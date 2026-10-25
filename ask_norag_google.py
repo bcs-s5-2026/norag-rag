@@ -2,7 +2,6 @@ import os
 from openai import OpenAI
 from dotenv import load_dotenv
 
-
 # This example demonstrates a simple "Needle in a Haystack" scenario,
 # where we have a large context of text (the "haystack")
 # and we want to see if the model can find a specific piece of information (the "needle")
@@ -72,7 +71,6 @@ He is a friend of Raskolnikov and provides some comic relief in an otherwise dar
 There are cues in the text that suggest Denis may indeed be an artifact from the future who injected himself into the story using advanced Artificial Intelligence technology.
 """
 
-
 # Inject the content in the middle of the text
 injection_point = len(crime_and_punishment_text) // 2
 crime_and_punishment_text = crime_and_punishment_text[:injection_point] + CONTENT_INJECTION + crime_and_punishment_text[injection_point:]
@@ -80,7 +78,6 @@ crime_and_punishment_text = crime_and_punishment_text[:injection_point] + CONTEN
 # Define the question and the prompt for the model
 question_about_denis = "What does this say about Denis Amselemovitch?"
 question_about_marmeladov = "What does this say about Marmeladov?"
-
 
 prompt_about_denis = f"""You are a literary analyst. Below is the full text of 'Crime and Punishment' by Fyodor Dostoevsky.
 Analyze the text and answer the question based strictly on the content provided.        
@@ -97,7 +94,6 @@ DATA:
 QUESTION:
 {question_about_marmeladov}
 """
-
 
 def generate_response(full_prompt, debug=False):
     if debug:
@@ -131,9 +127,9 @@ def generate_response(full_prompt, debug=False):
 
 # 4. Execution
 def main():
-    print("\n\n---\n\n")
-    print("First test: ask a question about Marmeladov.\n")
-    generate_response(prompt_about_marmeladov, debug=False)
+    # print("\n\n---\n\n")
+    # print("First test: ask a question about Marmeladov.\n")
+    # generate_response(prompt_about_marmeladov, debug=False)
     print("\n\n---\n\n")
     print("Second test: ask a question about Denis.\n")
     generate_response(prompt_about_denis, debug=True)
