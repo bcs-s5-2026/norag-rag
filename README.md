@@ -1,6 +1,8 @@
 # norag-rag project
 
-This workspace contains 2 Python applications to compare **NoRAG** (full-context prompting) versus **RAG** (retrieval-augmented generation) using **Google Gemini** via the **OpenAI SDK**.
+This workspace contains Python applications to compare **NoRAG** (full-context prompting) versus **RAG** (retrieval-augmented generation) using **Google Gemini** via the **OpenAI SDK**.
+
+For the BM25 lexical-retrieval example, see [README_BM25.md](./README_BM25.md).
 
 ## Applications
 
@@ -14,6 +16,10 @@ This workspace contains 2 Python applications to compare **NoRAG** (full-context
 - RAG with Google Gemini for generation via OpenAI SDK.
 - Uses local embeddings (`all-MiniLM-L6-v2`) + local ChromaDB (`chroma_db/`) to retrieve relevant chunks before asking the model.
 - Default retrieval uses `n_results=5` for the question: `What does this say about Denis?`
+
+3. `ask_bm25_rag_google.py`
+- RAG with Google Gemini for generation via OpenAI SDK and in-memory BM25 lexical retrieval.
+- See [README_BM25.md](./README_BM25.md) for how it works, how to run it, and the BM25 challenge.
 
 ## Project Structure
 
@@ -66,6 +72,12 @@ python ask_norag_google.py
 
 ```bash
 python ask_rag_google.py
+```
+
+### 3) BM25 RAG + Google
+
+```bash
+python ask_bm25_rag_google.py
 ```
 
 ## Notes
