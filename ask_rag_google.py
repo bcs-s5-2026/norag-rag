@@ -42,7 +42,8 @@ def list_available_models():
 local_ef = SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
 
 # The document to index and search
-DOCUMENT_FILE = "docs/CrimeAndPunishment.txt"
+#DOCUMENT_FILE = "docs/CrimeAndPunishment.txt"
+DOCUMENT_FILE="docs/vellora-duo-espresso-machine.txt"
 
 # Chunking settings
 # CHUNK_SIZE is in characters. 800 characters are about 190 tokens, which stays under the
@@ -162,7 +163,8 @@ def main():
     else:
         print(f"Using existing index '{COLLECTION_NAME}' ({collection.count()} chunks).")
 
-    question = "What does this say about Denis?"
+    #question = "What does this say about Denis?"
+    question = "What does error E47 mean and how do I fix it?"
     
     print(f"\n--- RAG RETRIEVAL START ---")
     context = get_rag_context(question, n_results=5)
