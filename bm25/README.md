@@ -2,7 +2,7 @@
 
 This guide covers the lexical-retrieval version of the RAG example in
 [`ask_bm25_rag_google.py`](./ask_bm25_rag_google.py). It complements the dense,
-embedding-based retrieval in [`ask_rag_google.py`](./ask_rag_google.py).
+embedding-based retrieval in [`ask_rag_google.py`](../ask_rag_google.py).
 
 ## What BM25 does
 
@@ -24,13 +24,13 @@ better for that question. Neither approach is best for every query.
 
 ## Run the example
 
-Use the project setup in [`README.md`](./README.md) to create a virtual
+Use the project setup in [`README.md`](../README.md) to create a virtual
 environment and install dependencies. Set `GOOGLE_API_KEY` in your environment
 to a key from [Google AI Studio](https://aistudio.google.com/app/apikey), then
 run:
 
 ```bash
-python ask_bm25_rag_google.py
+python bm25/ask_bm25_rag_google.py
 ```
 
 The script currently searches
@@ -68,6 +68,39 @@ Tokens that do not occur in any chunk do not affect the ranking: their term
 frequency is zero in every chunk. For this example, the rare token `e47` is a
 strong signal, so the chunk containing the exact error code is retrieved.
 
+## Investigate dense retrieval with the E47 probe
+
+[`probe_e47.py`](./probe_e47.py) explores why an embedding-based search can miss
+an exact error code. From the repository root, with the project dependencies
+installed, run:
+
+```bash
+python bm25/probe_e47.py
+```
+
+The probe runs the `all-MiniLM-L6-v2` embedding model locally. The first run may
+need network access to download the model, but it does not need a Google API
+key, Gemini, or ChromaDB.
+
+The four tests report:
+
+1. **Tokenization:** how the model splits the question and its error code.
+2. **Code swaps:** cosine similarity between the E47 question and the same
+   question with other codes. Values closer to 1 mean the question vectors
+   point in more similar directions, despite referring to different codes.
+3. **Individual entries:** the rank and score of the E47 entry among all error
+   entries. If its rank is greater than five, a top-five search over these
+   individual entries would miss it.
+4. **Chunks:** the ranks of chunks containing E47 using the same chunking
+   settings as the dense RAG example, and whether a top-five search would
+   include one. A chunk containing the code may still omit part of the answer.
+
+For example, in one local run the E47 entry ranked 35th out of 99 entries,
+and the first chunk containing E47 ranked 10th out of 43 chunks: both fall
+outside the top five. Results depend on the model, manual, and chunk settings.
+The probe ranks recreated chunks with cosine similarity; it does not query
+ChromaDB, so the dense RAG script can produce a different ranking.
+
 ## Explore the BM25 challenge
 
 The two challenge documents walk through the dense-retrieval failure on an
@@ -79,6 +112,4 @@ the advantage:
 - [`bm25_challenge_part2.md`](./bm25_challenge_part2.md): inspect BM25 and
   compare lexical and dense retrieval.
 
-The challenge asks you to temporarily edit the document and question in the
-scripts. Restore those edits after completing it if you want to return to the
-default examples.
+The challenge asks you to temporarily edit the document and question in the scripts. Restore those edits after completing it if you want to return to the default examples.

@@ -2,6 +2,7 @@ import os
 import re
 import math
 from collections import Counter
+from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -41,7 +42,7 @@ def list_available_models():
         print(f"  id: {m.id}")
 
 # The document to index and search
-DOCUMENT_FILE = "docs/vellora-duo-espresso-machine.txt"
+DOCUMENT_FILE = Path(__file__).resolve().parents[1] / "docs" / "vellora-duo-espresso-machine.txt"
 
 # Chunking settings: the same as in ask_rag_google.py
 CHUNK_SIZE = 800

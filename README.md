@@ -2,7 +2,7 @@
 
 This workspace contains Python applications to compare **NoRAG** (full-context prompting) versus **RAG** (retrieval-augmented generation) using **Google Gemini** via the **OpenAI SDK**.
 
-For the BM25 lexical-retrieval example, see [README_BM25.md](./README_BM25.md).
+For the BM25 lexical-retrieval example, see [bm25/README.md](./bm25/README.md).
 
 ## Applications
 
@@ -17,15 +17,16 @@ For the BM25 lexical-retrieval example, see [README_BM25.md](./README_BM25.md).
 - Uses local embeddings (`all-MiniLM-L6-v2`) + local ChromaDB (`chroma_db/`) to retrieve relevant chunks before asking the model.
 - Currently points to the espresso-machine manual and retrieves `n_results=5` for the question: `What does error E47 mean and how do I fix it?`
 
-3. `ask_bm25_rag_google.py`
+3. `bm25/ask_bm25_rag_google.py`
 - RAG with Google Gemini for generation via OpenAI SDK and in-memory BM25 lexical retrieval.
-- See [README_BM25.md](./README_BM25.md) for how it works, how to run it, and the BM25 challenge.
+- See [bm25/README.md](./bm25/README.md) for how it works, how to run it, and the BM25 challenge.
 
 ## Project Structure
 
 - `docs/CrimeAndPunishment.txt`: main source text used by the scripts.
 - `docs/CrimeAndPunishment-shorter.txt`: shortened version of the main source text for quicker testing and rapid experimentation in Gemini online at https://gemini.google.com/app (See note below)
 - `chroma_db/`: persistent local vector database (used by RAG scripts).
+- `bm25/`: BM25 retrieval example and challenges.
 - `requirements.txt`: Python dependencies.
 
 ## Prerequisites
@@ -77,7 +78,7 @@ python ask_rag_google.py
 ### 3) BM25 RAG + Google
 
 ```bash
-python ask_bm25_rag_google.py
+python bm25/ask_bm25_rag_google.py
 ```
 
 ## Notes

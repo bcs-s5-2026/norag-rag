@@ -17,7 +17,7 @@ Like many real manuals, it lists about a hundred error codes, from `E01` to `E99
 
 ## Ask the RAG
 
-**Step 2.** Open `ask_rag_google.py` and make two changes.
+**Step 2.** Open `../ask_rag_google.py` and make two changes.
 
 Point the script to the manual:
 
@@ -109,4 +109,4 @@ Before moving to part 2, write down your answers to these questions:
 - Among the words of the question, which ones are useful to find the right chunk, and which ones are not?
   How could a program tell the difference on its own?
 
-Keep your changes to `ask_rag_google.py`: we'll compare with them in part 2 (`bm25_challenge_part2.md`).
+Keep your changes to `../ask_rag_google.py`: we'll compare with them in part 2 (`bm25_challenge_part2.md`).

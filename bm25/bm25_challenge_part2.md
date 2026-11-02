@@ -34,8 +34,8 @@ The exact formula will be covered in the lecture.
 
 ## The new script
 
-**Step 1.** Open `ask_bm25_rag_google.py` and compare it with `ask_rag_google.py`
-(for example with `diff ask_rag_google.py ask_bm25_rag_google.py`, or side by side in your editor).
+**Step 1.** Open `bm25/ask_bm25_rag_google.py` and compare it with `ask_rag_google.py`
+(for example with `diff ask_rag_google.py bm25/ask_bm25_rag_google.py`, or side by side in your editor).
 
 - The document, the chunking, the prompt and the generation are the same.
   The script already points to `docs/vellora-duo-espresso-machine.txt` and asks the E47 question.
@@ -45,7 +45,7 @@ The exact formula will be covered in the lecture.
 **Step 2.** Run it:
 
 ```bash
-python ask_bm25_rag_google.py
+python bm25/ask_bm25_rag_google.py
 ```
 
 The script builds its BM25 index in memory (no question asked: it only takes a fraction of a second), then retrieves 5 chunks.
@@ -59,7 +59,7 @@ the grinder is blocked by a foreign object, and how to remove it with the hexago
 **Step 3.** Look at the weights BM25 gives to the words of the question. In a Python shell:
 
 ```python
-import ask_bm25_rag_google as bm
+from bm25 import ask_bm25_rag_google as bm
 index = bm.BM25Index(bm.chunk_document("docs/vellora-duo-espresso-machine.txt"))
 for word in bm.tokenize("What does error E47 mean and how do I fix it?"):
     print(f"{word:6} found in {index.chunk_frequency[word]:2} chunks, weight (IDF) {index.idf(word):.2f}")
@@ -76,7 +76,7 @@ for word in bm.tokenize("What does error E47 mean and how do I fix it?"):
     question = "How do I get rid of calcium deposits in my machine?"
 ```
 
-Change the question in `ask_rag_google.py` (still pointing to the manual) and in `ask_bm25_rag_google.py`, run both,
+Change the question in `ask_rag_google.py` (still pointing to the manual) and in `bm25/ask_bm25_rag_google.py`, run both,
 and compare the retrieved excerpts and the answers.
 
 - Which script retrieves the descaling instructions?
@@ -100,5 +100,5 @@ Each one fails where the other succeeds. Can you think of a way to get the best 
 Undo your changes to the two scripts (document and question), for example with:
 
 ```bash
-git checkout ask_rag_google.py ask_bm25_rag_google.py
+git checkout ask_rag_google.py bm25/ask_bm25_rag_google.py
 ```
