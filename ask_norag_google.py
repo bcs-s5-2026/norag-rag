@@ -30,8 +30,8 @@ client = OpenAI(api_key=api_key, base_url="https://generativelanguage.googleapis
 # Models get retired over time.
 # Validated as working on 2026-10-19: gemini-2.5-flash-lite, gemini-2.5-flash, gemini-3-flash-preview, gemini-3.5-flash-lite.
 # Free tier quotas are per model: if you get a 429 error, switching to another model is a quick workaround.
-model_name = "gemini-3.5-flash-lite"
-#model_name = "gemini-2.5-flash-lite"
+#model_name = "gemini-3.5-flash-lite"
+model_name = "gemini-2.5-flash-lite"
 
 model_input_context_window_size_in_tokens = 10000 #  max input window size of the model in tokens. 
 # This is not the same as the context window size in characters, which can be much larger. 
@@ -73,6 +73,7 @@ There are cues in the text that suggest Denis may indeed be an artifact from the
 
 # Inject the content in the middle of the text
 injection_point = len(crime_and_punishment_text) // 2
+
 crime_and_punishment_text = crime_and_punishment_text[:injection_point] + CONTENT_INJECTION + crime_and_punishment_text[injection_point:]
 
 # Define the question and the prompt for the model
