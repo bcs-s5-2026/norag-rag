@@ -6,6 +6,7 @@ from pydantic import BaseModel
 
 from app.database import initialize_database
 from app.documents import router as documents_router
+from app.chunk_preview import router as chunk_preview_router
 
 
 @asynccontextmanager
@@ -22,6 +23,7 @@ app = FastAPI(
 )
 
 app.include_router(documents_router)
+app.include_router(chunk_preview_router)
 
 
 class HealthResponse(BaseModel):
