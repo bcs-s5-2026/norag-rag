@@ -10,6 +10,11 @@ from pydantic import BaseModel
 
 from app.database import database
 
+import logging
+
+from app.indexing import index_write_lock
+from app.vector_store import get_collection
+
 
 router = APIRouter(prefix="/api/documents", tags=["documents"])
 
@@ -131,16 +136,30 @@ def upload_document(file: UploadFile) -> DocumentResponse:
 
 @router.delete("/{document_id}", status_code=204)
 def delete_document(document_id: str) -> Response:
-    with database() as connection:
-        cursor = connection.execute(
-            "DELETE FROM documents WHERE id = ?",
-            (document_id,),
+    if not index_write_lock.acquire(blocking=False):
+        raise HTTPException(
+            409,
+            "An index operation is running. Retry deletion shortly.",
         )
 
-        if cursor.rowcount == 0:
-            raise HTTPException(
-                status_code=404,
-                detail="Document not found.",
+    try:
+        with database() as connection:
+            cursor = connection.execute(
+                "DELETE FROM documents WHERE id = ?",
+                (document_id,),
             )
 
-    return Response(status_code=204)
+            if cursor.rowcount == 0:
+                raise HTTPException(404, "Document not found.")
+
+        try:
+            get_collection().delete(where={"document_id": document_id})
+        except Exception:
+            logging.getLogger(__name__).exception(
+                "Document %s was deleted, but vector cleanup failed",
+                document_id,
+            )
+
+        return Response(status_code=204)
+    finally:
+        index_write_lock.release()
