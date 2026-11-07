@@ -15,6 +15,8 @@ import {
   type StoredDocument,
 } from "@/lib/documents-api"
 
+import { IndexControls } from "@/components/index-controls"
+
 function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : "Something went wrong."
 }
@@ -235,6 +237,12 @@ export function DocumentPanel() {
                 >
                   Delete
                 </Button>
+
+                <IndexControls
+                  documentId={document.id}
+                  disabled={busy}
+                  onBusyChange={setBusy}
+                />
               </li>
             ))}
           </ul>

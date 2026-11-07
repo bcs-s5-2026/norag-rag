@@ -36,4 +36,20 @@ def initialize_database() -> None:
                 created_at TEXT NOT NULL
             )
             """
+        ),
+
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS document_indexes (
+                document_id TEXT PRIMARY KEY
+                    REFERENCES documents(id) ON DELETE CASCADE,
+                index_id TEXT NOT NULL UNIQUE,
+                content_hash TEXT NOT NULL,
+                model_name TEXT NOT NULL,
+                chunk_size INTEGER NOT NULL,
+                overlap INTEGER NOT NULL,
+                chunk_count INTEGER NOT NULL,
+                created_at TEXT NOT NULL
+            )
+            """
         )
