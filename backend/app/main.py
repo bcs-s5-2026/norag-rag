@@ -9,6 +9,7 @@ from app.documents import router as documents_router
 from app.chunk_preview import router as chunk_preview_router
 
 from app.indexing import router as indexing_router
+from app.retrieval import router as retrieval_router
 
 
 @asynccontextmanager
@@ -24,6 +25,7 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+app.include_router(retrieval_router)
 app.include_router(documents_router)
 app.include_router(chunk_preview_router)
 app.include_router(indexing_router)
