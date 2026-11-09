@@ -1,5 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react"
 
+import { QuestionPanel } from "@/components/question-panel"
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -247,6 +249,16 @@ export function DocumentPanel() {
             ))}
           </ul>
         </div>
+
+        <QuestionPanel
+          key={selectedIds.join(",")}
+          documents={documents.filter((document) =>
+            selectedIds.includes(document.id),
+          )}
+          disabled={busy}
+          onBusyChange={setBusy}
+        />
+        
       </CardContent>
     </Card>
   )
