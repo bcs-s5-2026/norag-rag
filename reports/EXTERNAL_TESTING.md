@@ -18,7 +18,7 @@
 | Concept map | Renders the Kestrel graph, concepts open with their evidence, "ask about this concept" works |
 | Redaction | Dummy emails and phone numbers were replaced by placeholders before the model call and restored locally in the answer (check B: 1 email, 1 phone reported in the trace) |
 | Abstention | Unanswerable questions return "insufficient evidence" instead of an invented answer |
-| Automated tests | `pytest`: 195 passed on my Mac before my changes to the mixed-selection and RTF handling; I re-run the full suite after those changes and report the result below |
+| Automated tests | `pytest`: 195 passed on my Mac on the original code; after my changes (including the mixed-selection and RTF tests) **198 passed** |
 
 Check A (the multi-hop question "who owns the service that raises KST-5031, and what is its channel?"):
 - **Dense only:** the runbook chunk is rank 1, but the two `service-catalog` chunks that hold the owner and the channel are only ranks 8 and 15, outside the top 5 sent to the model, so the model abstained (and that abstention still cost one model call).
@@ -67,7 +67,8 @@ For each decision: what was chosen, why, and what else could have been done.
 
 I ran the application, every test and every check on my own machine, and took all the screenshots and notes in this report. I used an AI assistant (Claude) during the work to help debug what I observed, to propose and write the fixes and tests listed in section 3, and to draft this report and the README text. I reviewed the results on my machine before committing. The commit is made under my own name.
 
-## 6. Verification still to confirm before the deadline
+## 6. Final verification
 
-- Re-run `python -m pytest -q` on my Mac after the latest changes and note the final count here.
-- Restart the server and hard-refresh the page to see the corrected graph note.
+- Full test suite on my Mac after all changes: **198 passed**.
+- Redaction check on the trace file (`data/traces/traces.jsonl`): 0 occurrences of the dummy email and 0 of the dummy phone number, so no personal data is stored in traces.
+- Server restarted and page hard-refreshed: the graph note now names the files without a graph instead of showing "undefined/undefined".
