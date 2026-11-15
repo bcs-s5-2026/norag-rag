@@ -182,13 +182,11 @@ class GoogleExtractor:
         if not self.approved:
             raise GraphError('Explicit approval is required before sending corpus data externally.')
         if self.client is None:
-            from dotenv import load_dotenv
-            from openai import OpenAI
-            load_dotenv(ROOT/'.env')
-            key = os.getenv('GOOGLE_API_KEY', '')
-            if not key or key == 'your_google_api_key_here':
-                raise GraphError('Set GOOGLE_API_KEY for the approved Google extraction.')
-            self.client = OpenAI(api_key=key, base_url=ENDPOINT, timeout=self.timeout, max_retries=0)
+            from . import llm
+            config = llm.load_config()
+            if not config.usable:
+                raise GraphError('Set LLM_API_KEY (or GOOGLE_API_KEY) for the approved extraction.')
+            self.client = llm.client(config, self.timeout)
 
 
 CONTEXTS = {}  # chunk id -> Markdown heading path (deterministic; recipe v2 only)

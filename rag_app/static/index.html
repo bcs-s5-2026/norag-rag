@@ -6,6 +6,7 @@
     <title>Evidence — RAG</title>
     <link rel="stylesheet" href="/style.css" />
     <script src="/app.js" defer></script>
+    <script src="/metrics.js" defer></script>
   </head>
   <body>
     <header>
@@ -62,7 +63,7 @@
               <legend>Search methods</legend>
               <label><input id="retriever-dense" type="checkbox" checked /> Meaning (dense embeddings)</label>
               <label><input id="retriever-bm25" type="checkbox" /> Exact words (BM25)</label>
-              <label><input id="retriever-graph" type="checkbox" /> Concept graph (Kestrel demo only)</label>
+              <label><input id="retriever-graph" type="checkbox" /> Concept graph (Kestrel demo or documents you uploaded)</label>
             </fieldset>
             <label>Candidate depth per retriever<input id="candidate-depth" type="number" min="1" max="10000" value="20" /></label>
             <label>RRF rank constant<input id="rrf-k" type="number" min="0" max="1000000" value="60" /></label>
@@ -103,6 +104,9 @@
             <button type="button" data-tab="words-view" aria-pressed="false">
               Words
             </button>
+            <button type="button" data-tab="metrics-view" aria-pressed="false">
+              Metrics
+            </button>
           </nav>
           <div id="status" role="status" aria-live="polite"></div>
           <div id="ask-view" class="tab-view">
@@ -134,14 +138,27 @@
               </p>
             </section>
           </div>
+          <section id="metrics-view" class="tab-view" hidden>
+            <h2>Metrics</h2>
+            <p>
+              How the application behaves, computed from its own saved traces:
+              outcomes, speed, model calls, cost and fallbacks.
+            </p>
+            <div id="metrics-body"></div>
+          </section>
           <section id="concepts-view" class="tab-view" hidden>
             <h2>Concept map</h2>
             <p>
-              A map of the Kestrel demo documents: services, teams, plans,
+              A map of the Kestrel demo documents (or of a document you uploaded, built automatically when you add it): services, teams, plans,
               features, error codes and how they are linked. Pick a concept,
               then click a neighbour to move around. Every link shows the
               sentence it was extracted from.
             </p>
+            <label
+              >Map of<select id="concept-source">
+                <option value="">Kestrel demo documents</option>
+              </select></label
+            >
             <label
               >Concept<select id="concept-select">
                 <option value="">Choose a concept…</option>

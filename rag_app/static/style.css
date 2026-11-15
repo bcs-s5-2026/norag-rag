@@ -399,3 +399,14 @@ button.link { background: none; border: 0; padding: 0; color: var(--green); text
 #concept-map .centre text { font-weight: 700; font-size: 14px; }
 #concept-detail blockquote { white-space: pre-wrap; overflow-wrap: anywhere; }
 button.details-button { width: auto; display: inline-block; padding: 6px 14px; margin: 6px 0; }
+
+/* Metrics tab */
+.metric-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 16px 0 24px; }
+.metric-card { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; background: #fbfcfa; }
+.metric-card b { display: block; font: 700 22px Manrope, sans-serif; color: #233b2f; letter-spacing: -0.5px; }
+.metric-card span { font-size: 12px; color: #527d61; }
+.metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; }
+.metric-chart { border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; background: #fff; }
+.metric-chart h3 { margin: 0 0 4px; font-size: 14px; }
+.metric-chart .hint { margin: 0 0 8px; }
+.metric-chart svg { width: 100%; height: auto; }

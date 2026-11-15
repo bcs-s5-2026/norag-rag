@@ -5,7 +5,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
-from .models import Question, Selection, WordsRequest, EvaluationRequest, GradeRequest, RetrievalQuestion, V3EvaluationRequest
+from .models import Settings, Question, Selection, WordsRequest, EvaluationRequest, GradeRequest, RetrievalQuestion, V3EvaluationRequest
 from .service import MAX_BYTES, ROOT, PipelineError, RagService
 
 
@@ -36,7 +36,22 @@ def create_app(service=None):
 
     @app.post('/api/documents')
     def upload(file: UploadFile = File(...)):
-        return app.state.rag.upload(file.filename or '', file.file.read(MAX_BYTES + 1))
+        result = app.state.rag.upload(file.filename or '', file.file.read(MAX_BYTES + 1))
+        # The concept graph is built right after the upload (one model call per passage, size-capped).
+        # A failure never fails the upload: the answer says what happened.
+        result['graph'] = app.state.rag.auto_graph(result['id'])
+        return result
+
+    @app.get('/api/graphs')
+    def graphs():
+        rag = app.state.rag
+        with rag.lock:
+            return {d['id']: rag.graph_status(d['id']) | {'name': d['name']} for d in rag.list_documents()
+                    if rag.graph_files(d['id'])}
+
+    @app.post('/api/documents/{doc_id}/graph')
+    def build_graph(doc_id: str, settings: Settings | None = None):
+        return app.state.rag.build_graph(doc_id, settings)
 
     @app.delete('/api/documents/{doc_id}')
     def delete(doc_id: str):
@@ -64,13 +79,22 @@ def create_app(service=None):
             raise PipelineError('Trace not found. Traces are kept for 30 days.', 404)
         return found
 
+    @app.get('/api/metrics')
+    def metrics():
+        from .metrics import summarize
+        return summarize(app.state.rag.traces.all())
+
+    @app.get('/metrics', response_class=HTMLResponse, include_in_schema=False)
+    def metrics_page():
+        return (ROOT / 'rag_app' / 'static' / 'index.html').read_text(encoding='utf-8')  # opens on the Metrics tab
+
     @app.get('/api/concepts')
-    def concepts():
-        return app.state.rag.concepts()
+    def concepts(documents: str | None = None):
+        return app.state.rag.concepts(documents.split(',') if documents else None)
 
     @app.get('/api/concepts/{concept_id}')
-    def concept(concept_id: str):
-        return app.state.rag.concept(concept_id)
+    def concept(concept_id: str, documents: str | None = None):
+        return app.state.rag.concept(concept_id, documents.split(',') if documents else None)
 
     @app.get('/api/evaluation')
     def evaluation():

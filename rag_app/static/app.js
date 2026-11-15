@@ -66,6 +66,7 @@ async function run(action) {
 }
 async function refresh() {
   const docs = await api("documents");
+  const graphs = await api("graphs");
   const old = new Map(
     Array.from(document.querySelectorAll(".doc input")).map((e) => [
       e.value,
@@ -93,9 +94,25 @@ async function refresh() {
         await refresh();
         status("Document and its indexed passages deleted.");
       });
-    row.append(label, del);
+    const graph = graphs[doc.id];
+    row.append(label);
+    if (!graph) {
+      const build = node("button", "Build graph");
+      build.type = "button";
+      build.title = "Extract a concept graph from this document (one model call per passage)";
+      build.onclick = () =>
+        run(async () => {
+          status("Building the concept graph… one model call per passage.");
+          const info = await api(`documents/${doc.id}/graph`, post({}));
+          await refresh();
+          status(`Concept graph built: ${info.concepts} concepts, ${info.links} links.`);
+        });
+      row.append(build);
+    }
+    row.append(del);
     $("documents").append(row);
   }
+  await loadConceptSources(graphs);
 }
 $("upload").onsubmit = (event) => {
   event.preventDefault();
@@ -106,10 +123,18 @@ $("upload").onsubmit = (event) => {
     const data = await api("documents", { method: "POST", body: form });
     await refresh();
     $("file").value = "";
+    const g = data.graph || {};
+    const graphNote = {
+      built: ` Concept graph built: ${g.concepts} concepts, ${g.links} links${g.complete ? "" : " (partial: some passages failed)"}.`,
+      exists: " Its concept graph already exists.",
+      skipped: " No concept graph: " + g.reason,
+      too_large: " No concept graph yet: " + g.reason,
+      failed: " The concept graph could not be built: " + g.reason + " Sources still work with the other search methods.",
+    }[g.status] || "";
     status(
-      data.duplicate
+      (data.duplicate
         ? "This content is already in your library."
-        : "Source added. It will be indexed on your next question.",
+        : "Source added. It will be indexed on your next question.") + graphNote,
     );
   });
 };
@@ -194,8 +219,15 @@ function reference(ref) {
 function renderGraph(host, trace, references = []) {
   const section = node("section");
   section.append(node("h3", "Graph evidence paths"));
-  if (!trace.complete)
-    section.append(node("p", `Partial extraction: ${trace.coverage.valid_chunks}/${trace.coverage.total_chunks} chunks validated. Missing graph facts can affect retrieval.`, "hint"));
+  if (!trace.complete) {
+    const c = trace.coverage || {};
+    const text = trace.note
+      ? trace.note
+      : c.valid_chunks !== undefined
+        ? `Partial extraction: ${c.valid_chunks}/${c.total_chunks} chunks validated.`
+        : "Partial extraction: some passages could not be read by the model.";
+    section.append(node("p", text + " Missing graph facts can affect retrieval.", "hint"));
+  }
   section.append(node("p", "Question entities: " + (trace.matched_entities.map((e) => `${e.label} (${e.matched_by})`).join(", ") || "none")));
   if (trace.reason) section.append(node("p", trace.reason));
   const cited = new Set(references.flatMap((r) => r.origins?.graph?.path_ids || []));
@@ -715,7 +747,7 @@ function drawNeighborhood(data) {
 }
 async function openConcept(id) {
   try {
-    const data = await api("concepts/" + encodeURIComponent(id));
+    const data = await api("concepts/" + encodeURIComponent(id) + conceptQuery());
     $("concept-select").value = id;
     $("concept-map").replaceChildren(drawNeighborhood(data));
     const detail = $("concept-detail");
@@ -723,7 +755,7 @@ async function openConcept(id) {
     ask.type = "button";
     ask.onclick = () =>
       run(async () => {
-        await loadCorpus("kestrel"); // the graph only covers the Kestrel documents
+        if (!$("concept-source").value) await loadCorpus("kestrel"); // the demo graph only covers the Kestrel documents
         $("question").value = `What do the documents say about ${data.concept.label}?`;
         showTab("ask-view");
         $("question").focus();
@@ -751,24 +783,48 @@ async function openConcept(id) {
     if (error.traceId) $("status").append(" ", detailsButton(error.traceId));
   }
 }
-api("concepts")
-  .then((concepts) => {
+function conceptQuery() {
+  const source = $("concept-source").value;
+  return source ? "?documents=" + encodeURIComponent(source) : "";
+}
+async function loadConceptSources(graphs) {
+  const select = $("concept-source");
+  const keep = select.value;
+  select.replaceChildren(node("option", "Kestrel demo documents"));
+  select.firstChild.value = "";
+  for (const [id, info] of Object.entries(graphs)) {
+    const option = node("option", `${info.name} (${info.concepts} concepts)`);
+    option.value = id;
+    select.append(option);
+  }
+  select.value = graphs[keep] ? keep : "";
+}
+async function loadConcepts() {
+  const select = $("concept-select");
+  select.replaceChildren(node("option", "Choose a concept…"));
+  select.firstChild.value = "";
+  $("concept-map").replaceChildren();
+  $("concept-detail").replaceChildren();
+  try {
+    const concepts = await api("concepts" + conceptQuery());
     const groups = new Map();
     for (const concept of concepts) {
       if (!groups.has(concept.type)) {
         const group = node("optgroup");
         group.label = concept.type;
         groups.set(concept.type, group);
-        $("concept-select").append(group);
+        select.append(group);
       }
       const option = node("option", `${concept.label} (${concept.links} links)`);
       option.value = concept.id;
       groups.get(concept.type).append(option);
     }
-  })
-  .catch((error) => {
+  } catch (error) {
     $("concept-detail").replaceChildren(node("p", error.message, "error"));
-  });
+  }
+}
+$("concept-source").onchange = loadConcepts;
+loadConcepts();
 $("concept-select").onchange = () => {
   if ($("concept-select").value) openConcept($("concept-select").value);
 };

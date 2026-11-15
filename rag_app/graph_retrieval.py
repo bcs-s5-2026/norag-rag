@@ -82,13 +82,16 @@ class GraphIndex:
             if isinstance(exc, GraphRetrievalError): raise
             raise GraphRetrievalError('Graph snapshot unreadable or corrupt.') from exc
 
-    def search(self, question, document_ids, settings, depth=20):
-        selected = set(document_ids)
+    def _check_request(self, selected, settings):
         if not selected or not selected <= self.document_ids:
             raise GraphRetrievalError('Graph retrieval supports only selected Kestrel source versions.')
         manifest = self.graph['manifest']
         if settings.chunk_size != manifest['chunk_size'] or settings.chunk_overlap != manifest['chunk_overlap']:
             raise GraphRetrievalError('Graph chunk settings differ from the frozen extraction snapshot.')
+
+    def search(self, question, document_ids, settings, depth=20):
+        selected = set(document_ids)
+        self._check_request(selected, settings)
         if type(depth) is not int or depth < 1:
             raise GraphRetrievalError('Graph candidate depth must be positive.')
         def proofs(ids):
@@ -148,7 +151,7 @@ class GraphIndex:
                 contributions[identifier][path_id] = seed['score']/(1+len(steps))
                 chunk_paths[identifier].add(path_id)
             if len(steps) >= 3: continue
-            ordered = sorted(adjacency[nodes[-1]], key=lambda x: (PRIORITY[x[0]['relation']], x[0]['id'], x[1]))[:12]
+            ordered = sorted(adjacency[nodes[-1]], key=lambda x: (PRIORITY.get(x[0]['relation'], len(PRIORITY)), x[0]['id'], x[1]))[:12]
             for edge, target, direction in ordered:
                 if target not in nodes:
                     queue.append((seed, nodes+[target], steps+[(edge, direction)]))

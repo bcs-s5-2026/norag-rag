@@ -17,7 +17,9 @@ pip install -r requirements-dev.txt
 cp .env.example .env
 ```
 
-Open `.env` and replace `your_google_api_key_here` with a Google AI Studio key (free to create at https://aistudio.google.com/app/api-keys). This is the only secret. Without it you can still load documents, search, browse the concept map and run the retrieval evaluation; asking a question shows "Set GOOGLE_API_KEY in .env to generate answers."
+Open `.env` and put your key in `LLM_API_KEY` (a free Google AI Studio key works: https://aistudio.google.com/app/api-keys). By default the app talks to Google Gemini. To use another OpenAI-compatible model, also set `LLM_URL` and `LLM_MODEL` (examples are in `.env.example`; a local server such as Ollama needs no key). The older `GOOGLE_API_KEY` / `GOOGLE_MODEL` names still work. Without a key you can still load documents, search, browse the concept map and run the retrieval evaluation; asking a question shows "Set LLM_API_KEY (or GOOGLE_API_KEY) in .env to generate answers."
+
+**Intel Mac (x86_64):** recent PyTorch versions have no Intel Mac build. Use Python 3.12 and, after `pip install -r requirements-dev.txt`, pin `numpy<2`, `sentence-transformers<4`, `transformers<4.50` and `huggingface-hub<1.0` if the install or the first question fails with a torch/transformers import error.
 
 ```bash
 python -m uvicorn rag_app.api:app --host 127.0.0.1 --port 8000
@@ -61,7 +63,17 @@ Check scripts and results: `python -m evaluation.v4_checks offline --output <new
 | `data/` | created at run time, git-ignored: uploaded documents, indexes, traces |
 | `tests/` | automated tests |
 
-Optional settings in `.env`: `GOOGLE_MODEL` (default `gemini-3.5-flash-lite`), `RAG_DATA_DIR` (default `./data`). `requirements-lock.txt` lists the exact versions tested on macOS with Python 3.12.
+Optional settings in `.env`: `LLM_URL`, `LLM_API_KEY`, `LLM_MODEL` (default Gemini `gemini-3.5-flash-lite`), `RAG_DATA_DIR` (default `./data`), `RAG_GRAPH_AUTO_MAX_CHUNKS` (default 60). `requirements-lock.txt` lists the exact versions tested on macOS with Python 3.12.
+
+## Concept graph of your own documents
+
+When you upload a `.txt` or `.md` file, the app builds its concept graph right away (one model call per 800-character passage, up to 60 passages; bigger files get a **Build graph** button instead). The model picks a short type for each concept (person, project, material…) and a short name for each link. A concept or link is kept only if its quote is copied exactly from the passage, otherwise it is dropped. Emails and phone numbers are replaced by placeholders before a passage is sent. The graph is saved in `data/doc_graphs/` and can be:
+
+- explored in **Concept map** (choose the document in "Map of"), every link showing the sentence it came from;
+- used as a retriever: tick **Concept graph** next to Meaning and/or Exact words. Several documents can be selected; a concept with the same name in two of them becomes one node, so a path can cross documents;
+- left out safely: if no graph could be built, ticking it together with another retriever simply shows "graph unavailable" and the answer comes from the others. The graph must use the same chunk settings it was built with.
+
+The Kestrel demo keeps its frozen, validated graph, and it can be mixed with uploaded files: each graph is used for its own files, and files that have no graph are listed as "not covered" in the graph trace instead of switching the retriever off. A broken Kestrel snapshot is still an error. A file that is really Rich Text saved as `.txt` is refused with advice (save as plain text).
 
 ---
 
