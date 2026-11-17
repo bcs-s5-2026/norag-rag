@@ -1,0 +1,42 @@
+{
+  "attempt_id": "d7ec9d8a973f41a7b5e3f26c1be5e376",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 5132,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:5040:5132",
+    "line": 67,
+    "name": "billing-policy-2026.md",
+    "start": 5040,
+    "text": "ng@kestrel.example. Please include the workspace name and, if relevant, the invoice number.\n"
+  },
+  "extracted_at": "2026-11-08T13:08:19.240822+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 3.352746874996228,
+  "key": "4fcf4500be081397331cfa390868906bc4c081221ad32c424cc64fcd838cc68d",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1730,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "QHTwasHiDrj7nsEPkp_RsQ4",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "4a18119e4fc790ce6ba027fd416934cbd839024aa2a5f4ea951063e58ff344c2"
+}

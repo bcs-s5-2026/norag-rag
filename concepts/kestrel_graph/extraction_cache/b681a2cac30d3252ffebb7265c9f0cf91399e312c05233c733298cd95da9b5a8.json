@@ -1,0 +1,40 @@
+{
+  "attempt_id": "9d13055000fc463cb572d6cfe84da3b1",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 5120,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:4320:5120",
+    "line": 58,
+    "name": "product-guide.md",
+    "start": 4320,
+    "text": "nforce for all members**. When single sign-on is enforced, passwords are disabled and two-factor authentication is handled by your identity provider.\n\n### 5.3 Regaining access to your account\n\nIf you no longer have your authenticator device, use one of your backup codes at the second-factor prompt, then set up two-factor authentication again from **Profile → Security**.\n\nIf you have neither your authenticator device nor any backup code, ask an Admin of your workspace to reset your second factor from **Settings → Members**. You will set it up again at your next sign-in.\n\nIf you are the only Admin, or the workspace Owner, write to support from the e-mail address registered on the account. For security reasons support verifies your identity before resetting anything; this verification can tak"
+  },
+  "extracted_at": "2026-11-08T12:10:06.387424+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.6305445420148317,
+  "key": "b681a2cac30d3252ffebb7265c9f0cf91399e312c05233c733298cd95da9b5a8",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1275,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "nWbwatudO7bxnsEPy6bFqAw",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "e16cdc6007159d1cafd89975d85838ea81fd9a307293ccf3f1d72938adcb23c2"
+}

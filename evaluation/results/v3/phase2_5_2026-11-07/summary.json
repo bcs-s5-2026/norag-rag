@@ -1,0 +1,5725 @@
+{
+  "schema_version": 1,
+  "benchmark": "V3 Phase 2.5",
+  "ks": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "definitions": {
+    "hit_rate": "Macro fraction of answerable questions with any annotated (source, literal quote) in the ranked prefix.",
+    "recall": "Macro fraction of annotated gold source/quote pairs retrieved per answerable question. This is evidence-annotation recall, not answer completeness.",
+    "latency": "Observed per-question retrieval_seconds, including on-demand indexing/loading; one observation per question/configuration.",
+    "p95": "Nearest-rank percentile: sorted times[ceil(0.95*n)-1].",
+    "failures": "Infrastructure/retriever exceptions, distinct from gold-evidence misses. All six CLI runs completed every expected question with ok/empty statuses.",
+    "unavailable": "null: no answerable gold evidence, absent question type, or unavailable measurement; never fabricated as zero accuracy."
+  },
+  "verification": {
+    "expected_runs": 6,
+    "completed_runs": 6,
+    "question_executions": 75,
+    "exact_original_question_sets": true,
+    "compatible_canonical_ids": true,
+    "source_hashes_match": true,
+    "all_saved_metrics_recomputed": true,
+    "all_llm_calls_zero": true,
+    "all_gold_quotes_source_valid": true
+  },
+  "runs": [
+    {
+      "corpus": "kestrel",
+      "configuration": "dense",
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/kestrel-dense-800-80.json",
+      "output_sha256": "01428cb7a99e755e1e55e7e815bcb3b06a914246438b797b641ac76832c926bc",
+      "questions": 10,
+      "answerable": 8,
+      "retrieval_failures": 0,
+      "overall": {
+        "1": {
+          "answerable": 8,
+          "hits": 5,
+          "hit_rate": 0.625,
+          "quote_recall": 0.40625
+        },
+        "3": {
+          "answerable": 8,
+          "hits": 7,
+          "hit_rate": 0.875,
+          "quote_recall": 0.8125
+        },
+        "5": {
+          "answerable": 8,
+          "hits": 7,
+          "hit_rate": 0.875,
+          "quote_recall": 0.8125
+        },
+        "10": {
+          "answerable": 8,
+          "hits": 8,
+          "hit_rate": 1.0,
+          "quote_recall": 0.9375
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.25
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 2.945319187507266,
+            "median_seconds": 2.945319187507266,
+            "p95_seconds": 5.877653333009221
+          }
+        },
+        "split_answer": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 0.625
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.01316014549229294,
+            "median_seconds": 0.01316014549229294,
+            "p95_seconds": 0.01322587497998029
+          }
+        },
+        "vocabulary": {
+          "questions": 1,
+          "overall": {
+            "1": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "3": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "5": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 1,
+            "mean_seconds": 0.012996416015084833,
+            "median_seconds": 0.012996416015084833,
+            "p95_seconds": 0.012996416015084833
+          }
+        },
+        "not_in_corpus": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.01287877099821344,
+            "median_seconds": 0.01287877099821344,
+            "p95_seconds": 0.012882999988505617
+          }
+        },
+        "versions": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.013997687492519617,
+            "median_seconds": 0.013997687492519617,
+            "p95_seconds": 0.014195541996741667
+          }
+        },
+        "two_hop": {
+          "questions": 1,
+          "overall": {
+            "1": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "5": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "10": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            }
+          },
+          "latency": {
+            "n": 1,
+            "mean_seconds": 0.012803457997506484,
+            "median_seconds": 0.012803457997506484,
+            "p95_seconds": 0.012803457997506484
+          }
+        },
+        "other": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        }
+      },
+      "all_annotated_evidence_rate": {
+        "1": 0.125,
+        "3": 0.75,
+        "5": 0.75,
+        "10": 0.875
+      },
+      "latency": {
+        "n": 10,
+        "mean_seconds": 0.5996511456993175,
+        "median_seconds": 0.013045416009845212,
+        "p95_seconds": 5.877653333009221
+      },
+      "first_question_seconds": 5.877653333009221,
+      "post_first_latency": {
+        "n": 9,
+        "mean_seconds": 0.013206458220439445,
+        "median_seconds": 0.012996416015084833,
+        "p95_seconds": 0.014195541996741667
+      },
+      "process_wall_seconds": 6.642573416989762,
+      "llm_calls": 0,
+      "empty_retriever_counts": {
+        "dense": 0
+      },
+      "verification": {
+        "dataset_exact": true,
+        "canonical_chunks": 43,
+        "returned_chunks_verified": 100,
+        "canonical_id_set_sha256": "6cde183054200506265228f811b20abad62914b53ae096c8807c5b49f0b72526",
+        "metrics_recomputed": true,
+        "rrf_scores_recomputed": true
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "configuration": "bm25",
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/kestrel-bm25-800-80.json",
+      "output_sha256": "edf6851df948751dab80c8b0c80a4a0b20156ae23dd0f4fa8c4b8aeaa1ad8a84",
+      "questions": 10,
+      "answerable": 8,
+      "retrieval_failures": 0,
+      "overall": {
+        "1": {
+          "answerable": 8,
+          "hits": 3,
+          "hit_rate": 0.375,
+          "quote_recall": 0.1875
+        },
+        "3": {
+          "answerable": 8,
+          "hits": 6,
+          "hit_rate": 0.75,
+          "quote_recall": 0.53125
+        },
+        "5": {
+          "answerable": 8,
+          "hits": 6,
+          "hit_rate": 0.75,
+          "quote_recall": 0.53125
+        },
+        "10": {
+          "answerable": 8,
+          "hits": 7,
+          "hit_rate": 0.875,
+          "quote_recall": 0.71875
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.25
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.25
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.25
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.005435063008917496,
+            "median_seconds": 0.005435063008917496,
+            "p95_seconds": 0.008281792019261047
+          }
+        },
+        "split_answer": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.25
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 0.625
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 0.625
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 0.625
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.002441250006086193,
+            "median_seconds": 0.002441250006086193,
+            "p95_seconds": 0.002443708013743162
+          }
+        },
+        "vocabulary": {
+          "questions": 1,
+          "overall": {
+            "1": {
+              "answerable": 1,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "3": {
+              "answerable": 1,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "5": {
+              "answerable": 1,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "10": {
+              "answerable": 1,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            }
+          },
+          "latency": {
+            "n": 1,
+            "mean_seconds": 0.0024751669843681157,
+            "median_seconds": 0.0024751669843681157,
+            "p95_seconds": 0.0024751669843681157
+          }
+        },
+        "not_in_corpus": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.0024125835043378174,
+            "median_seconds": 0.0024125835043378174,
+            "p95_seconds": 0.0024165830109268427
+          }
+        },
+        "versions": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.0024263334926217794,
+            "median_seconds": 0.0024263334926217794,
+            "p95_seconds": 0.00245124998036772
+          }
+        },
+        "two_hop": {
+          "questions": 1,
+          "overall": {
+            "1": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "5": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "10": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            }
+          },
+          "latency": {
+            "n": 1,
+            "mean_seconds": 0.002451915992423892,
+            "median_seconds": 0.002451915992423892,
+            "p95_seconds": 0.002451915992423892
+          }
+        },
+        "other": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        }
+      },
+      "all_annotated_evidence_rate": {
+        "1": 0,
+        "3": 0.375,
+        "5": 0.375,
+        "10": 0.625
+      },
+      "latency": {
+        "n": 10,
+        "mean_seconds": 0.003035754300071858,
+        "median_seconds": 0.002447478997055441,
+        "p95_seconds": 0.008281792019261047
+      },
+      "first_question_seconds": 0.008281792019261047,
+      "post_first_latency": {
+        "n": 9,
+        "mean_seconds": 0.002452861220161948,
+        "median_seconds": 0.002443708013743162,
+        "p95_seconds": 0.002588333998573944
+      },
+      "process_wall_seconds": 0.15167133300565183,
+      "llm_calls": 0,
+      "empty_retriever_counts": {
+        "bm25": 0
+      },
+      "verification": {
+        "dataset_exact": true,
+        "canonical_chunks": 43,
+        "returned_chunks_verified": 100,
+        "canonical_id_set_sha256": "6cde183054200506265228f811b20abad62914b53ae096c8807c5b49f0b72526",
+        "metrics_recomputed": true,
+        "rrf_scores_recomputed": true
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "configuration": "dense-bm25-rrf",
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/kestrel-dense-bm25-rrf-800-80.json",
+      "output_sha256": "b66cfb86c8f54f8368b736bef3eddbde774a9d3646322bcff879c926e5345e17",
+      "questions": 10,
+      "answerable": 8,
+      "retrieval_failures": 0,
+      "overall": {
+        "1": {
+          "answerable": 8,
+          "hits": 4,
+          "hit_rate": 0.5,
+          "quote_recall": 0.21875
+        },
+        "3": {
+          "answerable": 8,
+          "hits": 6,
+          "hit_rate": 0.75,
+          "quote_recall": 0.59375
+        },
+        "5": {
+          "answerable": 8,
+          "hits": 7,
+          "hit_rate": 0.875,
+          "quote_recall": 0.71875
+        },
+        "10": {
+          "answerable": 8,
+          "hits": 8,
+          "hit_rate": 1.0,
+          "quote_recall": 0.9375
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.25
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 1,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 2.323140541499015,
+            "median_seconds": 2.323140541499015,
+            "p95_seconds": 4.626143000001321
+          }
+        },
+        "split_answer": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 0.375
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 0.625
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 0.625
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.019427625011303462,
+            "median_seconds": 0.019427625011303462,
+            "p95_seconds": 0.01973366699530743
+          }
+        },
+        "vocabulary": {
+          "questions": 1,
+          "overall": {
+            "1": {
+              "answerable": 1,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "3": {
+              "answerable": 1,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "5": {
+              "answerable": 1,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "10": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 1,
+            "mean_seconds": 0.01865895898663439,
+            "median_seconds": 0.01865895898663439,
+            "p95_seconds": 0.01865895898663439
+          }
+        },
+        "not_in_corpus": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.018539333002991043,
+            "median_seconds": 0.018539333002991043,
+            "p95_seconds": 0.01918262499384582
+          }
+        },
+        "versions": {
+          "questions": 2,
+          "overall": {
+            "1": {
+              "answerable": 2,
+              "hits": 0,
+              "hit_rate": 0,
+              "quote_recall": 0.0
+            },
+            "3": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "5": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 2,
+              "hits": 2,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 2,
+            "mean_seconds": 0.018590562001918443,
+            "median_seconds": 0.018590562001918443,
+            "p95_seconds": 0.018834832997526973
+          }
+        },
+        "two_hop": {
+          "questions": 1,
+          "overall": {
+            "1": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "5": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            },
+            "10": {
+              "answerable": 1,
+              "hits": 1,
+              "hit_rate": 1,
+              "quote_recall": 0.5
+            }
+          },
+          "latency": {
+            "n": 1,
+            "mean_seconds": 0.020051500003319234,
+            "median_seconds": 0.020051500003319234,
+            "p95_seconds": 0.020051500003319234
+          }
+        },
+        "other": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        }
+      },
+      "all_annotated_evidence_rate": {
+        "1": 0,
+        "3": 0.5,
+        "5": 0.625,
+        "10": 0.875
+      },
+      "latency": {
+        "n": 10,
+        "mean_seconds": 0.47981065820204094,
+        "median_seconds": 0.019152104010572657,
+        "p95_seconds": 4.626143000001321
+      },
+      "first_question_seconds": 4.626143000001321,
+      "post_first_latency": {
+        "n": 9,
+        "mean_seconds": 0.019107064668787643,
+        "median_seconds": 0.019121583027299494,
+        "p95_seconds": 0.020138082996709272
+      },
+      "process_wall_seconds": 5.4469137499982025,
+      "llm_calls": 0,
+      "empty_retriever_counts": {
+        "dense": 0,
+        "bm25": 0
+      },
+      "verification": {
+        "dataset_exact": true,
+        "canonical_chunks": 43,
+        "returned_chunks_verified": 100,
+        "canonical_id_set_sha256": "6cde183054200506265228f811b20abad62914b53ae096c8807c5b49f0b72526",
+        "metrics_recomputed": true,
+        "rrf_scores_recomputed": true
+      }
+    },
+    {
+      "corpus": "vellora",
+      "configuration": "dense",
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/vellora-dense-800-80.json",
+      "output_sha256": "9df3c4a72efe3f6525d51e2e277e7c237391b7edcf746cbd541d518a1d1fe149",
+      "questions": 15,
+      "answerable": 12,
+      "retrieval_failures": 0,
+      "overall": {
+        "1": {
+          "answerable": 12,
+          "hits": 6,
+          "hit_rate": 0.5,
+          "quote_recall": 0.5
+        },
+        "3": {
+          "answerable": 12,
+          "hits": 6,
+          "hit_rate": 0.5,
+          "quote_recall": 0.5
+        },
+        "5": {
+          "answerable": 12,
+          "hits": 7,
+          "hit_rate": 0.5833333333333334,
+          "quote_recall": 0.5833333333333334
+        },
+        "10": {
+          "answerable": 12,
+          "hits": 10,
+          "hit_rate": 0.8333333333333334,
+          "quote_recall": 0.8333333333333334
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 0.010583104500256013,
+            "median_seconds": 0.010508645995287225,
+            "p95_seconds": 0.01085479199537076
+          }
+        },
+        "split_answer": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "vocabulary": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 1,
+              "hit_rate": 0.25,
+              "quote_recall": 0.25
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 1,
+              "hit_rate": 0.25,
+              "quote_recall": 0.25
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 0.011189405995537527,
+            "median_seconds": 0.010959395498503,
+            "p95_seconds": 0.011912207992281765
+          }
+        },
+        "not_in_corpus": {
+          "questions": 3,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 3,
+            "mean_seconds": 0.010741764000461748,
+            "median_seconds": 0.010608083015540615,
+            "p95_seconds": 0.011039249977329746
+          }
+        },
+        "versions": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "two_hop": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "other": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 1.3670623852522112,
+            "median_seconds": 0.010843062002095394,
+            "p95_seconds": 5.436025584000163
+          }
+        }
+      },
+      "all_annotated_evidence_rate": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5833333333333334,
+        "10": 0.8333333333333334
+      },
+      "latency": {
+        "n": 15,
+        "mean_seconds": 0.37250432499956027,
+        "median_seconds": 0.01085479199537076,
+        "p95_seconds": 5.436025584000163
+      },
+      "first_question_seconds": 5.436025584000163,
+      "post_first_latency": {
+        "n": 14,
+        "mean_seconds": 0.010824235070945829,
+        "median_seconds": 0.010774666501674801,
+        "p95_seconds": 0.011912207992281765
+      },
+      "process_wall_seconds": 6.168839541991474,
+      "llm_calls": 0,
+      "empty_retriever_counts": {
+        "dense": 0
+      },
+      "verification": {
+        "dataset_exact": true,
+        "canonical_chunks": 43,
+        "returned_chunks_verified": 150,
+        "canonical_id_set_sha256": "700c91f93c7816bde39a5fcf8472c81744fa8db119825704faefe16d75d48a43",
+        "metrics_recomputed": true,
+        "rrf_scores_recomputed": true
+      }
+    },
+    {
+      "corpus": "vellora",
+      "configuration": "bm25",
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/vellora-bm25-800-80.json",
+      "output_sha256": "2bcfb14ceefa72fff7b693ae415266d47033b16989abdfbfe9fe913500efb21e",
+      "questions": 15,
+      "answerable": 12,
+      "retrieval_failures": 0,
+      "overall": {
+        "1": {
+          "answerable": 12,
+          "hits": 8,
+          "hit_rate": 0.6666666666666666,
+          "quote_recall": 0.6666666666666666
+        },
+        "3": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        },
+        "5": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        },
+        "10": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 0.002195479246438481,
+            "median_seconds": 0.0021758749935543165,
+            "p95_seconds": 0.00226491701323539
+          }
+        },
+        "split_answer": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "vocabulary": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 0.0021987607615301386,
+            "median_seconds": 0.0021972505055600777,
+            "p95_seconds": 0.0022110420104581863
+          }
+        },
+        "not_in_corpus": {
+          "questions": 3,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 3,
+            "mean_seconds": 0.002172778001598393,
+            "median_seconds": 0.0021716250048484653,
+            "p95_seconds": 0.00218341700383462
+          }
+        },
+        "versions": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "two_hop": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "other": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 0.0036499585112323985,
+            "median_seconds": 0.002247604017611593,
+            "p95_seconds": 0.007910792017355561
+          }
+        }
+      },
+      "all_annotated_evidence_rate": {
+        "1": 0.6666666666666666,
+        "3": 0.9166666666666666,
+        "5": 0.9166666666666666,
+        "10": 0.9166666666666666
+      },
+      "latency": {
+        "n": 15,
+        "mean_seconds": 0.0025796752054399502,
+        "median_seconds": 0.0021938339923508465,
+        "p95_seconds": 0.007910792017355561
+      },
+      "first_question_seconds": 0.007910792017355561,
+      "post_first_latency": {
+        "n": 14,
+        "mean_seconds": 0.002198881147445978,
+        "median_seconds": 0.0021916670084465295,
+        "p95_seconds": 0.002283708017785102
+      },
+      "process_wall_seconds": 0.16234612499829382,
+      "llm_calls": 0,
+      "empty_retriever_counts": {
+        "bm25": 0
+      },
+      "verification": {
+        "dataset_exact": true,
+        "canonical_chunks": 43,
+        "returned_chunks_verified": 150,
+        "canonical_id_set_sha256": "700c91f93c7816bde39a5fcf8472c81744fa8db119825704faefe16d75d48a43",
+        "metrics_recomputed": true,
+        "rrf_scores_recomputed": true
+      }
+    },
+    {
+      "corpus": "vellora",
+      "configuration": "dense-bm25-rrf",
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/vellora-dense-bm25-rrf-800-80.json",
+      "output_sha256": "800eb052a037aa02806a0794bcada61554d01f10dd9ef2392f08680460c7aed2",
+      "questions": 15,
+      "answerable": 12,
+      "retrieval_failures": 0,
+      "overall": {
+        "1": {
+          "answerable": 12,
+          "hits": 7,
+          "hit_rate": 0.5833333333333334,
+          "quote_recall": 0.5833333333333334
+        },
+        "3": {
+          "answerable": 12,
+          "hits": 9,
+          "hit_rate": 0.75,
+          "quote_recall": 0.75
+        },
+        "5": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        },
+        "10": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 0.01290945850632852,
+            "median_seconds": 0.012852771003963426,
+            "p95_seconds": 0.01309916700120084
+          }
+        },
+        "split_answer": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "vocabulary": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 4,
+              "hit_rate": 1,
+              "quote_recall": 1.0
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 0.013079405995085835,
+            "median_seconds": 0.013080812495900318,
+            "p95_seconds": 0.013154165993910283
+          }
+        },
+        "not_in_corpus": {
+          "questions": 3,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 3,
+            "mean_seconds": 0.012995263998163864,
+            "median_seconds": 0.012965917005203664,
+            "p95_seconds": 0.013075083988951519
+          }
+        },
+        "versions": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "two_hop": {
+          "questions": 0,
+          "overall": {
+            "1": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "3": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "5": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            },
+            "10": {
+              "answerable": 0,
+              "hits": 0,
+              "hit_rate": null,
+              "quote_recall": null
+            }
+          },
+          "latency": {
+            "n": 0,
+            "mean_seconds": null,
+            "median_seconds": null,
+            "p95_seconds": null
+          }
+        },
+        "other": {
+          "questions": 4,
+          "overall": {
+            "1": {
+              "answerable": 4,
+              "hits": 2,
+              "hit_rate": 0.5,
+              "quote_recall": 0.5
+            },
+            "3": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "5": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            },
+            "10": {
+              "answerable": 4,
+              "hits": 3,
+              "hit_rate": 0.75,
+              "quote_recall": 0.75
+            }
+          },
+          "latency": {
+            "n": 4,
+            "mean_seconds": 1.0855593852465972,
+            "median_seconds": 0.013201562498579733,
+            "p95_seconds": 4.30282441599411
+          }
+        }
+      },
+      "all_annotated_evidence_rate": {
+        "1": 0.5833333333333334,
+        "3": 0.75,
+        "5": 0.9166666666666666,
+        "10": 0.9166666666666666
+      },
+      "latency": {
+        "n": 15,
+        "mean_seconds": 0.29901191939910254,
+        "median_seconds": 0.013044791005086154,
+        "p95_seconds": 4.30282441599411
+      },
+      "first_question_seconds": 4.30282441599411,
+      "post_first_latency": {
+        "n": 14,
+        "mean_seconds": 0.013025312499459167,
+        "median_seconds": 0.013027395500103012,
+        "p95_seconds": 0.013358333992073312
+      },
+      "process_wall_seconds": 5.073364500014577,
+      "llm_calls": 0,
+      "empty_retriever_counts": {
+        "dense": 0,
+        "bm25": 0
+      },
+      "verification": {
+        "dataset_exact": true,
+        "canonical_chunks": 43,
+        "returned_chunks_verified": 150,
+        "canonical_id_set_sha256": "700c91f93c7816bde39a5fcf8472c81744fa8db119825704faefe16d75d48a43",
+        "metrics_recomputed": true,
+        "rrf_scores_recomputed": true
+      }
+    }
+  ],
+  "questions": [
+    {
+      "corpus": "kestrel",
+      "id": "q01",
+      "question": "What does error KST-2044 mean and how do I fix it?",
+      "type": "exact_identifier",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q01",
+          "question": "What does error KST-2044 mean and how do I fix it?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            7,
+            7
+          ],
+          "latency_seconds": 5.877653333009221,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q01",
+          "question": "What does error KST-2044 mean and how do I fix it?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            7,
+            7
+          ],
+          "latency_seconds": 0.008281792019261047,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q01",
+          "question": "What does error KST-2044 mean and how do I fix it?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            5,
+            5
+          ],
+          "latency_seconds": 4.626143000001321,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q02",
+      "question": "A user gets KST-4012 when accepting an invitation. What should support tell them?",
+      "type": "exact_identifier",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q02",
+          "question": "A user gets KST-4012 when accepting an invitation. What should support tell them?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2,
+            1
+          ],
+          "latency_seconds": 0.012985042005311698,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q02",
+          "question": "A user gets KST-4012 when accepting an invitation. What should support tell them?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1,
+            6
+          ],
+          "latency_seconds": 0.002588333998573944,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q02",
+          "question": "A user gets KST-4012 when accepting an invitation. What should support tell them?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1,
+            2
+          ],
+          "latency_seconds": 0.020138082996709272,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": -0.5
+          },
+          "5": {
+            "hit": 0,
+            "recall": -0.5
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.5
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.5
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q03",
+      "question": "What happens, step by step, when a customer's card payment fails?",
+      "type": "split_answer",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q03",
+          "question": "What happens, step by step, when a customer's card payment fails?",
+          "type": "split_answer",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.75,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "latency_seconds": 0.01322587497998029,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q03",
+          "question": "What happens, step by step, when a customer's card payment fails?",
+          "type": "split_answer",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.25,
+            "5": 0.25,
+            "10": 0.25
+          },
+          "evidence_first_ranks_within_10": [
+            2,
+            null,
+            null,
+            null
+          ],
+          "latency_seconds": 0.002443708013743162,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q03",
+          "question": "What happens, step by step, when a customer's card payment fails?",
+          "type": "split_answer",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.25,
+            "3": 0.25,
+            "5": 0.25,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1,
+            7,
+            7,
+            7
+          ],
+          "latency_seconds": 0.019121583027299494,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": -1,
+            "recall": -0.75
+          },
+          "3": {
+            "hit": 0,
+            "recall": -0.75
+          },
+          "5": {
+            "hit": 0,
+            "recall": -0.75
+          },
+          "10": {
+            "hit": 0,
+            "recall": -0.75
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": -0.5
+          },
+          "3": {
+            "hit": 0,
+            "recall": -0.75
+          },
+          "5": {
+            "hit": 0,
+            "recall": -0.75
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 1,
+            "recall": 0.25
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.75
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q04",
+      "question": "Which plans include single sign-on, and how does an admin set it up?",
+      "type": "split_answer",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q04",
+          "question": "Which plans include single sign-on, and how does an admin set it up?",
+          "type": "split_answer",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3,
+            1
+          ],
+          "latency_seconds": 0.013094416004605591,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q04",
+          "question": "Which plans include single sign-on, and how does an admin set it up?",
+          "type": "split_answer",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3,
+            1
+          ],
+          "latency_seconds": 0.002438791998429224,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q04",
+          "question": "Which plans include single sign-on, and how does an admin set it up?",
+          "type": "split_answer",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3,
+            1
+          ],
+          "latency_seconds": 0.01973366699530743,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q05",
+      "question": "I lost my phone and I can't log in anymore. What can I do?",
+      "type": "vocabulary",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q05",
+          "question": "I lost my phone and I can't log in anymore. What can I do?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1,
+            1
+          ],
+          "latency_seconds": 0.012996416015084833,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q05",
+          "question": "I lost my phone and I can't log in anymore. What can I do?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "evidence_first_ranks_within_10": [
+            null,
+            null
+          ],
+          "latency_seconds": 0.0024751669843681157,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q05",
+          "question": "I lost my phone and I can't log in anymore. What can I do?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            8,
+            8
+          ],
+          "latency_seconds": 0.01865895898663439,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "3": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "5": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "10": {
+            "hit": -1,
+            "recall": -1.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "3": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "5": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 1,
+            "recall": 1.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q06",
+      "question": "Can I get a refund on my annual plan 45 days after it renewed?",
+      "type": "versions",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q06",
+          "question": "Can I get a refund on my annual plan 45 days after it renewed?",
+          "type": "versions",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3,
+            3
+          ],
+          "latency_seconds": 0.013799832988297567,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q06",
+          "question": "Can I get a refund on my annual plan 45 days after it renewed?",
+          "type": "versions",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2,
+            2
+          ],
+          "latency_seconds": 0.00245124998036772,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q06",
+          "question": "Can I get a refund on my annual plan 45 days after it renewed?",
+          "type": "versions",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3,
+            3
+          ],
+          "latency_seconds": 0.01834629100630991,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q07",
+      "question": "How much do I save by paying annually instead of monthly?",
+      "type": "versions",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q07",
+          "question": "How much do I save by paying annually instead of monthly?",
+          "type": "versions",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2
+          ],
+          "latency_seconds": 0.014195541996741667,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q07",
+          "question": "How much do I save by paying annually instead of monthly?",
+          "type": "versions",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3
+          ],
+          "latency_seconds": 0.0024014170048758388,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q07",
+          "question": "How much do I save by paying annually instead of monthly?",
+          "type": "versions",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3
+          ],
+          "latency_seconds": 0.018834832997526973,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q08",
+      "question": "Error KST-5031 happened on the last two scheduled reports. Which team should support contact, and where?",
+      "type": "two_hop",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q08",
+          "question": "Error KST-5031 happened on the last two scheduled reports. Which team should support contact, and where?",
+          "type": "two_hop",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5,
+            "10": 0.5
+          },
+          "evidence_first_ranks_within_10": [
+            1,
+            null
+          ],
+          "latency_seconds": 0.012803457997506484,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q08",
+          "question": "Error KST-5031 happened on the last two scheduled reports. Which team should support contact, and where?",
+          "type": "two_hop",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5,
+            "10": 0.5
+          },
+          "evidence_first_ranks_within_10": [
+            1,
+            null
+          ],
+          "latency_seconds": 0.002451915992423892,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q08",
+          "question": "Error KST-5031 happened on the last two scheduled reports. Which team should support contact, and where?",
+          "type": "two_hop",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5,
+            "10": 0.5
+          },
+          "evidence_first_ranks_within_10": [
+            1,
+            null
+          ],
+          "latency_seconds": 0.020051500003319234,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q09",
+      "question": "Is there a Kestrel mobile app for iPhone?",
+      "type": "not_in_corpus",
+      "answerable": false,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q09",
+          "question": "Is there a Kestrel mobile app for iPhone?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.012874542007921264,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q09",
+          "question": "Is there a Kestrel mobile app for iPhone?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.002408583997748792,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q09",
+          "question": "Is there a Kestrel mobile app for iPhone?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.01918262499384582,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        }
+      }
+    },
+    {
+      "corpus": "kestrel",
+      "id": "q10",
+      "question": "How much does one seat cost per month on the Business plan?",
+      "type": "not_in_corpus",
+      "answerable": false,
+      "configurations": {
+        "dense": {
+          "corpus": "kestrel",
+          "configuration": "dense",
+          "id": "q10",
+          "question": "How much does one seat cost per month on the Business plan?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.012882999988505617,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "kestrel",
+          "configuration": "bm25",
+          "id": "q10",
+          "question": "How much does one seat cost per month on the Business plan?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.0024165830109268427,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "kestrel",
+          "configuration": "dense-bm25-rrf",
+          "id": "q10",
+          "question": "How much does one seat cost per month on the Business plan?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.017896041012136266,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q01",
+      "question": "How large is the Vellora Duo water tank?",
+      "type": "other",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q01",
+          "question": "How large is the Vellora Duo water tank?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "evidence_first_ranks_within_10": [
+            null
+          ],
+          "latency_seconds": 5.436025584000163,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q01",
+          "question": "How large is the Vellora Duo water tank?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "evidence_first_ranks_within_10": [
+            null
+          ],
+          "latency_seconds": 0.007910792017355561,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q01",
+          "question": "How large is the Vellora Duo water tank?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "evidence_first_ranks_within_10": [
+            null
+          ],
+          "latency_seconds": 4.30282441599411,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q02",
+      "question": "How much coffee does the espresso button make?",
+      "type": "other",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q02",
+          "question": "How much coffee does the espresso button make?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.010991582996211946,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q02",
+          "question": "How much coffee does the espresso button make?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.002283708017785102,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q02",
+          "question": "How much coffee does the espresso button make?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.013358333992073312,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q03",
+      "question": "How long is the Vellora Duo warranty?",
+      "type": "other",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q03",
+          "question": "How long is the Vellora Duo warranty?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.010694541007978842,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q03",
+          "question": "How long is the Vellora Duo warranty?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.002211500017438084,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q03",
+          "question": "How long is the Vellora Duo warranty?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.013044791005086154,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q04",
+      "question": "How often should I replace the water filter?",
+      "type": "other",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q04",
+          "question": "How often should I replace the water filter?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.010537833004491404,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q04",
+          "question": "How often should I replace the water filter?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2
+          ],
+          "latency_seconds": 0.0021938339923508465,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q04",
+          "question": "How often should I replace the water filter?",
+          "type": "other",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2
+          ],
+          "latency_seconds": 0.01300999999511987,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q05",
+      "question": "What should I do for error E47?",
+      "type": "exact_identifier",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q05",
+          "question": "What should I do for error E47?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            7
+          ],
+          "latency_seconds": 0.010526917001698166,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q05",
+          "question": "What should I do for error E47?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.0021784580021630973,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q05",
+          "question": "What should I do for error E47?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.01283950000652112,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q06",
+      "question": "What does E22 mean and how do I fix it?",
+      "type": "exact_identifier",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q06",
+          "question": "What does E22 mean and how do I fix it?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.01085479199537076,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q06",
+          "question": "What does E22 mean and how do I fix it?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.00226491701323539,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q06",
+          "question": "What does E22 mean and how do I fix it?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.01309916700120084,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q07",
+      "question": "How do I clear error E86?",
+      "type": "exact_identifier",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q07",
+          "question": "How do I clear error E86?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": false
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 0.0
+          },
+          "evidence_first_ranks_within_10": [
+            null
+          ],
+          "latency_seconds": 0.010460334015078843,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q07",
+          "question": "How do I clear error E86?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.0021652499854099005,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q07",
+          "question": "How do I clear error E86?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            4
+          ],
+          "latency_seconds": 0.012833125016186386,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 1,
+            "recall": 1.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 1,
+            "recall": 1.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "3": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q08",
+      "question": "What does E70 require after descaling?",
+      "type": "exact_identifier",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q08",
+          "question": "What does E70 require after descaling?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.010490374988876283,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q08",
+          "question": "What does E70 require after descaling?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.0021732919849455357,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q08",
+          "question": "What does E70 require after descaling?",
+          "type": "exact_identifier",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.01286604200140573,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q09",
+      "question": "The grounds container was emptied but the counter has not reset. Why?",
+      "type": "vocabulary",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q09",
+          "question": "The grounds container was emptied but the counter has not reset. Why?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            9
+          ],
+          "latency_seconds": 0.011912207992281765,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q09",
+          "question": "The grounds container was emptied but the counter has not reset. Why?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2
+          ],
+          "latency_seconds": 0.0022004590136930346,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q09",
+          "question": "The grounds container was emptied but the counter has not reset. Why?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            5
+          ],
+          "latency_seconds": 0.013001832994632423,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q10",
+      "question": "Can I clean the brewing unit in the dishwasher?",
+      "type": "vocabulary",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q10",
+          "question": "Can I clean the brewing unit in the dishwasher?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.010926624992862344,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q10",
+          "question": "Can I clean the brewing unit in the dishwasher?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.0021895000245422125,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q10",
+          "question": "Can I clean the brewing unit in the dishwasher?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.01309070800198242,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q11",
+      "question": "What preparation is needed after the machine sits unused for three weeks?",
+      "type": "vocabulary",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q11",
+          "question": "What preparation is needed after the machine sits unused for three weeks?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": false,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 0.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            6
+          ],
+          "latency_seconds": 0.010980291001033038,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q11",
+          "question": "What preparation is needed after the machine sits unused for three weeks?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            2
+          ],
+          "latency_seconds": 0.0022110420104581863,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q11",
+          "question": "What preparation is needed after the machine sits unused for three weeks?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.013154165993910283,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q12",
+      "question": "What is excluded from warranty even when using soft water?",
+      "type": "vocabulary",
+      "answerable": true,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q12",
+          "question": "What is excluded from warranty even when using soft water?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": false,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 0.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            5
+          ],
+          "latency_seconds": 0.010938499995972961,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q12",
+          "question": "What is excluded from warranty even when using soft water?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": true,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 1.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            1
+          ],
+          "latency_seconds": 0.002194041997427121,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q12",
+          "question": "What is excluded from warranty even when using soft water?",
+          "type": "vocabulary",
+          "answerable": true,
+          "hits": {
+            "1": false,
+            "3": true,
+            "5": true,
+            "10": true
+          },
+          "recall": {
+            "1": 0.0,
+            "3": 1.0,
+            "5": 1.0,
+            "10": 1.0
+          },
+          "evidence_first_ranks_within_10": [
+            3
+          ],
+          "latency_seconds": 0.013070916989818215,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "3": {
+            "hit": 1,
+            "recall": 1.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": -1,
+            "recall": -1.0
+          },
+          "3": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "5": {
+            "hit": 0,
+            "recall": 0.0
+          },
+          "10": {
+            "hit": 0,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q13",
+      "question": "What is the Vellora Duo Wi-Fi password?",
+      "type": "not_in_corpus",
+      "answerable": false,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q13",
+          "question": "What is the Vellora Duo Wi-Fi password?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.010608083015540615,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q13",
+          "question": "What is the Vellora Duo Wi-Fi password?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.0021716250048484653,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q13",
+          "question": "What is the Vellora Duo Wi-Fi password?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.012965917005203664,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q14",
+      "question": "What is the exact retail price of the Vellora Duo?",
+      "type": "not_in_corpus",
+      "answerable": false,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q14",
+          "question": "What is the exact retail price of the Vellora Duo?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.011039249977329746,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q14",
+          "question": "What is the exact retail price of the Vellora Duo?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.00218341700383462,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q14",
+          "question": "What is the exact retail price of the Vellora Duo?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.013075083988951519,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        }
+      }
+    },
+    {
+      "corpus": "vellora",
+      "id": "q15",
+      "question": "Who won the 2026 football World Cup?",
+      "type": "not_in_corpus",
+      "answerable": false,
+      "configurations": {
+        "dense": {
+          "corpus": "vellora",
+          "configuration": "dense",
+          "id": "q15",
+          "question": "Who won the 2026 football World Cup?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.010577959008514881,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "bm25": {
+          "corpus": "vellora",
+          "configuration": "bm25",
+          "id": "q15",
+          "question": "Who won the 2026 football World Cup?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.0021632919961120933,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        },
+        "dense-bm25-rrf": {
+          "corpus": "vellora",
+          "configuration": "dense-bm25-rrf",
+          "id": "q15",
+          "question": "Who won the 2026 football World Cup?",
+          "type": "not_in_corpus",
+          "answerable": false,
+          "hits": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null,
+            "10": null
+          },
+          "evidence_first_ranks_within_10": [],
+          "latency_seconds": 0.012944791000336409,
+          "retrieval_failures": 0,
+          "empty_retrievers": []
+        }
+      },
+      "deltas": {
+        "bm25_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_dense": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        },
+        "dense-bm25-rrf_vs_bm25": {
+          "1": {
+            "hit": null,
+            "recall": null
+          },
+          "3": {
+            "hit": null,
+            "recall": null
+          },
+          "5": {
+            "hit": null,
+            "recall": null
+          },
+          "10": {
+            "hit": null,
+            "recall": null
+          }
+        }
+      }
+    }
+  ],
+  "annotation_checks": [
+    {
+      "corpus": "kestrel",
+      "question_id": "q01",
+      "source": "support-runbook-errors.md",
+      "quote": "the Kestrel addresses are missing from it",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q01",
+      "source": "support-runbook-errors.md",
+      "quote": "add both 203.0.113.10 and 203.0.113.11 to the allowlist",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q02",
+      "source": "support-runbook-errors.md",
+      "quote": "all seats of the plan are already used",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q02",
+      "source": "support-runbook-errors.md",
+      "quote": "an Admin of the workspace must remove a member to free a seat, or the Owner must add seats or move to a larger plan",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q03",
+      "source": "billing-policy-2026.md",
+      "quote": "We then retry the payment automatically 1 day, 3 days and 7 days after the first attempt",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q03",
+      "source": "billing-policy-2026.md",
+      "quote": "a grace period of 21 days from the first failed attempt",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q03",
+      "source": "billing-policy-2026.md",
+      "quote": "the workspace becomes read-only",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q03",
+      "source": "billing-policy-2026.md",
+      "quote": "60 days after the first failed attempt, the workspace is suspended",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q04",
+      "source": "product-guide.md",
+      "quote": "| Single sign-on (SAML) | \u2014 | \u2014 | \u2014 | Yes | Yes |",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q04",
+      "source": "product-guide.md",
+      "quote": "downloads the Kestrel service provider metadata",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q05",
+      "source": "product-guide.md",
+      "quote": "If you no longer have your authenticator device, use one of your backup codes",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q05",
+      "source": "product-guide.md",
+      "quote": "ask an Admin of your workspace to reset your second factor",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q06",
+      "source": "billing-policy-2026.md",
+      "quote": "within 60 days of the purchase or renewal date",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q06",
+      "source": "billing-policy-2026.md",
+      "quote": "pro-rated from the date of the request",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q07",
+      "source": "billing-policy-2026.md",
+      "quote": "Customers who choose annual billing receive a 20% discount",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q08",
+      "source": "support-runbook-errors.md",
+      "quote": "escalate to the team that owns postroom",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "kestrel",
+      "question_id": "q08",
+      "source": "service-catalog.md",
+      "quote": "| Messaging | In\u00e8s Moreau | #oncall-messaging | 08:00\u201320:00, weekdays |",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q01",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "water tank (1.8 litres)",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q02",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "espresso for a short coffee (40 ml)",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q03",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "two-year warranty from the date of purchase",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q04",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "A filter lasts two months, or 50 litres of water.",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q05",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "turn the upper burr anticlockwise until the object falls out",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q06",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "Set the grind adjuster two steps coarser.",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q07",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "Press and hold the menu button for five seconds",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q08",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "run the rinsing programme twice.",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q09",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "removed for at least five seconds",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q10",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "Do not use washing-up liquid or the dishwasher",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q11",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "has not been used for more than two weeks, the circuit must be filled with water.",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    },
+    {
+      "corpus": "vellora",
+      "question_id": "q12",
+      "source": "vellora-duo-espresso-machine.txt",
+      "quote": "Damage caused by limescale is not covered by the warranty.",
+      "source_occurrences": 1,
+      "wholly_contained_in_canonical_chunk": true
+    }
+  ]
+}

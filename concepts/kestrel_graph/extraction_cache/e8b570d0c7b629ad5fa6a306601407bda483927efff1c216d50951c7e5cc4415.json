@@ -1,0 +1,40 @@
+{
+  "attempt_id": "080880f058c04cf68641b6bf67688529",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 2240,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:1440:2240",
+    "line": 19,
+    "name": "billing-policy-2026.md",
+    "start": 1440,
+    "text": "tomers can also pay by bank transfer against an invoice, with payment due within 30 days of the invoice date.\n\nThe payment method can be updated by the workspace Owner from **Settings → Plan → Payment method**. We do not store full card or account numbers; they are held by our payment processor.\n\n## 4. Invoices\n\nAn invoice is issued for every charge and sent by e-mail to the billing contact of the workspace. Invoices can also be downloaded from **Settings → Plan → Invoices**. The billing contact and the company details printed on invoices (name, address, VAT number) can be changed by the Owner; changes apply to future invoices only. A corrected copy of a past invoice can be requested from support within 12 months of its date.\n\n## 5. Adding and removing seats\n\nSeats can be added at any time"
+  },
+  "extracted_at": "2026-11-08T12:07:36.667351+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 19.234859499993036,
+  "key": "e8b570d0c7b629ad5fa6a306601407bda483927efff1c216d50951c7e5cc4415",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1293,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "9WXwapaRMraGnsEPzsLxoAw",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "61150ea643fdc88b4b320786af140771f6b2cdf820e9a52f3e4352cb8c5d79ae"
+}

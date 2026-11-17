@@ -1,0 +1,40 @@
+{
+  "attempt_id": "e5969e2362ee46cabb9daba5b27c8d4e",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 5840,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5040:5840",
+    "line": 89,
+    "name": "support-runbook-errors.md",
+    "start": 5040,
+    "text": "use a seat; the check happens at acceptance.\n**Support action:** explain that an Admin of the workspace must remove a member to free a seat, or the Owner must add seats or move to a larger plan. Once a seat is free, the same invitation link works again as long as it is less than 7 days old.\n**Escalate:** no.\n\n### KST-4019 — Ownership transfer pending\n\n**User sees:** \"An ownership transfer is waiting for confirmation.\"\n**Cause:** the Owner started a transfer, and one of the two people has not confirmed it by e-mail.\n**Support action:** ask both people to check their inbox and spam folder. The transfer can be cancelled by the current Owner from **Settings → Members**.\n**Escalate:** no.\n\n## Delivery and embedding (KST-5xxx)\n\n### KST-5031 — Scheduled report not delivered\n\n**User sees:** the sc"
+  },
+  "extracted_at": "2026-11-08T12:14:02.214396+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 1.5371329160116147,
+  "key": "4ec00170d3b28a1dc9baa85e92e07bc72f83d04c7534d5c9b46fcf100ba54b8a",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1319,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "iWfwaoKHBfr4xN8PorfomA8",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "4caab88dfa495fd07ea46a63a7c8ec0c89286da742246bc2f7057cf4850ca518"
+}

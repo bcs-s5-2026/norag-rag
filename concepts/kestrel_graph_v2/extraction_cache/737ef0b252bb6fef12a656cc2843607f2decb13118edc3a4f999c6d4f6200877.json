@@ -1,0 +1,42 @@
+{
+  "attempt_id": "c7f1ffdf172b4367a207bcd2c2dc2c2b",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 4400,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:3600:4400",
+    "line": 47,
+    "name": "billing-policy-2026.md",
+    "start": 3600,
+    "text": " on file at the time of the retry, so updating the card before the next retry is usually enough to solve the problem. No late fee is charged.\n\nIf all retries fail, the workspace enters a grace period of 21 days from the first failed attempt, during which everything keeps working. A banner reminds Admins that payment is overdue.\n\nAfter the grace period, the workspace becomes read-only: members can view dashboards but cannot edit them, scheduled reports are paused, and datasets stop refreshing.\n\nIf the amount is still unpaid 60 days after the first failed attempt, the workspace is suspended: nobody can sign in to it until the outstanding amount is paid. A suspended workspace is not deleted, and returns to normal as soon as the payment succeeds.\n\n## 8. Cancellation\n\nThe Owner can cancel a pai"
+  },
+  "extracted_at": "2026-11-08T13:07:57.486249+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 19.167595333012287,
+  "key": "737ef0b252bb6fef12a656cc2843607f2decb13118edc3a4f999c6d4f6200877",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1887,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 10,
+    "response_id": "GnTwaob5Icu7kdUP-7qW0QI",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "39bb6c4d7b71175ae790b9e65859567901e9e234935da3738f8d1a9218049913"
+}

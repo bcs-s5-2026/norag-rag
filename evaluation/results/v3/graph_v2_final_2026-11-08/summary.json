@@ -1,0 +1,2393 @@
+{
+  "runs": {
+    "kestrel-bm25": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "bm25"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 5,
+          "hit_rate": 0.5,
+          "quote_recall": 0.25
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 8,
+          "hit_rate": 0.8,
+          "quote_recall": 0.5583333333333333
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 8,
+          "hit_rate": 0.8,
+          "quote_recall": 0.5583333333333333
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 9,
+          "hit_rate": 0.9,
+          "quote_recall": 0.775
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.5
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.611111111111111
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.611111111111111
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.8333333333333334
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 2.946267333754804,
+        "median": 2.450250001857057,
+        "max": 8.381583989830688
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0
+    },
+    "kestrel-dense-bm25-graph-d40": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "dense",
+        "bm25",
+        "graph"
+      ],
+      "candidate_depth": 40,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 3,
+          "hit_rate": 0.3,
+          "quote_recall": 0.15
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 4,
+          "hit_rate": 0.4,
+          "quote_recall": 0.35
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 7,
+          "hit_rate": 0.7,
+          "quote_recall": 0.5083333333333333
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 9,
+          "hit_rate": 0.9,
+          "quote_recall": 0.8666666666666666
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.16666666666666666
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.3333333333333333
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.4444444444444444
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.8888888888888888
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 484.1053090785863,
+        "median": 17.854145989986137,
+        "max": 5611.233292001998
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0,
+      "graph_fusion": {
+        "1": {
+          "graph_chunks_in_top_k": 11,
+          "questions_with_graph_chunk": 11
+        },
+        "3": {
+          "graph_chunks_in_top_k": 31,
+          "questions_with_graph_chunk": 11
+        },
+        "5": {
+          "graph_chunks_in_top_k": 38,
+          "questions_with_graph_chunk": 11
+        },
+        "10": {
+          "graph_chunks_in_top_k": 41,
+          "questions_with_graph_chunk": 11
+        }
+      },
+      "graph_candidates_total": 44,
+      "graph_build_id": "f54cf5635cdf079b0efa5eab815e79c73dc73e349dea3d4971635326aa0e8481"
+    },
+    "kestrel-dense-bm25-graph-v1": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "dense",
+        "bm25",
+        "graph"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 3,
+          "hit_rate": 0.3,
+          "quote_recall": 0.14166666666666666
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 7,
+          "hit_rate": 0.7,
+          "quote_recall": 0.425
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 9,
+          "hit_rate": 0.9,
+          "quote_recall": 0.7083333333333333
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 10,
+          "hit_rate": 1.0,
+          "quote_recall": 0.95
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.125
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.375
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.38888888888888884
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.611111111111111
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.8333333333333334
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 447.32363875179243,
+        "median": 17.290229006903246,
+        "max": 5177.598583017243
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0,
+      "graph_fusion": {
+        "1": {
+          "graph_chunks_in_top_k": 9,
+          "questions_with_graph_chunk": 9
+        },
+        "3": {
+          "graph_chunks_in_top_k": 12,
+          "questions_with_graph_chunk": 9
+        },
+        "5": {
+          "graph_chunks_in_top_k": 12,
+          "questions_with_graph_chunk": 9
+        },
+        "10": {
+          "graph_chunks_in_top_k": 14,
+          "questions_with_graph_chunk": 9
+        }
+      },
+      "graph_candidates_total": 18,
+      "graph_build_id": "529ee6bf820a7554a5d0352d10d92e39d6df992e0ae81f99c9a584c34e797794"
+    },
+    "kestrel-dense-bm25-graph": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "dense",
+        "bm25",
+        "graph"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 3,
+          "hit_rate": 0.3,
+          "quote_recall": 0.15
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 6,
+          "hit_rate": 0.6,
+          "quote_recall": 0.35833333333333334
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 9,
+          "hit_rate": 0.9,
+          "quote_recall": 0.7583333333333333
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 10,
+          "hit_rate": 1.0,
+          "quote_recall": 1.0
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.16666666666666666
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.27777777777777773
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.7777777777777777
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 489.47787866927683,
+        "median": 19.458229493466206,
+        "max": 5663.744666991988
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0,
+      "graph_fusion": {
+        "1": {
+          "graph_chunks_in_top_k": 11,
+          "questions_with_graph_chunk": 11
+        },
+        "3": {
+          "graph_chunks_in_top_k": 22,
+          "questions_with_graph_chunk": 11
+        },
+        "5": {
+          "graph_chunks_in_top_k": 25,
+          "questions_with_graph_chunk": 11
+        },
+        "10": {
+          "graph_chunks_in_top_k": 30,
+          "questions_with_graph_chunk": 11
+        }
+      },
+      "graph_candidates_total": 44,
+      "graph_build_id": "f54cf5635cdf079b0efa5eab815e79c73dc73e349dea3d4971635326aa0e8481"
+    },
+    "kestrel-dense-bm25": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "dense",
+        "bm25"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 5,
+          "hit_rate": 0.5,
+          "quote_recall": 0.20833333333333334
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 7,
+          "hit_rate": 0.7,
+          "quote_recall": 0.5416666666666667
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 9,
+          "hit_rate": 0.9,
+          "quote_recall": 0.7416666666666667
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 10,
+          "hit_rate": 1.0,
+          "quote_recall": 0.95
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.375
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.27777777777777773
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.38888888888888884
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.7222222222222222
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.8333333333333334
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 464.9012951728461,
+        "median": 15.74581250315532,
+        "max": 5404.857792018447
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0
+    },
+    "kestrel-dense-graph": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "dense",
+        "graph"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 3,
+          "hit_rate": 0.3,
+          "quote_recall": 0.15
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 6,
+          "hit_rate": 0.6,
+          "quote_recall": 0.4833333333333333
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 8,
+          "hit_rate": 0.8,
+          "quote_recall": 0.7166666666666667
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 10,
+          "hit_rate": 1.0,
+          "quote_recall": 0.9
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.16666666666666666
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.4444444444444444
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.5555555555555555
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.6666666666666666
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 459.38075692053343,
+        "median": 14.882853996823542,
+        "max": 5348.368625011062
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0,
+      "graph_fusion": {
+        "1": {
+          "graph_chunks_in_top_k": 11,
+          "questions_with_graph_chunk": 11
+        },
+        "3": {
+          "graph_chunks_in_top_k": 28,
+          "questions_with_graph_chunk": 11
+        },
+        "5": {
+          "graph_chunks_in_top_k": 35,
+          "questions_with_graph_chunk": 11
+        },
+        "10": {
+          "graph_chunks_in_top_k": 43,
+          "questions_with_graph_chunk": 11
+        }
+      },
+      "graph_candidates_total": 44,
+      "graph_build_id": "f54cf5635cdf079b0efa5eab815e79c73dc73e349dea3d4971635326aa0e8481"
+    },
+    "kestrel-dense": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "dense"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 6,
+          "hit_rate": 0.6,
+          "quote_recall": 0.35833333333333334
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 8,
+          "hit_rate": 0.8,
+          "quote_recall": 0.7166666666666667
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 9,
+          "hit_rate": 0.9,
+          "quote_recall": 0.75
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 10,
+          "hit_rate": 1.0,
+          "quote_recall": 0.95
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 0.625
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.27777777777777773
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 2,
+            "hit_rate": 0.6666666666666666,
+            "quote_recall": 0.38888888888888884
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.5
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 3,
+            "hit_rate": 1.0,
+            "quote_recall": 0.8333333333333334
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 2,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 1,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 606.3812221667225,
+        "median": 13.047332991845906,
+        "max": 7133.235832996434
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0
+    },
+    "kestrel-graph": {
+      "corpus": "kestrel",
+      "retrievers": [
+        "graph"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 10,
+          "hits": 2,
+          "hit_rate": 0.2,
+          "quote_recall": 0.1
+        },
+        "3": {
+          "answerable": 10,
+          "hits": 3,
+          "hit_rate": 0.3,
+          "quote_recall": 0.25
+        },
+        "5": {
+          "answerable": 10,
+          "hits": 3,
+          "hit_rate": 0.3,
+          "quote_recall": 0.25
+        },
+        "10": {
+          "answerable": 10,
+          "hits": 3,
+          "hit_rate": 0.3,
+          "quote_recall": 0.25
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "split_answer": {
+          "1": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 1,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          }
+        },
+        "two_hop": {
+          "1": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.16666666666666666
+          },
+          "3": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.3333333333333333
+          },
+          "5": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.3333333333333333
+          },
+          "10": {
+            "answerable": 3,
+            "hits": 1,
+            "hit_rate": 0.3333333333333333,
+            "quote_recall": 0.3333333333333333
+          }
+        },
+        "versions": {
+          "1": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "5": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "10": {
+            "answerable": 2,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "3": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "5": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          },
+          "10": {
+            "answerable": 1,
+            "hits": 0,
+            "hit_rate": 0.0,
+            "quote_recall": 0.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 2.6860936680653444,
+        "median": 2.0677085121860728,
+        "max": 9.220167004968971
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0,
+      "graph_fusion": {
+        "1": {
+          "graph_chunks_in_top_k": 11,
+          "questions_with_graph_chunk": 11
+        },
+        "3": {
+          "graph_chunks_in_top_k": 32,
+          "questions_with_graph_chunk": 11
+        },
+        "5": {
+          "graph_chunks_in_top_k": 41,
+          "questions_with_graph_chunk": 11
+        },
+        "10": {
+          "graph_chunks_in_top_k": 44,
+          "questions_with_graph_chunk": 11
+        }
+      },
+      "graph_candidates_total": 44,
+      "graph_build_id": "f54cf5635cdf079b0efa5eab815e79c73dc73e349dea3d4971635326aa0e8481"
+    },
+    "vellora-bm25": {
+      "corpus": "vellora",
+      "retrievers": [
+        "bm25"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 12,
+          "hits": 8,
+          "hit_rate": 0.6666666666666666,
+          "quote_recall": 0.6666666666666666
+        },
+        "3": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        },
+        "5": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        },
+        "10": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "other": {
+          "1": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 2.5431415997445583,
+        "median": 2.1583749912679195,
+        "max": 7.829958020010963
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0
+    },
+    "vellora-dense-bm25": {
+      "corpus": "vellora",
+      "retrievers": [
+        "dense",
+        "bm25"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 12,
+          "hits": 7,
+          "hit_rate": 0.5833333333333334,
+          "quote_recall": 0.5833333333333334
+        },
+        "3": {
+          "answerable": 12,
+          "hits": 9,
+          "hit_rate": 0.75,
+          "quote_recall": 0.75
+        },
+        "5": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        },
+        "10": {
+          "answerable": 12,
+          "hits": 11,
+          "hit_rate": 0.9166666666666666,
+          "quote_recall": 0.9166666666666666
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "other": {
+          "1": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 354.31122493076447,
+        "median": 12.855999986641109,
+        "max": 5134.478499996476
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0
+    },
+    "vellora-dense": {
+      "corpus": "vellora",
+      "retrievers": [
+        "dense"
+      ],
+      "candidate_depth": 20,
+      "overall": {
+        "1": {
+          "answerable": 12,
+          "hits": 6,
+          "hit_rate": 0.5,
+          "quote_recall": 0.5
+        },
+        "3": {
+          "answerable": 12,
+          "hits": 6,
+          "hit_rate": 0.5,
+          "quote_recall": 0.5
+        },
+        "5": {
+          "answerable": 12,
+          "hits": 7,
+          "hit_rate": 0.5833333333333334,
+          "quote_recall": 0.5833333333333334
+        },
+        "10": {
+          "answerable": 12,
+          "hits": 10,
+          "hit_rate": 0.8333333333333334,
+          "quote_recall": 0.8333333333333334
+        }
+      },
+      "by_type": {
+        "exact_identifier": {
+          "1": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          }
+        },
+        "not_in_corpus": {
+          "1": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "3": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "5": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          },
+          "10": {
+            "answerable": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "quote_recall": null
+          }
+        },
+        "other": {
+          "1": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 3,
+            "hit_rate": 0.75,
+            "quote_recall": 0.75
+          }
+        },
+        "vocabulary": {
+          "1": {
+            "answerable": 4,
+            "hits": 1,
+            "hit_rate": 0.25,
+            "quote_recall": 0.25
+          },
+          "3": {
+            "answerable": 4,
+            "hits": 1,
+            "hit_rate": 0.25,
+            "quote_recall": 0.25
+          },
+          "5": {
+            "answerable": 4,
+            "hits": 2,
+            "hit_rate": 0.5,
+            "quote_recall": 0.5
+          },
+          "10": {
+            "answerable": 4,
+            "hits": 4,
+            "hit_rate": 1.0,
+            "quote_recall": 1.0
+          }
+        }
+      },
+      "latency_ms": {
+        "mean": 362.54930266489583,
+        "median": 10.79408300574869,
+        "max": 5287.309000006644
+      },
+      "llm_calls_per_question": 0,
+      "tokens_per_question": 0
+    }
+  },
+  "graph_v2": {
+    "build_id": "f54cf5635cdf079b0efa5eab815e79c73dc73e349dea3d4971635326aa0e8481",
+    "complete": true,
+    "model": "gemini-3.6-flash",
+    "recipe": "kestrel-grounded-extraction-v2",
+    "entities": 42,
+    "relations": 39,
+    "entity_types": {
+      "Service": 10,
+      "ErrorCode": 6,
+      "Feature": 6,
+      "Channel": 6,
+      "Team": 8,
+      "Policy": 2,
+      "Plan": 4
+    },
+    "relation_types": {
+      "AVAILABLE_ON": 14,
+      "CONTACT_CHANNEL": 6,
+      "OWNED_BY": 11,
+      "ESCALATE_TO": 6,
+      "REPLACED_BY": 1,
+      "RAISED_BY": 1
+    },
+    "merges": 14,
+    "merge_kinds": {
+      "normalized_exact": 14
+    },
+    "multi_name_entities": 0,
+    "heading_anchored_proofs": 11,
+    "chunks_with_relations": 17,
+    "total_chunks": 43,
+    "coverage": {
+      "empty_extractions": 26,
+      "raw_triples": 41,
+      "total_chunks": 43,
+      "valid_chunks": 43
+    },
+    "build_stats": {
+      "actual_model_identifiers": [
+        "gemini-3.6-flash"
+      ],
+      "cost_complete": true,
+      "dropped_items": 0,
+      "finished_run_latency_seconds": 405.5596992079809,
+      "input_tokens": 45766,
+      "input_usage_unknown_calls": 0,
+      "kept_triples": 26,
+      "known_input_tokens": 45766,
+      "known_output_tokens": 3402,
+      "known_usage_estimated_usd": 0.047082,
+      "output_tokens": 3402,
+      "output_usage_unknown_calls": 0,
+      "preflight_failures": 0,
+      "provider_failures": 0,
+      "referenced_extraction_models": [
+        "gemini-3.6-flash"
+      ],
+      "reserved_llm_calls": 24,
+      "unfinished_runs": 0,
+      "unresolved_calls": 0,
+      "validation_rejections": 0
+    }
+  },
+  "graph_v1": {
+    "build_id": "529ee6bf820a7554a5d0352d10d92e39d6df992e0ae81f99c9a584c34e797794",
+    "complete": false,
+    "model": "gemini-3.5-flash-lite",
+    "recipe": "kestrel-grounded-extraction-v1",
+    "entities": 17,
+    "relations": 10,
+    "entity_types": {
+      "Service": 6,
+      "ErrorCode": 2,
+      "Team": 7,
+      "Policy": 1,
+      "Channel": 1
+    },
+    "relation_types": {
+      "OWNED_BY": 7,
+      "CONTACT_CHANNEL": 1,
+      "RAISED_BY": 1,
+      "ESCALATE_TO": 1
+    },
+    "merges": 3,
+    "merge_kinds": {
+      "normalized_exact": 3
+    },
+    "multi_name_entities": 0,
+    "heading_anchored_proofs": 0,
+    "chunks_with_relations": 7,
+    "total_chunks": 43,
+    "coverage": {
+      "context_repaired_chunks": 6,
+      "context_repaired_triples": 9,
+      "empty_extractions": 27,
+      "raw_triples": 2,
+      "total_chunks": 43,
+      "valid_chunks": 29
+    },
+    "build_stats": {
+      "actual_model_identifiers": [
+        "gemini-3.5-flash-lite"
+      ],
+      "cost_complete": false,
+      "finished_run_latency_seconds": 237.4652723330073,
+      "input_tokens": null,
+      "input_usage_unknown_calls": 4,
+      "known_input_tokens": 50239,
+      "known_output_tokens": 1845,
+      "known_usage_estimated_usd": 0.019684199999999995,
+      "output_tokens": null,
+      "output_usage_unknown_calls": 4,
+      "preflight_failures": 0,
+      "provider_failures": 4,
+      "referenced_extraction_models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "reserved_llm_calls": 43,
+      "unfinished_runs": 0,
+      "unresolved_calls": 0,
+      "validation_rejections": 10
+    }
+  },
+  "changes_at_5": {
+    "kestrel-dense -> kestrel-dense-bm25": [
+      {
+        "id": "q01",
+        "type": "exact_identifier",
+        "before": 0.0,
+        "after": 1.0
+      },
+      {
+        "id": "q03",
+        "type": "split_answer",
+        "before": 1.0,
+        "after": 0.25
+      },
+      {
+        "id": "q05",
+        "type": "vocabulary",
+        "before": 1.0,
+        "after": 0.0
+      },
+      {
+        "id": "q11",
+        "type": "two_hop",
+        "before": 0.3333333333333333,
+        "after": 0.6666666666666666
+      },
+      {
+        "id": "q12",
+        "type": "two_hop",
+        "before": 0.6666666666666666,
+        "after": 1.0
+      }
+    ],
+    "kestrel-dense-bm25 -> kestrel-dense-bm25-graph": [
+      {
+        "id": "q08",
+        "type": "two_hop",
+        "before": 0.5,
+        "after": 1.0
+      },
+      {
+        "id": "q12",
+        "type": "two_hop",
+        "before": 1.0,
+        "after": 0.6666666666666666
+      }
+    ],
+    "kestrel-dense -> kestrel-dense-graph": [
+      {
+        "id": "q02",
+        "type": "exact_identifier",
+        "before": 1.0,
+        "after": 0.5
+      },
+      {
+        "id": "q08",
+        "type": "two_hop",
+        "before": 0.5,
+        "after": 1.0
+      },
+      {
+        "id": "q11",
+        "type": "two_hop",
+        "before": 0.3333333333333333,
+        "after": 0.0
+      }
+    ],
+    "kestrel-dense -> kestrel-dense-bm25-graph": [
+      {
+        "id": "q01",
+        "type": "exact_identifier",
+        "before": 0.0,
+        "after": 1.0
+      },
+      {
+        "id": "q03",
+        "type": "split_answer",
+        "before": 1.0,
+        "after": 0.25
+      },
+      {
+        "id": "q05",
+        "type": "vocabulary",
+        "before": 1.0,
+        "after": 0.0
+      },
+      {
+        "id": "q08",
+        "type": "two_hop",
+        "before": 0.5,
+        "after": 1.0
+      },
+      {
+        "id": "q11",
+        "type": "two_hop",
+        "before": 0.3333333333333333,
+        "after": 0.6666666666666666
+      }
+    ],
+    "vellora-dense -> vellora-dense-bm25": [
+      {
+        "id": "q05",
+        "type": "exact_identifier",
+        "before": 0.0,
+        "after": 1.0
+      },
+      {
+        "id": "q07",
+        "type": "exact_identifier",
+        "before": 0.0,
+        "after": 1.0
+      },
+      {
+        "id": "q09",
+        "type": "vocabulary",
+        "before": 0.0,
+        "after": 1.0
+      },
+      {
+        "id": "q11",
+        "type": "vocabulary",
+        "before": 0.0,
+        "after": 1.0
+      }
+    ],
+    "kestrel-dense-bm25-graph-v1 -> kestrel-dense-bm25-graph": [
+      {
+        "id": "q08",
+        "type": "two_hop",
+        "before": 0.5,
+        "after": 1.0
+      }
+    ]
+  }
+}

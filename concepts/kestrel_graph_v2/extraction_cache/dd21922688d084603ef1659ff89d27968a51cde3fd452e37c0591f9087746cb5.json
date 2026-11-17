@@ -1,0 +1,56 @@
+{
+  "attempt_id": "45c879b7d0474d5a974ac8d507e9cbca",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 3680,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680",
+    "line": 64,
+    "name": "service-catalog.md",
+    "start": 2880,
+    "text": "saging | 08:00–20:00, weekdays |\n| Payments Core | Jonas Berg | #oncall-payments | 24/7 rotation |\n\nTeams with weekday hours are covered outside those hours by the Platform on-call, who can page the team lead for SEV-1 incidents only.\n\n## 3. Escalation rules\n\n1. Support identifies the service involved, using the error code and the Support Runbook.\n2. Support posts in the on-call channel of the team that owns that service, with the workspace name, the error code, the time, and the severity level.\n3. For SEV-1, support also pages the on-call engineer through the paging tool; posting in the channel is not enough.\n4. If the owning team is outside its working hours, escalate to the Platform on-call.\n5. The owning team acknowledges in the thread and becomes responsible for the follow-up with sup"
+  },
+  "extracted_at": "2026-11-08T13:48:21.856580+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "| Payments Core | Jonas Berg | #oncall-payments | 24/7 rotation |",
+        "object": {
+          "label": "#oncall-payments",
+          "type": "Channel"
+        },
+        "relation": "CONTACT_CHANNEL",
+        "subject": {
+          "label": "Payments Core",
+          "type": "Team"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 6.403355457994621,
+  "key": "dd21922688d084603ef1659ff89d27968a51cde3fd452e37c0591f9087746cb5",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1935,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 125,
+    "response_id": "n33wap25NZDqkdUPhv32oQ4",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"Team\",\n        \"label\": \"Payments Core\"\n      },\n      \"relation\": \"CONTACT_CHANNEL\",\n      \"object\": {\n        \"type\": \"Channel\",\n        \"label\": \"#oncall-payments\"\n      },\n      \"evidence_quote\": \"| Payments Core | Jonas Berg | #oncall-payments | 24/7 rotation |\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "b34cbd6765f2945c62865be492ce9974278faf9d33e9254cb184670e29fce9da"
+}

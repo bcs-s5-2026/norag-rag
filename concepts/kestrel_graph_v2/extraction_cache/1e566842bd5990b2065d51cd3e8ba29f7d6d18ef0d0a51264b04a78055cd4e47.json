@@ -1,0 +1,42 @@
+{
+  "attempt_id": "4cabd92c4b1349c9988a3c71284bea72",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 800,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:0:800",
+    "line": 1,
+    "name": "product-guide.md",
+    "start": 0,
+    "text": "# Kestrel Analytics — Product Guide\n\nVersion 4.2 · Last updated: 12 August 2026 · Audience: customers and workspace administrators\n\n## 1. What Kestrel does\n\nKestrel Analytics is a dashboard and business intelligence service for teams. You connect your data sources, build datasets on top of them, and turn those datasets into dashboards that refresh automatically. Dashboards can be shared with colleagues, sent as scheduled PDF reports, or embedded in your own web applications.\n\nEverything in Kestrel lives inside a **workspace**. A workspace has members, connectors, datasets and dashboards. Most customers use one workspace per company; larger organisations sometimes create one workspace per department. Members of one workspace cannot see the content of another workspace, even inside the same "
+  },
+  "extracted_at": "2026-11-08T13:08:27.094700+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 3.827624833997106,
+  "key": "1e566842bd5990b2065d51cd3e8ba29f7d6d18ef0d0a51264b04a78055cd4e47",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1845,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "R3TwaqCNHvXwnsEPlOXbwA4",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "bbbe2616e13a87d0ef8bd26c12f24555b3250a9d30c46dd1988b34a87e1c90d5"
+}

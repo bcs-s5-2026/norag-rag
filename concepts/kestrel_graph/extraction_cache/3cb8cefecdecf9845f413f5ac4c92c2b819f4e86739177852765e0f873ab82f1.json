@@ -1,0 +1,40 @@
+{
+  "attempt_id": "28cb99741001491bb6ffe0bc5d199e17",
+  "chunk": {
+    "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+    "end": 2960,
+    "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2160:2960",
+    "line": 29,
+    "name": "billing-policy-2025.md",
+    "start": 2160,
+    "text": " takes effect at the next renewal. No credit is given for removed seats during the current period.\n\n## 6. Refunds\n\n**Monthly plans** are not refundable. When a monthly plan is cancelled, it remains active until the end of the month already paid.\n\n**Annual plans** can be refunded in full if the request is made within 30 days of the purchase or renewal date. After 30 days, annual plans are not refundable.\n\nRefund requests must be sent by the workspace Owner to billing@kestrel.example. Approved refunds are processed within 10 business days and returned to the original payment method.\n\nCharges caused by a billing error on our side (for example a duplicate charge) are always refunded in full, whatever the plan and whatever the date.\n\n## 7. Failed payments\n\nIf a payment fails, we retry the card "
+  },
+  "extracted_at": "2026-11-08T12:05:49.527614+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 3.852753541985294,
+  "key": "3cb8cefecdecf9845f413f5ac4c92c2b819f4e86739177852765e0f873ab82f1",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1298,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "mmXwaujzFonfxs0Py5qd2AM",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "1729fce9927cc2a54261226344d6ad2d5c0cfc37bd81382145468fdbced582d0"
+}

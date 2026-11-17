@@ -1,0 +1,40 @@
+{
+  "attempt_id": "925b8d4c868f4d2c979ca207b199e4e9",
+  "chunk": {
+    "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+    "end": 1520,
+    "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:720:1520",
+    "line": 11,
+    "name": "billing-policy-2025.md",
+    "start": 720,
+    "text": " are charged once a year, on the anniversary of the purchase.\n\nCustomers who choose annual billing receive a 15% discount compared with twelve months of monthly billing. Switching from monthly to annual billing is possible at any time and takes effect immediately; the unused part of the current month is credited. Switching from annual to monthly billing takes effect at the next renewal.\n\n## 3. Payment methods\n\nWe accept credit and debit cards (Visa, Mastercard, American Express). Business and Enterprise customers can also pay by bank transfer against an invoice, with payment due within 30 days of the invoice date.\n\nThe card on file can be updated by the workspace Owner from **Settings → Plan → Payment method**. We do not store full card numbers; they are held by our payment processor.\n\n## "
+  },
+  "extracted_at": "2026-11-08T12:05:36.043953+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.9176861250016373,
+  "key": "7f038a7f11481e81b5b429e16f070cdb4def297788667b13e4c94aa283fea2bb",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1275,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "j2XwavKEGdnrkdUPtf2-4A0",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "a59471bf3777b71a320457c078e5db2dfb58508d9fcc9b22dea3bbba584c0199"
+}

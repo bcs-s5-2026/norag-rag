@@ -1,0 +1,40 @@
+{
+  "attempt_id": "1371db2adb444b3e90ae7d35eb842623",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 2960,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2160:2960",
+    "line": 34,
+    "name": "product-guide.md",
+    "start": 2160,
+    "text": "ges members, connectors and security settings.\n- **Editor**: creates and edits datasets and dashboards.\n- **Viewer**: opens dashboards and reports, but cannot change them.\n\nTo transfer ownership, the current Owner opens **Settings → Members**, selects a member and chooses **Transfer ownership**. The new Owner must already be an Admin of the workspace. Both people receive a confirmation e-mail, and the transfer completes only after both have confirmed. Until then the transfer is shown as pending.\n\n## 4. Inviting people\n\nAdmins invite people from **Settings → Members → Invite**. An invitation is sent by e-mail and is valid for 7 days. After that the link expires and a new invitation must be sent.\n\nPending invitations do not use a seat. A seat is used only when the person accepts the invitati"
+  },
+  "extracted_at": "2026-11-08T12:10:04.052459+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 1.3833029170054942,
+  "key": "54a9aa1745befe022fdd5e5d30ccda17faad5a767db55a6891fa3690ef2e76d6",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1278,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "mmbwasi_NLHGnsEP2OL3gAQ",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "09961ad49a0afe36cc6cfa529220bafc2d6fb954abfb192f847aa4535ef878b7"
+}

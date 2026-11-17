@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evidence — RAG</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+    <script src="/metrics.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">e<span>•</span>vidence</a
+      ><span class="badge">EPITA / RAG · FINAL RELEASE</span>
+    </header>
+    <main>
+      <div class="intro">
+        <p class="eyebrow">YOUR DOCUMENTS. CHECKABLE ANSWERS.</p>
+        <h1>Ask with evidence.</h1>
+        <p>
+          Add your documents, ask a question, then check the passages behind
+          the answer. Every answer has a <b>Details</b> button that shows what
+          the application did, step by step.
+        </p>
+      </div>
+      <div class="workspace">
+        <aside>
+          <section>
+            <div class="section-title">
+              <h2>01 / Documents</h2>
+              <span id="count">0 sources</span>
+            </div>
+            <p class="hint">Select the sources for your next question.</p>
+            <form id="upload">
+              <label class="upload"
+                >Add a document<input
+                  id="file"
+                  type="file"
+                  accept=".txt,.md"
+                  required
+              /></label>
+              <p class="hint">UTF-8 .txt or .md · up to 5 MiB</p>
+              <button type="submit" class="secondary">Upload source</button>
+            </form>
+            <div id="documents" class="documents"></div>
+            <button id="load-demo" type="button" class="secondary">
+              Load the Kestrel demo documents
+            </button>
+            <p class="hint">
+              New here? The demo loads five sample company documents so you can
+              try a question straight away.
+            </p>
+          </section>
+          <section>
+            <h2>02 / Settings</h2>
+            <p class="hint">
+              The defaults work for most questions. Documents are prepared
+              automatically the first time you ask.
+            </p>
+            <details id="advanced">
+              <summary>Advanced search settings</summary>
+            <fieldset>
+              <legend>Search methods</legend>
+              <label><input id="retriever-dense" type="checkbox" checked /> Meaning (dense embeddings)</label>
+              <label><input id="retriever-bm25" type="checkbox" /> Exact words (BM25)</label>
+              <label><input id="retriever-graph" type="checkbox" /> Concept graph (Kestrel demo or documents you uploaded)</label>
+            </fieldset>
+            <label>Candidate depth per retriever<input id="candidate-depth" type="number" min="1" max="10000" value="20" /></label>
+            <label>RRF rank constant<input id="rrf-k" type="number" min="0" max="1000000" value="60" /></label>
+            <label
+              >Chunk size <span>characters · 100–1,000</span
+              ><input
+                id="size"
+                type="number"
+                min="100"
+                max="1000"
+                value="800" /></label
+            ><label
+              >Overlap <span>characters · smaller than chunk size</span
+              ><input id="overlap" type="number" min="0" value="80" /></label
+            ><label
+              >Top-k <span>retrieved passages · 1–20</span
+              ><input id="topk" type="number" min="1" max="20" value="5"
+            /></label>
+            <p class="hint">
+              New chunk settings build a separate index on the next question.
+              Top-k takes effect immediately.
+            </p>
+            </details>
+            <button id="index" class="secondary">Prepare documents now</button>
+          </section>
+        </aside>
+        <div class="content">
+          <nav aria-label="Workspace tabs">
+            <button type="button" data-tab="ask-view" aria-pressed="true">
+              Ask
+            </button>
+            <button type="button" data-tab="concepts-view" aria-pressed="false">
+              Concept map
+            </button>
+            <button type="button" data-tab="eval-view" aria-pressed="false">
+              Evaluation
+            </button>
+            <button type="button" data-tab="words-view" aria-pressed="false">
+              Words
+            </button>
+            <button type="button" data-tab="metrics-view" aria-pressed="false">
+              Metrics
+            </button>
+          </nav>
+          <div id="status" role="status" aria-live="polite"></div>
+          <div id="ask-view" class="tab-view">
+            <section class="question-panel">
+              <h2>03 / Ask your sources</h2>
+              <form id="ask">
+                <label for="question" class="sr-only">Your question</label
+                ><textarea
+                  id="question"
+                  placeholder="What would you like to know?"
+                  maxlength="2000"
+                  required
+                ></textarea>
+                <div class="form-footer">
+                  <span class="hint"
+                    >Answers use only your selected documents.</span
+                  ><button type="submit">
+                    Find an answer <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+              </form>
+            </section>
+            <section id="result">
+              <p class="eyebrow">READY WHEN YOU ARE</p>
+              <h3>Start with a source.</h3>
+              <p class="hint">
+                Upload a document, keep it selected, and ask a question. Your
+                answer and clickable source passages will appear here.
+              </p>
+            </section>
+          </div>
+          <section id="metrics-view" class="tab-view" hidden>
+            <h2>Metrics</h2>
+            <p>
+              How the application behaves, computed from its own saved traces:
+              outcomes, speed, model calls, cost and fallbacks.
+            </p>
+            <div id="metrics-body"></div>
+          </section>
+          <section id="concepts-view" class="tab-view" hidden>
+            <h2>Concept map</h2>
+            <p>
+              A map of the Kestrel demo documents (or of a document you uploaded, built automatically when you add it): services, teams, plans,
+              features, error codes and how they are linked. Pick a concept,
+              then click a neighbour to move around. Every link shows the
+              sentence it was extracted from.
+            </p>
+            <label
+              >Map of<select id="concept-source">
+                <option value="">Kestrel demo documents</option>
+              </select></label
+            >
+            <label
+              >Concept<select id="concept-select">
+                <option value="">Choose a concept…</option>
+              </select></label
+            >
+            <div id="concept-map"></div>
+            <div id="concept-detail"></div>
+          </section>
+          <section id="eval-view" class="tab-view" hidden>
+            <h2>Evaluation</h2>
+            <p>
+              Runs a fixed corpus in an isolated index. Retrieval uses k=1, 3,
+              5, 10. Current chunk settings apply; top-k controls optional
+              answer generation.
+            </p>
+            <label
+              >Corpus<select id="eval-corpus">
+                <option value="kestrel">Kestrel</option>
+                <option value="vellora">Vellora (V1 corpus)</option>
+              </select></label
+            >
+            <label>Question set<select id="eval-question-set"><option value="v2">Original V2 (unchanged)</option><option value="v3">V3 (two additional Kestrel chains)</option></select></label>
+            <p class="hint">Retriever selections above also apply here. V3 evaluations are retrieval-only. Hosted answer/no-context review below remains available for original dense V2 only.</p>
+            <button id="load-corpus" class="secondary">
+              Load corpus into library
+            </button>
+            <label
+              ><input type="checkbox" id="eval-answers" /> Generate answers
+              (hosted API)</label
+            >
+            <label
+              ><input type="checkbox" id="eval-no-context" /> Run no-context
+              checks (hosted API)</label
+            >
+            <button id="evaluate">Run evaluation</button>
+            <p class="hint">
+              Generation may take several minutes. Default retrieval makes no
+              LLM calls. Results persist locally; download JSON for submission.
+            </p>
+            <label>Saved run ID<input id="saved-run" maxlength="32" /></label
+            ><button id="restore-run" class="secondary">Open saved run</button>
+            <label
+              >Measured project run<select id="measured-run"></select
+            ></label>
+            <button id="open-measured-run" class="secondary">
+              Open measured run for review
+            </button>
+            <div id="eval-results"></div>
+            <details class="evaluation">
+              <summary>
+                V1 retrieval baseline <span>View measured results</span>
+              </summary>
+              <p class="hint">
+                Fixed Vellora manual question set. Hit@k measures passage
+                retrieval, not answer accuracy. Unanswerable questions are
+                reported separately.
+              </p>
+              <div id="evaluation"></div>
+            </details>
+          </section>
+          <section id="words-view" class="tab-view" hidden>
+            <h2>Words</h2>
+            <p>
+              Uses checked library documents and current chunk size/overlap.
+              Load a corpus in Evaluation first if needed.
+            </p>
+            <label
+              >Mode<select id="words-mode">
+                <option value="corpus">Corpus</option>
+                <option value="question">Question</option>
+              </select></label
+            >
+            <label
+              >Question set question<select id="word-question">
+                <option value="">Type your own question</option>
+              </select></label
+            >
+            <label
+              >Question<textarea
+                id="words-question"
+                maxlength="2000"
+              ></textarea>
+            </label>
+            <label
+              >Word (Corpus mode)<input id="word-query" maxlength="200"
+            /></label>
+            <button id="analyze">Explore words</button>
+            <div id="word-results"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      Local search on your machine · answers written by Gemini ·
+      <button id="recent-traces" type="button" class="link">Recent activity</button
+      ><span>Read the sources. Verify the answer.</span>
+    </footer>
+    <dialog id="trace-dialog" aria-labelledby="trace-title">
+      <form method="dialog"><button class="secondary">Close</button></form>
+      <div id="trace-body"></div>
+    </dialog>
+  </body>
+</html>

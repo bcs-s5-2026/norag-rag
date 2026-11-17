@@ -1,0 +1,439 @@
+{
+  "counts": null,
+  "grading_rules": {
+    "correct": "The source passage validates the entity, relation, direction and any conditions.",
+    "unsupported": "The source does not state the claimed relationship; inferred or invented.",
+    "wrong": "The source says something else, including a wrong entity, relation or direction."
+  },
+  "graph_build_id": "5d6add18767ea00c20beb84630103494401d35ff8979a91618577331f816c28d",
+  "graph_content_sha256": "bcee8f3c48eebac5dfa155e6d8a27034ffd0819cbde01f2077a43397bab7e874",
+  "population": 14,
+  "sample_size": 10,
+  "seed": 20261108,
+  "selection": "random.Random(seed).sample(sorted(distinct relation IDs), count), without replacement",
+  "status": "awaiting_human_grades",
+  "triples": [
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+          "provenance": {
+            "cache_key": "9a0b99f673a123c96048c3bbc904e5986ccdfdb6af1fe9d4f154363f69163378",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+            "context_heading": "# Kestrel Analytics — Product Guide > ## 2. Plans and limits > Table header: | | Free | Starter | Team | Business | Enterprise |",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:10:22.428462+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_e4eccd8c391c230a35fdc78d976d95f7d942b4f0746bfd042fcf7ed93b8114fc",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| Public share links | — | Yes | Yes | Yes | Yes |",
+            "quote_end": 1579,
+            "quote_start": 1529,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "qHTwasb8CryakdUPu6W6qQ4",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 2240,
+          "source_line": 23,
+          "source_passage": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_3c10b844cdf5915e85c6a513b78b144cb331a1cb2993dc77c384fabe5bd84107",
+      "notes": null,
+      "number": 1,
+      "object": "Enterprise",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Public share links"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+          "provenance": {
+            "cache_key": "9a0b99f673a123c96048c3bbc904e5986ccdfdb6af1fe9d4f154363f69163378",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+            "context_heading": "# Kestrel Analytics — Product Guide > ## 2. Plans and limits > Table header: | | Free | Starter | Team | Business | Enterprise |",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:10:22.428462+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_e4eccd8c391c230a35fdc78d976d95f7d942b4f0746bfd042fcf7ed93b8114fc",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| Public share links | — | Yes | Yes | Yes | Yes |",
+            "quote_end": 1579,
+            "quote_start": 1529,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "qHTwasb8CryakdUPu6W6qQ4",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 2240,
+          "source_line": 23,
+          "source_passage": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_6c988d48b34af183d5f5961910b1e42f884166aa24b6be6fb76fcbec3e0166c6",
+      "notes": null,
+      "number": 2,
+      "object": "Starter",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Public share links"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+          "provenance": {
+            "cache_key": "9a0b99f673a123c96048c3bbc904e5986ccdfdb6af1fe9d4f154363f69163378",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+            "context_heading": "# Kestrel Analytics — Product Guide > ## 2. Plans and limits > Table header: | | Free | Starter | Team | Business | Enterprise |",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:10:22.428462+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_9acc89a9dd6b84598783fafa866101c3890995c41cead6504d5f99d23d6f7cd3",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| Audit log | — | — | — | 90 days | 1 year |",
+            "quote_end": 1528,
+            "quote_start": 1484,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "qHTwasb8CryakdUPu6W6qQ4",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 2240,
+          "source_line": 23,
+          "source_passage": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_2ed8a873fe2904a144c51d4317616c8a315eb27b85a4dedd29c8decdb7c429a5",
+      "notes": null,
+      "number": 3,
+      "object": "Enterprise",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Audit log"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:0:800",
+          "provenance": {
+            "cache_key": "146cd57646a1ef03edb1e37e39b8d7c89975b443a0fb23398a05fdf88309cf0d",
+            "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:0:800",
+            "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+            "extracted_at": "2026-11-08T13:06:17.278541+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_ceeb062c440238490171b089d23c012f07d6534482a8afe0e9eb5ffbd2b04358",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 March 2026 · Policy owner: Finance",
+            "quote_end": 101,
+            "quote_start": 0,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "vXPwaoTUM9zSxN8P56bw-QI",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "billing-policy-2026.md"
+          },
+          "source_document": "billing-policy-2026.md",
+          "source_end": 800,
+          "source_line": 1,
+          "source_passage": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 March 2026 · Policy owner: Finance · Audience: customers and support staff\n\nThis policy replaces the Billing and Refund Policy effective 1 January 2025. Requests made before 1 March 2026 are handled under the previous policy.\n\n## 1. Scope\n\nThis policy explains how Kestrel Analytics charges for its plans, how invoices are issued, and when refunds are possible. It applies to all paid plans: Starter, Team, Business and Enterprise. Enterprise contracts may contain different terms; when they do, the contract takes precedence over this policy. Current prices are published on the Kestrel pricing page and are not repeated here.\n\n## 2. Billing cycles\n\nPaid plans are billed per seat, either monthly or annually. Monthly plans are char",
+          "source_start": 0
+        }
+      ],
+      "grade": null,
+      "id": "r_3bc48db4bd1f1594a754e043d98d5e44b05622a2777fb9853c00b11fbedf9ea2",
+      "notes": null,
+      "number": 4,
+      "object": "Finance",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "Billing and Refund Policy"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+          "provenance": {
+            "cache_key": "9ca2bf9e5fab4c6c6a12ec5553b1e9a0d3ad69750cb2d7143f08052fca38cdb7",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:09:55.713028+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_895050461c923e03ea1a97053aa4fd0804d176d8d3f7205e30a08f93194c27ed",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |\n| SCIM user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | ",
+            "quote_end": 1520,
+            "quote_start": 989,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "jXTwapjZNoTavdIP4NySkQs",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 1520,
+          "source_line": 9,
+          "source_passage": "one workspace cannot see the content of another workspace, even inside the same organisation.\n\n## 2. Plans and limits\n\nEach workspace is on exactly one plan. The plan sets the number of seats, how often data refreshes, and which administration features are available.\n\n| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |\n| SCIM user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | ",
+          "source_start": 720
+        },
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+          "provenance": {
+            "cache_key": "9a0b99f673a123c96048c3bbc904e5986ccdfdb6af1fe9d4f154363f69163378",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+            "context_heading": "# Kestrel Analytics — Product Guide > ## 2. Plans and limits > Table header: | | Free | Starter | Team | Business | Enterprise |",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:10:22.428462+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_9acc89a9dd6b84598783fafa866101c3890995c41cead6504d5f99d23d6f7cd3",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| Audit log | — | — | — | 90 days | 1 year |",
+            "quote_end": 1528,
+            "quote_start": 1484,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "qHTwasb8CryakdUPu6W6qQ4",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 2240,
+          "source_line": 23,
+          "source_passage": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_6145a0c0023a9e386331f81b91cf48eae7a908b87c90dcbdb0e6a2d0ad2011c9",
+      "notes": null,
+      "number": 5,
+      "object": "Business",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Audit log"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+          "provenance": {
+            "cache_key": "9a0b99f673a123c96048c3bbc904e5986ccdfdb6af1fe9d4f154363f69163378",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+            "context_heading": "# Kestrel Analytics — Product Guide > ## 2. Plans and limits > Table header: | | Free | Starter | Team | Business | Enterprise |",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:10:22.428462+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_e4eccd8c391c230a35fdc78d976d95f7d942b4f0746bfd042fcf7ed93b8114fc",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| Public share links | — | Yes | Yes | Yes | Yes |",
+            "quote_end": 1579,
+            "quote_start": 1529,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "qHTwasb8CryakdUPu6W6qQ4",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 2240,
+          "source_line": 23,
+          "source_passage": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_703f8e923be6f565e16354657f647a307efde73c3555b105271ad0818a73c66a",
+      "notes": null,
+      "number": 6,
+      "object": "Business",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Public share links"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+          "provenance": {
+            "cache_key": "9ca2bf9e5fab4c6c6a12ec5553b1e9a0d3ad69750cb2d7143f08052fca38cdb7",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:09:55.713028+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_110e721a43f9b7ae55f601b88ffa670886560530cae870ed5d73cc0f4b2f32c8",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |",
+            "quote_end": 1434,
+            "quote_start": 989,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "jXTwapjZNoTavdIP4NySkQs",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 1520,
+          "source_line": 9,
+          "source_passage": "one workspace cannot see the content of another workspace, even inside the same organisation.\n\n## 2. Plans and limits\n\nEach workspace is on exactly one plan. The plan sets the number of seats, how often data refreshes, and which administration features are available.\n\n| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |\n| SCIM user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | ",
+          "source_start": 720
+        }
+      ],
+      "grade": null,
+      "id": "r_10598b3e190efbc70a84be22c6256d2347104d5d092152c13aa01e2215859a96",
+      "notes": null,
+      "number": 7,
+      "object": "Business",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Single sign-on (SAML)"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+          "provenance": {
+            "cache_key": "9a0b99f673a123c96048c3bbc904e5986ccdfdb6af1fe9d4f154363f69163378",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+            "context_heading": "# Kestrel Analytics — Product Guide > ## 2. Plans and limits > Table header: | | Free | Starter | Team | Business | Enterprise |",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:10:22.428462+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_e4eccd8c391c230a35fdc78d976d95f7d942b4f0746bfd042fcf7ed93b8114fc",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| Public share links | — | Yes | Yes | Yes | Yes |",
+            "quote_end": 1579,
+            "quote_start": 1529,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "qHTwasb8CryakdUPu6W6qQ4",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 2240,
+          "source_line": 23,
+          "source_passage": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_80d1dc0f97cd12593b50f9b07afbc165cd255321c6f780c6e94dc67257748089",
+      "notes": null,
+      "number": 8,
+      "object": "Team",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Public share links"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+          "provenance": {
+            "cache_key": "9ca2bf9e5fab4c6c6a12ec5553b1e9a0d3ad69750cb2d7143f08052fca38cdb7",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:09:55.713028+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_110e721a43f9b7ae55f601b88ffa670886560530cae870ed5d73cc0f4b2f32c8",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |",
+            "quote_end": 1434,
+            "quote_start": 989,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "jXTwapjZNoTavdIP4NySkQs",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 1520,
+          "source_line": 9,
+          "source_passage": "one workspace cannot see the content of another workspace, even inside the same organisation.\n\n## 2. Plans and limits\n\nEach workspace is on exactly one plan. The plan sets the number of seats, how often data refreshes, and which administration features are available.\n\n| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |\n| SCIM user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | ",
+          "source_start": 720
+        }
+      ],
+      "grade": null,
+      "id": "r_ccc1e4383d3109208dd09306e89bb094dc0b0fd26b6265952166c82b5d50b454",
+      "notes": null,
+      "number": 9,
+      "object": "Enterprise",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "Single sign-on (SAML)"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+          "provenance": {
+            "cache_key": "9ca2bf9e5fab4c6c6a12ec5553b1e9a0d3ad69750cb2d7143f08052fca38cdb7",
+            "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+            "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+            "extracted_at": "2026-11-08T13:09:55.713028+00:00",
+            "extraction_model": "gemini-3.6-flash",
+            "id": "p_bfd8339e54a20fa61e4eafbca3f370df693f48a5e1f31297d9ea983ab6d70909",
+            "kind": "triple",
+            "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+            "provider": "google-gemini-developer-api",
+            "quote": "| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |\n| SCIM user provisioning | — | — | — | — | Yes |",
+            "quote_end": 1483,
+            "quote_start": 989,
+            "requested_model": "gemini-3.6-flash",
+            "response_id": "jXTwapjZNoTavdIP4NySkQs",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "product-guide.md"
+          },
+          "source_document": "product-guide.md",
+          "source_end": 1520,
+          "source_line": 9,
+          "source_passage": "one workspace cannot see the content of another workspace, even inside the same organisation.\n\n## 2. Plans and limits\n\nEach workspace is on exactly one plan. The plan sets the number of seats, how often data refreshes, and which administration features are available.\n\n| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |\n| SCIM user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | ",
+          "source_start": 720
+        }
+      ],
+      "grade": null,
+      "id": "r_b1654c074ed09c50b78a8769135958ff3f17ad5fc4ca7f3b97d8db64bbfd2591",
+      "notes": null,
+      "number": 10,
+      "object": "Enterprise",
+      "relation": "AVAILABLE_ON",
+      "reviewer": null,
+      "subject": "SCIM user provisioning"
+    }
+  ]
+}

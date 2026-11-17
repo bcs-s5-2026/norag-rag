@@ -1,0 +1,137 @@
+{
+  "benchmark": "V3 Phase 2.5",
+  "started_at": "2026-11-06T23:46:46.357152+00:00",
+  "git_head": "8e86a027eb45d528eba5a153fe9804015fda8fa8",
+  "working_tree": "Uncommitted Phase 1 and Phase 2 implementation; code hashes below identify evaluated bytes.",
+  "environment_overrides": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "python": "Python 3.12.3",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "processor": "arm64",
+  "code_sha256": {
+    "evaluation/v2.py": "32791aa7f2d9863835495115a5f6e310075977dc572ff0c4af9d89537f618050",
+    "evaluation/v3.py": "52fa4dc7d5ffadd2aeef96f8b09fc6cf8663acc1a7ca3fe79a4a53ee8e4e2897",
+    "rag_app/service.py": "2ea80ca44744a979941a1f92e22e053b1225f42da01646a47992bb881c5359d0",
+    "rag_app/models.py": "7ee5bea20c167637b2b0f4f34839336a556a1b09c83d93e53b55d35cbb43f56b",
+    "rag_app/bm25.py": "f49b0400abec4fb45777769e42b4332e749d25083da5fad9857e08d0a5266ee7",
+    "rag_app/lexical.py": "9b6cf292cf757d34a67086a4acbdc5ccfb78cbc5baf08cdb70ef079441226f7d",
+    "rag_app/fusion.py": "a097181d9b3de7da7399413f4a472b8901949fb34944bbd630f18939cfa2b743",
+    "requirements-lock.txt": "a4e8006a8b68480dbe8dda60d28fd40fb660f406d90c51d63de0ee9919ffb1d6"
+  },
+  "packages": {
+    "chromadb": "1.5.9",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "numpy": "2.5.4",
+    "pydantic": "2.14.1"
+  },
+  "runs": [
+    {
+      "corpus": "kestrel",
+      "configuration": "dense",
+      "command": ".venv/bin/python -m evaluation.v3 --corpus kestrel --retrievers dense --chunk-size 800 --chunk-overlap 80 --candidate-depth 20 --rrf-k 60 --top-k 5 --output evaluation/results/v3/phase2_5_2026-11-07/kestrel-dense-800-80.json",
+      "environment_overrides": {
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1"
+      },
+      "started_at": "2026-11-06T23:46:46.459530+00:00",
+      "process_wall_seconds": 6.642573416989762,
+      "exit_code": 0,
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/kestrel-dense-800-80.json",
+      "stderr": "W1107 00:46:51.077000 95051 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.\nCould not reach the Hub (Cannot reach https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'sentence-transformers/all-MiniLM-L6-v2'.\n\nLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 103/103 [00:00<00:00, 7260.12it/s]\n",
+      "status": "complete",
+      "output_sha256": "01428cb7a99e755e1e55e7e815bcb3b06a914246438b797b641ac76832c926bc",
+      "questions_completed": 10
+    },
+    {
+      "corpus": "kestrel",
+      "configuration": "bm25",
+      "command": ".venv/bin/python -m evaluation.v3 --corpus kestrel --retrievers bm25 --chunk-size 800 --chunk-overlap 80 --candidate-depth 20 --rrf-k 60 --top-k 5 --output evaluation/results/v3/phase2_5_2026-11-07/kestrel-bm25-800-80.json",
+      "environment_overrides": {
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1"
+      },
+      "started_at": "2026-11-06T23:46:53.103063+00:00",
+      "process_wall_seconds": 0.15167133300565183,
+      "exit_code": 0,
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/kestrel-bm25-800-80.json",
+      "stderr": "",
+      "status": "complete",
+      "output_sha256": "edf6851df948751dab80c8b0c80a4a0b20156ae23dd0f4fa8c4b8aeaa1ad8a84",
+      "questions_completed": 10
+    },
+    {
+      "corpus": "kestrel",
+      "configuration": "dense-bm25-rrf",
+      "command": ".venv/bin/python -m evaluation.v3 --corpus kestrel --retrievers dense bm25 --chunk-size 800 --chunk-overlap 80 --candidate-depth 20 --rrf-k 60 --top-k 5 --output evaluation/results/v3/phase2_5_2026-11-07/kestrel-dense-bm25-rrf-800-80.json",
+      "environment_overrides": {
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1"
+      },
+      "started_at": "2026-11-06T23:46:53.255928+00:00",
+      "process_wall_seconds": 5.4469137499982025,
+      "exit_code": 0,
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/kestrel-dense-bm25-rrf-800-80.json",
+      "stderr": "W1107 00:46:56.754000 95069 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.\nCould not reach the Hub (Cannot reach https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'sentence-transformers/all-MiniLM-L6-v2'.\n\nLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 103/103 [00:00<00:00, 11721.97it/s]\n",
+      "status": "complete",
+      "output_sha256": "b66cfb86c8f54f8368b736bef3eddbde774a9d3646322bcff879c926e5345e17",
+      "questions_completed": 10
+    },
+    {
+      "corpus": "vellora",
+      "configuration": "dense",
+      "command": ".venv/bin/python -m evaluation.v3 --corpus vellora --retrievers dense --chunk-size 800 --chunk-overlap 80 --candidate-depth 20 --rrf-k 60 --top-k 5 --output evaluation/results/v3/phase2_5_2026-11-07/vellora-dense-800-80.json",
+      "environment_overrides": {
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1"
+      },
+      "started_at": "2026-11-06T23:46:58.704156+00:00",
+      "process_wall_seconds": 6.168839541991474,
+      "exit_code": 0,
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/vellora-dense-800-80.json",
+      "stderr": "W1107 00:47:03.099000 95073 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.\nCould not reach the Hub (Cannot reach https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'sentence-transformers/all-MiniLM-L6-v2'.\n\nLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 103/103 [00:00<00:00, 12949.65it/s]\n",
+      "status": "complete",
+      "output_sha256": "9df3c4a72efe3f6525d51e2e277e7c237391b7edcf746cbd541d518a1d1fe149",
+      "questions_completed": 15
+    },
+    {
+      "corpus": "vellora",
+      "configuration": "bm25",
+      "command": ".venv/bin/python -m evaluation.v3 --corpus vellora --retrievers bm25 --chunk-size 800 --chunk-overlap 80 --candidate-depth 20 --rrf-k 60 --top-k 5 --output evaluation/results/v3/phase2_5_2026-11-07/vellora-bm25-800-80.json",
+      "environment_overrides": {
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1"
+      },
+      "started_at": "2026-11-06T23:47:04.874263+00:00",
+      "process_wall_seconds": 0.16234612499829382,
+      "exit_code": 0,
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/vellora-bm25-800-80.json",
+      "stderr": "",
+      "status": "complete",
+      "output_sha256": "2bcfb14ceefa72fff7b693ae415266d47033b16989abdfbfe9fe913500efb21e",
+      "questions_completed": 15
+    },
+    {
+      "corpus": "vellora",
+      "configuration": "dense-bm25-rrf",
+      "command": ".venv/bin/python -m evaluation.v3 --corpus vellora --retrievers dense bm25 --chunk-size 800 --chunk-overlap 80 --candidate-depth 20 --rrf-k 60 --top-k 5 --output evaluation/results/v3/phase2_5_2026-11-07/vellora-dense-bm25-rrf-800-80.json",
+      "environment_overrides": {
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1"
+      },
+      "started_at": "2026-11-06T23:47:05.038129+00:00",
+      "process_wall_seconds": 5.073364500014577,
+      "exit_code": 0,
+      "output": "evaluation/results/v3/phase2_5_2026-11-07/vellora-dense-bm25-rrf-800-80.json",
+      "stderr": "W1107 00:47:08.382000 95083 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.\nCould not reach the Hub (Cannot reach https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'sentence-transformers/all-MiniLM-L6-v2'.\n\nLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 103/103 [00:00<00:00, 22079.80it/s]\n",
+      "status": "complete",
+      "output_sha256": "800eb052a037aa02806a0794bcada61554d01f10dd9ef2392f08680460c7aed2",
+      "questions_completed": 15
+    }
+  ],
+  "embedding_cached_main_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "finished_at": "2026-11-06T23:47:10.113659+00:00"
+}

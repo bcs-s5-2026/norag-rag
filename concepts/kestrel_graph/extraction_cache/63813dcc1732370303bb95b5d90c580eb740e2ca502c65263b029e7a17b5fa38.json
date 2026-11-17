@@ -1,0 +1,40 @@
+{
+  "attempt_id": "4d57444842744d389e1e2e85b38592ca",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 3680,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2880:3680",
+    "line": 37,
+    "name": "billing-policy-2026.md",
+    "start": 2880,
+    "text": "ed full months of the annual period. After 60 days, annual plans are not refundable.\n\nRefund requests must be sent by the workspace Owner, either from **Settings → Plan → Request a refund** or by e-mail to billing@kestrel.example. Approved refunds are processed within 14 days and returned to the original payment method.\n\nCharges caused by a billing error on our side (for example a duplicate charge) are always refunded in full, whatever the plan and whatever the date.\n\n## 7. Failed payments\n\nWhen a payment fails, the workspace Owner and the billing contact receive an e-mail straight away. We then retry the payment automatically 1 day, 3 days and 7 days after the first attempt.\n\nEach retry uses the payment method on file at the time of the retry, so updating the card before the next retry is"
+  },
+  "extracted_at": "2026-11-08T12:07:40.832088+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 1.3488128749886528,
+  "key": "63813dcc1732370303bb95b5d90c580eb740e2ca502c65263b029e7a17b5fa38",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1294,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "DGbwasyPHL2txN8PksvlgQM",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "463c1af3241bd8db8795879b469240e003f24887f06640411f584bf2e9d6acbd"
+}

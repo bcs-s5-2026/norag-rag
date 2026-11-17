@@ -1,0 +1,152 @@
+[
+  {
+    "id": "q01",
+    "difficulty": "easy",
+    "question": "How large is the Vellora Duo water tank?",
+    "expected_answer": "1.8 litres",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "water tank (1.8 litres)",
+    "location": "Section 2",
+    "answerable": true
+  },
+  {
+    "id": "q02",
+    "difficulty": "easy",
+    "question": "How much coffee does the espresso button make?",
+    "expected_answer": "40 ml",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "espresso for a short coffee (40 ml)",
+    "location": "Section 4",
+    "answerable": true
+  },
+  {
+    "id": "q03",
+    "difficulty": "easy",
+    "question": "How long is the Vellora Duo warranty?",
+    "expected_answer": "Two years from purchase",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "two-year warranty from the date of purchase",
+    "location": "Section 11",
+    "answerable": true
+  },
+  {
+    "id": "q04",
+    "difficulty": "easy",
+    "question": "How often should I replace the water filter?",
+    "expected_answer": "Two months or 50 litres",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "A filter lasts two months, or 50 litres of water.",
+    "location": "Section 8",
+    "answerable": true
+  },
+  {
+    "id": "q05",
+    "difficulty": "precise",
+    "question": "What should I do for error E47?",
+    "expected_answer": "Unplug, empty hopper, turn upper burr anticlockwise with supplied key",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "turn the upper burr anticlockwise until the object falls out",
+    "location": "Section 9 / E47",
+    "answerable": true
+  },
+  {
+    "id": "q06",
+    "difficulty": "precise",
+    "question": "What does E22 mean and how do I fix it?",
+    "expected_answer": "Pump overload; two steps coarser, descale if persistent",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "Set the grind adjuster two steps coarser.",
+    "location": "Section 9 / E22",
+    "answerable": true
+  },
+  {
+    "id": "q07",
+    "difficulty": "precise",
+    "question": "How do I clear error E86?",
+    "expected_answer": "Hold menu for five seconds",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "Press and hold the menu button for five seconds",
+    "location": "Section 9 / E86",
+    "answerable": true
+  },
+  {
+    "id": "q08",
+    "difficulty": "precise",
+    "question": "What does E70 require after descaling?",
+    "expected_answer": "Fresh water and two rinses",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "run the rinsing programme twice.",
+    "location": "Section 9 / E70",
+    "answerable": true
+  },
+  {
+    "id": "q09",
+    "difficulty": "hard",
+    "question": "The grounds container was emptied but the counter has not reset. Why?",
+    "expected_answer": "Remove for at least five seconds with machine on",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "removed for at least five seconds",
+    "location": "Section 6",
+    "answerable": true
+  },
+  {
+    "id": "q10",
+    "difficulty": "hard",
+    "question": "Can I clean the brewing unit in the dishwasher?",
+    "expected_answer": "No; it removes necessary grease",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "Do not use washing-up liquid or the dishwasher",
+    "location": "Section 6",
+    "answerable": true
+  },
+  {
+    "id": "q11",
+    "difficulty": "hard",
+    "question": "What preparation is needed after the machine sits unused for three weeks?",
+    "expected_answer": "Fill the water circuit",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "has not been used for more than two weeks, the circuit must be filled with water.",
+    "location": "Section 3",
+    "answerable": true
+  },
+  {
+    "id": "q12",
+    "difficulty": "hard",
+    "question": "What is excluded from warranty even when using soft water?",
+    "expected_answer": "Limescale damage",
+    "source": "vellora-duo-espresso-machine.txt",
+    "passage": "Damage caused by limescale is not covered by the warranty.",
+    "location": "Section 7",
+    "answerable": true
+  },
+  {
+    "id": "q13",
+    "difficulty": "unanswerable",
+    "question": "What is the Vellora Duo Wi-Fi password?",
+    "expected_answer": "Not provided in the corpus.",
+    "source": null,
+    "passage": null,
+    "location": null,
+    "answerable": false
+  },
+  {
+    "id": "q14",
+    "difficulty": "unanswerable",
+    "question": "What is the exact retail price of the Vellora Duo?",
+    "expected_answer": "Not provided in the corpus.",
+    "source": null,
+    "passage": null,
+    "location": null,
+    "answerable": false
+  },
+  {
+    "id": "q15",
+    "difficulty": "unanswerable",
+    "question": "Who won the 2026 football World Cup?",
+    "expected_answer": "Not provided in the corpus.",
+    "source": null,
+    "passage": null,
+    "location": null,
+    "answerable": false
+  }
+]

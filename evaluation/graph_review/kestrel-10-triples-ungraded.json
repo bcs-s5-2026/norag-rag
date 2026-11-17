@@ -1,0 +1,717 @@
+{
+  "counts": null,
+  "grading_rules": {
+    "correct": "The source passage validates the entity, relation, direction and any conditions.",
+    "unsupported": "The source does not state the claimed relationship; inferred or invented.",
+    "wrong": "The source says something else, including a wrong entity, relation or direction."
+  },
+  "graph_build_id": "529ee6bf820a7554a5d0352d10d92e39d6df992e0ae81f99c9a584c34e797794",
+  "graph_content_sha256": "67d8cb52f5941bc18b19e585d9b7423c2e461cafd413a3c2c7cab24e0a28f5a2",
+  "population": 10,
+  "sample_size": 10,
+  "seed": 20261108,
+  "selection": "random.Random(seed).sample(sorted(distinct relation IDs), count), without replacement",
+  "status": "awaiting_human_grades",
+  "triples": [
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680",
+          "provenance": {
+            "cache_key": "ba15d916d6c5221e02b815eaa873dcead69e06a089b482882cfcbf92356e0b79",
+            "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680",
+            "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+            "extracted_at": "2026-11-08T12:12:43.032684+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "id": "p_181ef56e20dca42916172e09af3b51f030a29864cc083c706b0492b0e9c35412",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "| Payments Core | Jonas Berg | #oncall-payments | 24/7 rotation |",
+            "quote_end": 2978,
+            "quote_start": 2913,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "OmfwasSPEp2evdIP4u7VuAE",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "service-catalog.md"
+          },
+          "source_document": "service-catalog.md",
+          "source_end": 3680,
+          "source_line": 64,
+          "source_passage": "saging | 08:00–20:00, weekdays |\n| Payments Core | Jonas Berg | #oncall-payments | 24/7 rotation |\n\nTeams with weekday hours are covered outside those hours by the Platform on-call, who can page the team lead for SEV-1 incidents only.\n\n## 3. Escalation rules\n\n1. Support identifies the service involved, using the error code and the Support Runbook.\n2. Support posts in the on-call channel of the team that owns that service, with the workspace name, the error code, the time, and the severity level.\n3. For SEV-1, support also pages the on-call engineer through the paging tool; posting in the channel is not enough.\n4. If the owning team is outside its working hours, escalate to the Platform on-call.\n5. The owning team acknowledges in the thread and becomes responsible for the follow-up with sup",
+          "source_start": 2880
+        }
+      ],
+      "grade": null,
+      "id": "r_b6f24b97cf0a0f77fcc6a6afb1146589c41a33b9c1220b75776aa086f79b5205",
+      "notes": null,
+      "number": 1,
+      "object": "#oncall-payments",
+      "relation": "CONTACT_CHANNEL",
+      "reviewer": null,
+      "subject": "Payments Core"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+          "provenance": {
+            "cache_key": "d1bdf1310fcd6e5b8af05c27f2f95267d91f3e331a352072e16a2c60c8e89228",
+            "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "d158e312bf534249ac8e34c0d1a44ee2",
+              "original_response_sha256": "f0b74d40b855b2e26486efa41af17e4554d0942d2481fd822b1d8c70f05f83c7",
+              "repairs": [
+                {
+                  "expanded_quote": "### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.",
+                  "object": {
+                    "label": "Data Integrations",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Data Integrations**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "connector-hub",
+                    "type": "Service"
+                  },
+                  "triple_index": 1
+                },
+                {
+                  "expanded_quote": "### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.",
+                  "object": {
+                    "label": "Analytics Engine",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Analytics Engine**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "query-engine",
+                    "type": "Service"
+                  },
+                  "triple_index": 2
+                },
+                {
+                  "expanded_quote": "### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.",
+                  "object": {
+                    "label": "Analytics Engine",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Analytics Engine**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "scheduler",
+                    "type": "Service"
+                  },
+                  "triple_index": 3
+                }
+              ]
+            },
+            "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+            "extracted_at": "2026-11-08T12:12:40.290884+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_528f64da99fe2b8128f68069efbc20ed053f9f6115411d9fe194ca92ba689ca2",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.",
+            "quote_end": 1240,
+            "quote_start": 1095,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "N2fwaqOCHbGUkdUP7cChOA",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "service-catalog.md"
+          },
+          "source_document": "service-catalog.md",
+          "source_end": 1520,
+          "source_line": 16,
+          "source_passage": "e sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every other service.\nOwner: **Identity**.\n\n### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.\n\n### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.\n\n### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled report",
+          "source_start": 720
+        }
+      ],
+      "grade": null,
+      "id": "r_c90e3b89c497da363d65beb031fdd915bb8c895d5715094d41dad4a77c51ac8c",
+      "notes": null,
+      "number": 2,
+      "object": "Analytics Engine",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "query-engine"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+          "provenance": {
+            "cache_key": "f5eee5066a8483df54a84d7af1cc73f7737fd6ef5a9ca247a8dc1668d886d3be",
+            "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "f81ec037ea354733959c46ca058a2374",
+              "original_response_sha256": "5207397f644932ed21303b3623fbe7767a0fda82ea22f07f7419c7bdf9b44fa6",
+              "repairs": [
+                {
+                  "expanded_quote": "### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.",
+                  "object": {
+                    "label": "Messaging",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Messaging**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "postroom",
+                    "type": "Service"
+                  },
+                  "triple_index": 0
+                },
+                {
+                  "expanded_quote": "### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.",
+                  "object": {
+                    "label": "Platform",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Platform**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "embed-svc",
+                    "type": "Service"
+                  },
+                  "triple_index": 2
+                }
+              ]
+            },
+            "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+            "extracted_at": "2026-11-08T12:12:41.302496+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_b7d77921332944e3d551c4b8a28d6a9a275af339a37283904942da15b5109393",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.",
+            "quote_end": 1984,
+            "quote_start": 1868,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "OGfwapTtHtD-vdIP1tGv6Ak",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "service-catalog.md"
+          },
+          "source_document": "service-catalog.md",
+          "source_end": 2240,
+          "source_line": 32,
+          "source_passage": "ngine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.\n\npostroom replaced the older mailman service in November 2025. mailman is switched off; old alerts or documents that mention it refer to postroom today.\n\n### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.\n\n### ledger\n\nSubscriptions, seats, invoices and payments. Generates invoice PDFs, runs the automatic payment retries, and applies the grace period and read-only rules of the Billing and Refund Policy. Talks to the payment processor; never stores full card",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_7ca92947065c0de5ec6265daa6da936e4ab3d5a1c1e17372708aa1d5721c69b9",
+      "notes": null,
+      "number": 3,
+      "object": "Platform",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "embed-svc"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+          "provenance": {
+            "cache_key": "d1bdf1310fcd6e5b8af05c27f2f95267d91f3e331a352072e16a2c60c8e89228",
+            "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "d158e312bf534249ac8e34c0d1a44ee2",
+              "original_response_sha256": "f0b74d40b855b2e26486efa41af17e4554d0942d2481fd822b1d8c70f05f83c7",
+              "repairs": [
+                {
+                  "expanded_quote": "### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.",
+                  "object": {
+                    "label": "Data Integrations",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Data Integrations**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "connector-hub",
+                    "type": "Service"
+                  },
+                  "triple_index": 1
+                },
+                {
+                  "expanded_quote": "### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.",
+                  "object": {
+                    "label": "Analytics Engine",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Analytics Engine**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "query-engine",
+                    "type": "Service"
+                  },
+                  "triple_index": 2
+                },
+                {
+                  "expanded_quote": "### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.",
+                  "object": {
+                    "label": "Analytics Engine",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Analytics Engine**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "scheduler",
+                    "type": "Service"
+                  },
+                  "triple_index": 3
+                }
+              ]
+            },
+            "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+            "extracted_at": "2026-11-08T12:12:40.290884+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_dd8da413b422dacbebaf478d8e2677c8f592ac890bfe855848a91ee9494081e2",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.",
+            "quote_end": 1093,
+            "quote_start": 837,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "N2fwaqOCHbGUkdUP7cChOA",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "service-catalog.md"
+          },
+          "source_document": "service-catalog.md",
+          "source_end": 1520,
+          "source_line": 16,
+          "source_passage": "e sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every other service.\nOwner: **Identity**.\n\n### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.\n\n### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.\n\n### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled report",
+          "source_start": 720
+        }
+      ],
+      "grade": null,
+      "id": "r_6fb425c8a336bd02862ef9c1b69316322b8ce8f59eaca00193ff2eecd81b2e28",
+      "notes": null,
+      "number": 4,
+      "object": "Data Integrations",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "connector-hub"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+          "provenance": {
+            "cache_key": "ec70f00dbd3e62d53bfce895a050737605b5d06c17b4f59ac0ed04efe06fa3bb",
+            "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "735c5a830ef341d58d13fc05a96e3e4d",
+              "original_response_sha256": "4b9cb355aea2c07cebafb04ac9995ee8445e02bcce5b8727882e354b5728d379",
+              "repairs": [
+                {
+                  "expanded_quote": "### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails.",
+                  "object": {
+                    "label": "postroom",
+                    "type": "Service"
+                  },
+                  "original_quote": "This error is raised by postroom, the service that sends all Kestrel e-mails.",
+                  "relation": "RAISED_BY",
+                  "subject": {
+                    "label": "KST-5031",
+                    "type": "ErrorCode"
+                  },
+                  "triple_index": 0
+                }
+              ]
+            },
+            "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+            "extracted_at": "2026-11-08T12:14:03.518986+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_66197d7a424dfb27a5daa6ba9b18604b2b53cf72c48ff358782de5d46d4e5df3",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails.",
+            "quote_end": 6019,
+            "quote_start": 5772,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "imfwapaHIILMkdUPrOLokAw",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "support-runbook-errors.md"
+          },
+          "source_document": "support-runbook-errors.md",
+          "source_end": 6560,
+          "source_line": 100,
+          "source_passage": "(KST-5xxx)\n\n### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails. A single occurrence is usually a temporary problem with a recipient's mail server.\n**Support action:** check whether the recipient's address is correct and whether the next delivery succeeds. Ask the customer to check that messages from kestrel.example are not blocked by their mail filter.\n**Escalate:** if the error happens on two consecutive deliveries, or for several customers on the same day, escalate to the team that owns postroom, as SEV-2.\n\n### KST-5038 — Embed token expired\n\n**User sees:** an embedded dashboard shows \"This link",
+          "source_start": 5760
+        }
+      ],
+      "grade": null,
+      "id": "r_c913029a8f1c27d922d399f6c690aba1867d99142b3bc097256e618e202efb66",
+      "notes": null,
+      "number": 5,
+      "object": "postroom",
+      "relation": "RAISED_BY",
+      "reviewer": null,
+      "subject": "KST-5031"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+          "provenance": {
+            "cache_key": "f5eee5066a8483df54a84d7af1cc73f7737fd6ef5a9ca247a8dc1668d886d3be",
+            "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "f81ec037ea354733959c46ca058a2374",
+              "original_response_sha256": "5207397f644932ed21303b3623fbe7767a0fda82ea22f07f7419c7bdf9b44fa6",
+              "repairs": [
+                {
+                  "expanded_quote": "### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.",
+                  "object": {
+                    "label": "Messaging",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Messaging**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "postroom",
+                    "type": "Service"
+                  },
+                  "triple_index": 0
+                },
+                {
+                  "expanded_quote": "### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.",
+                  "object": {
+                    "label": "Platform",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Platform**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "embed-svc",
+                    "type": "Service"
+                  },
+                  "triple_index": 2
+                }
+              ]
+            },
+            "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+            "extracted_at": "2026-11-08T12:12:41.302496+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_270b5fe3f5ebb57c105605660fa538db369fc2af3ec177e62570b1dc6bc53e7a",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.",
+            "quote_end": 1713,
+            "quote_start": 1450,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "OGfwapTtHtD-vdIP1tGv6Ak",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "service-catalog.md"
+          },
+          "source_document": "service-catalog.md",
+          "source_end": 2240,
+          "source_line": 32,
+          "source_passage": "ngine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.\n\npostroom replaced the older mailman service in November 2025. mailman is switched off; old alerts or documents that mention it refer to postroom today.\n\n### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.\n\n### ledger\n\nSubscriptions, seats, invoices and payments. Generates invoice PDFs, runs the automatic payment retries, and applies the grace period and read-only rules of the Billing and Refund Policy. Talks to the payment processor; never stores full card",
+          "source_start": 1440
+        }
+      ],
+      "grade": null,
+      "id": "r_8448c5dfc3ec645d2d67ccdcddbddf28339677e572fd5b8c040781cfc302f44e",
+      "notes": null,
+      "number": 6,
+      "object": "Messaging",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "postroom"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+          "provenance": {
+            "cache_key": "dde2c5a009d3b639182cef2e744fe8763149c9e2afd25acacb0171b8c32675e4",
+            "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "855b6839e2034cce8ef1efc4126fd542",
+              "original_response_sha256": "fd6cef11f597b05fc08ca3ab7f2e4b3d6a1442f342ca5ae848a1c196cc9bd236",
+              "repairs": [
+                {
+                  "expanded_quote": "### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.",
+                  "object": {
+                    "label": "Platform",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Platform**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "gateway",
+                    "type": "Service"
+                  },
+                  "triple_index": 0
+                }
+              ]
+            },
+            "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+            "extracted_at": "2026-11-08T12:12:39.287861+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_ac2dacd9f632431fd7e4c975e7e64cbc154ed213af1b0daaf51ded3e410fd681",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.",
+            "quote_end": 653,
+            "quote_start": 397,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "Nmfwap_VKqm1kdUP1Z_iqQw",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "service-catalog.md"
+          },
+          "source_document": "service-catalog.md",
+          "source_end": 800,
+          "source_line": 1,
+          "source_passage": "# Kestrel Analytics — Service Catalog\n\nInternal document · Owner: Platform team · Last updated: 15 September 2026\n\nThis catalog lists the production services of Kestrel, what each one does, and which team owns it. The owning team is responsible for the service's on-call rotation, its alerts and its runbook entries. When in doubt about who owns something, ask in #platform-help.\n\n## 1. Services\n\n### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.\n\n### auth\n\nSign-in with password, two-factor authentication, single sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every ",
+          "source_start": 0
+        }
+      ],
+      "grade": null,
+      "id": "r_284507b1134b504aa9c39d8093da64f6198176d70bb04e76e81484e09d1c3ea4",
+      "notes": null,
+      "number": 7,
+      "object": "Platform",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "gateway"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+          "provenance": {
+            "cache_key": "d1bdf1310fcd6e5b8af05c27f2f95267d91f3e331a352072e16a2c60c8e89228",
+            "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "d158e312bf534249ac8e34c0d1a44ee2",
+              "original_response_sha256": "f0b74d40b855b2e26486efa41af17e4554d0942d2481fd822b1d8c70f05f83c7",
+              "repairs": [
+                {
+                  "expanded_quote": "### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.",
+                  "object": {
+                    "label": "Data Integrations",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Data Integrations**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "connector-hub",
+                    "type": "Service"
+                  },
+                  "triple_index": 1
+                },
+                {
+                  "expanded_quote": "### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.",
+                  "object": {
+                    "label": "Analytics Engine",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Analytics Engine**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "query-engine",
+                    "type": "Service"
+                  },
+                  "triple_index": 2
+                },
+                {
+                  "expanded_quote": "### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.",
+                  "object": {
+                    "label": "Analytics Engine",
+                    "type": "Team"
+                  },
+                  "original_quote": "Owner: **Analytics Engine**.",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "scheduler",
+                    "type": "Service"
+                  },
+                  "triple_index": 3
+                }
+              ]
+            },
+            "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+            "extracted_at": "2026-11-08T12:12:40.290884+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_39d350714b1d28d1a0b13ad32bfc4b5e24071fbc73e1a03888564abf49d69da5",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.",
+            "quote_end": 1448,
+            "quote_start": 1242,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "N2fwaqOCHbGUkdUP7cChOA",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "service-catalog.md"
+          },
+          "source_document": "service-catalog.md",
+          "source_end": 1520,
+          "source_line": 16,
+          "source_passage": "e sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every other service.\nOwner: **Identity**.\n\n### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.\n\n### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.\n\n### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled report",
+          "source_start": 720
+        }
+      ],
+      "grade": null,
+      "id": "r_bc4e33c2d356c2699ac2acd97d17a601f6a99689585b7b6d65ba183de45f5b31",
+      "notes": null,
+      "number": 8,
+      "object": "Analytics Engine",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "scheduler"
+    },
+    {
+      "condition_quote": null,
+      "evidence": [
+        {
+          "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+          "provenance": {
+            "cache_key": "9344d1dd6fe9c697dcf0e2ae6ab57a647900a007456a8ba67d13266484207a2a",
+            "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "7a36c06c31a94ce5bd635583912ca809",
+              "original_response_sha256": "84c06e1819962a4b08aee300f43b0f1f5870353c678402eb28a6674f0905771a",
+              "repairs": [
+                {
+                  "expanded_quote": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 January 2025 · Policy owner: Finance",
+                  "object": {
+                    "label": "Finance",
+                    "type": "Team"
+                  },
+                  "original_quote": "Policy owner: Finance",
+                  "relation": "OWNED_BY",
+                  "subject": {
+                    "label": "Kestrel Analytics — Billing and Refund Policy",
+                    "type": "Policy"
+                  },
+                  "triple_index": 0
+                }
+              ]
+            },
+            "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+            "extracted_at": "2026-11-08T12:05:35.120083+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_2af5a8b1f1df7348f95ce86e202bd05308240ebe6ea0ea658f01b42689147dbe",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 January 2025 · Policy owner: Finance",
+            "quote_end": 103,
+            "quote_start": 0,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "iWXwapmwB4aH28oPmoPPmQI",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "billing-policy-2025.md"
+          },
+          "source_document": "billing-policy-2025.md",
+          "source_end": 800,
+          "source_line": 1,
+          "source_passage": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 January 2025 · Policy owner: Finance · Audience: customers and support staff\n\n## 1. Scope\n\nThis policy explains how Kestrel Analytics charges for its plans, how invoices are issued, and when refunds are possible. It applies to all paid plans: Starter, Team, Business and Enterprise. Enterprise contracts may contain different terms; when they do, the contract takes precedence over this policy. Current prices are published on the Kestrel pricing page and are not repeated here.\n\n## 2. Billing cycles\n\nPaid plans are billed per seat, either monthly or annually. Monthly plans are charged on the same day each month as the original purchase. Annual plans are charged once a year, on the anniversary of the purchase.\n\nCustomers who cho",
+          "source_start": 0
+        }
+      ],
+      "grade": null,
+      "id": "r_45dc5d6896e26563c2319c735bb796817f79cfbbf15999b3b089d199865e07a6",
+      "notes": null,
+      "number": 9,
+      "object": "Finance",
+      "relation": "OWNED_BY",
+      "reviewer": null,
+      "subject": "Kestrel Analytics — Billing and Refund Policy"
+    },
+    {
+      "condition_quote": "if the metadata is correct and the error persists",
+      "evidence": [
+        {
+          "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+          "provenance": {
+            "cache_key": "fec797ed3502bf0fda967f3fdc0940f4f156c2860dd3d59dc51beab8e631bf84",
+            "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+            "derivation": {
+              "method": "bounded-heading-context-v1",
+              "original_attempt_id": "c1309b3c7f964138a20df1a2ffa779a8",
+              "original_response_sha256": "64d003322c4db0fe8e637f14aeb1af2d26d279fa6fee1eb8af7c48e35c44da1a",
+              "repairs": [
+                {
+                  "expanded_quote": "### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.",
+                  "object": {
+                    "label": "Identity",
+                    "type": "Team"
+                  },
+                  "original_quote": "**Escalate:** to Identity if the metadata is correct and the error persists.",
+                  "relation": "ESCALATE_TO",
+                  "subject": {
+                    "label": "KST-1012",
+                    "type": "ErrorCode"
+                  },
+                  "triple_index": 0
+                }
+              ]
+            },
+            "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+            "extracted_at": "2026-11-08T12:13:23.005752+00:00",
+            "extraction_model": "gemini-3.5-flash-lite",
+            "human_reviewed": false,
+            "id": "p_c5ad26e5961e5fb5857008f476dad1f17d24e3408f0b0fca7e5ba9600d11921d",
+            "kind": "triple",
+            "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+            "provider": "google-gemini-developer-api",
+            "quote": "### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.",
+            "quote_end": 2665,
+            "quote_start": 2222,
+            "requested_model": "gemini-3.5-flash-lite",
+            "response_id": "YWfwaqOhPOCO28oPveb58AM",
+            "schema_version": "kestrel-graph-v1",
+            "source_document": "support-runbook-errors.md"
+          },
+          "source_document": "support-runbook-errors.md",
+          "source_end": 2960,
+          "source_line": 35,
+          "source_passage": "only does it after identity verification).\n**Escalate:** no.\n\n### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.\n\n## Connectors (KST-2xxx)\n\n### KST-2040 — Connection timed out\n\n**User sees:** \"Kestrel could not reach your data source in time.\"\n**Cause:** the database is down, overloaded, or behind a firewall that silently drops the connection.\n**Support action:** ask the customer to confirm the database ",
+          "source_start": 2160
+        }
+      ],
+      "grade": null,
+      "id": "r_ca441cf1b12ba168ba8085c885ca6c133d6013f6d83cea8aede54619becdf59f",
+      "notes": null,
+      "number": 10,
+      "object": "Identity",
+      "relation": "ESCALATE_TO",
+      "reviewer": null,
+      "subject": "KST-1012"
+    }
+  ]
+}

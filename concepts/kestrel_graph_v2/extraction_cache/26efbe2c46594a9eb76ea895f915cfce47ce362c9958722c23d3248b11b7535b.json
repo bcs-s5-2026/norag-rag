@@ -1,0 +1,42 @@
+{
+  "attempt_id": "8a1d537c4e524bb29ec846dc631e32c7",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 5120,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:4320:5120",
+    "line": 53,
+    "name": "billing-policy-2026.md",
+    "start": 4320,
+    "text": "as soon as the payment succeeds.\n\n## 8. Cancellation\n\nThe Owner can cancel a paid plan from **Settings → Plan → Cancel plan**. Cancellation stops future charges. The workspace stays on its paid plan until the end of the period already paid, then moves to the Free plan. Content above the Free plan limits becomes read-only.\n\nCancelling an annual plan does not by itself trigger a refund. To be refunded, request it as described in section 6.\n\n## 9. Taxes\n\nPrices are shown without tax. VAT or sales tax is added according to the billing address. Business customers in the European Union who provide a valid VAT number are invoiced without VAT under the reverse-charge mechanism.\n\n## 10. Contact\n\nBilling questions: billing@kestrel.example. Please include the workspace name and, if relevant, the invo"
+  },
+  "extracted_at": "2026-11-08T13:08:11.866768+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 10.357868791994406,
+  "key": "26efbe2c46594a9eb76ea895f915cfce47ce362c9958722c23d3248b11b7535b",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1899,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "MXTwauqVNKOEvdIPq4nNoAs",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "3c40c6beb333afc9f1016f2672536f586aa3db5d44a0948df6b4ae63415c7b4d"
+}

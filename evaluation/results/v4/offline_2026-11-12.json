@@ -1,0 +1,595 @@
+{
+  "kind": "v4-offline-checks",
+  "measured_at": "2026-11-12T12:32:46.543276+00:00",
+  "concept_map": {
+    "concepts": 42,
+    "links_seen_from_both_ends": 78,
+    "quotes_checked": 156,
+    "quotes_wrong": 0,
+    "most_links": {
+      "label": "Enterprise",
+      "type": "Plan",
+      "links": 6,
+      "links_with_condition": 0,
+      "mentions": 6,
+      "quotes_checked": 12,
+      "quotes_wrong": 0
+    },
+    "fewest_links": {
+      "label": "#oncall-analytics",
+      "type": "Channel",
+      "links": 1,
+      "links_with_condition": 0,
+      "mentions": 1,
+      "quotes_checked": 2,
+      "quotes_wrong": 0
+    },
+    "links_with_condition": 5,
+    "lookup_ms_median": 1.0350000000000001,
+    "lookup_ms_max": 1.28,
+    "llm_calls": 0,
+    "per_concept": [
+      {
+        "label": "#oncall-analytics",
+        "type": "Channel",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "#oncall-data-integrations",
+        "type": "Channel",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "#oncall-identity",
+        "type": "Channel",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "#oncall-messaging",
+        "type": "Channel",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "#oncall-payments",
+        "type": "Channel",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 2,
+        "quotes_checked": 4,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "#oncall-platform",
+        "type": "Channel",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "KST-1012",
+        "type": "ErrorCode",
+        "links": 1,
+        "links_with_condition": 1,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "KST-2040",
+        "type": "ErrorCode",
+        "links": 1,
+        "links_with_condition": 1,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "KST-3012",
+        "type": "ErrorCode",
+        "links": 2,
+        "links_with_condition": 1,
+        "mentions": 2,
+        "quotes_checked": 4,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "KST-5031",
+        "type": "ErrorCode",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "KST-6002",
+        "type": "ErrorCode",
+        "links": 1,
+        "links_with_condition": 1,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "KST-6010",
+        "type": "ErrorCode",
+        "links": 1,
+        "links_with_condition": 1,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Audit log",
+        "type": "Feature",
+        "links": 2,
+        "links_with_condition": 0,
+        "mentions": 2,
+        "quotes_checked": 5,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "bank transfer against an invoice",
+        "type": "Feature",
+        "links": 3,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 4,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Public share links",
+        "type": "Feature",
+        "links": 4,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 5,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "SCIM user provisioning",
+        "type": "Feature",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "single sign-on",
+        "type": "Feature",
+        "links": 2,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 3,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Single sign-on (SAML)",
+        "type": "Feature",
+        "links": 2,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 3,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Business",
+        "type": "Plan",
+        "links": 5,
+        "links_with_condition": 0,
+        "mentions": 6,
+        "quotes_checked": 12,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Enterprise",
+        "type": "Plan",
+        "links": 6,
+        "links_with_condition": 0,
+        "mentions": 6,
+        "quotes_checked": 12,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Starter",
+        "type": "Plan",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Team",
+        "type": "Plan",
+        "links": 2,
+        "links_with_condition": 0,
+        "mentions": 2,
+        "quotes_checked": 4,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Billing and Refund Policy",
+        "type": "Policy",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Billing and Refund Policy",
+        "type": "Policy",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "audit-log",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "auth",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "connector-hub",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "embed-svc",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "gateway",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "ledger",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "mailman",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "postroom",
+        "type": "Service",
+        "links": 3,
+        "links_with_condition": 0,
+        "mentions": 3,
+        "quotes_checked": 6,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "query-engine",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "scheduler",
+        "type": "Service",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Analytics Eng",
+        "type": "Team",
+        "links": 1,
+        "links_with_condition": 0,
+        "mentions": 1,
+        "quotes_checked": 2,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Analytics Engine",
+        "type": "Team",
+        "links": 4,
+        "links_with_condition": 1,
+        "mentions": 4,
+        "quotes_checked": 8,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Data Integrations",
+        "type": "Team",
+        "links": 3,
+        "links_with_condition": 1,
+        "mentions": 3,
+        "quotes_checked": 6,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Finance",
+        "type": "Team",
+        "links": 2,
+        "links_with_condition": 0,
+        "mentions": 2,
+        "quotes_checked": 4,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Identity",
+        "type": "Team",
+        "links": 4,
+        "links_with_condition": 1,
+        "mentions": 4,
+        "quotes_checked": 8,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Messaging",
+        "type": "Team",
+        "links": 2,
+        "links_with_condition": 0,
+        "mentions": 2,
+        "quotes_checked": 4,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Payments Core",
+        "type": "Team",
+        "links": 4,
+        "links_with_condition": 2,
+        "mentions": 5,
+        "quotes_checked": 10,
+        "quotes_wrong": 0
+      },
+      {
+        "label": "Platform",
+        "type": "Team",
+        "links": 3,
+        "links_with_condition": 0,
+        "mentions": 3,
+        "quotes_checked": 6,
+        "quotes_wrong": 0
+      }
+    ]
+  },
+  "redaction_cases": [
+    {
+      "text": "Write to jane.doe@example.org please.",
+      "redacted": "Write to [EMAIL_1] please.",
+      "found": {
+        "emails": 1,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 1,
+        "phones": 0
+      },
+      "as_expected": true
+    },
+    {
+      "text": "Two people: a@x.io and b@y.co.uk, then a@x.io again.",
+      "redacted": "Two people: [EMAIL_1] and [EMAIL_2], then [EMAIL_1] again.",
+      "found": {
+        "emails": 2,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 2,
+        "phones": 0
+      },
+      "as_expected": true
+    },
+    {
+      "text": "Call +33 6 12 34 56 78.",
+      "redacted": "Call [PHONE_1].",
+      "found": {
+        "emails": 0,
+        "phones": 1
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 1
+      },
+      "as_expected": true
+    },
+    {
+      "text": "Call 06 12 34 56 78 or 06.12.34.56.78",
+      "redacted": "Call [PHONE_1] or [PHONE_2]",
+      "found": {
+        "emails": 0,
+        "phones": 2
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 2
+      },
+      "as_expected": true
+    },
+    {
+      "text": "US number (555) 123-4567 ext 12",
+      "redacted": "US number [PHONE_1] ext 12",
+      "found": {
+        "emails": 0,
+        "phones": 1
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 1
+      },
+      "as_expected": true
+    },
+    {
+      "text": "Allow the IP 203.0.113.10 on the firewall.",
+      "redacted": "Allow the IP 203.0.113.10 on the firewall.",
+      "found": {
+        "emails": 0,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 0
+      },
+      "as_expected": true
+    },
+    {
+      "text": "Effective 2026-01-01, error KST-5031, 1,200 EUR.",
+      "redacted": "Effective 2026-01-01, error KST-5031, 1,200 EUR.",
+      "found": {
+        "emails": 0,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 0
+      },
+      "as_expected": true
+    },
+    {
+      "text": "My name is Sam Martin and I live in Paris.",
+      "redacted": "My name is Sam Martin and I live in Paris.",
+      "found": {
+        "emails": 0,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 0
+      },
+      "as_expected": true
+    },
+    {
+      "text": "Mail me at sam (at) example (dot) org",
+      "redacted": "Mail me at sam (at) example (dot) org",
+      "found": {
+        "emails": 0,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 0
+      },
+      "as_expected": true
+    },
+    {
+      "text": "My number is zero six, twelve, thirty-four.",
+      "redacted": "My number is zero six, twelve, thirty-four.",
+      "found": {
+        "emails": 0,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 0
+      },
+      "as_expected": true
+    },
+    {
+      "text": "Short number 0612 3456",
+      "redacted": "Short number 0612 3456",
+      "found": {
+        "emails": 0,
+        "phones": 0
+      },
+      "expected": {
+        "emails": 0,
+        "phones": 0
+      },
+      "as_expected": true
+    }
+  ],
+  "redaction_on_corpora": {
+    "billing-policy-2025.md": {
+      "emails": 1,
+      "phones": 0,
+      "values": [
+        "billing@kestrel.example"
+      ]
+    },
+    "billing-policy-2026.md": {
+      "emails": 1,
+      "phones": 0,
+      "values": [
+        "billing@kestrel.example"
+      ]
+    },
+    "product-guide.md": {
+      "emails": 1,
+      "phones": 0,
+      "values": [
+        "privacy@kestrel.example"
+      ]
+    },
+    "service-catalog.md": {
+      "emails": 0,
+      "phones": 0,
+      "values": []
+    },
+    "support-runbook-errors.md": {
+      "emails": 0,
+      "phones": 0,
+      "values": []
+    },
+    "vellora-duo-espresso-machine.txt": {
+      "emails": 0,
+      "phones": 0,
+      "values": []
+    }
+  }
+}

@@ -1,0 +1,11 @@
+number,subject,relation,object,grade,reason,reviewer
+1,Public share links,AVAILABLE_ON,Business,correct,The plan table shows Yes for Business,Feras M
+2,SCIM user provisioning,AVAILABLE_ON,Enterprise,correct,SCIM is available on the Enterprise plan,Feras M
+3,Public share links,AVAILABLE_ON,Enterprise,correct,The Enterprise column shows Yes for public share links,Feras M
+4,connector-hub,OWNED_BY,Data Integrations,correct,The service catalog says Data Integrations owns connector-hub,Feras M
+5,Public share links,AVAILABLE_ON,Team,correct,The Team plan also has public share links,Feras M
+6,single sign-on,AVAILABLE_ON,Enterprise,correct,The guide says SSO is available on Business and Enterprise,Feras M
+7,audit-log,OWNED_BY,Identity,correct,Identity is listed as the owner of audit-log,Feras M
+8,Analytics Engine,CONTACT_CHANNEL,#oncall-analytics,correct,The team table lists #oncall-analytics for Analytics Engine,Feras M
+9,query-engine,OWNED_BY,Analytics Engine,correct,The service catalog lists Analytics Engine as the owner,Feras M
+10,Billing and Refund Policy,OWNED_BY,Finance,correct,The policy header says Finance is the owner,Feras M

@@ -1,0 +1,56 @@
+{
+  "attempt_id": "08c94d403fb6451a8db86751337038a2",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 5120,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:4320:5120",
+    "line": 74,
+    "name": "support-runbook-errors.md",
+    "start": 4320,
+    "text": "t is the same on every plan and cannot be raised.\n**Escalate:** to Analytics Engine only if a query that used to finish quickly suddenly times out for many datasets of the same customer.\n\n### KST-3020 — Dataset refresh failed\n\n**User sees:** a red clock on the tiles.\n**Cause:** the tooltip shows a second code with the real cause, usually a KST-2xxx connector error.\n**Support action:** handle the underlying code.\n**Escalate:** depends on the underlying code.\n\n## Members and seats (KST-4xxx)\n\n### KST-4012 — No seat available\n\n**User sees:** \"This workspace has no seat available. Ask an Admin.\"\n**Cause:** the person is accepting an invitation, but all seats of the plan are already used. Pending invitations do not use a seat; the check happens at acceptance.\n**Support action:** explain that an"
+  },
+  "extracted_at": "2026-11-08T13:50:12.095987+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": "only if a query that used to finish quickly suddenly times out for many datasets of the same customer",
+        "evidence_quote": "**Escalate:** to Analytics Engine only if a query that used to finish quickly suddenly times out for many datasets of the same customer.",
+        "object": {
+          "label": "Analytics Engine",
+          "type": "Team"
+        },
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-3012",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 5.445444666984258,
+  "key": "a5cac3977c0b183dc35afc79376fcc55f4307c0e5ea33a2ade5f538040e8ed6b",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1940,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 156,
+    "response_id": "D37wasGGBPiyvdIPvpzNsQs",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"ErrorCode\",\n        \"label\": \"KST-3012\"\n      },\n      \"relation\": \"ESCALATE_TO\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Analytics Engine\"\n      },\n      \"evidence_quote\": \"**Escalate:** to Analytics Engine only if a query that used to finish quickly suddenly times out for many datasets of the same customer.\",\n      \"condition_quote\": \"only if a query that used to finish quickly suddenly times out for many datasets of the same customer\"\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "84198bae55f77b8518357fae01e04c6cc96e7c52abfd188d2c48f050afc1d7cc"
+}

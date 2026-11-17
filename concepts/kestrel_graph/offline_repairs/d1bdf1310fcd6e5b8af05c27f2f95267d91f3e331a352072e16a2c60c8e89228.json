@@ -1,0 +1,129 @@
+{
+  "attempt_id": "d158e312bf534249ac8e34c0d1a44ee2",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 1520,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+    "line": 16,
+    "name": "service-catalog.md",
+    "start": 720,
+    "text": "e sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every other service.\nOwner: **Identity**.\n\n### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.\n\n### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.\n\n### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled report"
+  },
+  "derivation": {
+    "method": "bounded-heading-context-v1",
+    "original_attempt_id": "d158e312bf534249ac8e34c0d1a44ee2",
+    "original_response_sha256": "f0b74d40b855b2e26486efa41af17e4554d0942d2481fd822b1d8c70f05f83c7",
+    "repairs": [
+      {
+        "expanded_quote": "### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.",
+        "object": {
+          "label": "Data Integrations",
+          "type": "Team"
+        },
+        "original_quote": "Owner: **Data Integrations**.",
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "connector-hub",
+          "type": "Service"
+        },
+        "triple_index": 1
+      },
+      {
+        "expanded_quote": "### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.",
+        "object": {
+          "label": "Analytics Engine",
+          "type": "Team"
+        },
+        "original_quote": "Owner: **Analytics Engine**.",
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "query-engine",
+          "type": "Service"
+        },
+        "triple_index": 2
+      },
+      {
+        "expanded_quote": "### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.",
+        "object": {
+          "label": "Analytics Engine",
+          "type": "Team"
+        },
+        "original_quote": "Owner: **Analytics Engine**.",
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "scheduler",
+          "type": "Service"
+        },
+        "triple_index": 3
+      }
+    ]
+  },
+  "extracted_at": "2026-11-08T12:12:40.290884+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.",
+        "object": {
+          "label": "Data Integrations",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "connector-hub",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.",
+        "object": {
+          "label": "Analytics Engine",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "query-engine",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.",
+        "object": {
+          "label": "Analytics Engine",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "scheduler",
+          "type": "Service"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 0.9950225000211503,
+  "key": "d1bdf1310fcd6e5b8af05c27f2f95267d91f3e331a352072e16a2c60c8e89228",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1320,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 240,
+    "response_id": "N2fwaqOCHbGUkdUP7cChOA",
+    "text": "{\"triples\": [{\"subject\": {\"type\": \"Service\", \"label\": \"connector-hub\"}, \"relation\": \"OWNED_BY\", \"object\": {\"type\": \"Team\", \"label\": \"Data Integrations\"}, \"evidence_quote\": \"### connector-hub\\n\\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\\nOwner: **Data Integrations**.\", \"condition_quote\": null}, {\"subject\": {\"type\": \"Service\", \"label\": \"query-engine\"}, \"relation\": \"OWNED_BY\", \"object\": {\"type\": \"Team\", \"label\": \"Analytics Engine\"}, \"evidence_quote\": \"### query-engine\\n\\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\\nOwner: **Analytics Engine**.\", \"condition_quote\": null}, {\"subject\": {\"type\": \"Service\", \"label\": \"scheduler\"}, \"relation\": \"OWNED_BY\", \"object\": {\"type\": \"Team\", \"label\": \"Analytics Engine\"}, \"evidence_quote\": \"### scheduler\\n\\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\\nOwner: **Analytics Engine**.\", \"condition_quote\": null}], \"aliases\": []}"
+  },
+  "sha256": "56a7f2755178616e0f4c89b614f3262a510520903e7c0f35d9f08d1d46a52439"
+}

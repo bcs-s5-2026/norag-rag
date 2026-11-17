@@ -1,0 +1,82 @@
+{
+  "attempt_id": "1f0e444390854c1e982bd44e14c9d6f2",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 2240,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+    "line": 32,
+    "name": "service-catalog.md",
+    "start": 1440,
+    "text": "ngine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.\n\npostroom replaced the older mailman service in November 2025. mailman is switched off; old alerts or documents that mention it refer to postroom today.\n\n### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.\n\n### ledger\n\nSubscriptions, seats, invoices and payments. Generates invoice PDFs, runs the automatic payment retries, and applies the grace period and read-only rules of the Billing and Refund Policy. Talks to the payment processor; never stores full card"
+  },
+  "extracted_at": "2026-11-08T13:47:45.613828+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.",
+        "object": {
+          "label": "Messaging",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "postroom",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "postroom replaced the older mailman service in November 2025.",
+        "object": {
+          "label": "postroom",
+          "type": "Service"
+        },
+        "relation": "REPLACED_BY",
+        "subject": {
+          "label": "mailman",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.",
+        "object": {
+          "label": "Platform",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "embed-svc",
+          "type": "Service"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 14.088931582984515,
+  "key": "b484dba65d74ed45783634e43406cd7c470ffa96c12e4a86923322930c9b51c0",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1889,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 370,
+    "response_id": "c33war3yNomwnsEPlZu7wAM",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"postroom\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Messaging\"\n      },\n      \"evidence_quote\": \"### postroom\\n\\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\\nOwner: **Messaging**.\",\n      \"condition_quote\": null\n    },\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"mailman\"\n      },\n      \"relation\": \"REPLACED_BY\",\n      \"object\": {\n        \"type\": \"Service\",\n        \"label\": \"postroom\"\n      },\n      \"evidence_quote\": \"postroom replaced the older mailman service in November 2025.\",\n      \"condition_quote\": null\n    },\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"embed-svc\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Platform\"\n      },\n      \"evidence_quote\": \"### embed-svc\\n\\nIssues and checks embed tokens for dashboards embedded in customer applications.\\nOwner: **Platform**.\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "5abbef2d00105b53a8ad7f51bd995ad743b1f24023da25559cfef0f5b98709b8"
+}

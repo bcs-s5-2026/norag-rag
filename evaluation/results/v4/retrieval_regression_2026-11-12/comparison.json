@@ -1,0 +1,86 @@
+[
+  {
+    "run": "kestrel-dense",
+    "questions": 12,
+    "identical_rankings": 12,
+    "recall_at_5_v3": 0.75,
+    "recall_at_5_v4": 0.75,
+    "hit_at_5_v3": 0.9,
+    "hit_at_5_v4": 0.9,
+    "same_metrics": true,
+    "median_ms_v3": 12.8,
+    "median_ms_v4": 14.1
+  },
+  {
+    "run": "kestrel-dense-bm25",
+    "questions": 12,
+    "identical_rankings": 12,
+    "recall_at_5_v3": 0.7416666666666667,
+    "recall_at_5_v4": 0.7416666666666667,
+    "hit_at_5_v3": 0.9,
+    "hit_at_5_v4": 0.9,
+    "same_metrics": true,
+    "median_ms_v3": 15.2,
+    "median_ms_v4": 16.8
+  },
+  {
+    "run": "kestrel-graph",
+    "questions": 12,
+    "identical_rankings": 12,
+    "recall_at_5_v3": 0.38333333333333336,
+    "recall_at_5_v4": 0.38333333333333336,
+    "hit_at_5_v3": 0.5,
+    "hit_at_5_v4": 0.5,
+    "same_metrics": true,
+    "median_ms_v3": 2.2,
+    "median_ms_v4": 2.5
+  },
+  {
+    "run": "kestrel-dense-bm25-graph",
+    "questions": 12,
+    "identical_rankings": 12,
+    "recall_at_5_v3": 0.7916666666666667,
+    "recall_at_5_v4": 0.7916666666666667,
+    "hit_at_5_v3": 0.9,
+    "hit_at_5_v4": 0.9,
+    "same_metrics": true,
+    "median_ms_v3": 17.6,
+    "median_ms_v4": 19.0
+  },
+  {
+    "run": "vellora-dense",
+    "questions": 15,
+    "identical_rankings": 15,
+    "recall_at_5_v3": 0.5833333333333334,
+    "recall_at_5_v4": 0.5833333333333334,
+    "hit_at_5_v3": 0.5833333333333334,
+    "hit_at_5_v4": 0.5833333333333334,
+    "same_metrics": true,
+    "median_ms_v3": 10.8,
+    "median_ms_v4": 11.3
+  },
+  {
+    "run": "vellora-bm25",
+    "questions": 15,
+    "identical_rankings": 15,
+    "recall_at_5_v3": 0.9166666666666666,
+    "recall_at_5_v4": 0.9166666666666666,
+    "hit_at_5_v3": 0.9166666666666666,
+    "hit_at_5_v4": 0.9166666666666666,
+    "same_metrics": true,
+    "median_ms_v3": 2.2,
+    "median_ms_v4": 2.5
+  },
+  {
+    "run": "vellora-dense-bm25",
+    "questions": 15,
+    "identical_rankings": 15,
+    "recall_at_5_v3": 0.9166666666666666,
+    "recall_at_5_v4": 0.9166666666666666,
+    "hit_at_5_v3": 0.9166666666666666,
+    "hit_at_5_v4": 0.9166666666666666,
+    "same_metrics": true,
+    "median_ms_v3": 12.9,
+    "median_ms_v4": 14.6
+  }
+]

@@ -1,0 +1,516 @@
+{
+  "dataset_version": 1,
+  "measured_at": "2026-10-28T22:44:26.394710+00:00",
+  "embedding_model": "all-MiniLM-L6-v2",
+  "settings": {
+    "chunk_size": 800,
+    "chunk_overlap": 80,
+    "top_k": 5
+  },
+  "corpus_sha256": {
+    "vellora-duo-espresso-machine.txt": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6"
+  },
+  "dataset_sha256": "f013c5f5104bd52a6a13bad627ae5e4c557f3f3fa9a2d2d6ddc4956ed7faf37d",
+  "metric": "Hit@k: fraction of answerable questions with the full expected verbatim span in a retrieved chunk from the expected document",
+  "hits": 7,
+  "answerable_count": 12,
+  "unanswerable_count": 3,
+  "hit_at_k": 0.5833333333333334,
+  "results": [
+    {
+      "id": "q01",
+      "difficulty": "easy",
+      "question": "How large is the Vellora Duo water tank?",
+      "expected_answer": "1.8 litres",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "water tank (1.8 litres)",
+      "location": "Section 2",
+      "answerable": true,
+      "hit": false,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "similarity": 0.47364145517349243
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7920:8720",
+          "similarity": 0.40643906593322754
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "similarity": 0.333260178565979
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "similarity": 0.3327661156654358
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7200:8000",
+          "similarity": 0.3197152614593506
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "difficulty": "easy",
+      "question": "How much coffee does the espresso button make?",
+      "expected_answer": "40 ml",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "espresso for a short coffee (40 ml)",
+      "location": "Section 4",
+      "answerable": true,
+      "hit": true,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:2880:3680",
+          "similarity": 0.582241952419281
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:1440:2240",
+          "similarity": 0.5577375888824463
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "similarity": 0.43479597568511963
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:3600:4400",
+          "similarity": 0.42908555269241333
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:4320:5120",
+          "similarity": 0.41566145420074463
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "difficulty": "easy",
+      "question": "How long is the Vellora Duo warranty?",
+      "expected_answer": "Two years from purchase",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "two-year warranty from the date of purchase",
+      "location": "Section 11",
+      "answerable": true,
+      "hit": true,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "similarity": 0.5291773080825806
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:720:1520",
+          "similarity": 0.3465861678123474
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7920:8720",
+          "similarity": 0.32610177993774414
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "similarity": 0.3242970108985901
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "similarity": 0.2998543977737427
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "difficulty": "easy",
+      "question": "How often should I replace the water filter?",
+      "expected_answer": "Two months or 50 litres",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "A filter lasts two months, or 50 litres of water.",
+      "location": "Section 8",
+      "answerable": true,
+      "hit": true,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7920:8720",
+          "similarity": 0.5362317562103271
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:22320:23120",
+          "similarity": 0.41089367866516113
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7200:8000",
+          "similarity": 0.3434431552886963
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:30240:31036",
+          "similarity": 0.323925256729126
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:5760:6560",
+          "similarity": 0.32387208938598633
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "difficulty": "precise",
+      "question": "What should I do for error E47?",
+      "expected_answer": "Unplug, empty hopper, turn upper burr anticlockwise with supplied key",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "turn the upper burr anticlockwise until the object falls out",
+      "location": "Section 9 / E47",
+      "answerable": true,
+      "hit": false,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:20880:21680",
+          "similarity": 0.5600518584251404
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:19440:20240",
+          "similarity": 0.5133129358291626
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:20160:20960",
+          "similarity": 0.49567943811416626
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "similarity": 0.45782601833343506
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:15120:15920",
+          "similarity": 0.44236505031585693
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "difficulty": "precise",
+      "question": "What does E22 mean and how do I fix it?",
+      "expected_answer": "Pump overload; two steps coarser, descale if persistent",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "Set the grind adjuster two steps coarser.",
+      "location": "Section 9 / E22",
+      "answerable": true,
+      "hit": true,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:13680:14480",
+          "similarity": 0.4777071475982666
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:20160:20960",
+          "similarity": 0.40163272619247437
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:20880:21680",
+          "similarity": 0.39480066299438477
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:10800:11600",
+          "similarity": 0.3882490396499634
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:15120:15920",
+          "similarity": 0.3857741355895996
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "difficulty": "precise",
+      "question": "How do I clear error E86?",
+      "expected_answer": "Hold menu for five seconds",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "Press and hold the menu button for five seconds",
+      "location": "Section 9 / E86",
+      "answerable": true,
+      "hit": false,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:20880:21680",
+          "similarity": 0.41774284839630127
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:21600:22400",
+          "similarity": 0.38752055168151855
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "similarity": 0.37957465648651123
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:15120:15920",
+          "similarity": 0.353208065032959
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:19440:20240",
+          "similarity": 0.3355395197868347
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "difficulty": "precise",
+      "question": "What does E70 require after descaling?",
+      "expected_answer": "Fresh water and two rinses",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "run the rinsing programme twice.",
+      "location": "Section 9 / E70",
+      "answerable": true,
+      "hit": true,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:23040:23840",
+          "similarity": 0.4001199007034302
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:6480:7280",
+          "similarity": 0.3323957920074463
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:26640:27440",
+          "similarity": 0.31503140926361084
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:21600:22400",
+          "similarity": 0.31149888038635254
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:23760:24560",
+          "similarity": 0.2922712564468384
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "difficulty": "hard",
+      "question": "The grounds container was emptied but the counter has not reset. Why?",
+      "expected_answer": "Remove for at least five seconds with machine on",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "removed for at least five seconds",
+      "location": "Section 6",
+      "answerable": true,
+      "hit": false,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:10080:10880",
+          "similarity": 0.5663324594497681
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:26640:27440",
+          "similarity": 0.4038048982620239
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:21600:22400",
+          "similarity": 0.3903747797012329
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:19440:20240",
+          "similarity": 0.3856201171875
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:27360:28160",
+          "similarity": 0.37628722190856934
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "difficulty": "hard",
+      "question": "Can I clean the brewing unit in the dishwasher?",
+      "expected_answer": "No; it removes necessary grease",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "Do not use washing-up liquid or the dishwasher",
+      "location": "Section 6",
+      "answerable": true,
+      "hit": true,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:5760:6560",
+          "similarity": 0.614608883857727
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:720:1520",
+          "similarity": 0.4192655086517334
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:30240:31036",
+          "similarity": 0.4065341353416443
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:6480:7280",
+          "similarity": 0.372794508934021
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:10800:11600",
+          "similarity": 0.3697474002838135
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "difficulty": "hard",
+      "question": "What preparation is needed after the machine sits unused for three weeks?",
+      "expected_answer": "Fill the water circuit",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "has not been used for more than two weeks, the circuit must be filled with water.",
+      "location": "Section 3",
+      "answerable": true,
+      "hit": false,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:5760:6560",
+          "similarity": 0.484167218208313
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:6480:7280",
+          "similarity": 0.47369134426116943
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:30240:31036",
+          "similarity": 0.4574439525604248
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "similarity": 0.4445762634277344
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:5040:5840",
+          "similarity": 0.4398890733718872
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "difficulty": "hard",
+      "question": "What is excluded from warranty even when using soft water?",
+      "expected_answer": "Limescale damage",
+      "source": "vellora-duo-espresso-machine.txt",
+      "passage": "Damage caused by limescale is not covered by the warranty.",
+      "location": "Section 7",
+      "answerable": true,
+      "hit": true,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7920:8720",
+          "similarity": 0.42277973890304565
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:30240:31036",
+          "similarity": 0.40413719415664673
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "similarity": 0.3510286808013916
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:2160:2960",
+          "similarity": 0.29082298278808594
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:6480:7280",
+          "similarity": 0.28241175413131714
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "difficulty": "unanswerable",
+      "question": "What is the Vellora Duo Wi-Fi password?",
+      "expected_answer": "Not provided in the corpus.",
+      "source": null,
+      "passage": null,
+      "location": null,
+      "answerable": false,
+      "hit": null,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:25200:26000",
+          "similarity": 0.4800291061401367
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "similarity": 0.2738279700279236
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:720:1520",
+          "similarity": 0.26653122901916504
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "similarity": 0.23086315393447876
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "similarity": 0.22242659330368042
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "difficulty": "unanswerable",
+      "question": "What is the exact retail price of the Vellora Duo?",
+      "expected_answer": "Not provided in the corpus.",
+      "source": null,
+      "passage": null,
+      "location": null,
+      "answerable": false,
+      "hit": null,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "similarity": 0.2992899417877197
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:720:1520",
+          "similarity": 0.23175382614135742
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "similarity": 0.19777238368988037
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "similarity": 0.15417206287384033
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:25200:26000",
+          "similarity": 0.14114868640899658
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "difficulty": "unanswerable",
+      "question": "Who won the 2026 football World Cup?",
+      "expected_answer": "Not provided in the corpus.",
+      "source": null,
+      "passage": null,
+      "location": null,
+      "answerable": false,
+      "hit": null,
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "similarity": 0.09109413623809814
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:18720:19520",
+          "similarity": 0.08385813236236572
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:28080:28880",
+          "similarity": 0.07951456308364868
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:22320:23120",
+          "similarity": 0.07611334323883057
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:2880:3680",
+          "similarity": 0.07419359683990479
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "attempt_id": "b40a294310c44a4cb36d88fde68e93a2",
+  "chunk": {
+    "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+    "end": 4123,
+    "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:3600:4123",
+    "line": 51,
+    "name": "billing-policy-2025.md",
+    "start": 3600,
+    "text": "pace stays on its paid plan until the end of the period already paid, then moves to the Free plan. Content above the Free plan limits becomes read-only.\n\n## 9. Taxes\n\nPrices are shown without tax. VAT or sales tax is added according to the billing address. Business customers in the European Union who provide a valid VAT number are invoiced without VAT under the reverse-charge mechanism.\n\n## 10. Contact\n\nBilling questions: billing@kestrel.example. Please include the workspace name and, if relevant, the invoice number.\n"
+  },
+  "extracted_at": "2026-11-08T12:07:01.759858+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.7491306669835467,
+  "key": "e51582ec492569e94df9ac063a93ed4b1e9236410e3dc45e078fb05449dc344b",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1230,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "5WXwaqnfHPKgxN8PzIqYGA",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "6dbcdbb211b364478f18b3536e17076b87bf75c831071cd0aaa9b37fe5849d5f"
+}

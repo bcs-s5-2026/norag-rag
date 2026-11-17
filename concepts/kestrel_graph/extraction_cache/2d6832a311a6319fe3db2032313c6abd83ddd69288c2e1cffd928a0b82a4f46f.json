@@ -1,0 +1,40 @@
+{
+  "attempt_id": "b1a5fdcc0b5e4069904ab338cd34345d",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 2960,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2160:2960",
+    "line": 25,
+    "name": "billing-policy-2026.md",
+    "start": 2160,
+    "text": "hs of its date.\n\n## 5. Adding and removing seats\n\nSeats can be added at any time. Added seats are charged immediately, pro-rated to the end of the current billing period.\n\nSeats can be removed at any time. On monthly plans the reduction takes effect at the next monthly charge. On annual plans the reduction takes effect at the next renewal, and no credit is given for the current period.\n\n## 6. Refunds\n\n**Monthly plans** are not refundable. When a monthly plan is cancelled, it remains active until the end of the month already paid.\n\n**Annual plans** can be refunded if the request is made within 60 days of the purchase or renewal date. The refund is pro-rated from the date of the request: you are refunded the unused full months of the annual period. After 60 days, annual plans are not refunda"
+  },
+  "extracted_at": "2026-11-08T12:07:39.472322+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 2.7948804579791613,
+  "key": "2d6832a311a6319fe3db2032313c6abd83ddd69288c2e1cffd928a0b82a4f46f",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1300,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "CWbwav20NpjxnsEPs-jeuAw",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "b607bcb4af460ef752a8e16e04a7b9f6d17816c5fc5363b85a256438ef9bed1e"
+}

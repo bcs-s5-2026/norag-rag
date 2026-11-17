@@ -1,0 +1,40 @@
+{
+  "attempt_id": "63f3f6d6dd6941269cb72425ae7a3977",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 7280,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:6480:7280",
+    "line": 109,
+    "name": "support-runbook-errors.md",
+    "start": 6480,
+    "text": "038 — Embed token expired\n\n**User sees:** an embedded dashboard shows \"This link has expired\".\n**Cause:** the embed token passed by the customer's application is older than its lifetime (24 hours by default).\n**Support action:** the customer's server must request a new token before the old one expires. On Business and Enterprise, the lifetime can be raised up to 30 days.\n**Escalate:** no.\n\n## Billing (KST-6xxx)\n\n### KST-6002 — Payment declined\n\n**User sees:** \"Your payment was declined.\"\n**Cause:** the card was refused by the bank: insufficient funds, expired card, or a security block.\n**Support action:** ask the Owner to update the payment method before the next automatic retry. Follow the current Billing and Refund Policy for retries, grace period and read-only rules. Support cannot take"
+  },
+  "extracted_at": "2026-11-08T12:14:04.439536+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.9098500419931952,
+  "key": "c970b243cd73606a410c93bf234d6c5724e6e754faa88d4fd5f546505f6e5739",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1310,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "i2fwavyvL5f-vdIP-ci8WQ",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "a897238f2652a42a8c253f064d7d632ba2721de5609cebc6d1ebb6d990a34c3f"
+}

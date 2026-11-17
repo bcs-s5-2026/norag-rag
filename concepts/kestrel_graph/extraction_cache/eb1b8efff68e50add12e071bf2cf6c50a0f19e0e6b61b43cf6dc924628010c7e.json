@@ -1,0 +1,40 @@
+{
+  "attempt_id": "b70e937782684416884e09eeb6d7582d",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 4400,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:3600:4400",
+    "line": 52,
+    "name": "product-guide.md",
+    "start": 3600,
+    "text": "ows 10 backup codes. Each backup code works once. Store them somewhere safe and separate from your authenticator device.\n\nAdmins can make two-factor authentication mandatory for every member from **Settings → Security**. Members who have not set it up are asked to do so at their next sign-in.\n\n### 5.2 Single sign-on\n\nOn the Business and Enterprise plans, workspaces can use single sign-on with any SAML 2.0 identity provider. To set it up, an Admin opens **Settings → Security → Single sign-on**, downloads the Kestrel service provider metadata, registers Kestrel in the identity provider, and pastes the identity provider metadata URL back into Kestrel. We recommend testing with one Admin account before choosing **Enforce for all members**. When single sign-on is enforced, passwords are disable"
+  },
+  "extracted_at": "2026-11-08T12:10:05.746550+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.604709165985696,
+  "key": "eb1b8efff68e50add12e071bf2cf6c50a0f19e0e6b61b43cf6dc924628010c7e",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1279,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "nWbwapr_EpelkdUPsoGMwAw",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "3d99c9494dd8b6ded2d4de8ae48c82b4a5fbeaa14d7a9453c0e1f7b8e0902cc8"
+}

@@ -1,0 +1,56 @@
+{
+  "attempt_id": "3764e1ac44854b63b6462990fb02bc2e",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 800,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+    "line": 1,
+    "name": "service-catalog.md",
+    "start": 0,
+    "text": "# Kestrel Analytics — Service Catalog\n\nInternal document · Owner: Platform team · Last updated: 15 September 2026\n\nThis catalog lists the production services of Kestrel, what each one does, and which team owns it. The owning team is responsible for the service's on-call rotation, its alerts and its runbook entries. When in doubt about who owns something, ask in #platform-help.\n\n## 1. Services\n\n### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.\n\n### auth\n\nSign-in with password, two-factor authentication, single sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every "
+  },
+  "extracted_at": "2026-11-08T13:47:00.449908+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.",
+        "object": {
+          "label": "Platform",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "gateway",
+          "type": "Service"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 18.089393542002654,
+  "key": "c228cefdfb131f34da8758176946046b6aeffca9f45fcc803b8b24da7bef7355",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1889,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 165,
+    "response_id": "Qn3wau20LLuR28oPkP_WoAM",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"gateway\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Platform\"\n      },\n      \"evidence_quote\": \"### gateway\\n\\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\\nOwner: **Platform**.\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "d3517eb7070af9d5dd89cfc313d6b48e2d5ed975323376ba670f83fc6148984f"
+}

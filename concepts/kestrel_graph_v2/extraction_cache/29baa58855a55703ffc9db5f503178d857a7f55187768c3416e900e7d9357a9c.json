@@ -1,0 +1,42 @@
+{
+  "attempt_id": "9f5ef0d3746446ebababb41b8cfc0d38",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 800,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:0:800",
+    "line": 1,
+    "name": "support-runbook-errors.md",
+    "start": 0,
+    "text": "# Kestrel Analytics — Support Runbook: Error Codes\n\nInternal document · Owner: Customer Support · Last reviewed: 2 September 2026\n\n## How to use this runbook\n\nEvery error shown to a Kestrel user carries a code of the form `KST-` followed by four digits. The first digit gives the area: 1 for sign-in, 2 for connectors, 3 for queries and dashboards, 4 for members and seats, 5 for delivery and embedding, 6 for billing.\n\nFor each code, this runbook gives what the user sees, the usual cause, what support can do, and when to escalate. Always ask the customer for the workspace name, the exact code and the time it happened. If a code is not listed here, escalate it to the on-call engineer of the Platform team.\n\nEscalations go to the team that owns the service involved. The owning team of each servi"
+  },
+  "extracted_at": "2026-11-08T13:48:44.897907+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 3.859386208001524,
+  "key": "29baa58855a55703ffc9db5f503178d857a7f55187768c3416e900e7d9357a9c",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1893,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "uX3wao3sFpP-nsEP0cSmqA4",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "2e6b43fd54cce6cf41d98c8d33e9732fee3bf4ed0a8090d6327af38954a258ed"
+}

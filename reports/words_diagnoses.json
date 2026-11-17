@@ -1,0 +1,209 @@
+[
+  {
+    "corpus": "kestrel",
+    "id": "q01",
+    "question": "What does error KST-2044 mean and how do I fix it?",
+    "settings": {
+      "chunk_size": 800,
+      "chunk_overlap": 80,
+      "top_k": 5
+    },
+    "chunk_count": 43,
+    "words": [
+      {
+        "word": "what",
+        "present": true,
+        "occurrences": 4,
+        "chunks": 3
+      },
+      {
+        "word": "does",
+        "present": true,
+        "occurrences": 6,
+        "chunks": 5
+      },
+      {
+        "word": "error",
+        "present": true,
+        "occurrences": 12,
+        "chunks": 9
+      },
+      {
+        "word": "kst-2044",
+        "present": true,
+        "occurrences": 1,
+        "chunks": 1
+      },
+      {
+        "word": "mean",
+        "present": false,
+        "occurrences": 0,
+        "chunks": 0
+      },
+      {
+        "word": "and",
+        "present": true,
+        "occurrences": 133,
+        "chunks": 43
+      },
+      {
+        "word": "how",
+        "present": true,
+        "occurrences": 6,
+        "chunks": 4
+      },
+      {
+        "word": "do",
+        "present": true,
+        "occurrences": 12,
+        "chunks": 12
+      },
+      {
+        "word": "i",
+        "present": false,
+        "occurrences": 0,
+        "chunks": 0
+      },
+      {
+        "word": "fix",
+        "present": false,
+        "occurrences": 0,
+        "chunks": 0
+      },
+      {
+        "word": "it",
+        "present": true,
+        "occurrences": 32,
+        "chunks": 21
+      }
+    ],
+    "expected_chunks": [
+      {
+        "source": "support-runbook-errors.md",
+        "start": 2880,
+        "end": 3680,
+        "text": "ps the connection.\n**Support action:** ask the customer to confirm the database is reachable from outside their network, on the host and port configured in the connector.\n**Escalate:** to Data Integrations if several customers report it for the same source type at the same time.\n\n### KST-2044 \u2014 Source refused the connection\n\n**User sees:** \"Your data source refused the connection from Kestrel.\"\n**Cause:** the database only accepts connections from an allowlist of IP addresses, and the Kestrel addresses are missing from it.\n**Support action:** ask the customer to add both 203.0.113.10 and 203.0.113.11 to the allowlist of their database or firewall. Adding only one of them leads to errors that come and go, because connections can come from either address.\n**Escalate:** no.\n\n### KST-2051 \u2014 Cr",
+        "question_word_counts": {
+          "what": 0,
+          "does": 0,
+          "error": 0,
+          "kst-2044": 1,
+          "mean": 0,
+          "and": 4,
+          "how": 0,
+          "do": 0,
+          "i": 0,
+          "fix": 0,
+          "it": 2
+        }
+      }
+    ]
+  },
+  {
+    "corpus": "vellora",
+    "id": "q11",
+    "question": "What preparation is needed after the machine sits unused for three weeks?",
+    "settings": {
+      "chunk_size": 800,
+      "chunk_overlap": 80,
+      "top_k": 5
+    },
+    "chunk_count": 43,
+    "words": [
+      {
+        "word": "what",
+        "present": true,
+        "occurrences": 113,
+        "chunks": 28
+      },
+      {
+        "word": "preparation",
+        "present": true,
+        "occurrences": 5,
+        "chunks": 4
+      },
+      {
+        "word": "is",
+        "present": true,
+        "occurrences": 101,
+        "chunks": 37
+      },
+      {
+        "word": "needed",
+        "present": true,
+        "occurrences": 6,
+        "chunks": 3
+      },
+      {
+        "word": "after",
+        "present": true,
+        "occurrences": 19,
+        "chunks": 15
+      },
+      {
+        "word": "the",
+        "present": true,
+        "occurrences": 719,
+        "chunks": 43
+      },
+      {
+        "word": "machine",
+        "present": true,
+        "occurrences": 102,
+        "chunks": 38
+      },
+      {
+        "word": "sits",
+        "present": false,
+        "occurrences": 0,
+        "chunks": 0
+      },
+      {
+        "word": "unused",
+        "present": false,
+        "occurrences": 0,
+        "chunks": 0
+      },
+      {
+        "word": "for",
+        "present": true,
+        "occurrences": 42,
+        "chunks": 26
+      },
+      {
+        "word": "three",
+        "present": true,
+        "occurrences": 2,
+        "chunks": 2
+      },
+      {
+        "word": "weeks",
+        "present": true,
+        "occurrences": 1,
+        "chunks": 1
+      }
+    ],
+    "expected_chunks": [
+      {
+        "source": "vellora-duo-espresso-machine.txt",
+        "start": 2880,
+        "end": 3680,
+        "text": "that number in the menu.\n\nAt first use, and every time the machine has not been used for more than two weeks, the circuit must be filled with water. The display shows \"Fill circuit\": place a container under the steam wand and press the hot water button. When water flows steadily, the machine heats up and performs an automatic rinse through the coffee outlets. The first two or three coffees may taste weak: this is normal, the grinder needs a few cycles to adjust.\n\n\n4. MAKING COFFEE\n\nPlace a cup under the coffee outlets and lower the outlets as close to the cup as possible to keep the crema. Press espresso for a short coffee (40 ml) or lungo for a long coffee (110 ml). Press the button twice within two seconds to make two cups at once. You can stop the flow at any time by pressing the same b",
+        "question_word_counts": {
+          "what": 0,
+          "preparation": 0,
+          "is": 1,
+          "needed": 0,
+          "after": 0,
+          "the": 17,
+          "machine": 2,
+          "sits": 0,
+          "unused": 0,
+          "for": 3,
+          "three": 1,
+          "weeks": 1
+        }
+      }
+    ]
+  }
+]

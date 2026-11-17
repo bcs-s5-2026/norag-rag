@@ -1,0 +1,40 @@
+{
+  "attempt_id": "6bbc6382913c43df8284f0424c76db92",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 2240,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+    "line": 23,
+    "name": "product-guide.md",
+    "start": 1440,
+    "text": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d"
+  },
+  "extracted_at": "2026-11-08T12:10:02.659139+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 1.0695338329824153,
+  "key": "b296a1e6e4bf6708e40dd31f7036e3cef79bc5d1cdfc7d363530865c334e0630",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1299,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "mmbwatmxAaTm7M8P7aTsmAo",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "e693c6a791e3ca764d5653f02216c4286fb76f768708ac64b330044e79f78e57"
+}

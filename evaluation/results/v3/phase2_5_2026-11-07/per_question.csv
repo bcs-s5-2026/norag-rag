@@ -1,0 +1,76 @@
+corpus,question_id,type,answerable,configuration,latency_seconds,hit@1,hit@3,hit@5,hit@10,recall@1,recall@3,recall@5,recall@10,evidence_first_ranks_within_10,retrieval_failures
+kestrel,q01,exact_identifier,True,dense,5.877653333009221,False,False,False,True,0.0,0.0,0.0,1.0,"[7, 7]",0
+kestrel,q01,exact_identifier,True,bm25,0.008281792019261047,False,False,False,True,0.0,0.0,0.0,1.0,"[7, 7]",0
+kestrel,q01,exact_identifier,True,dense-bm25-rrf,4.626143000001321,False,False,True,True,0.0,0.0,1.0,1.0,"[5, 5]",0
+kestrel,q02,exact_identifier,True,dense,0.012985042005311698,True,True,True,True,0.5,1.0,1.0,1.0,"[2, 1]",0
+kestrel,q02,exact_identifier,True,bm25,0.002588333998573944,True,True,True,True,0.5,0.5,0.5,1.0,"[1, 6]",0
+kestrel,q02,exact_identifier,True,dense-bm25-rrf,0.020138082996709272,True,True,True,True,0.5,1.0,1.0,1.0,"[1, 2]",0
+kestrel,q03,split_answer,True,dense,0.01322587497998029,True,True,True,True,0.75,1.0,1.0,1.0,"[2, 1, 1, 1]",0
+kestrel,q03,split_answer,True,bm25,0.002443708013743162,False,True,True,True,0.0,0.25,0.25,0.25,"[2, null, null, null]",0
+kestrel,q03,split_answer,True,dense-bm25-rrf,0.019121583027299494,True,True,True,True,0.25,0.25,0.25,1.0,"[1, 7, 7, 7]",0
+kestrel,q04,split_answer,True,dense,0.013094416004605591,True,True,True,True,0.5,1.0,1.0,1.0,"[3, 1]",0
+kestrel,q04,split_answer,True,bm25,0.002438791998429224,True,True,True,True,0.5,1.0,1.0,1.0,"[3, 1]",0
+kestrel,q04,split_answer,True,dense-bm25-rrf,0.01973366699530743,True,True,True,True,0.5,1.0,1.0,1.0,"[3, 1]",0
+kestrel,q05,vocabulary,True,dense,0.012996416015084833,True,True,True,True,1.0,1.0,1.0,1.0,"[1, 1]",0
+kestrel,q05,vocabulary,True,bm25,0.0024751669843681157,False,False,False,False,0.0,0.0,0.0,0.0,"[null, null]",0
+kestrel,q05,vocabulary,True,dense-bm25-rrf,0.01865895898663439,False,False,False,True,0.0,0.0,0.0,1.0,"[8, 8]",0
+kestrel,q06,versions,True,dense,0.013799832988297567,False,True,True,True,0.0,1.0,1.0,1.0,"[3, 3]",0
+kestrel,q06,versions,True,bm25,0.00245124998036772,False,True,True,True,0.0,1.0,1.0,1.0,"[2, 2]",0
+kestrel,q06,versions,True,dense-bm25-rrf,0.01834629100630991,False,True,True,True,0.0,1.0,1.0,1.0,"[3, 3]",0
+kestrel,q07,versions,True,dense,0.014195541996741667,False,True,True,True,0.0,1.0,1.0,1.0,[2],0
+kestrel,q07,versions,True,bm25,0.0024014170048758388,False,True,True,True,0.0,1.0,1.0,1.0,[3],0
+kestrel,q07,versions,True,dense-bm25-rrf,0.018834832997526973,False,True,True,True,0.0,1.0,1.0,1.0,[3],0
+kestrel,q08,two_hop,True,dense,0.012803457997506484,True,True,True,True,0.5,0.5,0.5,0.5,"[1, null]",0
+kestrel,q08,two_hop,True,bm25,0.002451915992423892,True,True,True,True,0.5,0.5,0.5,0.5,"[1, null]",0
+kestrel,q08,two_hop,True,dense-bm25-rrf,0.020051500003319234,True,True,True,True,0.5,0.5,0.5,0.5,"[1, null]",0
+kestrel,q09,not_in_corpus,False,dense,0.012874542007921264,,,,,,,,,[],0
+kestrel,q09,not_in_corpus,False,bm25,0.002408583997748792,,,,,,,,,[],0
+kestrel,q09,not_in_corpus,False,dense-bm25-rrf,0.01918262499384582,,,,,,,,,[],0
+kestrel,q10,not_in_corpus,False,dense,0.012882999988505617,,,,,,,,,[],0
+kestrel,q10,not_in_corpus,False,bm25,0.0024165830109268427,,,,,,,,,[],0
+kestrel,q10,not_in_corpus,False,dense-bm25-rrf,0.017896041012136266,,,,,,,,,[],0
+vellora,q01,other,True,dense,5.436025584000163,False,False,False,False,0.0,0.0,0.0,0.0,[null],0
+vellora,q01,other,True,bm25,0.007910792017355561,False,False,False,False,0.0,0.0,0.0,0.0,[null],0
+vellora,q01,other,True,dense-bm25-rrf,4.30282441599411,False,False,False,False,0.0,0.0,0.0,0.0,[null],0
+vellora,q02,other,True,dense,0.010991582996211946,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q02,other,True,bm25,0.002283708017785102,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q02,other,True,dense-bm25-rrf,0.013358333992073312,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q03,other,True,dense,0.010694541007978842,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q03,other,True,bm25,0.002211500017438084,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q03,other,True,dense-bm25-rrf,0.013044791005086154,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q04,other,True,dense,0.010537833004491404,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q04,other,True,bm25,0.0021938339923508465,False,True,True,True,0.0,1.0,1.0,1.0,[2],0
+vellora,q04,other,True,dense-bm25-rrf,0.01300999999511987,False,True,True,True,0.0,1.0,1.0,1.0,[2],0
+vellora,q05,exact_identifier,True,dense,0.010526917001698166,False,False,False,True,0.0,0.0,0.0,1.0,[7],0
+vellora,q05,exact_identifier,True,bm25,0.0021784580021630973,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q05,exact_identifier,True,dense-bm25-rrf,0.01283950000652112,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q06,exact_identifier,True,dense,0.01085479199537076,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q06,exact_identifier,True,bm25,0.00226491701323539,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q06,exact_identifier,True,dense-bm25-rrf,0.01309916700120084,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q07,exact_identifier,True,dense,0.010460334015078843,False,False,False,False,0.0,0.0,0.0,0.0,[null],0
+vellora,q07,exact_identifier,True,bm25,0.0021652499854099005,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q07,exact_identifier,True,dense-bm25-rrf,0.012833125016186386,False,False,True,True,0.0,0.0,1.0,1.0,[4],0
+vellora,q08,exact_identifier,True,dense,0.010490374988876283,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q08,exact_identifier,True,bm25,0.0021732919849455357,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q08,exact_identifier,True,dense-bm25-rrf,0.01286604200140573,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q09,vocabulary,True,dense,0.011912207992281765,False,False,False,True,0.0,0.0,0.0,1.0,[9],0
+vellora,q09,vocabulary,True,bm25,0.0022004590136930346,False,True,True,True,0.0,1.0,1.0,1.0,[2],0
+vellora,q09,vocabulary,True,dense-bm25-rrf,0.013001832994632423,False,False,True,True,0.0,0.0,1.0,1.0,[5],0
+vellora,q10,vocabulary,True,dense,0.010926624992862344,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q10,vocabulary,True,bm25,0.0021895000245422125,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q10,vocabulary,True,dense-bm25-rrf,0.01309070800198242,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q11,vocabulary,True,dense,0.010980291001033038,False,False,False,True,0.0,0.0,0.0,1.0,[6],0
+vellora,q11,vocabulary,True,bm25,0.0022110420104581863,False,True,True,True,0.0,1.0,1.0,1.0,[2],0
+vellora,q11,vocabulary,True,dense-bm25-rrf,0.013154165993910283,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q12,vocabulary,True,dense,0.010938499995972961,False,False,True,True,0.0,0.0,1.0,1.0,[5],0
+vellora,q12,vocabulary,True,bm25,0.002194041997427121,True,True,True,True,1.0,1.0,1.0,1.0,[1],0
+vellora,q12,vocabulary,True,dense-bm25-rrf,0.013070916989818215,False,True,True,True,0.0,1.0,1.0,1.0,[3],0
+vellora,q13,not_in_corpus,False,dense,0.010608083015540615,,,,,,,,,[],0
+vellora,q13,not_in_corpus,False,bm25,0.0021716250048484653,,,,,,,,,[],0
+vellora,q13,not_in_corpus,False,dense-bm25-rrf,0.012965917005203664,,,,,,,,,[],0
+vellora,q14,not_in_corpus,False,dense,0.011039249977329746,,,,,,,,,[],0
+vellora,q14,not_in_corpus,False,bm25,0.00218341700383462,,,,,,,,,[],0
+vellora,q14,not_in_corpus,False,dense-bm25-rrf,0.013075083988951519,,,,,,,,,[],0
+vellora,q15,not_in_corpus,False,dense,0.010577959008514881,,,,,,,,,[],0
+vellora,q15,not_in_corpus,False,bm25,0.0021632919961120933,,,,,,,,,[],0
+vellora,q15,not_in_corpus,False,dense-bm25-rrf,0.012944791000336409,,,,,,,,,[],0

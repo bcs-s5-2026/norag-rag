@@ -1,0 +1,25 @@
+{
+  "regression": {
+    "command": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python -m pytest -q",
+    "exit_code": 0,
+    "passed": 94,
+    "elapsed_seconds": 13.94,
+    "executed_after_raw_runs_and_derived_tables": true
+  },
+  "additional_checks": {
+    "git diff --check": "passed",
+    "node --check rag_app/static/app.js": "passed"
+  },
+  "preservation": {
+    "preexisting_evaluation_and_corpus_files_checked": 29,
+    "all_sha256_unchanged": true,
+    "original_dataset_hashes_preserved": true
+  },
+  "scope": {
+    "application_code_changed": false,
+    "existing_questions_changed": false,
+    "llm_calls": 0,
+    "concept_graph_implemented": false,
+    "commits_pushes_or_tags": false
+  }
+}

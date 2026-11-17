@@ -1,0 +1,75 @@
+{
+  "attempt_id": "855b6839e2034cce8ef1efc4126fd542",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 800,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+    "line": 1,
+    "name": "service-catalog.md",
+    "start": 0,
+    "text": "# Kestrel Analytics — Service Catalog\n\nInternal document · Owner: Platform team · Last updated: 15 September 2026\n\nThis catalog lists the production services of Kestrel, what each one does, and which team owns it. The owning team is responsible for the service's on-call rotation, its alerts and its runbook entries. When in doubt about who owns something, ask in #platform-help.\n\n## 1. Services\n\n### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.\n\n### auth\n\nSign-in with password, two-factor authentication, single sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every "
+  },
+  "derivation": {
+    "method": "bounded-heading-context-v1",
+    "original_attempt_id": "855b6839e2034cce8ef1efc4126fd542",
+    "original_response_sha256": "fd6cef11f597b05fc08ca3ab7f2e4b3d6a1442f342ca5ae848a1c196cc9bd236",
+    "repairs": [
+      {
+        "expanded_quote": "### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.",
+        "object": {
+          "label": "Platform",
+          "type": "Team"
+        },
+        "original_quote": "Owner: **Platform**.",
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "gateway",
+          "type": "Service"
+        },
+        "triple_index": 0
+      }
+    ]
+  },
+  "extracted_at": "2026-11-08T12:12:39.287861+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.",
+        "object": {
+          "label": "Platform",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "gateway",
+          "type": "Service"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 0.852561459003482,
+  "key": "dde2c5a009d3b639182cef2e744fe8763149c9e2afd25acacb0171b8c32675e4",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1302,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 113,
+    "response_id": "Nmfwap_VKqm1kdUP1Z_iqQw",
+    "text": "{\"triples\": [{\"subject\": {\"type\": \"Service\", \"label\": \"gateway\"}, \"relation\": \"OWNED_BY\", \"object\": {\"type\": \"Team\", \"label\": \"Platform\"}, \"evidence_quote\": \"### gateway\\n\\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\\nOwner: **Platform**.\", \"condition_quote\": null}], \"aliases\": []}"
+  },
+  "sha256": "298b2da9dbc7b499acb63c880fd042b90d7787c614903e15997819ef50987533"
+}

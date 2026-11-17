@@ -1,0 +1,102 @@
+{
+  "attempt_id": "f81ec037ea354733959c46ca058a2374",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 2240,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+    "line": 32,
+    "name": "service-catalog.md",
+    "start": 1440,
+    "text": "ngine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.\n\npostroom replaced the older mailman service in November 2025. mailman is switched off; old alerts or documents that mention it refer to postroom today.\n\n### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.\n\n### ledger\n\nSubscriptions, seats, invoices and payments. Generates invoice PDFs, runs the automatic payment retries, and applies the grace period and read-only rules of the Billing and Refund Policy. Talks to the payment processor; never stores full card"
+  },
+  "derivation": {
+    "method": "bounded-heading-context-v1",
+    "original_attempt_id": "f81ec037ea354733959c46ca058a2374",
+    "original_response_sha256": "5207397f644932ed21303b3623fbe7767a0fda82ea22f07f7419c7bdf9b44fa6",
+    "repairs": [
+      {
+        "expanded_quote": "### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.",
+        "object": {
+          "label": "Messaging",
+          "type": "Team"
+        },
+        "original_quote": "Owner: **Messaging**.",
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "postroom",
+          "type": "Service"
+        },
+        "triple_index": 0
+      },
+      {
+        "expanded_quote": "### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.",
+        "object": {
+          "label": "Platform",
+          "type": "Team"
+        },
+        "original_quote": "Owner: **Platform**.",
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "embed-svc",
+          "type": "Service"
+        },
+        "triple_index": 2
+      }
+    ]
+  },
+  "extracted_at": "2026-11-08T12:12:41.302496+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.",
+        "object": {
+          "label": "Messaging",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "postroom",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.",
+        "object": {
+          "label": "Platform",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "embed-svc",
+          "type": "Service"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 1.0018704170070123,
+  "key": "f5eee5066a8483df54a84d7af1cc73f7737fd6ef5a9ca247a8dc1668d886d3be",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1286,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 181,
+    "response_id": "OGfwapTtHtD-vdIP1tGv6Ak",
+    "text": "{\"triples\": [{\"subject\": {\"type\": \"Service\", \"label\": \"postroom\"}, \"relation\": \"OWNED_BY\", \"object\": {\"type\": \"Team\", \"label\": \"Messaging\"}, \"evidence_quote\": \"### postroom\\n\\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\\nOwner: **Messaging**.\", \"condition_quote\": null}, {\"subject\": {\"type\": \"Service\", \"label\": \"embed-svc\"}, \"relation\": \"OWNED_BY\", \"object\": {\"type\": \"Team\", \"label\": \"Platform\"}, \"evidence_quote\": \"### embed-svc\\n\\nIssues and checks embed tokens for dashboards embedded in customer applications.\\nOwner: **Platform**.\", \"condition_quote\": null}], \"aliases\": []}"
+  },
+  "sha256": "da1eca402fdbe09be58d37f8b3eda051738dead10b3e583dc02d58b92284ba3a"
+}

@@ -1,0 +1,75 @@
+{
+  "attempt_id": "c1309b3c7f964138a20df1a2ffa779a8",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 2960,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+    "line": 35,
+    "name": "support-runbook-errors.md",
+    "start": 2160,
+    "text": "only does it after identity verification).\n**Escalate:** no.\n\n### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.\n\n## Connectors (KST-2xxx)\n\n### KST-2040 — Connection timed out\n\n**User sees:** \"Kestrel could not reach your data source in time.\"\n**Cause:** the database is down, overloaded, or behind a firewall that silently drops the connection.\n**Support action:** ask the customer to confirm the database "
+  },
+  "derivation": {
+    "method": "bounded-heading-context-v1",
+    "original_attempt_id": "c1309b3c7f964138a20df1a2ffa779a8",
+    "original_response_sha256": "64d003322c4db0fe8e637f14aeb1af2d26d279fa6fee1eb8af7c48e35c44da1a",
+    "repairs": [
+      {
+        "expanded_quote": "### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.",
+        "object": {
+          "label": "Identity",
+          "type": "Team"
+        },
+        "original_quote": "**Escalate:** to Identity if the metadata is correct and the error persists.",
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-1012",
+          "type": "ErrorCode"
+        },
+        "triple_index": 0
+      }
+    ]
+  },
+  "extracted_at": "2026-11-08T12:13:23.005752+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": "if the metadata is correct and the error persists",
+        "evidence_quote": "### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.",
+        "object": {
+          "label": "Identity",
+          "type": "Team"
+        },
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-1012",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 1.2235257499851286,
+  "key": "fec797ed3502bf0fda967f3fdc0940f4f156c2860dd3d59dc51beab8e631bf84",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1308,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 93,
+    "response_id": "YWfwaqOhPOCO28oPveb58AM",
+    "text": "{\"triples\": [{\"subject\": {\"type\": \"ErrorCode\", \"label\": \"KST-1012\"}, \"relation\": \"ESCALATE_TO\", \"object\": {\"type\": \"Team\", \"label\": \"Identity\"}, \"evidence_quote\": \"### KST-1012 — SSO response rejected\\n\\n**User sees:** \\\"Your identity provider returned an invalid response.\\\"\\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\\n**Escalate:** to Identity if the metadata is correct and the error persists.\", \"condition_quote\": \"if the metadata is correct and the error persists\"}], \"aliases\": []}"
+  },
+  "sha256": "a09360a45fcf8d317dc80e98c9cddb0ab33826f9c6574d03b58c82bebebf04bd"
+}

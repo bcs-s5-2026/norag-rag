@@ -1,0 +1,56 @@
+{
+  "attempt_id": "86c77fe171a94a13a69fbb57442aa48e",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 800,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:0:800",
+    "line": 1,
+    "name": "billing-policy-2026.md",
+    "start": 0,
+    "text": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 March 2026 · Policy owner: Finance · Audience: customers and support staff\n\nThis policy replaces the Billing and Refund Policy effective 1 January 2025. Requests made before 1 March 2026 are handled under the previous policy.\n\n## 1. Scope\n\nThis policy explains how Kestrel Analytics charges for its plans, how invoices are issued, and when refunds are possible. It applies to all paid plans: Starter, Team, Business and Enterprise. Enterprise contracts may contain different terms; when they do, the contract takes precedence over this policy. Current prices are published on the Kestrel pricing page and are not repeated here.\n\n## 2. Billing cycles\n\nPaid plans are billed per seat, either monthly or annually. Monthly plans are char"
+  },
+  "extracted_at": "2026-11-08T13:06:17.278541+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 March 2026 · Policy owner: Finance",
+        "object": {
+          "label": "Finance",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "Billing and Refund Policy",
+          "type": "Policy"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 11.638535167003283,
+  "key": "146cd57646a1ef03edb1e37e39b8d7c89975b443a0fb23398a05fdf88309cf0d",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1872,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 134,
+    "response_id": "vXPwaoTUM9zSxN8P56bw-QI",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"Policy\",\n        \"label\": \"Billing and Refund Policy\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Finance\"\n      },\n      \"evidence_quote\": \"# Kestrel Analytics — Billing and Refund Policy\\n\\nEffective date: 1 March 2026 · Policy owner: Finance\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "b2599212e425168a51909ee08cc1bf1f559b4b16a9539d04375e6cd8aacfa920"
+}

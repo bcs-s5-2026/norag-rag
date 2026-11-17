@@ -1,0 +1,56 @@
+{
+  "attempt_id": "cdb3e438644c4a8cb5d287e8c2d259ea",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 6560,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+    "line": 100,
+    "name": "support-runbook-errors.md",
+    "start": 5760,
+    "text": "(KST-5xxx)\n\n### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails. A single occurrence is usually a temporary problem with a recipient's mail server.\n**Support action:** check whether the recipient's address is correct and whether the next delivery succeeds. Ask the customer to check that messages from kestrel.example are not blocked by their mail filter.\n**Escalate:** if the error happens on two consecutive deliveries, or for several customers on the same day, escalate to the team that owns postroom, as SEV-2.\n\n### KST-5038 — Embed token expired\n\n**User sees:** an embedded dashboard shows \"This link"
+  },
+  "extracted_at": "2026-11-08T13:50:43.739213+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "This error is raised by postroom",
+        "object": {
+          "label": "postroom",
+          "type": "Service"
+        },
+        "relation": "RAISED_BY",
+        "subject": {
+          "label": "KST-5031",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 10.053893500007689,
+  "key": "6400313cc30ca9ae1d08c9af0aeab7d806416d8b3f683bfe0446e21a357ee663",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1911,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 118,
+    "response_id": "Kn7wasFDibCewQ-Vm7vAAw",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"ErrorCode\",\n        \"label\": \"KST-5031\"\n      },\n      \"relation\": \"RAISED_BY\",\n      \"object\": {\n        \"type\": \"Service\",\n        \"label\": \"postroom\"\n      },\n      \"evidence_quote\": \"This error is raised by postroom\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "78a3cb7750118c66efc1149466f604fd71199cccddaa6ba2ca7ea2f3228579cf"
+}

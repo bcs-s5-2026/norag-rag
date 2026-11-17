@@ -1,0 +1,40 @@
+{
+  "attempt_id": "987bb10187b64b42ae47332c4e5128fe",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 5840,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5040:5840",
+    "line": 66,
+    "name": "product-guide.md",
+    "start": 5040,
+    "text": "port verifies your identity before resetting anything; this verification can take up to 2 business days.\n\nTo reset a forgotten password, choose **Forgot password** on the sign-in page. The reset link is valid for 1 hour.\n\n## 6. Data connectors\n\nA connector stores the connection details for one data source. Kestrel supports PostgreSQL, MySQL, Google BigQuery, Snowflake, Google Sheets and CSV upload. A single CSV file can be up to 200 MB.\n\nConnector credentials are encrypted at rest and are never shown again after they are saved. If your database only accepts connections from known addresses, add both Kestrel addresses to its allowlist: **203.0.113.10** and **203.0.113.11**. Connections can come from either address.\n\nEach dataset query has a time limit of 120 seconds. Queries that take longe"
+  },
+  "extracted_at": "2026-11-08T12:10:07.380623+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.9829910829721484,
+  "key": "732c0ba72a6cfc4e9bcaf1b4ff2c6f732393c3dfecbfa45ccd1c9043fe8e09a3",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1302,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "nmbwas-MJPeZvdIPw9jDUA",
+    "text": "{\"aliases\": [], \"triples\": []}"
+  },
+  "sha256": "72916081e6ffe610c868c080229b645c1a6f9f2ab494754eb17608c5338420a8"
+}

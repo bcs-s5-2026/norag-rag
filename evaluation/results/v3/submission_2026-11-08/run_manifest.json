@@ -1,0 +1,458 @@
+[
+  {
+    "corpus": "kestrel",
+    "configuration": "dense",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "kestrel",
+      "--retrievers",
+      "dense",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/kestrel-dense-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 7.153422000003047,
+    "output": "evaluation/results/v3/submission_2026-11-08/kestrel-dense-v3-800-80.json",
+    "sha256": "bf426ad274d250d273b08cb5eb0ba4b5cee7f44503e051e55b3e67ff1edc8fdd",
+    "overall": {
+      "1": {
+        "answerable": 10,
+        "hits": 6,
+        "hit_rate": 0.6,
+        "quote_recall": 0.35833333333333334
+      },
+      "3": {
+        "answerable": 10,
+        "hits": 8,
+        "hit_rate": 0.8,
+        "quote_recall": 0.7166666666666667
+      },
+      "5": {
+        "answerable": 10,
+        "hits": 9,
+        "hit_rate": 0.9,
+        "quote_recall": 0.75
+      },
+      "10": {
+        "answerable": 10,
+        "hits": 10,
+        "hit_rate": 1.0,
+        "quote_recall": 0.95
+      }
+    }
+  },
+  {
+    "corpus": "kestrel",
+    "configuration": "bm25",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "kestrel",
+      "--retrievers",
+      "bm25",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/kestrel-bm25-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.1559344579873141,
+    "output": "evaluation/results/v3/submission_2026-11-08/kestrel-bm25-v3-800-80.json",
+    "sha256": "fc2737e503e1d218c7a3106347c69889797814a835d5e1268f8276568ef68a53",
+    "overall": {
+      "1": {
+        "answerable": 10,
+        "hits": 5,
+        "hit_rate": 0.5,
+        "quote_recall": 0.25
+      },
+      "3": {
+        "answerable": 10,
+        "hits": 8,
+        "hit_rate": 0.8,
+        "quote_recall": 0.5583333333333333
+      },
+      "5": {
+        "answerable": 10,
+        "hits": 8,
+        "hit_rate": 0.8,
+        "quote_recall": 0.5583333333333333
+      },
+      "10": {
+        "answerable": 10,
+        "hits": 9,
+        "hit_rate": 0.9,
+        "quote_recall": 0.775
+      }
+    }
+  },
+  {
+    "corpus": "kestrel",
+    "configuration": "dense-bm25",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "kestrel",
+      "--retrievers",
+      "dense",
+      "bm25",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/kestrel-dense-bm25-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 5.039479792001657,
+    "output": "evaluation/results/v3/submission_2026-11-08/kestrel-dense-bm25-v3-800-80.json",
+    "sha256": "cfd3a5f9981c292405c75bc03c6fc289eaf6daeb04e1cfd570d2c80613c09e72",
+    "overall": {
+      "1": {
+        "answerable": 10,
+        "hits": 5,
+        "hit_rate": 0.5,
+        "quote_recall": 0.20833333333333334
+      },
+      "3": {
+        "answerable": 10,
+        "hits": 7,
+        "hit_rate": 0.7,
+        "quote_recall": 0.5416666666666667
+      },
+      "5": {
+        "answerable": 10,
+        "hits": 9,
+        "hit_rate": 0.9,
+        "quote_recall": 0.7416666666666667
+      },
+      "10": {
+        "answerable": 10,
+        "hits": 10,
+        "hit_rate": 1.0,
+        "quote_recall": 0.95
+      }
+    }
+  },
+  {
+    "corpus": "kestrel",
+    "configuration": "graph",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "kestrel",
+      "--retrievers",
+      "graph",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/kestrel-graph-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.16623616599827074,
+    "output": "evaluation/results/v3/submission_2026-11-08/kestrel-graph-v3-800-80.json",
+    "sha256": "f1eb31da4a22ad9b0119bb5ff3189ba9d14418f88a08a09bbb09679981d2c56d",
+    "overall": {
+      "1": {
+        "answerable": 10,
+        "hits": 2,
+        "hit_rate": 0.2,
+        "quote_recall": 0.11666666666666665
+      },
+      "3": {
+        "answerable": 10,
+        "hits": 2,
+        "hit_rate": 0.2,
+        "quote_recall": 0.11666666666666665
+      },
+      "5": {
+        "answerable": 10,
+        "hits": 2,
+        "hit_rate": 0.2,
+        "quote_recall": 0.11666666666666665
+      },
+      "10": {
+        "answerable": 10,
+        "hits": 2,
+        "hit_rate": 0.2,
+        "quote_recall": 0.11666666666666665
+      }
+    }
+  },
+  {
+    "corpus": "kestrel",
+    "configuration": "dense-bm25-graph",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "kestrel",
+      "--retrievers",
+      "dense",
+      "bm25",
+      "graph",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/kestrel-dense-bm25-graph-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 5.076490332983667,
+    "output": "evaluation/results/v3/submission_2026-11-08/kestrel-dense-bm25-graph-v3-800-80.json",
+    "sha256": "83220dbb7a239de557c283dccc8acc0ad3983a89dccc0cf1da716dc3a1a8787b",
+    "overall": {
+      "1": {
+        "answerable": 10,
+        "hits": 3,
+        "hit_rate": 0.3,
+        "quote_recall": 0.14166666666666666
+      },
+      "3": {
+        "answerable": 10,
+        "hits": 7,
+        "hit_rate": 0.7,
+        "quote_recall": 0.425
+      },
+      "5": {
+        "answerable": 10,
+        "hits": 9,
+        "hit_rate": 0.9,
+        "quote_recall": 0.7083333333333333
+      },
+      "10": {
+        "answerable": 10,
+        "hits": 10,
+        "hit_rate": 1.0,
+        "quote_recall": 0.95
+      }
+    }
+  },
+  {
+    "corpus": "vellora",
+    "configuration": "dense",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "vellora",
+      "--retrievers",
+      "dense",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/vellora-dense-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 5.0100800409854855,
+    "output": "evaluation/results/v3/submission_2026-11-08/vellora-dense-v3-800-80.json",
+    "sha256": "da39c7de65264c8afc3644288e6f2e2678601fb3c59cb506deaef253f2650da9",
+    "overall": {
+      "1": {
+        "answerable": 12,
+        "hits": 6,
+        "hit_rate": 0.5,
+        "quote_recall": 0.5
+      },
+      "3": {
+        "answerable": 12,
+        "hits": 6,
+        "hit_rate": 0.5,
+        "quote_recall": 0.5
+      },
+      "5": {
+        "answerable": 12,
+        "hits": 7,
+        "hit_rate": 0.5833333333333334,
+        "quote_recall": 0.5833333333333334
+      },
+      "10": {
+        "answerable": 12,
+        "hits": 10,
+        "hit_rate": 0.8333333333333334,
+        "quote_recall": 0.8333333333333334
+      }
+    }
+  },
+  {
+    "corpus": "vellora",
+    "configuration": "bm25",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "vellora",
+      "--retrievers",
+      "bm25",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/vellora-bm25-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.16615533299045637,
+    "output": "evaluation/results/v3/submission_2026-11-08/vellora-bm25-v3-800-80.json",
+    "sha256": "fc14c1eb725cd76cb76a2710b490ecbede67c210b7d329121af5f8540e48e73e",
+    "overall": {
+      "1": {
+        "answerable": 12,
+        "hits": 8,
+        "hit_rate": 0.6666666666666666,
+        "quote_recall": 0.6666666666666666
+      },
+      "3": {
+        "answerable": 12,
+        "hits": 11,
+        "hit_rate": 0.9166666666666666,
+        "quote_recall": 0.9166666666666666
+      },
+      "5": {
+        "answerable": 12,
+        "hits": 11,
+        "hit_rate": 0.9166666666666666,
+        "quote_recall": 0.9166666666666666
+      },
+      "10": {
+        "answerable": 12,
+        "hits": 11,
+        "hit_rate": 0.9166666666666666,
+        "quote_recall": 0.9166666666666666
+      }
+    }
+  },
+  {
+    "corpus": "vellora",
+    "configuration": "dense-bm25",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "vellora",
+      "--retrievers",
+      "dense",
+      "bm25",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "20",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/vellora-dense-bm25-v3-800-80.json"
+    ],
+    "exit_code": 0,
+    "seconds": 5.129874625010416,
+    "output": "evaluation/results/v3/submission_2026-11-08/vellora-dense-bm25-v3-800-80.json",
+    "sha256": "d19b0b9bf2902f6d018d264c51c1a7184f1ecc604da75d788b0a254a836d75f2",
+    "overall": {
+      "1": {
+        "answerable": 12,
+        "hits": 7,
+        "hit_rate": 0.5833333333333334,
+        "quote_recall": 0.5833333333333334
+      },
+      "3": {
+        "answerable": 12,
+        "hits": 9,
+        "hit_rate": 0.75,
+        "quote_recall": 0.75
+      },
+      "5": {
+        "answerable": 12,
+        "hits": 11,
+        "hit_rate": 0.9166666666666666,
+        "quote_recall": 0.9166666666666666
+      },
+      "10": {
+        "answerable": 12,
+        "hits": 11,
+        "hit_rate": 0.9166666666666666,
+        "quote_recall": 0.9166666666666666
+      }
+    }
+  },
+  {
+    "corpus": "kestrel",
+    "configuration": "dense-bm25-graph-depth40",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "evaluation.v3",
+      "--corpus",
+      "kestrel",
+      "--retrievers",
+      "dense",
+      "bm25",
+      "graph",
+      "--question-set",
+      "v3",
+      "--candidate-depth",
+      "40",
+      "--rrf-k",
+      "60",
+      "--top-k",
+      "5",
+      "--output",
+      "evaluation/results/v3/submission_2026-11-08/kestrel-dense-bm25-graph-v3-depth40.json"
+    ],
+    "exit_code": 0,
+    "output": "evaluation/results/v3/submission_2026-11-08/kestrel-dense-bm25-graph-v3-depth40.json",
+    "sha256": "cc49aec1f7e3eb88c429cd210be5e167e4a4fb8d031f1427ae16a9ec11080689"
+  }
+]

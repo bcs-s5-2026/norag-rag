@@ -1,0 +1,40 @@
+{
+  "attempt_id": "e10a79cd633e4e29bb405d5856b2d61d",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 2240,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:1440:2240",
+    "line": 27,
+    "name": "support-runbook-errors.md",
+    "start": 1440,
+    "text": "\n**Support action:** check whether the workspace enforces single sign-on. If it does, tell the user to use **Sign in with SSO**. Otherwise point them to **Forgot password**. Support never sets a password for a user.\n**Escalate:** no.\n\n### KST-1007 — Two-factor code rejected\n\n**User sees:** \"This code is not valid.\"\n**Cause:** in most cases the clock of the device running the authenticator app is wrong; time-based codes depend on the time being correct within about 30 seconds.\n**Support action:** ask the user to turn on automatic date and time on their device and try again. If they have lost their device, follow the second-factor reset procedure in the Product Guide (an Admin of the workspace resets it; support only does it after identity verification).\n**Escalate:** no.\n\n### KST-1012 — SSO"
+  },
+  "extracted_at": "2026-11-08T12:13:21.769846+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.9043019590026233,
+  "key": "12c1687f26eb4c1d1e436d1630dd12aa495173ab84dfdc56c6a2ca0632cd5308",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1308,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "YWfwapqCCNeRvdIP9LiHsQ4",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "17ff0b43155a2f39ec061824879817c7e0a67e4560823281148896e1982b2227"
+}

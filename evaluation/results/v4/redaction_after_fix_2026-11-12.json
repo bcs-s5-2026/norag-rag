@@ -1,0 +1,44 @@
+{
+  "kind": "v4-redaction-after-fix",
+  "measured_at": "2026-11-12T10:13:04.136082+00:00",
+  "question": "How do I request a refund, and where do I send the request?",
+  "note": "Same question after adding the placeholder instruction to the system prompt and the invented-contact guard. 4 runs, temperature 0.",
+  "results": [
+    {
+      "mode": "redaction_on_after_fix",
+      "answer": "Refund requests must be sent by the workspace Owner, either from **Settings \u2192 Plan \u2192 Request a refund** or by e-mail to billing@kestrel.example.",
+      "outcome": "answered",
+      "input_tokens": 3449,
+      "output_tokens": 138,
+      "cost_usd": 0.0013797,
+      "correct_address": true
+    },
+    {
+      "mode": "redaction_on_after_fix",
+      "answer": "Refund requests must be sent by the workspace Owner, either from **Settings \u2192 Plan \u2192 Request a refund** or by e-mail to billing@kestrel.example.",
+      "outcome": "answered",
+      "input_tokens": 3449,
+      "output_tokens": 138,
+      "cost_usd": 0.0013797,
+      "correct_address": true
+    },
+    {
+      "mode": "redaction_on_after_fix",
+      "answer": "Refund requests must be sent by the workspace Owner, either from Settings \u2192 Plan \u2192 Request a refund or by e-mail to billing@kestrel.example.",
+      "outcome": "answered",
+      "input_tokens": 3449,
+      "output_tokens": 136,
+      "cost_usd": 0.0013747,
+      "correct_address": true
+    },
+    {
+      "mode": "redaction_on_after_fix",
+      "answer": "Refund requests must be sent by the workspace Owner, either from Settings \u2192 Plan \u2192 Request a refund or by e-mail to billing@kestrel.example.",
+      "outcome": "answered",
+      "input_tokens": 3449,
+      "output_tokens": 136,
+      "cost_usd": 0.0013747,
+      "correct_address": true
+    }
+  ]
+}

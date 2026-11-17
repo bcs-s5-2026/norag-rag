@@ -1,0 +1,54 @@
+{
+  "attempt_id": "988a0fbfa67a407e9d76b848ea119f6e",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 4400,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:3600:4400",
+    "line": 58,
+    "name": "support-runbook-errors.md",
+    "start": 3600,
+    "text": "e connections can come from either address.\n**Escalate:** no.\n\n### KST-2051 — Credentials rejected\n\n**User sees:** \"The username or password for this data source is incorrect.\"\n**Cause:** the database password was changed, or the database user was removed.\n**Support action:** an Admin must edit the connector and enter the new credentials. Support cannot see stored credentials.\n**Escalate:** no.\n\n## Queries and dashboards (KST-3xxx)\n\n### KST-3012 — Query time limit exceeded\n\n**User sees:** \"This query took too long and was stopped.\"\n**Cause:** a dataset query ran for more than 120 seconds.\n**Support action:** suggest adding a filter, pre-aggregating in the source database, or refreshing less often. The time limit is the same on every plan and cannot be raised.\n**Escalate:** to Analytics Eng"
+  },
+  "extracted_at": "2026-11-08T12:13:24.845942+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "KST-3012 — Query time limit exceeded\n\n**User sees:** \"This query took too long and was stopped.\"\n**Cause:** a dataset query ran for more than 120 seconds.\n**Support action:** suggest adding a filter, pre-aggregating in the source database, or refreshing less often. The time limit is the same on every plan and cannot be raised.\n**Escalate:** to Analytics Eng",
+        "object": {
+          "label": "Analytics Eng",
+          "type": "Team"
+        },
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-3012",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 0.9443259999970905,
+  "key": "a0ebed5a476ffe95f737dfa5a1f53f4fe362cb64a2f2cad906d4375ebe71a49f",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1316,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 165,
+    "response_id": "ZGfwapasBt3S28oPtc7f2QI",
+    "text": "{\"triples\": [{\"condition_quote\": null, \"evidence_quote\": \"KST-3012 — Query time limit exceeded\\n\\n**User sees:** \\\"This query took too long and was stopped.\\\"\\n**Cause:** a dataset query ran for more than 120 seconds.\\n**Support action:** suggest adding a filter, pre-aggregating in the source database, or refreshing less often. The time limit is the same on every plan and cannot be raised.\\n**Escalate:** to Analytics Eng\", \"object\": {\"label\": \"Analytics Eng\", \"type\": \"Team\"}, \"relation\": \"ESCALATE_TO\", \"subject\": {\"label\": \"KST-3012\", \"type\": \"ErrorCode\"}}], \"aliases\": []}"
+  },
+  "sha256": "8d211911909e21f89b5ab66d5e2fc21c0a75120563780c785c41126cd8a3e703"
+}

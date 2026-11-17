@@ -26,3 +26,11 @@ chroma_db/
 
 # Files located in the future/ directory must be ignored
 future/
+
+# Web application documents, indexes and completion markers
+data/
+.env.*
+!.env.example
+
+# Local course task materials
+/Tasks/

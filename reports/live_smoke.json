@@ -1,0 +1,202 @@
+[
+  {
+    "question": "How large is the Vellora Duo water tank?",
+    "status": "success",
+    "result": {
+      "answer": "The selected documents do not provide enough evidence.",
+      "answerable": false,
+      "citations": [],
+      "references": [],
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "text": "e current preparation and shows an error code on the display. The code is made of the letter E and two digits. Each code identifies one precise problem. Find the code in the list below: it tells you what the code means and what to do. If the code is still displayed after you have followed the instructions, switch the machine off, wait one minute and switch it on again. If the problem persists, write down the code and contact the Vellora customer service: the code helps the technician to diagnose the problem quickly, and often to solve it over the phone without sending the machine for repair.\n\nE01 - Water tank missing. Cause: The machine does not detect the water tank, or the tank is not pushed in all the way. What to do: Push the water tank firmly into its housing until it clicks. Check th",
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "name": "vellora-duo-espresso-machine.txt",
+          "line": 68,
+          "end": 9440,
+          "start": 8640,
+          "similarity": 0.47364145517349243
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7920:8720",
+          "text": "r in cold water for one minute, screw it into the holder at the bottom of the water tank, set \"Filter installed\" in the menu and run the filter programme, which rinses the filter with half a tank of water. A filter lasts two months, or 50 litres of water. The machine counts the water used and asks for a replacement when the filter is exhausted. When a filter is installed and activated, the machine does not ask for descaling. Only use original Vellora filters: other filters may not fit the holder correctly, may let unfiltered water into the circuit, and are not covered by the warranty. Store spare filters in a cool, dry place, in their sealed bag.\n\n\n9. ERROR CODES\n\nWhen the machine detects a problem, it stops the current preparation and shows an error code on the display. The code is made o",
+          "start": 7920,
+          "line": 63,
+          "name": "vellora-duo-espresso-machine.txt",
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "end": 8720,
+          "similarity": 0.40643906593322754
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "text": "VELLORA DUO - ESPRESSO MACHINE\nUSER MANUAL\n(Fictional product. Document written for the BM25 challenge of the RAG course.)\n\n\n1. BEFORE YOU START\n\nThank you for choosing the Vellora Duo, a bean-to-cup espresso machine with an integrated conical grinder, a thermoblock heater and an automatic milk system. Please read this manual carefully before using the machine for the first time, and keep it for future reference. Most problems can be solved in a few minutes by following the instructions in the troubleshooting and error code sections.\n\nSafety first. Always place the machine on a stable, flat and dry surface, away from the edge of the worktop and out of reach of children. Never immerse the machine, the power cord or the plug in water or any other liquid. Unplug the machine before cleaning it",
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "line": 1,
+          "start": 0,
+          "name": "vellora-duo-espresso-machine.txt",
+          "end": 800,
+          "similarity": 0.333260178565979
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "text": " for the first few coffees, and when the bean hopper is almost empty. If the noise is very loud, or if it sounds like grinding gravel, stop the machine immediately and check the error code on the display.\n\nWater leaks under the machine. The drip tray is full or badly inserted, or the water tank is not inserted correctly. Empty the drip tray and check the seal of the water tank.\n\n\n11. WARRANTY AND CUSTOMER SERVICE\n\nThe Vellora Duo is covered by a two-year warranty from the date of purchase, on presentation of the receipt. The warranty does not cover damage caused by limescale, by the use of unsuitable coffee beans, by foreign objects in the grinder, by dropping the machine, or by repairs carried out by unauthorised persons. Wear parts such as seals, the water filter and the brewing unit gre",
+          "end": 30320,
+          "line": 278,
+          "start": 29520,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "name": "vellora-duo-espresso-machine.txt",
+          "similarity": 0.3327661156654358
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7200:8000",
+          "text": " tank if one is installed. Pour the content of one bottle of descaling liquid into the empty water tank and fill it with water up to the descaling mark. Place a large container (at least 1.5 litres) under the coffee outlets and another one under the steam wand. Start the descaling programme from the maintenance menu and follow the instructions on the display. The programme takes about 30 minutes and has two phases: the descaling phase, then a rinsing phase for which you must fill the tank with fresh water. Never use vinegar or any other product than the recommended descaling liquid.\n\n\n8. WATER FILTER\n\nThe optional water filter reduces limescale and improves the taste of the coffee. To install it, soak the filter in cold water for one minute, screw it into the holder at the bottom of the wa",
+          "start": 7200,
+          "end": 8000,
+          "line": 58,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "name": "vellora-duo-espresso-machine.txt",
+          "similarity": 0.3197152614593506
+        }
+      ]
+    }
+  },
+  {
+    "question": "What is the Vellora Duo Wi-Fi password?",
+    "status": "success",
+    "result": {
+      "answer": "The selected documents do not provide enough evidence.",
+      "answerable": false,
+      "citations": [],
+      "references": [],
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:25200:26000",
+          "text": "e: The Wi-Fi module does not respond to the main board. What to do: Switch the machine off and on again. The machine can still be used without the app.\n\nE81 - Wi-Fi connection lost. Cause: The machine lost its connection to the home network. What to do: Check your router, then connect the machine again from the Vellora app.\n\nE82 - App pairing failed. Cause: The machine could not be paired with the Vellora app. What to do: Move your phone closer to the machine and start the pairing again from the app.\n\nE83 - App version too old. Cause: The Vellora app on your phone is too old for this machine. What to do: Update the Vellora app from your app store.\n\nE84 - Recipe not supported. Cause: A recipe sent from the app is not supported by this machine. What to do: Update the software of the machine ",
+          "end": 26000,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "line": 228,
+          "name": "vellora-duo-espresso-machine.txt",
+          "start": 25200,
+          "similarity": 0.4800291061401367
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "text": "e current preparation and shows an error code on the display. The code is made of the letter E and two digits. Each code identifies one precise problem. Find the code in the list below: it tells you what the code means and what to do. If the code is still displayed after you have followed the instructions, switch the machine off, wait one minute and switch it on again. If the problem persists, write down the code and contact the Vellora customer service: the code helps the technician to diagnose the problem quickly, and often to solve it over the phone without sending the machine for repair.\n\nE01 - Water tank missing. Cause: The machine does not detect the water tank, or the tank is not pushed in all the way. What to do: Push the water tank firmly into its housing until it clicks. Check th",
+          "start": 8640,
+          "name": "vellora-duo-espresso-machine.txt",
+          "end": 9440,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "line": 68,
+          "similarity": 0.2738279700279236
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:720:1520",
+          "text": " or the plug in water or any other liquid. Unplug the machine before cleaning it, before removing the brewing unit and when it is not used for a long period. Do not touch the steam wand or the coffee outlets during or just after use: they get very hot. Only use the machine indoors, at a room temperature between 10 and 32 degrees Celsius.\n\nThe machine must be connected to a properly earthed socket. If the power cord is damaged, it must be replaced by an authorised service centre in order to avoid any hazard. Do not use an extension cord or a multiple socket adapter. Children must not play with the machine, and cleaning must not be done by children without supervision.\n\n\n2. PARTS OF THE MACHINE\n\nThe Vellora Duo is made of the following main parts: the bean hopper with its aroma-preserving li",
+          "end": 1520,
+          "line": 10,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "name": "vellora-duo-espresso-machine.txt",
+          "start": 720,
+          "similarity": 0.26653122901916504
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "text": "VELLORA DUO - ESPRESSO MACHINE\nUSER MANUAL\n(Fictional product. Document written for the BM25 challenge of the RAG course.)\n\n\n1. BEFORE YOU START\n\nThank you for choosing the Vellora Duo, a bean-to-cup espresso machine with an integrated conical grinder, a thermoblock heater and an automatic milk system. Please read this manual carefully before using the machine for the first time, and keep it for future reference. Most problems can be solved in a few minutes by following the instructions in the troubleshooting and error code sections.\n\nSafety first. Always place the machine on a stable, flat and dry surface, away from the edge of the worktop and out of reach of children. Never immerse the machine, the power cord or the plug in water or any other liquid. Unplug the machine before cleaning it",
+          "end": 800,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "name": "vellora-duo-espresso-machine.txt",
+          "line": 1,
+          "start": 0,
+          "similarity": 0.23086315393447876
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "text": " for the first few coffees, and when the bean hopper is almost empty. If the noise is very loud, or if it sounds like grinding gravel, stop the machine immediately and check the error code on the display.\n\nWater leaks under the machine. The drip tray is full or badly inserted, or the water tank is not inserted correctly. Empty the drip tray and check the seal of the water tank.\n\n\n11. WARRANTY AND CUSTOMER SERVICE\n\nThe Vellora Duo is covered by a two-year warranty from the date of purchase, on presentation of the receipt. The warranty does not cover damage caused by limescale, by the use of unsuitable coffee beans, by foreign objects in the grinder, by dropping the machine, or by repairs carried out by unauthorised persons. Wear parts such as seals, the water filter and the brewing unit gre",
+          "end": 30320,
+          "name": "vellora-duo-espresso-machine.txt",
+          "start": 29520,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "line": 278,
+          "similarity": 0.22242659330368042
+        }
+      ]
+    }
+  },
+  {
+    "question": "How long is the Vellora Duo warranty?",
+    "status": "success",
+    "transport": "HTTP /api/ask",
+    "result": {
+      "answer": "The Vellora Duo is covered by a two-year warranty from the date of purchase.",
+      "answerable": true,
+      "citations": [
+        "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320"
+      ],
+      "references": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "text": " for the first few coffees, and when the bean hopper is almost empty. If the noise is very loud, or if it sounds like grinding gravel, stop the machine immediately and check the error code on the display.\n\nWater leaks under the machine. The drip tray is full or badly inserted, or the water tank is not inserted correctly. Empty the drip tray and check the seal of the water tank.\n\n\n11. WARRANTY AND CUSTOMER SERVICE\n\nThe Vellora Duo is covered by a two-year warranty from the date of purchase, on presentation of the receipt. The warranty does not cover damage caused by limescale, by the use of unsuitable coffee beans, by foreign objects in the grinder, by dropping the machine, or by repairs carried out by unauthorised persons. Wear parts such as seals, the water filter and the brewing unit gre",
+          "line": 278,
+          "start": 29520,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "name": "vellora-duo-espresso-machine.txt",
+          "end": 30320,
+          "similarity": 0.5291773080825806
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:29520:30320",
+          "text": " for the first few coffees, and when the bean hopper is almost empty. If the noise is very loud, or if it sounds like grinding gravel, stop the machine immediately and check the error code on the display.\n\nWater leaks under the machine. The drip tray is full or badly inserted, or the water tank is not inserted correctly. Empty the drip tray and check the seal of the water tank.\n\n\n11. WARRANTY AND CUSTOMER SERVICE\n\nThe Vellora Duo is covered by a two-year warranty from the date of purchase, on presentation of the receipt. The warranty does not cover damage caused by limescale, by the use of unsuitable coffee beans, by foreign objects in the grinder, by dropping the machine, or by repairs carried out by unauthorised persons. Wear parts such as seals, the water filter and the brewing unit gre",
+          "line": 278,
+          "start": 29520,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "name": "vellora-duo-espresso-machine.txt",
+          "end": 30320,
+          "similarity": 0.5291773080825806
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:720:1520",
+          "text": " or the plug in water or any other liquid. Unplug the machine before cleaning it, before removing the brewing unit and when it is not used for a long period. Do not touch the steam wand or the coffee outlets during or just after use: they get very hot. Only use the machine indoors, at a room temperature between 10 and 32 degrees Celsius.\n\nThe machine must be connected to a properly earthed socket. If the power cord is damaged, it must be replaced by an authorised service centre in order to avoid any hazard. Do not use an extension cord or a multiple socket adapter. Children must not play with the machine, and cleaning must not be done by children without supervision.\n\n\n2. PARTS OF THE MACHINE\n\nThe Vellora Duo is made of the following main parts: the bean hopper with its aroma-preserving li",
+          "start": 720,
+          "name": "vellora-duo-espresso-machine.txt",
+          "end": 1520,
+          "line": 10,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "similarity": 0.3465861678123474
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:7920:8720",
+          "text": "r in cold water for one minute, screw it into the holder at the bottom of the water tank, set \"Filter installed\" in the menu and run the filter programme, which rinses the filter with half a tank of water. A filter lasts two months, or 50 litres of water. The machine counts the water used and asks for a replacement when the filter is exhausted. When a filter is installed and activated, the machine does not ask for descaling. Only use original Vellora filters: other filters may not fit the holder correctly, may let unfiltered water into the circuit, and are not covered by the warranty. Store spare filters in a cool, dry place, in their sealed bag.\n\n\n9. ERROR CODES\n\nWhen the machine detects a problem, it stops the current preparation and shows an error code on the display. The code is made o",
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "line": 63,
+          "start": 7920,
+          "name": "vellora-duo-espresso-machine.txt",
+          "end": 8720,
+          "similarity": 0.32610177993774414
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:8640:9440",
+          "text": "e current preparation and shows an error code on the display. The code is made of the letter E and two digits. Each code identifies one precise problem. Find the code in the list below: it tells you what the code means and what to do. If the code is still displayed after you have followed the instructions, switch the machine off, wait one minute and switch it on again. If the problem persists, write down the code and contact the Vellora customer service: the code helps the technician to diagnose the problem quickly, and often to solve it over the phone without sending the machine for repair.\n\nE01 - Water tank missing. Cause: The machine does not detect the water tank, or the tank is not pushed in all the way. What to do: Push the water tank firmly into its housing until it clicks. Check th",
+          "name": "vellora-duo-espresso-machine.txt",
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "start": 8640,
+          "end": 9440,
+          "line": 68,
+          "similarity": 0.3242970108985901
+        },
+        {
+          "id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6:0:800",
+          "text": "VELLORA DUO - ESPRESSO MACHINE\nUSER MANUAL\n(Fictional product. Document written for the BM25 challenge of the RAG course.)\n\n\n1. BEFORE YOU START\n\nThank you for choosing the Vellora Duo, a bean-to-cup espresso machine with an integrated conical grinder, a thermoblock heater and an automatic milk system. Please read this manual carefully before using the machine for the first time, and keep it for future reference. Most problems can be solved in a few minutes by following the instructions in the troubleshooting and error code sections.\n\nSafety first. Always place the machine on a stable, flat and dry surface, away from the edge of the worktop and out of reach of children. Never immerse the machine, the power cord or the plug in water or any other liquid. Unplug the machine before cleaning it",
+          "end": 800,
+          "document_id": "2edb0ea39a3a150df44b7e9e2f2ef9079787da92dbb9549034e9d3d07a3de7e6",
+          "line": 1,
+          "start": 0,
+          "name": "vellora-duo-espresso-machine.txt",
+          "similarity": 0.2998543977737427
+        }
+      ]
+    }
+  }
+]

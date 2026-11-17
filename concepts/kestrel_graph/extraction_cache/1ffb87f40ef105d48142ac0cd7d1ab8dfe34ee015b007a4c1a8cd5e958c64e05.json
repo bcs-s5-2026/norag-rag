@@ -1,0 +1,40 @@
+{
+  "attempt_id": "491120af1c8a4a5d80adb45a3dfd85e9",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 3899,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:3600:3899",
+    "line": 75,
+    "name": "service-catalog.md",
+    "start": 3600,
+    "text": "am acknowledges in the thread and becomes responsible for the follow-up with support.\n\n## 4. Changing ownership\n\nA service changes owner only with the agreement of both engineering leads and an update of this catalog in the same week. Until the catalog is updated, the previous owner stays on call.\n"
+  },
+  "extracted_at": "2026-11-08T12:12:43.607283+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.5638643749989569,
+  "key": "1ffb87f40ef105d48142ac0cd7d1ab8dfe34ee015b007a4c1a8cd5e958c64e05",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1167,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "O2fwarueC9nrkdUPqvjB8A4",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "3de71262799537713ee2b55d96783b704d1ac2dc99e64ee12e7f57767bae757c"
+}

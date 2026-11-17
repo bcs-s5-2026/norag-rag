@@ -1,0 +1,42 @@
+{
+  "attempt_id": "31292ddcd828402c96b1e83088afab40",
+  "chunk": {
+    "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+    "end": 4123,
+    "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:3600:4123",
+    "line": 51,
+    "name": "billing-policy-2025.md",
+    "start": 3600,
+    "text": "pace stays on its paid plan until the end of the period already paid, then moves to the Free plan. Content above the Free plan limits becomes read-only.\n\n## 9. Taxes\n\nPrices are shown without tax. VAT or sales tax is added according to the billing address. Business customers in the European Union who provide a valid VAT number are invoiced without VAT under the reverse-charge mechanism.\n\n## 10. Contact\n\nBilling questions: billing@kestrel.example. Please include the workspace name and, if relevant, the invoice number.\n"
+  },
+  "extracted_at": "2026-11-08T13:06:01.616056+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 8.70151374998386,
+  "key": "d4a556cc21d776c9e1c6b01e56b601242d9eebeff57c779470cce9e35143645d",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1832,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "sXPwaouMB4nfxs0Pgpqd2AM",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "aba90610ee4c0e73fd45ea4aa95904a7a18a4148355b2f4b8c2e21b461748101"
+}

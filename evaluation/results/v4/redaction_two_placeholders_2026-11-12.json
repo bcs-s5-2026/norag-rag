@@ -1,0 +1,35 @@
+{
+  "kind": "v4-redaction-two-placeholders",
+  "measured_at": "2026-11-12T12:30:24.350222+00:00",
+  "note": "Question with personal data whose answer needs a redacted corpus address. 3 runs, temperature 0, final code (invented contacts removed, correct guesses kept).",
+  "personal_data_found_in_trace_file": [],
+  "results": [
+    {
+      "answer": "Refund requests must be sent by the workspace Owner, either from Settings → Plan → Request a refund or by e-mail to billing@kestrel.example.",
+      "outcome": "answered",
+      "question_as_traced": "My email is [EMAIL_1] and my phone is [PHONE_1]. How do I request a refund, and where do I send the request?",
+      "input_tokens": 3495,
+      "output_tokens": 137,
+      "cost_usd": 0.001391,
+      "invented_contacts_removed": 0
+    },
+    {
+      "answer": "Refund requests must be sent by the workspace Owner, either from Settings → Plan → Request a refund or by e-mail to billing@kestrel.example.",
+      "outcome": "answered",
+      "question_as_traced": "My email is [EMAIL_1] and my phone is [PHONE_1]. How do I request a refund, and where do I send the request?",
+      "input_tokens": 3495,
+      "output_tokens": 137,
+      "cost_usd": 0.001391,
+      "invented_contacts_removed": 0
+    },
+    {
+      "answer": "Refund requests must be sent by the workspace Owner, either from Settings → Plan → Request a refund or by e-mail to billing@kestrel.example.",
+      "outcome": "answered",
+      "question_as_traced": "My email is [EMAIL_1] and my phone is [PHONE_1]. How do I request a refund, and where do I send the request?",
+      "input_tokens": 3495,
+      "output_tokens": 137,
+      "cost_usd": 0.001391,
+      "invented_contacts_removed": 0
+    }
+  ]
+}

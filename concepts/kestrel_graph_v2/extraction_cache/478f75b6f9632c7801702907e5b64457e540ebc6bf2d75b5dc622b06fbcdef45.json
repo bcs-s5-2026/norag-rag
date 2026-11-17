@@ -1,0 +1,42 @@
+{
+  "attempt_id": "9583e99087d349c3bbb8d9b574971129",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 8000,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7200:8000",
+    "line": 94,
+    "name": "product-guide.md",
+    "start": 7200,
+    "text": "n embed token from the Kestrel API and passes it to the page. By default an embed token expires after 24 hours. On the Business and Enterprise plans, the lifetime can be raised up to 30 days from **Settings → Embedding**.\n\n## 10. Exporting and deleting data\n\nThe Owner can export the whole workspace (dashboards, datasets definitions and settings) as a ZIP file from **Settings → Workspace → Export**. Data from your sources is not included: Kestrel stores only the cached results needed to display dashboards.\n\nWhen the Owner deletes a workspace, it is first disabled for 30 days. During that period it can be restored by contacting support. After 30 days it is deleted permanently and cannot be recovered.\n\nRequests about personal data (access, correction, deletion) can be sent to privacy@kestrel."
+  },
+  "extracted_at": "2026-11-08T13:46:11.910317+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 11.861984749994008,
+  "key": "478f75b6f9632c7801702907e5b64457e540ebc6bf2d75b5dc622b06fbcdef45",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1885,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 10,
+    "response_id": "GH3wav-7HYDs28oP5rHXkAM",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "80cc3ab447cb6616e87875aadf366ef590e809912be49e97f14b6d768a44bdf5"
+}

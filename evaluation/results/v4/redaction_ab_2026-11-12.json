@@ -1,0 +1,40 @@
+{
+  "kind": "v4-redaction-ab",
+  "measured_at": "2026-11-12T10:12:12.563945+00:00",
+  "question": "How do I request a refund, and where do I send the request?",
+  "note": "Ad-hoc A/B, 2 runs per mode, temperature 0. redaction_off sends the corpus role address billing@kestrel.example to the provider, as V2/V3 did.",
+  "results": [
+    {
+      "mode": "redaction_on",
+      "answer": "Refund requests must be sent by the workspace Owner, either from **Settings \u2192 Plan \u2192 Request a refund** or by e-mail to refunds@kestrel.analytics.",
+      "input_tokens": 3410,
+      "output_tokens": 139,
+      "cost_usd": 0.0013705,
+      "invented_address": false
+    },
+    {
+      "mode": "redaction_off",
+      "answer": "Refund requests must be sent by the workspace Owner, either from Settings \u2192 Plan \u2192 Request a refund or by e-mail to billing@kestrel.example.",
+      "input_tokens": 3412,
+      "output_tokens": 137,
+      "cost_usd": 0.0013661,
+      "invented_address": false
+    },
+    {
+      "mode": "redaction_on",
+      "answer": "Refund requests must be sent by the workspace Owner either from Settings \u2192 Plan \u2192 Request a refund or by e-mail to refunds@kestrel.example.",
+      "input_tokens": 3410,
+      "output_tokens": 136,
+      "cost_usd": 0.001363,
+      "invented_address": false
+    },
+    {
+      "mode": "redaction_off",
+      "answer": "Refund requests must be sent by the workspace Owner, either from **Settings \u2192 Plan \u2192 Request a refund** or by e-mail to billing@kestrel.example.",
+      "input_tokens": 3412,
+      "output_tokens": 139,
+      "cost_usd": 0.0013711,
+      "invented_address": false
+    }
+  ]
+}

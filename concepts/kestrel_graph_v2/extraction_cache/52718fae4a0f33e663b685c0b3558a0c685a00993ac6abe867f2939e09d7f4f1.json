@@ -1,0 +1,42 @@
+{
+  "attempt_id": "20cfb245087449908c6c3ed931c5f643",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 8519,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7920:8519",
+    "line": 102,
+    "name": "product-guide.md",
+    "start": 7920,
+    "text": "out personal data (access, correction, deletion) can be sent to privacy@kestrel.example. We answer within one month.\n\n## 11. Getting help\n\n| Plan | Channels | First response target |\n|---|---|---|\n| Free | Help centre, community forum | Best effort |\n| Starter | E-mail | 2 business days |\n| Team | E-mail, chat | 1 business day |\n| Business | E-mail, chat | 8 business hours |\n| Enterprise | E-mail, chat, named contact | 4 hours, 24/7 for critical incidents |\n\nWhen you contact support, include the workspace name, the error code if one is shown (it starts with `KST-`), and the time it happened.\n"
+  },
+  "extracted_at": "2026-11-08T13:46:34.338444+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 14.40525599999819,
+  "key": "52718fae4a0f33e663b685c0b3558a0c685a00993ac6abe867f2939e09d7f4f1",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1880,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "LH3waouUFJWwvdIP2PG18QI",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "4661e693d388d23aae19f521d31511b3e626ae09cbce6cfe74e30713f7ce1895"
+}

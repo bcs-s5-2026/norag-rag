@@ -1,0 +1,40 @@
+{
+  "attempt_id": "5a86212bde3c40afa33d18b9dd7ff887",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 1520,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:720:1520",
+    "line": 13,
+    "name": "billing-policy-2026.md",
+    "start": 720,
+    "text": "id plans are billed per seat, either monthly or annually. Monthly plans are charged on the same day each month as the original purchase. Annual plans are charged once a year, on the anniversary of the purchase.\n\nCustomers who choose annual billing receive a 20% discount compared with twelve months of monthly billing. Switching from monthly to annual billing is possible at any time and takes effect immediately; the unused part of the current month is credited. Switching from annual to monthly billing takes effect at the next renewal.\n\n## 3. Payment methods\n\nWe accept credit and debit cards (Visa, Mastercard, American Express) and SEPA direct debit for customers in the euro area. Team, Business and Enterprise customers can also pay by bank transfer against an invoice, with payment due within"
+  },
+  "extracted_at": "2026-11-08T12:07:17.425562+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.7176116250047926,
+  "key": "4b6607e170b96082bcdf48b2928b653745050e03bdff60b3842f43aa6183b027",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1266,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "9GXwasuqONrexs0P3a-twAM",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "8432fd6962967a95257dbc22e3e044cb6bda6732b0e83da5aa24ebfaeee7f39d"
+}

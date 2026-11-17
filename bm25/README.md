@@ -1,5 +1,113 @@
 # BM25 retrieval
 
+## Application BM25 (V3 Phase 1)
+
+The reusable application implementation is `rag_app/bm25.py`, integrated through
+`RagService.index_bm25(ids, settings, rebuild=False)` and
+`RagService.retrieve_bm25(question, ids, settings)`. It uses only Python's standard
+library. The original course demonstration below is preserved for comparison;
+it is not imported by the application and its hosted answer-generation step is
+not part of these BM25 endpoints.
+
+### Build and search
+
+Upload UTF-8 text/Markdown through the existing document API, or load a bundled
+corpus. Example using curl (substitute the returned document IDs in the JSON):
+
+```bash
+curl -X POST http://127.0.0.1:8000/api/corpora/kestrel
+# Or: curl -X POST http://127.0.0.1:8000/api/corpora/vellora
+
+curl -X POST http://127.0.0.1:8000/api/bm25/index \
+  -H 'Content-Type: application/json' \
+  -d '{"document_ids":["RETURNED_DOCUMENT_ID"],"settings":{"chunk_size":800,"chunk_overlap":80}}'
+
+curl -X POST http://127.0.0.1:8000/api/bm25/search \
+  -H 'Content-Type: application/json' \
+  -d '{"document_ids":["RETURNED_DOCUMENT_ID"],"question":"KST-2044","settings":{"top_k":5}}'
+```
+
+For Kestrel, include all five returned IDs to search the full corpus. Vellora has
+one document. Search builds a missing index automatically; explicit indexing is
+optional. Force rebuilding with `POST /api/bm25/index?rebuild=true` using the same
+body. Index responses contain the fingerprint, document/chunk counts and `rebuilt`.
+Search returns canonical chunk dictionaries with source name, source document ID,
+start/end offsets, starting line, text, `retriever="bm25"`, positive `score` and
+1-based `rank`. BM25 scores are neither cosine similarities nor confidence values.
+No credentials, model download, embeddings or LLM calls are needed.
+
+### Tokenization and ranking
+
+`rag_app/lexical.py` supplies the same tokenizer used by V2 Words: Unicode casefold,
+word tokens with internal hyphens and straight/curly apostrophes. `KST-2044`,
+`connector-hub`, `CAFÉ` and `isn't` become `kst-2044`, `connector-hub`, `café` and
+`isn't`. Other punctuation, underscores and leading `#` separate tokens;
+`#oncall-payments` and `oncall-payments` both match `oncall-payments`. Straight and
+curly apostrophes are retained, not mapped to each other. No stemming, stopword
+filtering, accent stripping, synonym expansion or fuzzy identifier matching.
+Index and query use exactly the same policy, versioned in the index manifest.
+
+Standard BM25 uses k1=1.5, b=0.75, and positive IDF
+`ln(1 + (N-df+0.5)/(df+0.5))`. Document length means token count per chunk; N/df
+and average length are computed over **only the selected chunks**. Each distinct
+query token contributes once, so repeating a word does not increase its weight.
+Results sort by descending score, then ascending canonical chunk ID. Scores of
+zero are excluded; empty/punctuation-only/out-of-vocabulary queries and tokenless
+corpora return an empty list. Top-k can therefore return fewer than k chunks.
+
+### Physical storage, restart and updates
+
+Snapshots live at `data/bm25/<sha256-fingerprint>.json`, or
+`$RAG_DATA_DIR/bm25/<sha256-fingerprint>.json`. A `RagService(data_dir=...)` argument
+takes precedence over the environment, as for dense storage. `data/` is already
+Git-ignored. Snapshots include a versioned manifest, exact canonical source chunks,
+per-chunk term counts and payload SHA-256. Lengths/document frequencies are derived
+from those saved counts when loaded. No additional service or database is required.
+
+The fingerprint includes sorted unique source content IDs, chunk size/overlap,
+tokenizer/index versions and BM25 parameters; it excludes top-k and selection order.
+Sources are reread and canonical rows checked on each operation; valid saved counts
+load without source tokenization or disk rewrite. A restart does not rebuild them.
+There is no process-lifetime index cache to become stale. Loading and scoring scan
+the small selected corpus; this choice targets the existing local course application,
+not a large multi-user search deployment.
+
+- Identical uploads reuse their source ID/index and retain the original filename.
+- Changed content has a new source ID. Include that ID in the selection to use it;
+  uploads do not silently replace older documents with the same name.
+- New selections, chunk settings, BM25 parameters or version changes create a new
+  snapshot. No incremental df updates are needed; rebuild the small selection.
+- Deleting any source clears **all** BM25 snapshots before removing the source.
+  Other selections rebuild lazily, so deleted text cannot persist in old snapshots.
+  Dense deletion still removes the source's rows from every dense collection.
+- Malformed/changed-checksum/source-mismatched snapshots rebuild automatically.
+  Storage permission/write errors produce a handled service error. Forced rebuilds
+  publish through a unique temporary file plus atomic replacement; a failed write
+  leaves an existing complete snapshot intact. Normal failure paths remove the temp
+  file. A process killed during writing can leave an unused `.tmp` file.
+- Unused snapshots from changed selections/settings remain until a document is
+  deleted or the operator removes the BM25 snapshot directory. Stop the app before
+  manual cleanup. On-demand rebuilding recreates the required snapshot.
+
+All service operations use the existing process-local RLock. Run the application
+as one local worker, as in V2; cross-process document mutation is not supported.
+Snapshot hashes detect accidental corruption, not a malicious local writer who
+can also replace source files. Preserve the entire data directory for restart reuse.
+
+### Design choices and limitations
+
+Persisted JSON plus in-memory counters was chosen over RAM-only rebuilds for restart
+reuse and inspectability, and over SQLite/search frameworks to avoid migrations and
+dependencies for the current 43-chunk corpora. Canonical V2 windows preserve short
+headings, exact offsets and IDs `document_sha256:start:end`, allowing future fusion.
+Fixed windows can still split words/facts, overlaps repeat evidence, and lexical
+matching cannot resolve synonyms or multi-hop chains. Dense is still the default;
+there is no fusion, graph, UI toggle or new evaluation configuration in Phase 1.
+
+Tests: `python -m pytest -q tests/test_bm25.py`.
+
+## Original course demo
+
 This guide covers the lexical-retrieval version of the RAG example in
 [`ask_bm25_rag_google.py`](./ask_bm25_rag_google.py). It complements the dense,
 embedding-based retrieval in [`ask_rag_google.py`](../ask_rag_google.py).

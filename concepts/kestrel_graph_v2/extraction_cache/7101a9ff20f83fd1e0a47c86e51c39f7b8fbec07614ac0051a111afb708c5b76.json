@@ -1,0 +1,56 @@
+{
+  "attempt_id": "bb31198599d143f3a4208f99e5a75fba",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 3680,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2880:3680",
+    "line": 50,
+    "name": "support-runbook-errors.md",
+    "start": 2880,
+    "text": "ps the connection.\n**Support action:** ask the customer to confirm the database is reachable from outside their network, on the host and port configured in the connector.\n**Escalate:** to Data Integrations if several customers report it for the same source type at the same time.\n\n### KST-2044 — Source refused the connection\n\n**User sees:** \"Your data source refused the connection from Kestrel.\"\n**Cause:** the database only accepts connections from an allowlist of IP addresses, and the Kestrel addresses are missing from it.\n**Support action:** ask the customer to add both 203.0.113.10 and 203.0.113.11 to the allowlist of their database or firewall. Adding only one of them leads to errors that come and go, because connections can come from either address.\n**Escalate:** no.\n\n### KST-2051 — Cr"
+  },
+  "extracted_at": "2026-11-08T13:49:42.957359+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": "if several customers report it for the same source type at the same time",
+        "evidence_quote": "**Escalate:** to Data Integrations if several customers report it for the same source type at the same time.",
+        "object": {
+          "label": "Data Integrations",
+          "type": "Team"
+        },
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-2040",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 8.321755250013666,
+  "key": "7101a9ff20f83fd1e0a47c86e51c39f7b8fbec07614ac0051a111afb708c5b76",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1938,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 148,
+    "response_id": "7n3waoqNOuOF7M8PrOCA0A4",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"ErrorCode\",\n        \"label\": \"KST-2040\"\n      },\n      \"relation\": \"ESCALATE_TO\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Data Integrations\"\n      },\n      \"evidence_quote\": \"**Escalate:** to Data Integrations if several customers report it for the same source type at the same time.\",\n      \"condition_quote\": \"if several customers report it for the same source type at the same time\"\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "ab662dfb2711ffa1669fbdb02060dcf5d6be80f3ac06e9848b6716f2ba7fa768"
+}

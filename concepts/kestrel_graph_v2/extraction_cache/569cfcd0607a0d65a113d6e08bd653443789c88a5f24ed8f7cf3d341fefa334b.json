@@ -1,0 +1,42 @@
+{
+  "attempt_id": "e96bc067a3b04c3ba2a4cf6779f255a0",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 3680,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2880:3680",
+    "line": 44,
+    "name": "product-guide.md",
+    "start": 2880,
+    "text": "ions do not use a seat. A seat is used only when the person accepts the invitation. If the workspace has no free seat at that moment, the invitation cannot be accepted until an Admin frees a seat or the Owner moves to a larger plan.\n\nMembers can be removed at any time. Their dashboards are not deleted: they are transferred to the Admin who removed them.\n\n## 5. Signing in\n\n### 5.1 Password and two-factor authentication\n\nMembers sign in with their e-mail address and a password, unless the workspace uses single sign-on. We strongly recommend turning on two-factor authentication from **Profile → Security**. Kestrel supports authenticator apps that generate time-based six-digit codes. When you turn it on, Kestrel shows 10 backup codes. Each backup code works once. Store them somewhere safe and "
+  },
+  "extracted_at": "2026-11-08T13:10:50.690388+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 7.65119729199796,
+  "key": "569cfcd0607a0d65a113d6e08bd653443789c88a5f24ed8f7cf3d341fefa334b",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1887,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 9,
+    "response_id": "03TwaueIHYTavdIP4NySkQs",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "dd526b79ede524208aca79208ddb9bedcc51123b9bd88c7e46894f611b3f1f8d"
+}

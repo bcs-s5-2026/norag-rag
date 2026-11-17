@@ -1,0 +1,42 @@
+{
+  "attempt_id": "5d0eb48be69e415688c36cacd6203037",
+  "chunk": {
+    "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+    "end": 5840,
+    "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5040:5840",
+    "line": 66,
+    "name": "product-guide.md",
+    "start": 5040,
+    "text": "port verifies your identity before resetting anything; this verification can take up to 2 business days.\n\nTo reset a forgotten password, choose **Forgot password** on the sign-in page. The reset link is valid for 1 hour.\n\n## 6. Data connectors\n\nA connector stores the connection details for one data source. Kestrel supports PostgreSQL, MySQL, Google BigQuery, Snowflake, Google Sheets and CSV upload. A single CSV file can be up to 200 MB.\n\nConnector credentials are encrypted at rest and are never shown again after they are saved. If your database only accepts connections from known addresses, add both Kestrel addresses to its allowlist: **203.0.113.10** and **203.0.113.11**. Connections can come from either address.\n\nEach dataset query has a time limit of 120 seconds. Queries that take longe"
+  },
+  "extracted_at": "2026-11-08T13:45:10.164732+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 10.09523541701492,
+  "key": "cb6e5e3a82192e46b2f49c2c465492036a54a61d790711e67d82c112185a58e0",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1915,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "3HzwavruGuyv3boPp-CYqA8",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "0a46fccd8338ff81afd06cfedd5708907af14059e6ef14290d35478d79545c4c"
+}

@@ -1,0 +1,42 @@
+{
+  "attempt_id": "778af69882d14706ad971c13d66da144",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 1520,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:720:1520",
+    "line": 11,
+    "name": "support-runbook-errors.md",
+    "start": 720,
+    "text": "ons go to the team that owns the service involved. The owning team of each service and its on-call channel are listed in the Service Catalog.\n\n## Severity levels\n\n| Level | Meaning | Target first response |\n|---|---|---|\n| SEV-1 | Many customers cannot use Kestrel, or data is exposed | 15 minutes, page on-call |\n| SEV-2 | One customer is blocked in production, no workaround | 1 hour |\n| SEV-3 | Degraded behaviour with a workaround | Next business day |\n| SEV-4 | Question, cosmetic issue | Normal queue |\n\n## Sign-in (KST-1xxx)\n\n### KST-1001 — Invalid credentials\n\n**User sees:** \"The e-mail or password is incorrect.\"\n**Cause:** wrong password, or the user is signing in to a workspace that enforces single sign-on.\n**Support action:** check whether the workspace enforces single sign-on. If it "
+  },
+  "extracted_at": "2026-11-08T13:48:58.719840+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 5.797388874983881,
+  "key": "58c818f838c7d35d8ab4037bcf8751090a4d67dfcf2ae7657f791d90901b4406",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1937,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 16,
+    "response_id": "xX3waqn4D9-hvdIPqIfL8AI",
+    "text": "{\n  \"triples\": [],\n  \"aliases\": []\n}"
+  },
+  "sha256": "1dd6e394e0e3b024313e15985daf32458378b3173aa59c87894d278e1a2b16ba"
+}

@@ -1,0 +1,95 @@
+{
+  "attempt_id": "7d423f1a53b54895a2f4f1ffe6df2807",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 1520,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+    "line": 16,
+    "name": "service-catalog.md",
+    "start": 720,
+    "text": "e sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every other service.\nOwner: **Identity**.\n\n### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.\n\n### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.\n\n### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled report"
+  },
+  "extracted_at": "2026-11-08T13:47:23.497951+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "Owner: **Identity**.",
+        "object": {
+          "label": "Identity",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "auth",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.",
+        "object": {
+          "label": "Data Integrations",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "connector-hub",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.",
+        "object": {
+          "label": "Analytics Engine",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "query-engine",
+          "type": "Service"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.",
+        "object": {
+          "label": "Analytics Engine",
+          "type": "Team"
+        },
+        "relation": "OWNED_BY",
+        "subject": {
+          "label": "scheduler",
+          "type": "Service"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 15.018621583993081,
+  "key": "5db04b000cbe9b3116153dc697bcdbbafbd0b821b2cc22e7c817d205fcc30bb3",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1923,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 524,
+    "response_id": "XH3wapXXNZCexN8Pmc7J2Q0",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"auth\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Identity\"\n      },\n      \"evidence_quote\": \"Owner: **Identity**.\",\n      \"condition_quote\": null\n    },\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"connector-hub\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Data Integrations\"\n      },\n      \"evidence_quote\": \"### connector-hub\\n\\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\\nOwner: **Data Integrations**.\",\n      \"condition_quote\": null\n    },\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"query-engine\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Analytics Engine\"\n      },\n      \"evidence_quote\": \"### query-engine\\n\\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\\nOwner: **Analytics Engine**.\",\n      \"condition_quote\": null\n    },\n    {\n      \"subject\": {\n        \"type\": \"Service\",\n        \"label\": \"scheduler\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Analytics Engine\"\n      },\n      \"evidence_quote\": \"### scheduler\\n\\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\\nOwner: **Analytics Engine**.\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "2a68d1ae42ee1a593801ac9a972a743dddd548b7734ed61a0baa338ba1e70fe5"
+}

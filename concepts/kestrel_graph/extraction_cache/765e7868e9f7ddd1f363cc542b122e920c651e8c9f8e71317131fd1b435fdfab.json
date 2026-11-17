@@ -1,0 +1,40 @@
+{
+  "attempt_id": "0cf1455cded44bcabbc6e697c7203a71",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 800,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:0:800",
+    "line": 1,
+    "name": "support-runbook-errors.md",
+    "start": 0,
+    "text": "# Kestrel Analytics — Support Runbook: Error Codes\n\nInternal document · Owner: Customer Support · Last reviewed: 2 September 2026\n\n## How to use this runbook\n\nEvery error shown to a Kestrel user carries a code of the form `KST-` followed by four digits. The first digit gives the area: 1 for sign-in, 2 for connectors, 3 for queries and dashboards, 4 for members and seats, 5 for delivery and embedding, 6 for billing.\n\nFor each code, this runbook gives what the user sees, the usual cause, what support can do, and when to escalate. Always ask the customer for the workspace name, the exact code and the time it happened. If a code is not listed here, escalate it to the on-call engineer of the Platform team.\n\nEscalations go to the team that owns the service involved. The owning team of each servi"
+  },
+  "extracted_at": "2026-11-08T12:12:44.562425+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.9443183340190444,
+  "key": "765e7868e9f7ddd1f363cc542b122e920c651e8c9f8e71317131fd1b435fdfab",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1306,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "O2fwauOQOPeXvdIPtZrRiQM",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "8b5982d2a130f4ff0f5b7035e3a0c85b23bbba761720033355fb3a0a6c8e65f9"
+}

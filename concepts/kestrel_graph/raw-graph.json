@@ -1,0 +1,1120 @@
+{
+  "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+  "build_stats": {
+    "actual_model_identifiers": [
+      "gemini-3.5-flash-lite"
+    ],
+    "cost_complete": false,
+    "finished_run_latency_seconds": 237.4652723330073,
+    "input_tokens": null,
+    "input_usage_unknown_calls": 4,
+    "known_input_tokens": 50239,
+    "known_output_tokens": 1845,
+    "known_usage_estimated_usd": 0.019684199999999995,
+    "output_tokens": null,
+    "output_usage_unknown_calls": 4,
+    "preflight_failures": 0,
+    "provider_failures": 4,
+    "referenced_extraction_models": [
+      "gemini-3.5-flash-lite"
+    ],
+    "reserved_llm_calls": 43,
+    "unfinished_runs": 0,
+    "unresolved_calls": 0,
+    "validation_rejections": 10
+  },
+  "chunks": [
+    {
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "end": 800,
+      "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+      "line": 1,
+      "name": "billing-policy-2025.md",
+      "start": 0,
+      "text": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 January 2025 · Policy owner: Finance · Audience: customers and support staff\n\n## 1. Scope\n\nThis policy explains how Kestrel Analytics charges for its plans, how invoices are issued, and when refunds are possible. It applies to all paid plans: Starter, Team, Business and Enterprise. Enterprise contracts may contain different terms; when they do, the contract takes precedence over this policy. Current prices are published on the Kestrel pricing page and are not repeated here.\n\n## 2. Billing cycles\n\nPaid plans are billed per seat, either monthly or annually. Monthly plans are charged on the same day each month as the original purchase. Annual plans are charged once a year, on the anniversary of the purchase.\n\nCustomers who cho"
+    },
+    {
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "end": 1520,
+      "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:720:1520",
+      "line": 11,
+      "name": "billing-policy-2025.md",
+      "start": 720,
+      "text": " are charged once a year, on the anniversary of the purchase.\n\nCustomers who choose annual billing receive a 15% discount compared with twelve months of monthly billing. Switching from monthly to annual billing is possible at any time and takes effect immediately; the unused part of the current month is credited. Switching from annual to monthly billing takes effect at the next renewal.\n\n## 3. Payment methods\n\nWe accept credit and debit cards (Visa, Mastercard, American Express). Business and Enterprise customers can also pay by bank transfer against an invoice, with payment due within 30 days of the invoice date.\n\nThe card on file can be updated by the workspace Owner from **Settings → Plan → Payment method**. We do not store full card numbers; they are held by our payment processor.\n\n## "
+    },
+    {
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "end": 2240,
+      "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:1440:2240",
+      "line": 19,
+      "name": "billing-policy-2025.md",
+      "start": 1440,
+      "text": " We do not store full card numbers; they are held by our payment processor.\n\n## 4. Invoices\n\nAn invoice is issued for every charge and sent by e-mail to the billing contact of the workspace. Invoices can also be downloaded from **Settings → Plan → Invoices**. The billing contact and the company details printed on invoices (name, address, VAT number) can be changed by the Owner; changes apply to future invoices only. A corrected copy of a past invoice can be requested from support within 90 days of its date.\n\n## 5. Adding and removing seats\n\nSeats can be added at any time. Added seats are charged immediately, pro-rated to the end of the current billing period.\n\nSeats can be removed at any time, but the reduction takes effect at the next renewal. No credit is given for removed seats during t"
+    },
+    {
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "end": 2960,
+      "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2160:2960",
+      "line": 29,
+      "name": "billing-policy-2025.md",
+      "start": 2160,
+      "text": " takes effect at the next renewal. No credit is given for removed seats during the current period.\n\n## 6. Refunds\n\n**Monthly plans** are not refundable. When a monthly plan is cancelled, it remains active until the end of the month already paid.\n\n**Annual plans** can be refunded in full if the request is made within 30 days of the purchase or renewal date. After 30 days, annual plans are not refundable.\n\nRefund requests must be sent by the workspace Owner to billing@kestrel.example. Approved refunds are processed within 10 business days and returned to the original payment method.\n\nCharges caused by a billing error on our side (for example a duplicate charge) are always refunded in full, whatever the plan and whatever the date.\n\n## 7. Failed payments\n\nIf a payment fails, we retry the card "
+    },
+    {
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "end": 3680,
+      "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2880:3680",
+      "line": 39,
+      "name": "billing-policy-2025.md",
+      "start": 2880,
+      "text": "hatever the date.\n\n## 7. Failed payments\n\nIf a payment fails, we retry the card automatically 3 days and 7 days after the first attempt, and the workspace Owner receives an e-mail after each failed attempt.\n\nIf the payment still fails, the workspace has a grace period of 14 days from the first failed attempt. During the grace period everything keeps working. After the grace period, the workspace becomes read-only: members can view dashboards but cannot edit them, and datasets stop refreshing.\n\nA read-only workspace returns to normal as soon as the outstanding amount is paid.\n\n## 8. Cancellation\n\nThe Owner can cancel a paid plan from **Settings → Plan → Cancel plan**. Cancellation stops future charges. The workspace stays on its paid plan until the end of the period already paid, then moves"
+    },
+    {
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "end": 4123,
+      "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:3600:4123",
+      "line": 51,
+      "name": "billing-policy-2025.md",
+      "start": 3600,
+      "text": "pace stays on its paid plan until the end of the period already paid, then moves to the Free plan. Content above the Free plan limits becomes read-only.\n\n## 9. Taxes\n\nPrices are shown without tax. VAT or sales tax is added according to the billing address. Business customers in the European Union who provide a valid VAT number are invoiced without VAT under the reverse-charge mechanism.\n\n## 10. Contact\n\nBilling questions: billing@kestrel.example. Please include the workspace name and, if relevant, the invoice number.\n"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 800,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:0:800",
+      "line": 1,
+      "name": "billing-policy-2026.md",
+      "start": 0,
+      "text": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 March 2026 · Policy owner: Finance · Audience: customers and support staff\n\nThis policy replaces the Billing and Refund Policy effective 1 January 2025. Requests made before 1 March 2026 are handled under the previous policy.\n\n## 1. Scope\n\nThis policy explains how Kestrel Analytics charges for its plans, how invoices are issued, and when refunds are possible. It applies to all paid plans: Starter, Team, Business and Enterprise. Enterprise contracts may contain different terms; when they do, the contract takes precedence over this policy. Current prices are published on the Kestrel pricing page and are not repeated here.\n\n## 2. Billing cycles\n\nPaid plans are billed per seat, either monthly or annually. Monthly plans are char"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 1520,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:720:1520",
+      "line": 13,
+      "name": "billing-policy-2026.md",
+      "start": 720,
+      "text": "id plans are billed per seat, either monthly or annually. Monthly plans are charged on the same day each month as the original purchase. Annual plans are charged once a year, on the anniversary of the purchase.\n\nCustomers who choose annual billing receive a 20% discount compared with twelve months of monthly billing. Switching from monthly to annual billing is possible at any time and takes effect immediately; the unused part of the current month is credited. Switching from annual to monthly billing takes effect at the next renewal.\n\n## 3. Payment methods\n\nWe accept credit and debit cards (Visa, Mastercard, American Express) and SEPA direct debit for customers in the euro area. Team, Business and Enterprise customers can also pay by bank transfer against an invoice, with payment due within"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 2240,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:1440:2240",
+      "line": 19,
+      "name": "billing-policy-2026.md",
+      "start": 1440,
+      "text": "tomers can also pay by bank transfer against an invoice, with payment due within 30 days of the invoice date.\n\nThe payment method can be updated by the workspace Owner from **Settings → Plan → Payment method**. We do not store full card or account numbers; they are held by our payment processor.\n\n## 4. Invoices\n\nAn invoice is issued for every charge and sent by e-mail to the billing contact of the workspace. Invoices can also be downloaded from **Settings → Plan → Invoices**. The billing contact and the company details printed on invoices (name, address, VAT number) can be changed by the Owner; changes apply to future invoices only. A corrected copy of a past invoice can be requested from support within 12 months of its date.\n\n## 5. Adding and removing seats\n\nSeats can be added at any time"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 2960,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2160:2960",
+      "line": 25,
+      "name": "billing-policy-2026.md",
+      "start": 2160,
+      "text": "hs of its date.\n\n## 5. Adding and removing seats\n\nSeats can be added at any time. Added seats are charged immediately, pro-rated to the end of the current billing period.\n\nSeats can be removed at any time. On monthly plans the reduction takes effect at the next monthly charge. On annual plans the reduction takes effect at the next renewal, and no credit is given for the current period.\n\n## 6. Refunds\n\n**Monthly plans** are not refundable. When a monthly plan is cancelled, it remains active until the end of the month already paid.\n\n**Annual plans** can be refunded if the request is made within 60 days of the purchase or renewal date. The refund is pro-rated from the date of the request: you are refunded the unused full months of the annual period. After 60 days, annual plans are not refunda"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 3680,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2880:3680",
+      "line": 37,
+      "name": "billing-policy-2026.md",
+      "start": 2880,
+      "text": "ed full months of the annual period. After 60 days, annual plans are not refundable.\n\nRefund requests must be sent by the workspace Owner, either from **Settings → Plan → Request a refund** or by e-mail to billing@kestrel.example. Approved refunds are processed within 14 days and returned to the original payment method.\n\nCharges caused by a billing error on our side (for example a duplicate charge) are always refunded in full, whatever the plan and whatever the date.\n\n## 7. Failed payments\n\nWhen a payment fails, the workspace Owner and the billing contact receive an e-mail straight away. We then retry the payment automatically 1 day, 3 days and 7 days after the first attempt.\n\nEach retry uses the payment method on file at the time of the retry, so updating the card before the next retry is"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 4400,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:3600:4400",
+      "line": 47,
+      "name": "billing-policy-2026.md",
+      "start": 3600,
+      "text": " on file at the time of the retry, so updating the card before the next retry is usually enough to solve the problem. No late fee is charged.\n\nIf all retries fail, the workspace enters a grace period of 21 days from the first failed attempt, during which everything keeps working. A banner reminds Admins that payment is overdue.\n\nAfter the grace period, the workspace becomes read-only: members can view dashboards but cannot edit them, scheduled reports are paused, and datasets stop refreshing.\n\nIf the amount is still unpaid 60 days after the first failed attempt, the workspace is suspended: nobody can sign in to it until the outstanding amount is paid. A suspended workspace is not deleted, and returns to normal as soon as the payment succeeds.\n\n## 8. Cancellation\n\nThe Owner can cancel a pai"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 5120,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:4320:5120",
+      "line": 53,
+      "name": "billing-policy-2026.md",
+      "start": 4320,
+      "text": "as soon as the payment succeeds.\n\n## 8. Cancellation\n\nThe Owner can cancel a paid plan from **Settings → Plan → Cancel plan**. Cancellation stops future charges. The workspace stays on its paid plan until the end of the period already paid, then moves to the Free plan. Content above the Free plan limits becomes read-only.\n\nCancelling an annual plan does not by itself trigger a refund. To be refunded, request it as described in section 6.\n\n## 9. Taxes\n\nPrices are shown without tax. VAT or sales tax is added according to the billing address. Business customers in the European Union who provide a valid VAT number are invoiced without VAT under the reverse-charge mechanism.\n\n## 10. Contact\n\nBilling questions: billing@kestrel.example. Please include the workspace name and, if relevant, the invo"
+    },
+    {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 5132,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:5040:5132",
+      "line": 67,
+      "name": "billing-policy-2026.md",
+      "start": 5040,
+      "text": "ng@kestrel.example. Please include the workspace name and, if relevant, the invoice number.\n"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 800,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:0:800",
+      "line": 1,
+      "name": "product-guide.md",
+      "start": 0,
+      "text": "# Kestrel Analytics — Product Guide\n\nVersion 4.2 · Last updated: 12 August 2026 · Audience: customers and workspace administrators\n\n## 1. What Kestrel does\n\nKestrel Analytics is a dashboard and business intelligence service for teams. You connect your data sources, build datasets on top of them, and turn those datasets into dashboards that refresh automatically. Dashboards can be shared with colleagues, sent as scheduled PDF reports, or embedded in your own web applications.\n\nEverything in Kestrel lives inside a **workspace**. A workspace has members, connectors, datasets and dashboards. Most customers use one workspace per company; larger organisations sometimes create one workspace per department. Members of one workspace cannot see the content of another workspace, even inside the same "
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 1520,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+      "line": 9,
+      "name": "product-guide.md",
+      "start": 720,
+      "text": "one workspace cannot see the content of another workspace, even inside the same organisation.\n\n## 2. Plans and limits\n\nEach workspace is on exactly one plan. The plan sets the number of seats, how often data refreshes, and which administration features are available.\n\n| | Free | Starter | Team | Business | Enterprise |\n|---|---|---|---|---|---|\n| Seats included | 2 | 5 | 20 | 100 | Custom |\n| Dashboards | 3 | 25 | Unlimited | Unlimited | Unlimited |\n| Data connectors | 1 | 3 | 10 | Unlimited | Unlimited |\n| Fastest refresh | Daily | Hourly | Every 15 minutes | Every 5 minutes | Every minute |\n| History kept | 30 days | 1 year | 2 years | 5 years | Custom |\n| Single sign-on (SAML) | — | — | — | Yes | Yes |\n| SCIM user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | "
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 2240,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+      "line": 23,
+      "name": "product-guide.md",
+      "start": 1440,
+      "text": "M user provisioning | — | — | — | — | Yes |\n| Audit log | — | — | — | 90 days | 1 year |\n| Public share links | — | Yes | Yes | Yes | Yes |\n\nPlans can be changed at any time from **Settings → Plan**. An upgrade takes effect immediately. A downgrade takes effect at the end of the current billing period; if the workspace uses more than the lower plan allows (for example more dashboards than the limit), the extra items become read-only until you remove them.\n\n## 3. Workspace roles\n\nEvery member has one role in the workspace:\n\n- **Owner**: exactly one per workspace. The Owner can do everything an Admin can, and is the only person who can change the plan, delete the workspace or transfer ownership.\n- **Admin**: manages members, connectors and security settings.\n- **Editor**: creates and edits d"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 2960,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2160:2960",
+      "line": 34,
+      "name": "product-guide.md",
+      "start": 2160,
+      "text": "ges members, connectors and security settings.\n- **Editor**: creates and edits datasets and dashboards.\n- **Viewer**: opens dashboards and reports, but cannot change them.\n\nTo transfer ownership, the current Owner opens **Settings → Members**, selects a member and chooses **Transfer ownership**. The new Owner must already be an Admin of the workspace. Both people receive a confirmation e-mail, and the transfer completes only after both have confirmed. Until then the transfer is shown as pending.\n\n## 4. Inviting people\n\nAdmins invite people from **Settings → Members → Invite**. An invitation is sent by e-mail and is valid for 7 days. After that the link expires and a new invitation must be sent.\n\nPending invitations do not use a seat. A seat is used only when the person accepts the invitati"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 3680,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2880:3680",
+      "line": 44,
+      "name": "product-guide.md",
+      "start": 2880,
+      "text": "ions do not use a seat. A seat is used only when the person accepts the invitation. If the workspace has no free seat at that moment, the invitation cannot be accepted until an Admin frees a seat or the Owner moves to a larger plan.\n\nMembers can be removed at any time. Their dashboards are not deleted: they are transferred to the Admin who removed them.\n\n## 5. Signing in\n\n### 5.1 Password and two-factor authentication\n\nMembers sign in with their e-mail address and a password, unless the workspace uses single sign-on. We strongly recommend turning on two-factor authentication from **Profile → Security**. Kestrel supports authenticator apps that generate time-based six-digit codes. When you turn it on, Kestrel shows 10 backup codes. Each backup code works once. Store them somewhere safe and "
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 4400,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:3600:4400",
+      "line": 52,
+      "name": "product-guide.md",
+      "start": 3600,
+      "text": "ows 10 backup codes. Each backup code works once. Store them somewhere safe and separate from your authenticator device.\n\nAdmins can make two-factor authentication mandatory for every member from **Settings → Security**. Members who have not set it up are asked to do so at their next sign-in.\n\n### 5.2 Single sign-on\n\nOn the Business and Enterprise plans, workspaces can use single sign-on with any SAML 2.0 identity provider. To set it up, an Admin opens **Settings → Security → Single sign-on**, downloads the Kestrel service provider metadata, registers Kestrel in the identity provider, and pastes the identity provider metadata URL back into Kestrel. We recommend testing with one Admin account before choosing **Enforce for all members**. When single sign-on is enforced, passwords are disable"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 5120,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:4320:5120",
+      "line": 58,
+      "name": "product-guide.md",
+      "start": 4320,
+      "text": "nforce for all members**. When single sign-on is enforced, passwords are disabled and two-factor authentication is handled by your identity provider.\n\n### 5.3 Regaining access to your account\n\nIf you no longer have your authenticator device, use one of your backup codes at the second-factor prompt, then set up two-factor authentication again from **Profile → Security**.\n\nIf you have neither your authenticator device nor any backup code, ask an Admin of your workspace to reset your second factor from **Settings → Members**. You will set it up again at your next sign-in.\n\nIf you are the only Admin, or the workspace Owner, write to support from the e-mail address registered on the account. For security reasons support verifies your identity before resetting anything; this verification can tak"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 5840,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5040:5840",
+      "line": 66,
+      "name": "product-guide.md",
+      "start": 5040,
+      "text": "port verifies your identity before resetting anything; this verification can take up to 2 business days.\n\nTo reset a forgotten password, choose **Forgot password** on the sign-in page. The reset link is valid for 1 hour.\n\n## 6. Data connectors\n\nA connector stores the connection details for one data source. Kestrel supports PostgreSQL, MySQL, Google BigQuery, Snowflake, Google Sheets and CSV upload. A single CSV file can be up to 200 MB.\n\nConnector credentials are encrypted at rest and are never shown again after they are saved. If your database only accepts connections from known addresses, add both Kestrel addresses to its allowlist: **203.0.113.10** and **203.0.113.11**. Connections can come from either address.\n\nEach dataset query has a time limit of 120 seconds. Queries that take longe"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 6560,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5760:6560",
+      "line": 74,
+      "name": "product-guide.md",
+      "start": 5760,
+      "text": "ss.\n\nEach dataset query has a time limit of 120 seconds. Queries that take longer are stopped. If this happens often, add a filter, pre-aggregate the data in your database, or schedule a less frequent refresh.\n\n## 7. Dashboards and refresh\n\nDashboards are built from tiles. Each tile reads one dataset. When a dataset refreshes, every tile that uses it is updated. The refresh frequency of a dataset cannot be faster than the fastest refresh of your plan (see section 2).\n\nYou can see when a dataset was last refreshed by hovering over the clock icon in the corner of any tile. A red clock means the last refresh failed; the tooltip shows the error code.\n\n## 8. Scheduled reports\n\nAny dashboard can be sent as a PDF on a schedule: daily, weekly or monthly. A schedule can have up to 50 recipients, wh"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 7280,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:6480:7280",
+      "line": 86,
+      "name": "product-guide.md",
+      "start": 6480,
+      "text": " schedule: daily, weekly or monthly. A schedule can have up to 50 recipients, who do not need to be members of the workspace. The schedule uses the time zone of the person who created it.\n\nReports are generated a few minutes before the scheduled time and delivered by e-mail. If a recipient's mail server rejects the message three times, that recipient is removed from the schedule and the schedule creator is notified.\n\n## 9. Sharing and embedding\n\n**Public links** let anyone with the link view a dashboard without signing in. They are available on every plan except Free, and an Admin can turn them off for the whole workspace.\n\n**Embedding** places a dashboard inside your own web application. Your server requests an embed token from the Kestrel API and passes it to the page. By default an embe"
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 8000,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7200:8000",
+      "line": 94,
+      "name": "product-guide.md",
+      "start": 7200,
+      "text": "n embed token from the Kestrel API and passes it to the page. By default an embed token expires after 24 hours. On the Business and Enterprise plans, the lifetime can be raised up to 30 days from **Settings → Embedding**.\n\n## 10. Exporting and deleting data\n\nThe Owner can export the whole workspace (dashboards, datasets definitions and settings) as a ZIP file from **Settings → Workspace → Export**. Data from your sources is not included: Kestrel stores only the cached results needed to display dashboards.\n\nWhen the Owner deletes a workspace, it is first disabled for 30 days. During that period it can be restored by contacting support. After 30 days it is deleted permanently and cannot be recovered.\n\nRequests about personal data (access, correction, deletion) can be sent to privacy@kestrel."
+    },
+    {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 8519,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7920:8519",
+      "line": 102,
+      "name": "product-guide.md",
+      "start": 7920,
+      "text": "out personal data (access, correction, deletion) can be sent to privacy@kestrel.example. We answer within one month.\n\n## 11. Getting help\n\n| Plan | Channels | First response target |\n|---|---|---|\n| Free | Help centre, community forum | Best effort |\n| Starter | E-mail | 2 business days |\n| Team | E-mail, chat | 1 business day |\n| Business | E-mail, chat | 8 business hours |\n| Enterprise | E-mail, chat, named contact | 4 hours, 24/7 for critical incidents |\n\nWhen you contact support, include the workspace name, the error code if one is shown (it starts with `KST-`), and the time it happened.\n"
+    },
+    {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 800,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+      "line": 1,
+      "name": "service-catalog.md",
+      "start": 0,
+      "text": "# Kestrel Analytics — Service Catalog\n\nInternal document · Owner: Platform team · Last updated: 15 September 2026\n\nThis catalog lists the production services of Kestrel, what each one does, and which team owns it. The owning team is responsible for the service's on-call rotation, its alerts and its runbook entries. When in doubt about who owns something, ask in #platform-help.\n\n## 1. Services\n\n### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.\n\n### auth\n\nSign-in with password, two-factor authentication, single sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every "
+    },
+    {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 1520,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+      "line": 16,
+      "name": "service-catalog.md",
+      "start": 720,
+      "text": "e sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every other service.\nOwner: **Identity**.\n\n### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.\n\n### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.\n\n### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled report"
+    },
+    {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 2240,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+      "line": 32,
+      "name": "service-catalog.md",
+      "start": 1440,
+      "text": "ngine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.\n\npostroom replaced the older mailman service in November 2025. mailman is switched off; old alerts or documents that mention it refer to postroom today.\n\n### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.\n\n### ledger\n\nSubscriptions, seats, invoices and payments. Generates invoice PDFs, runs the automatic payment retries, and applies the grace period and read-only rules of the Billing and Refund Policy. Talks to the payment processor; never stores full card"
+    },
+    {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 2960,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960",
+      "line": 48,
+      "name": "service-catalog.md",
+      "start": 2160,
+      "text": "illing and Refund Policy. Talks to the payment processor; never stores full card numbers.\nOwner: **Payments Core**.\n\n### audit-log\n\nRecords security-relevant events (sign-ins, role changes, connector edits, exports) for workspaces on Business and Enterprise plans.\nOwner: **Identity**.\n\n## 2. Teams\n\n| Team | Engineering lead | On-call channel | Working hours (Paris time) |\n|---|---|---|---|\n| Platform | Samuel Okafor | #oncall-platform | 24/7 rotation |\n| Identity | Priya Raman | #oncall-identity | 24/7 rotation |\n| Data Integrations | Tomasz Wójcik | #oncall-data-integrations | 08:00–20:00, weekdays |\n| Analytics Engine | Léa Fontaine | #oncall-analytics | 24/7 rotation |\n| Messaging | Inès Moreau | #oncall-messaging | 08:00–20:00, weekdays |\n| Payments Core | Jonas Berg | #oncall-payments"
+    },
+    {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 3680,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680",
+      "line": 64,
+      "name": "service-catalog.md",
+      "start": 2880,
+      "text": "saging | 08:00–20:00, weekdays |\n| Payments Core | Jonas Berg | #oncall-payments | 24/7 rotation |\n\nTeams with weekday hours are covered outside those hours by the Platform on-call, who can page the team lead for SEV-1 incidents only.\n\n## 3. Escalation rules\n\n1. Support identifies the service involved, using the error code and the Support Runbook.\n2. Support posts in the on-call channel of the team that owns that service, with the workspace name, the error code, the time, and the severity level.\n3. For SEV-1, support also pages the on-call engineer through the paging tool; posting in the channel is not enough.\n4. If the owning team is outside its working hours, escalate to the Platform on-call.\n5. The owning team acknowledges in the thread and becomes responsible for the follow-up with sup"
+    },
+    {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 3899,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:3600:3899",
+      "line": 75,
+      "name": "service-catalog.md",
+      "start": 3600,
+      "text": "am acknowledges in the thread and becomes responsible for the follow-up with support.\n\n## 4. Changing ownership\n\nA service changes owner only with the agreement of both engineering leads and an update of this catalog in the same week. Until the catalog is updated, the previous owner stays on call.\n"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 800,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:0:800",
+      "line": 1,
+      "name": "support-runbook-errors.md",
+      "start": 0,
+      "text": "# Kestrel Analytics — Support Runbook: Error Codes\n\nInternal document · Owner: Customer Support · Last reviewed: 2 September 2026\n\n## How to use this runbook\n\nEvery error shown to a Kestrel user carries a code of the form `KST-` followed by four digits. The first digit gives the area: 1 for sign-in, 2 for connectors, 3 for queries and dashboards, 4 for members and seats, 5 for delivery and embedding, 6 for billing.\n\nFor each code, this runbook gives what the user sees, the usual cause, what support can do, and when to escalate. Always ask the customer for the workspace name, the exact code and the time it happened. If a code is not listed here, escalate it to the on-call engineer of the Platform team.\n\nEscalations go to the team that owns the service involved. The owning team of each servi"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 1520,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:720:1520",
+      "line": 11,
+      "name": "support-runbook-errors.md",
+      "start": 720,
+      "text": "ons go to the team that owns the service involved. The owning team of each service and its on-call channel are listed in the Service Catalog.\n\n## Severity levels\n\n| Level | Meaning | Target first response |\n|---|---|---|\n| SEV-1 | Many customers cannot use Kestrel, or data is exposed | 15 minutes, page on-call |\n| SEV-2 | One customer is blocked in production, no workaround | 1 hour |\n| SEV-3 | Degraded behaviour with a workaround | Next business day |\n| SEV-4 | Question, cosmetic issue | Normal queue |\n\n## Sign-in (KST-1xxx)\n\n### KST-1001 — Invalid credentials\n\n**User sees:** \"The e-mail or password is incorrect.\"\n**Cause:** wrong password, or the user is signing in to a workspace that enforces single sign-on.\n**Support action:** check whether the workspace enforces single sign-on. If it "
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 2240,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:1440:2240",
+      "line": 27,
+      "name": "support-runbook-errors.md",
+      "start": 1440,
+      "text": "\n**Support action:** check whether the workspace enforces single sign-on. If it does, tell the user to use **Sign in with SSO**. Otherwise point them to **Forgot password**. Support never sets a password for a user.\n**Escalate:** no.\n\n### KST-1007 — Two-factor code rejected\n\n**User sees:** \"This code is not valid.\"\n**Cause:** in most cases the clock of the device running the authenticator app is wrong; time-based codes depend on the time being correct within about 30 seconds.\n**Support action:** ask the user to turn on automatic date and time on their device and try again. If they have lost their device, follow the second-factor reset procedure in the Product Guide (an Admin of the workspace resets it; support only does it after identity verification).\n**Escalate:** no.\n\n### KST-1012 — SSO"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 2960,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+      "line": 35,
+      "name": "support-runbook-errors.md",
+      "start": 2160,
+      "text": "only does it after identity verification).\n**Escalate:** no.\n\n### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.\n\n## Connectors (KST-2xxx)\n\n### KST-2040 — Connection timed out\n\n**User sees:** \"Kestrel could not reach your data source in time.\"\n**Cause:** the database is down, overloaded, or behind a firewall that silently drops the connection.\n**Support action:** ask the customer to confirm the database "
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 3680,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2880:3680",
+      "line": 50,
+      "name": "support-runbook-errors.md",
+      "start": 2880,
+      "text": "ps the connection.\n**Support action:** ask the customer to confirm the database is reachable from outside their network, on the host and port configured in the connector.\n**Escalate:** to Data Integrations if several customers report it for the same source type at the same time.\n\n### KST-2044 — Source refused the connection\n\n**User sees:** \"Your data source refused the connection from Kestrel.\"\n**Cause:** the database only accepts connections from an allowlist of IP addresses, and the Kestrel addresses are missing from it.\n**Support action:** ask the customer to add both 203.0.113.10 and 203.0.113.11 to the allowlist of their database or firewall. Adding only one of them leads to errors that come and go, because connections can come from either address.\n**Escalate:** no.\n\n### KST-2051 — Cr"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 4400,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:3600:4400",
+      "line": 58,
+      "name": "support-runbook-errors.md",
+      "start": 3600,
+      "text": "e connections can come from either address.\n**Escalate:** no.\n\n### KST-2051 — Credentials rejected\n\n**User sees:** \"The username or password for this data source is incorrect.\"\n**Cause:** the database password was changed, or the database user was removed.\n**Support action:** an Admin must edit the connector and enter the new credentials. Support cannot see stored credentials.\n**Escalate:** no.\n\n## Queries and dashboards (KST-3xxx)\n\n### KST-3012 — Query time limit exceeded\n\n**User sees:** \"This query took too long and was stopped.\"\n**Cause:** a dataset query ran for more than 120 seconds.\n**Support action:** suggest adding a filter, pre-aggregating in the source database, or refreshing less often. The time limit is the same on every plan and cannot be raised.\n**Escalate:** to Analytics Eng"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 5120,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:4320:5120",
+      "line": 74,
+      "name": "support-runbook-errors.md",
+      "start": 4320,
+      "text": "t is the same on every plan and cannot be raised.\n**Escalate:** to Analytics Engine only if a query that used to finish quickly suddenly times out for many datasets of the same customer.\n\n### KST-3020 — Dataset refresh failed\n\n**User sees:** a red clock on the tiles.\n**Cause:** the tooltip shows a second code with the real cause, usually a KST-2xxx connector error.\n**Support action:** handle the underlying code.\n**Escalate:** depends on the underlying code.\n\n## Members and seats (KST-4xxx)\n\n### KST-4012 — No seat available\n\n**User sees:** \"This workspace has no seat available. Ask an Admin.\"\n**Cause:** the person is accepting an invitation, but all seats of the plan are already used. Pending invitations do not use a seat; the check happens at acceptance.\n**Support action:** explain that an"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 5840,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5040:5840",
+      "line": 89,
+      "name": "support-runbook-errors.md",
+      "start": 5040,
+      "text": "use a seat; the check happens at acceptance.\n**Support action:** explain that an Admin of the workspace must remove a member to free a seat, or the Owner must add seats or move to a larger plan. Once a seat is free, the same invitation link works again as long as it is less than 7 days old.\n**Escalate:** no.\n\n### KST-4019 — Ownership transfer pending\n\n**User sees:** \"An ownership transfer is waiting for confirmation.\"\n**Cause:** the Owner started a transfer, and one of the two people has not confirmed it by e-mail.\n**Support action:** ask both people to check their inbox and spam folder. The transfer can be cancelled by the current Owner from **Settings → Members**.\n**Escalate:** no.\n\n## Delivery and embedding (KST-5xxx)\n\n### KST-5031 — Scheduled report not delivered\n\n**User sees:** the sc"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 6560,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+      "line": 100,
+      "name": "support-runbook-errors.md",
+      "start": 5760,
+      "text": "(KST-5xxx)\n\n### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails. A single occurrence is usually a temporary problem with a recipient's mail server.\n**Support action:** check whether the recipient's address is correct and whether the next delivery succeeds. Ask the customer to check that messages from kestrel.example are not blocked by their mail filter.\n**Escalate:** if the error happens on two consecutive deliveries, or for several customers on the same day, escalate to the team that owns postroom, as SEV-2.\n\n### KST-5038 — Embed token expired\n\n**User sees:** an embedded dashboard shows \"This link"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 7280,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:6480:7280",
+      "line": 109,
+      "name": "support-runbook-errors.md",
+      "start": 6480,
+      "text": "038 — Embed token expired\n\n**User sees:** an embedded dashboard shows \"This link has expired\".\n**Cause:** the embed token passed by the customer's application is older than its lifetime (24 hours by default).\n**Support action:** the customer's server must request a new token before the old one expires. On Business and Enterprise, the lifetime can be raised up to 30 days.\n**Escalate:** no.\n\n## Billing (KST-6xxx)\n\n### KST-6002 — Payment declined\n\n**User sees:** \"Your payment was declined.\"\n**Cause:** the card was refused by the bank: insufficient funds, expired card, or a security block.\n**Support action:** ask the Owner to update the payment method before the next automatic retry. Follow the current Billing and Refund Policy for retries, grace period and read-only rules. Support cannot take"
+    },
+    {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 7895,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:7200:7895",
+      "line": 122,
+      "name": "support-runbook-errors.md",
+      "start": 7200,
+      "text": "Refund Policy for retries, grace period and read-only rules. Support cannot take card details over e-mail or chat.\n**Escalate:** to Payments Core only if the customer shows that the bank approved the payment.\n\n### KST-6010 — Duplicate charge detected\n\n**User sees:** nothing; this code appears in the admin console when two charges for the same period are found.\n**Cause:** a retry and a manual payment went through for the same invoice.\n**Support action:** confirm the duplicate in the admin console and request a full refund of the second charge; billing errors are always refunded.\n**Escalate:** to Payments Core if more than three customers are affected on the same day (possible incident).\n"
+    }
+  ],
+  "complete": false,
+  "coverage": {
+    "empty_extractions": 27,
+    "raw_triples": 2,
+    "total_chunks": 43,
+    "valid_chunks": 29
+  },
+  "entities": [
+    {
+      "id": "e_2630be3ae508e70eb992a890c0b0954861dd9d63f0a45dec2e7e079b410c5d5a",
+      "label": "Analytics Eng",
+      "names": [
+        "Analytics Eng"
+      ],
+      "provenance_ids": [
+        "p_e2e45aa998d002d0f9c4de60fb6f0934889520e3a280b5235e7de485ec519798"
+      ],
+      "scope": "kestrel",
+      "type": "Team"
+    },
+    {
+      "id": "e_a9fd144fcab654c6766c79578a00ea3fd6f11fa530772479cbe2da2eba4a3eaa",
+      "label": "Payments Core",
+      "names": [
+        "Payments Core"
+      ],
+      "provenance_ids": [
+        "p_181ef56e20dca42916172e09af3b51f030a29864cc083c706b0492b0e9c35412"
+      ],
+      "scope": "kestrel",
+      "type": "Team"
+    },
+    {
+      "id": "e_d9dffdb8b13b722f8c885cf62ec4646e4386b16c029888c07a4bbcbe9ce96c85",
+      "label": "KST-3012",
+      "names": [
+        "KST-3012"
+      ],
+      "provenance_ids": [
+        "p_e2e45aa998d002d0f9c4de60fb6f0934889520e3a280b5235e7de485ec519798"
+      ],
+      "scope": "kestrel",
+      "type": "ErrorCode"
+    },
+    {
+      "id": "e_fe645428321aef2bda4a91763ba2d05c38c813a7fb083c9d0b432d922f52152b",
+      "label": "#oncall-payments",
+      "names": [
+        "#oncall-payments"
+      ],
+      "provenance_ids": [
+        "p_181ef56e20dca42916172e09af3b51f030a29864cc083c706b0492b0e9c35412"
+      ],
+      "scope": "kestrel",
+      "type": "Channel"
+    }
+  ],
+  "extractions": [
+    {
+      "attempt_id": "925b8d4c868f4d2c979ca207b199e4e9",
+      "cache_key": "7f038a7f11481e81b5b429e16f070cdb4def297788667b13e4c94aa283fea2bb",
+      "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:720:1520",
+      "extracted_at": "2026-11-08T12:05:36.043953+00:00",
+      "extraction_seconds": 0.9176861250016373,
+      "input_tokens": 1275,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "j2XwavKEGdnrkdUPtf2-4A0",
+      "response_sha256": "a59471bf3777b71a320457c078e5db2dfb58508d9fcc9b22dea3bbba584c0199"
+    },
+    {
+      "attempt_id": "cb88be7987a24aea9057dcd21b7c05e6",
+      "cache_key": "7bf536a95cbc3f71e77f7804d20a1b9f7efe7f01a8fc7fbd67e9a9c3c341ff7c",
+      "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:1440:2240",
+      "extracted_at": "2026-11-08T12:05:45.667302+00:00",
+      "extraction_seconds": 9.616942082997411,
+      "input_tokens": 1294,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "kGXwao3ED-LqxN8PmtqJ0Q8",
+      "response_sha256": "15c2d44399065b630f931878ebdd18c970cbff1786dad641c286e94e6cf9024d"
+    },
+    {
+      "attempt_id": "28cb99741001491bb6ffe0bc5d199e17",
+      "cache_key": "3cb8cefecdecf9845f413f5ac4c92c2b819f4e86739177852765e0f873ab82f1",
+      "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2160:2960",
+      "extracted_at": "2026-11-08T12:05:49.527614+00:00",
+      "extraction_seconds": 3.852753541985294,
+      "input_tokens": 1298,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "mmXwaujzFonfxs0Py5qd2AM",
+      "response_sha256": "1729fce9927cc2a54261226344d6ad2d5c0cfc37bd81382145468fdbced582d0"
+    },
+    {
+      "attempt_id": "b40a294310c44a4cb36d88fde68e93a2",
+      "cache_key": "e51582ec492569e94df9ac063a93ed4b1e9236410e3dc45e078fb05449dc344b",
+      "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:3600:4123",
+      "extracted_at": "2026-11-08T12:07:01.759858+00:00",
+      "extraction_seconds": 0.7491306669835467,
+      "input_tokens": 1230,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "5WXwaqnfHPKgxN8PzIqYGA",
+      "response_sha256": "6dbcdbb211b364478f18b3536e17076b87bf75c831071cd0aaa9b37fe5849d5f"
+    },
+    {
+      "attempt_id": "e614e41be29e4ce08a074ef25ee8a9ee",
+      "cache_key": "2a3921d5c7dec2f11b3b7cb4144373862058ab76606bc1d2b8cce4c9254d6598",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:0:800",
+      "extracted_at": "2026-11-08T12:07:16.703433+00:00",
+      "extraction_seconds": 14.940673457982484,
+      "input_tokens": 1285,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "5mXwar-7BYe2vdIPnOe_YQ",
+      "response_sha256": "13580012dee8550e73bf50e735df7f627c391faff0d80f98638069a3cfadeb73"
+    },
+    {
+      "attempt_id": "5a86212bde3c40afa33d18b9dd7ff887",
+      "cache_key": "4b6607e170b96082bcdf48b2928b653745050e03bdff60b3842f43aa6183b027",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:720:1520",
+      "extracted_at": "2026-11-08T12:07:17.425562+00:00",
+      "extraction_seconds": 0.7176116250047926,
+      "input_tokens": 1266,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "9GXwasuqONrexs0P3a-twAM",
+      "response_sha256": "8432fd6962967a95257dbc22e3e044cb6bda6732b0e83da5aa24ebfaeee7f39d"
+    },
+    {
+      "attempt_id": "080880f058c04cf68641b6bf67688529",
+      "cache_key": "e8b570d0c7b629ad5fa6a306601407bda483927efff1c216d50951c7e5cc4415",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:1440:2240",
+      "extracted_at": "2026-11-08T12:07:36.667351+00:00",
+      "extraction_seconds": 19.234859499993036,
+      "input_tokens": 1293,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "9WXwapaRMraGnsEPzsLxoAw",
+      "response_sha256": "61150ea643fdc88b4b320786af140771f6b2cdf820e9a52f3e4352cb8c5d79ae"
+    },
+    {
+      "attempt_id": "b1a5fdcc0b5e4069904ab338cd34345d",
+      "cache_key": "2d6832a311a6319fe3db2032313c6abd83ddd69288c2e1cffd928a0b82a4f46f",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2160:2960",
+      "extracted_at": "2026-11-08T12:07:39.472322+00:00",
+      "extraction_seconds": 2.7948804579791613,
+      "input_tokens": 1300,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "CWbwav20NpjxnsEPs-jeuAw",
+      "response_sha256": "b607bcb4af460ef752a8e16e04a7b9f6d17816c5fc5363b85a256438ef9bed1e"
+    },
+    {
+      "attempt_id": "4d57444842744d389e1e2e85b38592ca",
+      "cache_key": "63813dcc1732370303bb95b5d90c580eb740e2ca502c65263b029e7a17b5fa38",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2880:3680",
+      "extracted_at": "2026-11-08T12:07:40.832088+00:00",
+      "extraction_seconds": 1.3488128749886528,
+      "input_tokens": 1294,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "DGbwasyPHL2txN8PksvlgQM",
+      "response_sha256": "463c1af3241bd8db8795879b469240e003f24887f06640411f584bf2e9d6acbd"
+    },
+    {
+      "attempt_id": "767f6d1100a64ca089e441d5306a5ab7",
+      "cache_key": "19482e8751932710c45921dbffcb44b59391776a2c8754f2c185c9430115df2c",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:3600:4400",
+      "extracted_at": "2026-11-08T12:07:41.969719+00:00",
+      "extraction_seconds": 1.1341436670045368,
+      "input_tokens": 1284,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "DWbwauCVEuCG7M8P2oSWkAw",
+      "response_sha256": "9e14009e4cfabe6ab5e00f694effbf407c420bdf06d712616c9d78e732adbe0c"
+    },
+    {
+      "attempt_id": "7afb8396caf747bea7e700d535f44e0c",
+      "cache_key": "02f25dca32cb6244ff7664e769e54e0aac51b9fcc7d4680d8baa7b1646ae1f1e",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:5040:5132",
+      "extracted_at": "2026-11-08T12:07:58.562979+00:00",
+      "extraction_seconds": 0.654123874992365,
+      "input_tokens": 1127,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "HmbwaqqRB_LQvdIP2OKCgAI",
+      "response_sha256": "bfac191aef8612f083d277530a2828feefc1a47005d8a644720fb15f915a3885"
+    },
+    {
+      "attempt_id": "11c2a818d93e40b4b5d0486932586466",
+      "cache_key": "4839b97fa8f954abd47ad49ff9b62389e94f0f6917344092eb6a371efd514316",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+      "extracted_at": "2026-11-08T12:10:01.583878+00:00",
+      "extraction_seconds": 0.9649244999745861,
+      "input_tokens": 1341,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "mWbwavbKC83-vdIP3a_0OA",
+      "response_sha256": "c0d729b2c07530d79c1324cdf4f92cb3237eaf65d103ac3ef399aa2805fa6571"
+    },
+    {
+      "attempt_id": "6bbc6382913c43df8284f0424c76db92",
+      "cache_key": "b296a1e6e4bf6708e40dd31f7036e3cef79bc5d1cdfc7d363530865c334e0630",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+      "extracted_at": "2026-11-08T12:10:02.659139+00:00",
+      "extraction_seconds": 1.0695338329824153,
+      "input_tokens": 1299,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "mmbwatmxAaTm7M8P7aTsmAo",
+      "response_sha256": "e693c6a791e3ca764d5653f02216c4286fb76f768708ac64b330044e79f78e57"
+    },
+    {
+      "attempt_id": "1371db2adb444b3e90ae7d35eb842623",
+      "cache_key": "54a9aa1745befe022fdd5e5d30ccda17faad5a767db55a6891fa3690ef2e76d6",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2160:2960",
+      "extracted_at": "2026-11-08T12:10:04.052459+00:00",
+      "extraction_seconds": 1.3833029170054942,
+      "input_tokens": 1278,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "mmbwasi_NLHGnsEP2OL3gAQ",
+      "response_sha256": "09961ad49a0afe36cc6cfa529220bafc2d6fb954abfb192f847aa4535ef878b7"
+    },
+    {
+      "attempt_id": "6875dda2227b4483b677d6433de313ce",
+      "cache_key": "be89774e839a8f5d46e59fe0301985c17aa7943f97402c1903fb0ee188d5ab2d",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2880:3680",
+      "extracted_at": "2026-11-08T12:10:05.131943+00:00",
+      "extraction_seconds": 1.0685953329957556,
+      "input_tokens": 1285,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "nGbwaoy-DorSxN8PvrW6kQ8",
+      "response_sha256": "1316338dcf21dc458db203704651e811c2117f5a0f98a62a0c5463b985b5f225"
+    },
+    {
+      "attempt_id": "b70e937782684416884e09eeb6d7582d",
+      "cache_key": "eb1b8efff68e50add12e071bf2cf6c50a0f19e0e6b61b43cf6dc924628010c7e",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:3600:4400",
+      "extracted_at": "2026-11-08T12:10:05.746550+00:00",
+      "extraction_seconds": 0.604709165985696,
+      "input_tokens": 1279,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "nWbwapr_EpelkdUPsoGMwAw",
+      "response_sha256": "3d99c9494dd8b6ded2d4de8ae48c82b4a5fbeaa14d7a9453c0e1f7b8e0902cc8"
+    },
+    {
+      "attempt_id": "9d13055000fc463cb572d6cfe84da3b1",
+      "cache_key": "b681a2cac30d3252ffebb7265c9f0cf91399e312c05233c733298cd95da9b5a8",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:4320:5120",
+      "extracted_at": "2026-11-08T12:10:06.387424+00:00",
+      "extraction_seconds": 0.6305445420148317,
+      "input_tokens": 1275,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "nWbwatudO7bxnsEPy6bFqAw",
+      "response_sha256": "e16cdc6007159d1cafd89975d85838ea81fd9a307293ccf3f1d72938adcb23c2"
+    },
+    {
+      "attempt_id": "987bb10187b64b42ae47332c4e5128fe",
+      "cache_key": "732c0ba72a6cfc4e9bcaf1b4ff2c6f732393c3dfecbfa45ccd1c9043fe8e09a3",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5040:5840",
+      "extracted_at": "2026-11-08T12:10:07.380623+00:00",
+      "extraction_seconds": 0.9829910829721484,
+      "input_tokens": 1302,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "nmbwas-MJPeZvdIPw9jDUA",
+      "response_sha256": "72916081e6ffe610c868c080229b645c1a6f9f2ab494754eb17608c5338420a8"
+    },
+    {
+      "attempt_id": "ced9819e6b664228bd5ae1faa1eeae32",
+      "cache_key": "b648bf64dbc6d03487658cffdce21d6ce6dc3393cd835533cca973d8615542e0",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7200:8000",
+      "extracted_at": "2026-11-08T12:12:37.482471+00:00",
+      "extraction_seconds": 1.252229042002,
+      "input_tokens": 1284,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "NGfwavyoJea4nsEP7NW-OQ",
+      "response_sha256": "9cda0a4f7916443bac6dcc4a1606a02199fd125b6f21a87904c0d40ee038842f"
+    },
+    {
+      "attempt_id": "4e1f62725ab94998a95ee03e53dfee08",
+      "cache_key": "c2aef09a9f981cc820fb52661867f83298ccde14513681976dd6aa8240e30d76",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7920:8519",
+      "extracted_at": "2026-11-08T12:12:38.424836+00:00",
+      "extraction_seconds": 0.9311345829919446,
+      "input_tokens": 1275,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "NWfwatqdKLHGnsEP2OL3gAQ",
+      "response_sha256": "90c4d18b8498fad900f1b1e95121d90d688e3d41b8fd3f637eda578d4d1cfd94"
+    },
+    {
+      "attempt_id": "f30250cc914849bb879b94886c486bab",
+      "cache_key": "078d68a3bf99ab3ee7edcd4f4ef27bd77c954da92013147793851a1f33a7537a",
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960",
+      "extracted_at": "2026-11-08T12:12:42.111232+00:00",
+      "extraction_seconds": 0.79777637499501,
+      "input_tokens": 1348,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "OWfwaoK4IYOuvdIPhLiEwQw",
+      "response_sha256": "8a02718c62b4b92076d75a61e79e9b56af8d03a1fd5f2cfc37c0f629606ddff0"
+    },
+    {
+      "attempt_id": "d1da6de12a9448ef9078e3ff464007fa",
+      "cache_key": "ba15d916d6c5221e02b815eaa873dcead69e06a089b482882cfcbf92356e0b79",
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680",
+      "extracted_at": "2026-11-08T12:12:43.032684+00:00",
+      "extraction_seconds": 0.9096500420127995,
+      "input_tokens": 1313,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 78,
+      "response_id": "OmfwasSPEp2evdIP4u7VuAE",
+      "response_sha256": "df2fa3e0ba1cd8330159bb48e2ef40f7e8d22f92ac471a1c1179303b749b2e4d"
+    },
+    {
+      "attempt_id": "491120af1c8a4a5d80adb45a3dfd85e9",
+      "cache_key": "1ffb87f40ef105d48142ac0cd7d1ab8dfe34ee015b007a4c1a8cd5e958c64e05",
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:3600:3899",
+      "extracted_at": "2026-11-08T12:12:43.607283+00:00",
+      "extraction_seconds": 0.5638643749989569,
+      "input_tokens": 1167,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "O2fwarueC9nrkdUPqvjB8A4",
+      "response_sha256": "3de71262799537713ee2b55d96783b704d1ac2dc99e64ee12e7f57767bae757c"
+    },
+    {
+      "attempt_id": "0cf1455cded44bcabbc6e697c7203a71",
+      "cache_key": "765e7868e9f7ddd1f363cc542b122e920c651e8c9f8e71317131fd1b435fdfab",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:0:800",
+      "extracted_at": "2026-11-08T12:12:44.562425+00:00",
+      "extraction_seconds": 0.9443183340190444,
+      "input_tokens": 1306,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "O2fwauOQOPeXvdIPtZrRiQM",
+      "response_sha256": "8b5982d2a130f4ff0f5b7035e3a0c85b23bbba761720033355fb3a0a6c8e65f9"
+    },
+    {
+      "attempt_id": "183fb56ea0c64859be7b94639158bed3",
+      "cache_key": "83ddecf8837df4f278f8f111ced0f389280e98a2c3407515cc784927fc24580c",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:720:1520",
+      "extracted_at": "2026-11-08T12:13:20.848802+00:00",
+      "extraction_seconds": 36.27641262501129,
+      "input_tokens": 1331,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "PGfwap7jLp7qkdUPpYSBkAw",
+      "response_sha256": "e612c2d055fb28383bcc9d95249f06b17ec9b225be4b17f1158a40b4cbfc0ed2"
+    },
+    {
+      "attempt_id": "e10a79cd633e4e29bb405d5856b2d61d",
+      "cache_key": "12c1687f26eb4c1d1e436d1630dd12aa495173ab84dfdc56c6a2ca0632cd5308",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:1440:2240",
+      "extracted_at": "2026-11-08T12:13:21.769846+00:00",
+      "extraction_seconds": 0.9043019590026233,
+      "input_tokens": 1308,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "YWfwapqCCNeRvdIP9LiHsQ4",
+      "response_sha256": "17ff0b43155a2f39ec061824879817c7e0a67e4560823281148896e1982b2227"
+    },
+    {
+      "attempt_id": "988a0fbfa67a407e9d76b848ea119f6e",
+      "cache_key": "a0ebed5a476ffe95f737dfa5a1f53f4fe362cb64a2f2cad906d4375ebe71a49f",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:3600:4400",
+      "extracted_at": "2026-11-08T12:13:24.845942+00:00",
+      "extraction_seconds": 0.9443259999970905,
+      "input_tokens": 1316,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 165,
+      "response_id": "ZGfwapasBt3S28oPtc7f2QI",
+      "response_sha256": "8d211911909e21f89b5ab66d5e2fc21c0a75120563780c785c41126cd8a3e703"
+    },
+    {
+      "attempt_id": "e5969e2362ee46cabb9daba5b27c8d4e",
+      "cache_key": "4ec00170d3b28a1dc9baa85e92e07bc72f83d04c7534d5c9b46fcf100ba54b8a",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5040:5840",
+      "extracted_at": "2026-11-08T12:14:02.214396+00:00",
+      "extraction_seconds": 1.5371329160116147,
+      "input_tokens": 1319,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "iWfwaoKHBfr4xN8PorfomA8",
+      "response_sha256": "4caab88dfa495fd07ea46a63a7c8ec0c89286da742246bc2f7057cf4850ca518"
+    },
+    {
+      "attempt_id": "63f3f6d6dd6941269cb72425ae7a3977",
+      "cache_key": "c970b243cd73606a410c93bf234d6c5724e6e754faa88d4fd5f546505f6e5739",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:6480:7280",
+      "extracted_at": "2026-11-08T12:14:04.439536+00:00",
+      "extraction_seconds": 0.9098500419931952,
+      "input_tokens": 1310,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 10,
+      "response_id": "i2fwavyvL5f-vdIP-ci8WQ",
+      "response_sha256": "a897238f2652a42a8c253f064d7d632ba2721de5609cebc6d1ebb6d990a34c3f"
+    }
+  ],
+  "graph_content_sha256": "92f3b744fc1dd1a2b6d82aea245a90a956c6f2e910330f8898aba5c0b695d373",
+  "last_run": {
+    "approved_external": true,
+    "cache_hits": 27,
+    "cache_only": false,
+    "cache_rejections": 0,
+    "finished_at": "2026-11-08T12:14:05.455590+00:00",
+    "id": "3840b987f2714c0c92d8d30fb255e44f",
+    "latency_seconds": 5.14544512500288,
+    "max_attempts": 1,
+    "max_calls": 43,
+    "new_reserved_calls": 4,
+    "pending": [
+      {
+        "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2880:3680",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:4320:5120",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:0:800",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5760:6560",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:6480:7280",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2880:3680",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:4320:5120",
+        "reason": "chunk_attempt_limit"
+      },
+      {
+        "attempt_id": "735c5a830ef341d58d13fc05a96e3e4d",
+        "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+        "reason": "validation_rejected"
+      },
+      {
+        "attempt_id": "fb2dd51eb26b45eebd91a00e61780602",
+        "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:7200:7895",
+        "reason": "validation_rejected"
+      }
+    ],
+    "started_at": "2026-11-08T12:14:00.310478+00:00",
+    "status": "partial"
+  },
+  "manifest": {
+    "aliases": [],
+    "chunk_overlap": 80,
+    "chunk_size": 800,
+    "chunks": [
+      "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+      "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:720:1520",
+      "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:1440:2240",
+      "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2160:2960",
+      "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2880:3680",
+      "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:3600:4123",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:0:800",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:720:1520",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:1440:2240",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2160:2960",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2880:3680",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:3600:4400",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:4320:5120",
+      "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:5040:5132",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:0:800",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2160:2960",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:2880:3680",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:3600:4400",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:4320:5120",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5040:5840",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5760:6560",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:6480:7280",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7200:8000",
+      "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:7920:8519",
+      "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+      "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+      "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+      "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960",
+      "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680",
+      "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:3600:3899",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:0:800",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:720:1520",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:1440:2240",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2880:3680",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:3600:4400",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:4320:5120",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5040:5840",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:6480:7280",
+      "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:7200:7895"
+    ],
+    "corpus": "kestrel",
+    "implementation_sha256": {
+      "graph_build.py": "307656a9fe812e386d6a797ed336916e44d60726df09989b5e6d4f82d4952076",
+      "graph_schema.py": "7e097ef4b6966be8b4369e69ea80eb559acba45f92c7364c44f3ac3a9de2abce"
+    },
+    "pydantic_version": "2.14.1",
+    "python_version": "3.12.3",
+    "recipe": {
+      "builder_version": "kestrel-graph-builder-v1",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "max_output_tokens": 4096,
+      "model": "gemini-3.5-flash-lite",
+      "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+      "prompt_version": "kestrel-grounded-extraction-v1",
+      "provider": "google-gemini-developer-api",
+      "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+      "schema_version": "kestrel-graph-v1",
+      "temperature": 0
+    },
+    "sources": [
+      {
+        "characters": 4123,
+        "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+        "name": "billing-policy-2025.md",
+        "sha256": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f"
+      },
+      {
+        "characters": 5132,
+        "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+        "name": "billing-policy-2026.md",
+        "sha256": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22"
+      },
+      {
+        "characters": 8519,
+        "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+        "name": "product-guide.md",
+        "sha256": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6"
+      },
+      {
+        "characters": 3899,
+        "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+        "name": "service-catalog.md",
+        "sha256": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888"
+      },
+      {
+        "characters": 7895,
+        "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+        "name": "support-runbook-errors.md",
+        "sha256": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc"
+      }
+    ]
+  },
+  "merge_decisions": [],
+  "pending": [
+    {
+      "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2880:3680",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:4320:5120",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:0:800",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:5760:6560",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:6480:7280",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2880:3680",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:4320:5120",
+      "reason": "chunk_attempt_limit"
+    },
+    {
+      "attempt_id": "735c5a830ef341d58d13fc05a96e3e4d",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+      "reason": "validation_rejected"
+    },
+    {
+      "attempt_id": "fb2dd51eb26b45eebd91a00e61780602",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:7200:7895",
+      "reason": "validation_rejected"
+    }
+  ],
+  "provenance": [
+    {
+      "cache_key": "ba15d916d6c5221e02b815eaa873dcead69e06a089b482882cfcbf92356e0b79",
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680",
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "extracted_at": "2026-11-08T12:12:43.032684+00:00",
+      "extraction_model": "gemini-3.5-flash-lite",
+      "id": "p_181ef56e20dca42916172e09af3b51f030a29864cc083c706b0492b0e9c35412",
+      "kind": "triple",
+      "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+      "provider": "google-gemini-developer-api",
+      "quote": "| Payments Core | Jonas Berg | #oncall-payments | 24/7 rotation |",
+      "quote_end": 2978,
+      "quote_start": 2913,
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "OmfwasSPEp2evdIP4u7VuAE",
+      "schema_version": "kestrel-graph-v1",
+      "source_document": "service-catalog.md"
+    },
+    {
+      "cache_key": "a0ebed5a476ffe95f737dfa5a1f53f4fe362cb64a2f2cad906d4375ebe71a49f",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:3600:4400",
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "extracted_at": "2026-11-08T12:13:24.845942+00:00",
+      "extraction_model": "gemini-3.5-flash-lite",
+      "id": "p_e2e45aa998d002d0f9c4de60fb6f0934889520e3a280b5235e7de485ec519798",
+      "kind": "triple",
+      "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+      "provider": "google-gemini-developer-api",
+      "quote": "KST-3012 — Query time limit exceeded\n\n**User sees:** \"This query took too long and was stopped.\"\n**Cause:** a dataset query ran for more than 120 seconds.\n**Support action:** suggest adding a filter, pre-aggregating in the source database, or refreshing less often. The time limit is the same on every plan and cannot be raised.\n**Escalate:** to Analytics Eng",
+      "quote_end": 4400,
+      "quote_start": 4041,
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "ZGfwapasBt3S28oPtc7f2QI",
+      "schema_version": "kestrel-graph-v1",
+      "source_document": "support-runbook-errors.md"
+    }
+  ],
+  "relations": [
+    {
+      "condition_quote": null,
+      "id": "r_b6f24b97cf0a0f77fcc6a6afb1146589c41a33b9c1220b75776aa086f79b5205",
+      "object_id": "e_fe645428321aef2bda4a91763ba2d05c38c813a7fb083c9d0b432d922f52152b",
+      "provenance_ids": [
+        "p_181ef56e20dca42916172e09af3b51f030a29864cc083c706b0492b0e9c35412"
+      ],
+      "relation": "CONTACT_CHANNEL",
+      "subject_id": "e_a9fd144fcab654c6766c79578a00ea3fd6f11fa530772479cbe2da2eba4a3eaa"
+    },
+    {
+      "condition_quote": null,
+      "id": "r_cda4aa6a6c02998e5987a1b1b33c98635a2d86b245d13f84868977b05b4bea6a",
+      "object_id": "e_2630be3ae508e70eb992a890c0b0954861dd9d63f0a45dec2e7e079b410c5d5a",
+      "provenance_ids": [
+        "p_e2e45aa998d002d0f9c4de60fb6f0934889520e3a280b5235e7de485ec519798"
+      ],
+      "relation": "ESCALATE_TO",
+      "subject_id": "e_d9dffdb8b13b722f8c885cf62ec4646e4386b16c029888c07a4bbcbe9ce96c85"
+    }
+  ],
+  "schema_version": "kestrel-graph-v1"
+}

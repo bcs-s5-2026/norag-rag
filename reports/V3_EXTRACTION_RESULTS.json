@@ -1,0 +1,86 @@
+{
+  "actual_request_attempts": 43,
+  "approved_build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+  "boundary_rejections": [
+    {
+      "object": "Analytics Eng",
+      "provenance_ids": [
+        "p_e2e45aa998d002d0f9c4de60fb6f0934889520e3a280b5235e7de485ec519798"
+      ],
+      "reason": "Entity label ends at the chunk boundary inside a continuing source word; no fuzzy resolution applied.",
+      "relation_id": "r_cda4aa6a6c02998e5987a1b1b33c98635a2d86b245d13f84868977b05b4bea6a",
+      "subject": "KST-3012"
+    }
+  ],
+  "coverage": {
+    "context_repaired_chunks": 6,
+    "context_repaired_triples": 9,
+    "empty_extractions": 27,
+    "raw_triples": 2,
+    "total_chunks": 43,
+    "valid_chunks": 29
+  },
+  "entities": 17,
+  "manual_review": {
+    "counts": {
+      "correct": 10,
+      "unsupported": 0,
+      "wrong": 0
+    },
+    "file": "evaluation/graph_review/kestrel-10-triples.json",
+    "graded": 10,
+    "population": 10,
+    "reviewed_at": "2026-11-08T12:31:33.204154+00:00",
+    "reviewer": "Feras M",
+    "sample_size": 10,
+    "seed": 20261108,
+    "ungraded_snapshot": "evaluation/graph_review/kestrel-10-triples-ungraded.json"
+  },
+  "offline_quote_repaired_relations": 9,
+  "provider_failure_types": {
+    "APITimeoutError": 2,
+    "InternalServerError": 1,
+    "RateLimitError": 1
+  },
+  "published_graph_build_id": "529ee6bf820a7554a5d0352d10d92e39d6df992e0ae81f99c9a584c34e797794",
+  "raw_model_triple_candidates": 19,
+  "relations": 10,
+  "remaining_budget": 0,
+  "stats": {
+    "actual_model_identifiers": [
+      "gemini-3.5-flash-lite"
+    ],
+    "cost_complete": false,
+    "finished_run_latency_seconds": 237.4652723330073,
+    "input_tokens": null,
+    "input_usage_unknown_calls": 4,
+    "known_input_tokens": 50239,
+    "known_output_tokens": 1845,
+    "known_usage_estimated_usd": 0.019684199999999995,
+    "output_tokens": null,
+    "output_usage_unknown_calls": 4,
+    "preflight_failures": 0,
+    "provider_failures": 4,
+    "referenced_extraction_models": [
+      "gemini-3.5-flash-lite"
+    ],
+    "reserved_llm_calls": 43,
+    "unfinished_runs": 0,
+    "unresolved_calls": 0,
+    "validation_rejections": 10
+  },
+  "status_counts": {
+    "provider_failed": 4,
+    "valid": 29,
+    "validation_rejected": 10
+  },
+  "unique_chunks_attempted": 43,
+  "verified": {
+    "entity_edge_references": true,
+    "merge_evidence": true,
+    "model_unchanged": true,
+    "no_extra_external_calls": true,
+    "provenance_integrity": true,
+    "source_scope": true
+  }
+}

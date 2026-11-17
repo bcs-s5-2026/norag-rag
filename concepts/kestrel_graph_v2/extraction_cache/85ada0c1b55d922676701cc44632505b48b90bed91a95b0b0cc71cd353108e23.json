@@ -1,0 +1,82 @@
+{
+  "attempt_id": "85bf5153bd6c4a5f8dcdc1edf76acc1e",
+  "chunk": {
+    "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+    "end": 1520,
+    "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:720:1520",
+    "line": 13,
+    "name": "billing-policy-2026.md",
+    "start": 720,
+    "text": "id plans are billed per seat, either monthly or annually. Monthly plans are charged on the same day each month as the original purchase. Annual plans are charged once a year, on the anniversary of the purchase.\n\nCustomers who choose annual billing receive a 20% discount compared with twelve months of monthly billing. Switching from monthly to annual billing is possible at any time and takes effect immediately; the unused part of the current month is credited. Switching from annual to monthly billing takes effect at the next renewal.\n\n## 3. Payment methods\n\nWe accept credit and debit cards (Visa, Mastercard, American Express) and SEPA direct debit for customers in the euro area. Team, Business and Enterprise customers can also pay by bank transfer against an invoice, with payment due within"
+  },
+  "extracted_at": "2026-11-08T13:06:44.330741+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "Team, Business and Enterprise customers can also pay by bank transfer against an invoice",
+        "object": {
+          "label": "Team",
+          "type": "Plan"
+        },
+        "relation": "AVAILABLE_ON",
+        "subject": {
+          "label": "bank transfer against an invoice",
+          "type": "Feature"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "Team, Business and Enterprise customers can also pay by bank transfer against an invoice",
+        "object": {
+          "label": "Business",
+          "type": "Plan"
+        },
+        "relation": "AVAILABLE_ON",
+        "subject": {
+          "label": "bank transfer against an invoice",
+          "type": "Feature"
+        }
+      },
+      {
+        "condition_quote": null,
+        "evidence_quote": "Team, Business and Enterprise customers can also pay by bank transfer against an invoice",
+        "object": {
+          "label": "Enterprise",
+          "type": "Plan"
+        },
+        "relation": "AVAILABLE_ON",
+        "subject": {
+          "label": "bank transfer against an invoice",
+          "type": "Feature"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 23.0285002499877,
+  "key": "85ada0c1b55d922676701cc44632505b48b90bed91a95b0b0cc71cd353108e23",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1869,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 325,
+    "response_id": "zXPwaqHwKenbxs0P2uWO8A4",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"Feature\",\n        \"label\": \"bank transfer against an invoice\"\n      },\n      \"relation\": \"AVAILABLE_ON\",\n      \"object\": {\n        \"type\": \"Plan\",\n        \"label\": \"Team\"\n      },\n      \"evidence_quote\": \"Team, Business and Enterprise customers can also pay by bank transfer against an invoice\",\n      \"condition_quote\": null\n    },\n    {\n      \"subject\": {\n        \"type\": \"Feature\",\n        \"label\": \"bank transfer against an invoice\"\n      },\n      \"relation\": \"AVAILABLE_ON\",\n      \"object\": {\n        \"type\": \"Plan\",\n        \"label\": \"Business\"\n      },\n      \"evidence_quote\": \"Team, Business and Enterprise customers can also pay by bank transfer against an invoice\",\n      \"condition_quote\": null\n    },\n    {\n      \"subject\": {\n        \"type\": \"Feature\",\n        \"label\": \"bank transfer against an invoice\"\n      },\n      \"relation\": \"AVAILABLE_ON\",\n      \"object\": {\n        \"type\": \"Plan\",\n        \"label\": \"Enterprise\"\n      },\n      \"evidence_quote\": \"Team, Business and Enterprise customers can also pay by bank transfer against an invoice\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "ca56239d093f1807dd257005b6e725b9dde5af60e75116db228f29a1ee1bea5f"
+}

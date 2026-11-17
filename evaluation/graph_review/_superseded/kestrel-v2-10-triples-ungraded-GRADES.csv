@@ -1,0 +1,11 @@
+number,subject,relation,object,grade (correct/wrong/unsupported),reason,reviewer
+1,Public share links,AVAILABLE_ON,Enterprise,,,
+2,Public share links,AVAILABLE_ON,Starter,,,
+3,Audit log,AVAILABLE_ON,Enterprise,,,
+4,Billing and Refund Policy,OWNED_BY,Finance,,,
+5,Audit log,AVAILABLE_ON,Business,,,
+6,Public share links,AVAILABLE_ON,Business,,,
+7,Single sign-on (SAML),AVAILABLE_ON,Business,,,
+8,Public share links,AVAILABLE_ON,Team,,,
+9,Single sign-on (SAML),AVAILABLE_ON,Enterprise,,,
+10,SCIM user provisioning,AVAILABLE_ON,Enterprise,,,

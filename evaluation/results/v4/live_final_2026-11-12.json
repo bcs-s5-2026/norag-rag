@@ -1,0 +1,273 @@
+{
+  "kind": "v4-live-checks",
+  "measured_at": "2026-11-12T12:30:13.690508+00:00",
+  "settings": {
+    "chunk_size": 800,
+    "chunk_overlap": 80,
+    "top_k": 5
+  },
+  "retrieval": {
+    "retrievers": [
+      "dense",
+      "bm25",
+      "graph"
+    ],
+    "candidate_depth": 20,
+    "rrf_k": 60
+  },
+  "totals": {
+    "questions": 8,
+    "llm_calls": 8,
+    "input_tokens": 31461,
+    "output_tokens": 1962,
+    "cost_usd": 0.014343
+  },
+  "personal_data_found_in_trace_file": [],
+  "indexing_run": {
+    "duration_ms": 6083.77,
+    "attributes": {
+      "trigger": "button",
+      "chunk_size": 800,
+      "chunk_overlap": 80,
+      "documents": 5,
+      "chunks": 43,
+      "newly_embedded": 5
+    },
+    "llm_calls": 0
+  },
+  "results": [
+    {
+      "case": "two_hop",
+      "answer": "If error KST-5031 happens on two consecutive deliveries, it should be escalated as a SEV-2 to the team that owns postroom, which is the Messaging team (their on-call channel is #oncall-messaging).",
+      "citations": [
+        "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+        "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+        "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960"
+      ],
+      "question_as_traced": "Error KST-5031 happened on the last two scheduled reports. Which team should support contact, and where?",
+      "outcome": "answered",
+      "duration_ms": 1851.59,
+      "llm_calls": 1,
+      "input_tokens": 3407,
+      "output_tokens": 289,
+      "cost_usd": 0.0017446,
+      "redacted": {
+        "emails": 1,
+        "phones": 0
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 13.87,
+        "bm25": 2.87,
+        "graph": 7.93,
+        "fusion": 0.08,
+        "redact": 0.21,
+        "generate": 1826.09,
+        "validate": 0.06
+      }
+    },
+    {
+      "case": "corpus_email",
+      "answer": "Refund requests must be sent by the workspace Owner, either from Settings → Plan → Request a refund or by e-mail to billing@kestrel.example.",
+      "citations": [
+        "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2880:3680"
+      ],
+      "question_as_traced": "How do I request a refund, and where do I send the request?",
+      "outcome": "answered",
+      "duration_ms": 916.27,
+      "llm_calls": 1,
+      "input_tokens": 3449,
+      "output_tokens": 136,
+      "cost_usd": 0.0013747,
+      "redacted": {
+        "emails": 1,
+        "phones": 0
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 18.02,
+        "bm25": 3.57,
+        "graph": 3.83,
+        "fusion": 0.13,
+        "redact": 0.27,
+        "generate": 890.12,
+        "validate": 0.09
+      }
+    },
+    {
+      "case": "plain",
+      "answer": "Whether you can get a refund depends on which policy applies to you. Under the 2025 policy, annual plans can only be refunded if the request is made within 30 days of the purchase or renewal date. Under the 2026 policy (effective March 1, 2026), annual plans can be refunded if the request is made within 60 days of the purchase or renewal date, pro-rated for the unused full months.",
+      "citations": [
+        "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2160:2960",
+        "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2160:2960",
+        "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2880:3680"
+      ],
+      "question_as_traced": "Can I get a refund on my annual plan 45 days after it renewed?",
+      "outcome": "answered",
+      "duration_ms": 2013.69,
+      "llm_calls": 1,
+      "input_tokens": 3441,
+      "output_tokens": 330,
+      "cost_usd": 0.0018573,
+      "redacted": {
+        "emails": 1,
+        "phones": 0
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 19.65,
+        "bm25": 2.91,
+        "graph": 2.51,
+        "fusion": 0.07,
+        "redact": 0.21,
+        "generate": 1987.91,
+        "validate": 0.22
+      }
+    },
+    {
+      "case": "same_with_personal_data",
+      "answer": "Whether you can get a refund depends on the effective date of your plan's policy. Under the 2025 billing policy, annual plans can only be refunded if requested within 30 days of the purchase or renewal date, meaning a request after 45 days would not be refundable. However, under the 2026 billing policy (effective 1 March 2026), annual plans can be refunded on a pro-rated basis if the request is made within 60 days of the purchase or renewal date.",
+      "citations": [
+        "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:2160:2960",
+        "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:2160:2960"
+      ],
+      "question_as_traced": "My name is Sam Martin, my email is [EMAIL_1] and my phone is [PHONE_1]. Can I get a refund on my annual plan 45 days after it renewed?",
+      "outcome": "answered",
+      "duration_ms": 1432.41,
+      "llm_calls": 1,
+      "input_tokens": 3464,
+      "output_tokens": 275,
+      "cost_usd": 0.0017267,
+      "redacted": {
+        "emails": 2,
+        "phones": 1
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 20.6,
+        "bm25": 3.72,
+        "graph": 3.45,
+        "fusion": 0.08,
+        "redact": 0.27,
+        "generate": 1403.9,
+        "validate": 0.19
+      }
+    },
+    {
+      "case": "not_in_corpus",
+      "answer": "The selected documents do not provide enough evidence.",
+      "citations": [],
+      "question_as_traced": "Is there a Kestrel mobile app for iPhone?",
+      "outcome": "abstained",
+      "duration_ms": 814.93,
+      "llm_calls": 1,
+      "input_tokens": 3205,
+      "output_tokens": 32,
+      "cost_usd": 0.0010415,
+      "redacted": {
+        "emails": 0,
+        "phones": 0
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 19.47,
+        "bm25": 3.2,
+        "graph": 2.69,
+        "fusion": 0.07,
+        "redact": 0.24,
+        "generate": 788.92,
+        "validate": 0.15
+      }
+    },
+    {
+      "case": "from_concept_service",
+      "answer": "Ledger handles subscriptions, seats, invoices, and payments, generates invoice PDFs, runs automatic payment retries, and applies the grace period and read-only rules of the Billing and Refund Policy. It communicates with the payment processor and never stores full card numbers. Its owner is Payments Core.",
+      "citations": [
+        "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+        "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960"
+      ],
+      "question_as_traced": "What do the documents say about ledger?",
+      "outcome": "answered",
+      "duration_ms": 1236.95,
+      "llm_calls": 1,
+      "input_tokens": 2981,
+      "output_tokens": 224,
+      "cost_usd": 0.0014543,
+      "redacted": {
+        "emails": 0,
+        "phones": 0
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 16.24,
+        "bm25": 3.05,
+        "graph": 1.89,
+        "fusion": 0.34,
+        "redact": 0.23,
+        "generate": 1214.94,
+        "validate": 0.09
+      }
+    },
+    {
+      "case": "from_concept_hub",
+      "answer": "According to the documents, the Enterprise plan offers custom seats, unlimited dashboards, unlimited data connectors, the fastest data refresh of every minute, custom history retention, single sign-on (SAML), SCIM user provisioning, a 1-year audit log, public share links, and the ability to pay by bank transfer against an invoice. Workspaces on Business and Enterprise plans can use single sign-on with any SAML 2.0 identity provider, and they also have security-relevant events recorded by the audit-log service.",
+      "citations": [
+        "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:720:1520",
+        "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:1440:2240",
+        "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:3600:4400",
+        "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:720:1520",
+        "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960"
+      ],
+      "question_as_traced": "What do the documents say about Enterprise?",
+      "outcome": "answered",
+      "duration_ms": 1729.76,
+      "llm_calls": 1,
+      "input_tokens": 8055,
+      "output_tokens": 478,
+      "cost_usd": 0.0036115,
+      "redacted": {
+        "emails": 0,
+        "phones": 0
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 29.44,
+        "bm25": 5.41,
+        "graph": 3.99,
+        "fusion": 0.11,
+        "redact": 0.37,
+        "generate": 1689.96,
+        "validate": 0.22
+      }
+    },
+    {
+      "case": "from_concept_channel",
+      "answer": "The documents state that #oncall-payments is the on-call channel for the Payments Core team, which operates on a 24/7 rotation.",
+      "citations": [
+        "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960",
+        "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2880:3680"
+      ],
+      "question_as_traced": "What do the documents say about #oncall-payments?",
+      "outcome": "answered",
+      "duration_ms": 905.28,
+      "llm_calls": 1,
+      "input_tokens": 3459,
+      "output_tokens": 198,
+      "cost_usd": 0.0015327,
+      "redacted": {
+        "emails": 0,
+        "phones": 0
+      },
+      "invented_contacts_removed": 0,
+      "step_ms": {
+        "dense": 19.67,
+        "bm25": 3.14,
+        "graph": 1.92,
+        "fusion": 0.08,
+        "redact": 0.22,
+        "generate": 879.89,
+        "validate": 0.14
+      }
+    }
+  ]
+}

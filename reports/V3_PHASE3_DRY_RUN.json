@@ -1,0 +1,63 @@
+{
+  "build_id": "cdb696d0e105c8619e3cbc38a2738ff5ecdc5b79c074721f56a3619a3015f527",
+  "provider": "google-gemini-developer-api",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+  "model": "gemini-3.5-flash-lite",
+  "documents": [
+    {
+      "name": "billing-policy-2025.md",
+      "sha256": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "characters": 4123
+    },
+    {
+      "name": "billing-policy-2026.md",
+      "sha256": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "characters": 5132
+    },
+    {
+      "name": "product-guide.md",
+      "sha256": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "characters": 8519
+    },
+    {
+      "name": "service-catalog.md",
+      "sha256": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "characters": 3899
+    },
+    {
+      "name": "support-runbook-errors.md",
+      "sha256": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "characters": 7895
+    }
+  ],
+  "chunks": 43,
+  "cached_valid": 0,
+  "invalid_cache_entries": 0,
+  "pending_chunks": 43,
+  "first_pass_calls": 43,
+  "prior_reserved_calls": 0,
+  "remaining_call_budget": 43,
+  "max_calls": 43,
+  "dispatchable_calls_now": 43,
+  "max_attempts_per_chunk": 2,
+  "approximate_input_tokens": 48038,
+  "assumed_output_tokens": 44032,
+  "output_token_cap_first_pass": 176128,
+  "estimated_first_pass_usd": 0.12449139999999999,
+  "output_cap_scenario_usd": 0.4547314,
+  "estimate_method": "ceil(UTF-8 request content bytes/4)+32 framing tokens per call; output assumption <=1024 per chunk. Not provider token counts or a hard dollar cap.",
+  "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
+  "pricing_checked": "2026-11-07",
+  "prices_usd_per_million": [
+    0.3,
+    2.5
+  ],
+  "external_payload": "Each pending chunk text, canonical IDs, source filename, offsets/line; fixed extraction instructions and JSON schema. No questions, gold evidence, benchmark answers, reports or .env file content.",
+  "approval_required": true,
+  "llm_calls_made_by_dry_run": 0
+}

@@ -1,0 +1,56 @@
+{
+  "attempt_id": "f82fc41910074ba6a886c616fab3de49",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 4400,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:3600:4400",
+    "line": 58,
+    "name": "support-runbook-errors.md",
+    "start": 3600,
+    "text": "e connections can come from either address.\n**Escalate:** no.\n\n### KST-2051 — Credentials rejected\n\n**User sees:** \"The username or password for this data source is incorrect.\"\n**Cause:** the database password was changed, or the database user was removed.\n**Support action:** an Admin must edit the connector and enter the new credentials. Support cannot see stored credentials.\n**Escalate:** no.\n\n## Queries and dashboards (KST-3xxx)\n\n### KST-3012 — Query time limit exceeded\n\n**User sees:** \"This query took too long and was stopped.\"\n**Cause:** a dataset query ran for more than 120 seconds.\n**Support action:** suggest adding a filter, pre-aggregating in the source database, or refreshing less often. The time limit is the same on every plan and cannot be raised.\n**Escalate:** to Analytics Eng"
+  },
+  "extracted_at": "2026-11-08T13:49:58.625155+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "**Escalate:** to Analytics Eng",
+        "object": {
+          "label": "Analytics Eng",
+          "type": "Team"
+        },
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-3012",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 7.646436042006826,
+  "key": "5af0d5685fa5a3c0d87b31951c89a09647259e26e8b6ec0707519c8985ce0099",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1939,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 117,
+    "response_id": "_33waqHxEJbq7M8P5t_KoQ4",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"ErrorCode\",\n        \"label\": \"KST-3012\"\n      },\n      \"relation\": \"ESCALATE_TO\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Analytics Eng\"\n      },\n      \"evidence_quote\": \"**Escalate:** to Analytics Eng\",\n      \"condition_quote\": null\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "71889447b96090838b3f2911662d5dd2aeed33e28acfef4755bd453ad5e77c34"
+}

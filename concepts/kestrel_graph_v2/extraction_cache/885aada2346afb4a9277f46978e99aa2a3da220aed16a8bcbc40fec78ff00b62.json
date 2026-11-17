@@ -1,0 +1,69 @@
+{
+  "attempt_id": "531847debcc941038c7376fcfdd2d9a4",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 7895,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:7200:7895",
+    "line": 122,
+    "name": "support-runbook-errors.md",
+    "start": 7200,
+    "text": "Refund Policy for retries, grace period and read-only rules. Support cannot take card details over e-mail or chat.\n**Escalate:** to Payments Core only if the customer shows that the bank approved the payment.\n\n### KST-6010 — Duplicate charge detected\n\n**User sees:** nothing; this code appears in the admin console when two charges for the same period are found.\n**Cause:** a retry and a manual payment went through for the same invoice.\n**Support action:** confirm the duplicate in the admin console and request a full refund of the second charge; billing errors are always refunded.\n**Escalate:** to Payments Core if more than three customers are affected on the same day (possible incident).\n"
+  },
+  "extracted_at": "2026-11-08T13:51:15.424876+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": "only if the customer shows that the bank approved the payment",
+        "evidence_quote": "**Escalate:** to Payments Core only if the customer shows that the bank approved the payment.",
+        "object": {
+          "label": "Payments Core",
+          "type": "Team"
+        },
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-6002",
+          "type": "ErrorCode"
+        }
+      },
+      {
+        "condition_quote": "if more than three customers are affected on the same day",
+        "evidence_quote": "**Escalate:** to Payments Core if more than three customers are affected on the same day (possible incident).",
+        "object": {
+          "label": "Payments Core",
+          "type": "Team"
+        },
+        "relation": "ESCALATE_TO",
+        "subject": {
+          "label": "KST-6010",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 7.94220708400826,
+  "key": "885aada2346afb4a9277f46978e99aa2a3da220aed16a8bcbc40fec78ff00b62",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v2",
+    "context": "markdown-heading-path-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 8192,
+    "model": "gemini-3.6-flash",
+    "prompt_sha256": "2dd4d2a9e8e5eddfca2682cf8101ded97fb1a97dc22b08a4e4e3e00f0cad1e28",
+    "prompt_version": "kestrel-grounded-extraction-v2",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0,
+    "validation": "per-item-filter-v1"
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1885,
+    "model": "gemini-3.6-flash",
+    "output_tokens": 265,
+    "response_id": "S37wauTGMe-zkdUPx4uBoQ8",
+    "text": "{\n  \"triples\": [\n    {\n      \"subject\": {\n        \"type\": \"ErrorCode\",\n        \"label\": \"KST-6002\"\n      },\n      \"relation\": \"ESCALATE_TO\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Payments Core\"\n      },\n      \"evidence_quote\": \"**Escalate:** to Payments Core only if the customer shows that the bank approved the payment.\",\n      \"condition_quote\": \"only if the customer shows that the bank approved the payment\"\n    },\n    {\n      \"subject\": {\n        \"type\": \"ErrorCode\",\n        \"label\": \"KST-6010\"\n      },\n      \"relation\": \"ESCALATE_TO\",\n      \"object\": {\n        \"type\": \"Team\",\n        \"label\": \"Payments Core\"\n      },\n      \"evidence_quote\": \"**Escalate:** to Payments Core if more than three customers are affected on the same day (possible incident).\",\n      \"condition_quote\": \"if more than three customers are affected on the same day\"\n    }\n  ],\n  \"aliases\": []\n}"
+  },
+  "sha256": "518e2c5e11f9d55cacd8484e625c4b355511c67c2d6d0905ffdf0e3a133fba10"
+}

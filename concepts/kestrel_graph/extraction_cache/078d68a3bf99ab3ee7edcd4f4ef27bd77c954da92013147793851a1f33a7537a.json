@@ -1,0 +1,40 @@
+{
+  "attempt_id": "f30250cc914849bb879b94886c486bab",
+  "chunk": {
+    "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+    "end": 2960,
+    "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:2160:2960",
+    "line": 48,
+    "name": "service-catalog.md",
+    "start": 2160,
+    "text": "illing and Refund Policy. Talks to the payment processor; never stores full card numbers.\nOwner: **Payments Core**.\n\n### audit-log\n\nRecords security-relevant events (sign-ins, role changes, connector edits, exports) for workspaces on Business and Enterprise plans.\nOwner: **Identity**.\n\n## 2. Teams\n\n| Team | Engineering lead | On-call channel | Working hours (Paris time) |\n|---|---|---|---|\n| Platform | Samuel Okafor | #oncall-platform | 24/7 rotation |\n| Identity | Priya Raman | #oncall-identity | 24/7 rotation |\n| Data Integrations | Tomasz Wójcik | #oncall-data-integrations | 08:00–20:00, weekdays |\n| Analytics Engine | Léa Fontaine | #oncall-analytics | 24/7 rotation |\n| Messaging | Inès Moreau | #oncall-messaging | 08:00–20:00, weekdays |\n| Payments Core | Jonas Berg | #oncall-payments"
+  },
+  "extracted_at": "2026-11-08T12:12:42.111232+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": []
+  },
+  "extraction_seconds": 0.79777637499501,
+  "key": "078d68a3bf99ab3ee7edcd4f4ef27bd77c954da92013147793851a1f33a7537a",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1348,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 10,
+    "response_id": "OWfwaoK4IYOuvdIPhLiEwQw",
+    "text": "{\"triples\": [], \"aliases\": []}"
+  },
+  "sha256": "8a02718c62b4b92076d75a61e79e9b56af8d03a1fd5f2cfc37c0f629606ddff0"
+}

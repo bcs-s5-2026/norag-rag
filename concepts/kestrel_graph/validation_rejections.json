@@ -1,0 +1,372 @@
+[
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "f08d46621882faf1c833044f08191a9ebfdfb74e73d93a12c81e847a42c1f6c2",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2880:3680",
+      "finished_at": "2026-11-08T12:13:23.890812+00:00",
+      "id": "40d872d9254a48c2bc58f0f19d7ec7c2",
+      "input_tokens": 1316,
+      "output_tokens": 110,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "Y2fwasPWDZzmnsEP09SpuA8",
+      "run_id": "c15fd866d8674e6aa027d3d211c29159",
+      "seconds": 0.8718541249982081,
+      "started_at": "2026-11-08T12:13:23.018160+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 3680,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2880:3680",
+      "line": 50,
+      "name": "support-runbook-errors.md",
+      "start": 2880,
+      "text": "ps the connection.\n**Support action:** ask the customer to confirm the database is reachable from outside their network, on the host and port configured in the connector.\n**Escalate:** to Data Integrations if several customers report it for the same source type at the same time.\n\n### KST-2044 — Source refused the connection\n\n**User sees:** \"Your data source refused the connection from Kestrel.\"\n**Cause:** the database only accepts connections from an allowlist of IP addresses, and the Kestrel addresses are missing from it.\n**Support action:** ask the customer to add both 203.0.113.10 and 203.0.113.11 to the allowlist of their database or firewall. Adding only one of them leads to errors that come and go, because connections can come from either address.\n**Escalate:** no.\n\n### KST-2051 — Cr"
+    },
+    "errors": "2 validation errors for Extraction\ntriples.0.evidence_query\n  Extra inputs are not permitted [type=extra_forbidden, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden\ntriples.0.subject\n  Value error, ErrorCode must be a complete KST-0000 identifier. [type=value_error, input_value={'label': 'Data Integrati...s', 'type': 'ErrorCode'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1316,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 110,
+      "response_id": "Y2fwasPWDZzmnsEP09SpuA8",
+      "text": "{\"triples\": [{\"condition_quote\": \"if several customers report it for the same source type at the same time\", \"evidence_query\": null, \"evidence_quote\": \"Escalate: to Data Integrations if several customers report it for the same source type at the same time.\", \"object\": {\"label\": \"Data Integrations\", \"type\": \"Team\"}, \"relation\": \"ESCALATE_TO\", \"subject\": {\"label\": \"Data Integrations\", \"type\": \"ErrorCode\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "dcbe9b064c1329401a877f253bb1b947bdc914e85d9a7bad2b75e610aeb4106a",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+      "finished_at": "2026-11-08T12:14:03.518986+00:00",
+      "id": "735c5a830ef341d58d13fc05a96e3e4d",
+      "input_tokens": 1308,
+      "output_tokens": 82,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "imfwapaHIILMkdUPrOLokAw",
+      "run_id": "3840b987f2714c0c92d8d30fb255e44f",
+      "seconds": 1.3001026670099236,
+      "started_at": "2026-11-08T12:14:02.218628+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 6560,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+      "line": 100,
+      "name": "support-runbook-errors.md",
+      "start": 5760,
+      "text": "(KST-5xxx)\n\n### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails. A single occurrence is usually a temporary problem with a recipient's mail server.\n**Support action:** check whether the recipient's address is correct and whether the next delivery succeeds. Ask the customer to check that messages from kestrel.example are not blocked by their mail filter.\n**Escalate:** if the error happens on two consecutive deliveries, or for several customers on the same day, escalate to the team that owns postroom, as SEV-2.\n\n### KST-5038 — Embed token expired\n\n**User sees:** an embedded dashboard shows \"This link"
+    },
+    "errors": "Evidence must contain both endpoint names (or both alias names).",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1308,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 82,
+      "response_id": "imfwapaHIILMkdUPrOLokAw",
+      "text": "{\"triples\": [{\"evidence_quote\": \"This error is raised by postroom, the service that sends all Kestrel e-mails.\", \"object\": {\"label\": \"postroom\", \"type\": \"Service\"}, \"relation\": \"RAISED_BY\", \"subject\": {\"label\": \"KST-5031\", \"type\": \"ErrorCode\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "70a08b8fc5f98216ade6b0cfc205f0277270a81c760f1afa844e52c1997aa667",
+      "chunk_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:4320:5120",
+      "finished_at": "2026-11-08T12:07:57.896507+00:00",
+      "id": "755ad47b65244366a3db3a704db8dd3a",
+      "input_tokens": 1296,
+      "output_tokens": 72,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "DmbwapSMFbGavdIPzZmn4Q4",
+      "run_id": "99ca1c6806b64251890b7995aeaf3361",
+      "seconds": 15.920664167002542,
+      "started_at": "2026-11-08T12:07:41.975713+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22",
+      "end": 5120,
+      "id": "6bd088c131fb50e00ed933ef2758705ed1a308bfa8ee2672d07d64de8a29ee22:4320:5120",
+      "line": 53,
+      "name": "billing-policy-2026.md",
+      "start": 4320,
+      "text": "as soon as the payment succeeds.\n\n## 8. Cancellation\n\nThe Owner can cancel a paid plan from **Settings → Plan → Cancel plan**. Cancellation stops future charges. The workspace stays on its paid plan until the end of the period already paid, then moves to the Free plan. Content above the Free plan limits becomes read-only.\n\nCancelling an annual plan does not by itself trigger a refund. To be refunded, request it as described in section 6.\n\n## 9. Taxes\n\nPrices are shown without tax. VAT or sales tax is added according to the billing address. Business customers in the European Union who provide a valid VAT number are invoiced without VAT under the reverse-charge mechanism.\n\n## 10. Contact\n\nBilling questions: billing@kestrel.example. Please include the workspace name and, if relevant, the invo"
+    },
+    "errors": "1 validation error for Extraction\ntriples.0\n  Value error, Relation has invalid endpoint types or direction. [type=value_error, input_value={'evidence_quote': 'The O... plan', 'type': 'Plan'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1296,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 72,
+      "response_id": "DmbwapSMFbGavdIPzZmn4Q4",
+      "text": "{\"triples\": [{\"evidence_quote\": \"The Owner can cancel a paid plan from **Settings → Plan → Cancel plan**.\", \"object\": {\"label\": \"Owner\", \"type\": \"Role\"}, \"relation\": \"HAS_RULE\", \"subject\": {\"label\": \"paid plan\", \"type\": \"Plan\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "8ce0f92573bd5ed494eb535cb0c7d26d016941de4581dd31f5e8d1031030e230",
+      "chunk_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+      "finished_at": "2026-11-08T12:05:35.120083+00:00",
+      "id": "7a36c06c31a94ce5bd635583912ca809",
+      "input_tokens": 1278,
+      "output_tokens": 115,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "iWXwapmwB4aH28oPmoPPmQI",
+      "run_id": "32aa70b2bc2d47a5ace05a7bfa8fd6a6",
+      "seconds": 6.701577250001719,
+      "started_at": "2026-11-08T12:05:28.418441+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f",
+      "end": 800,
+      "id": "7fe5d5cb764faf872662b4639a727eabbae1364cee0b280864453e6a61d9513f:0:800",
+      "line": 1,
+      "name": "billing-policy-2025.md",
+      "start": 0,
+      "text": "# Kestrel Analytics — Billing and Refund Policy\n\nEffective date: 1 January 2025 · Policy owner: Finance · Audience: customers and support staff\n\n## 1. Scope\n\nThis policy explains how Kestrel Analytics charges for its plans, how invoices are issued, and when refunds are possible. It applies to all paid plans: Starter, Team, Business and Enterprise. Enterprise contracts may contain different terms; when they do, the contract takes precedence over this policy. Current prices are published on the Kestrel pricing page and are not repeated here.\n\n## 2. Billing cycles\n\nPaid plans are billed per seat, either monthly or annually. Monthly plans are charged on the same day each month as the original purchase. Annual plans are charged once a year, on the anniversary of the purchase.\n\nCustomers who cho"
+    },
+    "errors": "Evidence must contain both endpoint names (or both alias names).",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1278,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 115,
+      "response_id": "iWXwapmwB4aH28oPmoPPmQI",
+      "text": "{\n  \"aliases\": [],\n  \"triples\": [\n    {\n      \"condition_quote\": null,\n      \"evidence_quote\": \"Policy owner: Finance\",\n      \"object\": {\n        \"label\": \"Finance\",\n        \"type\": \"Team\"\n      },\n      \"relation\": \"OWNED_BY\",\n      \"subject\": {\n        \"label\": \"Kestrel Analytics — Billing and Refund Policy\",\n        \"type\": \"Policy\"\n      }\n    }\n  ]\n}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "ec80628181ddb43c35e6aca6fe82b09c8326c1ea971ea261ee013fad8a0cb060",
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+      "finished_at": "2026-11-08T12:12:39.287861+00:00",
+      "id": "855b6839e2034cce8ef1efc4126fd542",
+      "input_tokens": 1302,
+      "output_tokens": 113,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "Nmfwap_VKqm1kdUP1Z_iqQw",
+      "run_id": "c15fd866d8674e6aa027d3d211c29159",
+      "seconds": 0.852561459003482,
+      "started_at": "2026-11-08T12:12:38.434627+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 800,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:0:800",
+      "line": 1,
+      "name": "service-catalog.md",
+      "start": 0,
+      "text": "# Kestrel Analytics — Service Catalog\n\nInternal document · Owner: Platform team · Last updated: 15 September 2026\n\nThis catalog lists the production services of Kestrel, what each one does, and which team owns it. The owning team is responsible for the service's on-call rotation, its alerts and its runbook entries. When in doubt about who owns something, ask in #platform-help.\n\n## 1. Services\n\n### gateway\n\nPublic entry point for the web app and the public API. Handles TLS, rate limiting and request routing to the other services. Rate limit: 600 API requests per minute per workspace; requests above the limit receive HTTP 429.\nOwner: **Platform**.\n\n### auth\n\nSign-in with password, two-factor authentication, single sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every "
+    },
+    "errors": "Evidence must contain both endpoint names (or both alias names).",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1302,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 113,
+      "response_id": "Nmfwap_VKqm1kdUP1Z_iqQw",
+      "text": "{\"triples\": [{\"evidence_quote\": \"Owner: **Platform**.\", \"object\": {\"label\": \"Platform\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"gateway\", \"type\": \"Service\"}}, {\"evidence_quote\": \"Owner: **Platform**.\", \"object\": {\"label\": \"Platform\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"auth\", \"type\": \"Service\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "871ea357588290247c7507fcd4b8bba3baee243722eae29fabb3ec11f90ec018",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+      "finished_at": "2026-11-08T12:13:23.005752+00:00",
+      "id": "c1309b3c7f964138a20df1a2ffa779a8",
+      "input_tokens": 1308,
+      "output_tokens": 93,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "YWfwaqOhPOCO28oPveb58AM",
+      "run_id": "c15fd866d8674e6aa027d3d211c29159",
+      "seconds": 1.2235257499851286,
+      "started_at": "2026-11-08T12:13:21.781237+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 2960,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:2160:2960",
+      "line": 35,
+      "name": "support-runbook-errors.md",
+      "start": 2160,
+      "text": "only does it after identity verification).\n**Escalate:** no.\n\n### KST-1012 — SSO response rejected\n\n**User sees:** \"Your identity provider returned an invalid response.\"\n**Cause:** the identity provider certificate has expired or was rotated, or the clock of the identity provider is out of sync.\n**Support action:** ask a workspace Admin to upload the new identity provider metadata in **Settings → Security → Single sign-on**.\n**Escalate:** to Identity if the metadata is correct and the error persists.\n\n## Connectors (KST-2xxx)\n\n### KST-2040 — Connection timed out\n\n**User sees:** \"Kestrel could not reach your data source in time.\"\n**Cause:** the database is down, overloaded, or behind a firewall that silently drops the connection.\n**Support action:** ask the customer to confirm the database "
+    },
+    "errors": "Evidence must contain both endpoint names (or both alias names).",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1308,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 93,
+      "response_id": "YWfwaqOhPOCO28oPveb58AM",
+      "text": "{\"triples\": [{\"condition_quote\": \"if the metadata is correct and the error persists\", \"evidence_quote\": \"**Escalate:** to Identity if the metadata is correct and the error persists.\", \"object\": {\"label\": \"Identity\", \"type\": \"Team\"}, \"relation\": \"ESCALATE_TO\", \"subject\": {\"label\": \"KST-1012\", \"type\": \"ErrorCode\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "fd7f349f01d047dd401dfc47164e138974186f4ba72ee088c578508716e8bf16",
+      "chunk_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:6480:7280",
+      "finished_at": "2026-11-08T12:12:36.221426+00:00",
+      "id": "c287508358af47a48eaa7cd2b14b019b",
+      "input_tokens": 1278,
+      "output_tokens": 64,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "M2fwaqriFJnS28oP-umDgAM",
+      "run_id": "c15fd866d8674e6aa027d3d211c29159",
+      "seconds": 1.4745545420155395,
+      "started_at": "2026-11-08T12:12:34.746560+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6",
+      "end": 7280,
+      "id": "2a6de3b72fb4b0c85b697f8fdecdde1a0f37506eae3b24a05497f289ebb251c6:6480:7280",
+      "line": 86,
+      "name": "product-guide.md",
+      "start": 6480,
+      "text": " schedule: daily, weekly or monthly. A schedule can have up to 50 recipients, who do not need to be members of the workspace. The schedule uses the time zone of the person who created it.\n\nReports are generated a few minutes before the scheduled time and delivered by e-mail. If a recipient's mail server rejects the message three times, that recipient is removed from the schedule and the schedule creator is notified.\n\n## 9. Sharing and embedding\n\n**Public links** let anyone with the link view a dashboard without signing in. They are available on every plan except Free, and an Admin can turn them off for the whole workspace.\n\n**Embedding** places a dashboard inside your own web application. Your server requests an embed token from the Kestrel API and passes it to the page. By default an embe"
+    },
+    "errors": "Evidence must contain both endpoint names (or both alias names).",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1278,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 64,
+      "response_id": "M2fwaqriFJnS28oP-umDgAM",
+      "text": "{\"triples\": [{\"evidence_quote\": \"They are available on every plan except Free\", \"object\": {\"label\": \"Free\", \"type\": \"Plan\"}, \"relation\": \"AVAILABLE_ON\", \"subject\": {\"label\": \"Public links\", \"type\": \"Feature\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "422f30816a036ffabaeb8687e719f77a7b9b2cfe2df0a0abedc42cc23ae59cdb",
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+      "finished_at": "2026-11-08T12:12:40.290884+00:00",
+      "id": "d158e312bf534249ac8e34c0d1a44ee2",
+      "input_tokens": 1320,
+      "output_tokens": 240,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "N2fwaqOCHbGUkdUP7cChOA",
+      "run_id": "c15fd866d8674e6aa027d3d211c29159",
+      "seconds": 0.9950225000211503,
+      "started_at": "2026-11-08T12:12:39.295333+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 1520,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:720:1520",
+      "line": 16,
+      "name": "service-catalog.md",
+      "start": 720,
+      "text": "e sign-on (SAML) and SCIM provisioning. Issues the session tokens used by every other service.\nOwner: **Identity**.\n\n### connector-hub\n\nStores connector credentials (encrypted with per-workspace keys) and opens the connections to customer data sources. All outgoing connections leave through two fixed addresses, 203.0.113.10 and 203.0.113.11.\nOwner: **Data Integrations**.\n\n### query-engine\n\nRuns dataset queries, enforces the 120-second query time limit, and caches results for dashboards.\nOwner: **Analytics Engine**.\n\n### scheduler\n\nTriggers dataset refreshes and scheduled reports at the right time, in the time zone of each schedule. Generates the report PDFs and hands them over for delivery.\nOwner: **Analytics Engine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled report"
+    },
+    "errors": "Evidence must contain both endpoint names (or both alias names).",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1320,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 240,
+      "response_id": "N2fwaqOCHbGUkdUP7cChOA",
+      "text": "{\"triples\": [{\"evidence_quote\": \"Owner: **Identity**.\", \"object\": {\"label\": \"Identity\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"e sign-on (SAML) and SCIM provisioning\", \"type\": \"Service\"}}, {\"evidence_quote\": \"Owner: **Data Integrations**.\", \"object\": {\"label\": \"Data Integrations\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"connector-hub\", \"type\": \"Service\"}}, {\"evidence_quote\": \"Owner: **Analytics Engine**.\", \"object\": {\"label\": \"Analytics Engine\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"query-engine\", \"type\": \"Service\"}}, {\"evidence_quote\": \"Owner: **Analytics Engine**.\", \"object\": {\"label\": \"Analytics Engine\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"scheduler\", \"type\": \"Service\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "906db1e7d5bb82d90c1d0997cc1f5011b390e397e922f5ad556ae033ea8c16d5",
+      "chunk_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+      "finished_at": "2026-11-08T12:12:41.302496+00:00",
+      "id": "f81ec037ea354733959c46ca058a2374",
+      "input_tokens": 1286,
+      "output_tokens": 181,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "OGfwapTtHtD-vdIP1tGv6Ak",
+      "run_id": "c15fd866d8674e6aa027d3d211c29159",
+      "seconds": 1.0018704170070123,
+      "started_at": "2026-11-08T12:12:40.299546+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888",
+      "end": 2240,
+      "id": "12e8379afbbd255b94909badde635074233712d32d73cab654f4c8ab2c582888:1440:2240",
+      "line": 32,
+      "name": "service-catalog.md",
+      "start": 1440,
+      "text": "ngine**.\n\n### postroom\n\nSends every e-mail that leaves Kestrel: scheduled reports, invitations, password resets, ownership transfer confirmations and billing notifications. Tracks bounces and removes a recipient from a schedule after three rejections.\nOwner: **Messaging**.\n\npostroom replaced the older mailman service in November 2025. mailman is switched off; old alerts or documents that mention it refer to postroom today.\n\n### embed-svc\n\nIssues and checks embed tokens for dashboards embedded in customer applications.\nOwner: **Platform**.\n\n### ledger\n\nSubscriptions, seats, invoices and payments. Generates invoice PDFs, runs the automatic payment retries, and applies the grace period and read-only rules of the Billing and Refund Policy. Talks to the payment processor; never stores full card"
+    },
+    "errors": "Evidence must contain both endpoint names (or both alias names).",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1286,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 181,
+      "response_id": "OGfwapTtHtD-vdIP1tGv6Ak",
+      "text": "{\"triples\": [{\"evidence_quote\": \"Owner: **Messaging**.\", \"object\": {\"label\": \"Messaging\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"postroom\", \"type\": \"Service\"}}, {\"evidence_quote\": \"postroom replaced the older mailman service in November 2025.\", \"object\": {\"label\": \"mailman\", \"type\": \"Service\"}, \"relation\": \"REPLACED_BY\", \"subject\": {\"label\": \"postroom\", \"type\": \"Service\"}}, {\"evidence_quote\": \"Owner: **Platform**.\", \"object\": {\"label\": \"Platform\", \"type\": \"Team\"}, \"relation\": \"OWNED_BY\", \"subject\": {\"label\": \"embed-svc\", \"type\": \"Service\"}}], \"aliases\": []}"
+    }
+  },
+  {
+    "attempt": {
+      "actual_model": "gemini-3.5-flash-lite",
+      "build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+      "cache_key": "1e3b3d1e7cd822f2278efefc57e8f920cb7024e7265f0ccc4cd1588668bc5625",
+      "chunk_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:7200:7895",
+      "finished_at": "2026-11-08T12:14:05.442319+00:00",
+      "id": "fb2dd51eb26b45eebd91a00e61780602",
+      "input_tokens": 1265,
+      "output_tokens": 262,
+      "provider": "google-gemini-developer-api",
+      "requested_model": "gemini-3.5-flash-lite",
+      "response_id": "jGfwavCyKLPznsEP55-8sAw",
+      "run_id": "3840b987f2714c0c92d8d30fb255e44f",
+      "seconds": 0.9908587500103749,
+      "started_at": "2026-11-08T12:14:04.450623+00:00",
+      "status": "validation_rejected"
+    },
+    "chunk": {
+      "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+      "end": 7895,
+      "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:7200:7895",
+      "line": 122,
+      "name": "support-runbook-errors.md",
+      "start": 7200,
+      "text": "Refund Policy for retries, grace period and read-only rules. Support cannot take card details over e-mail or chat.\n**Escalate:** to Payments Core only if the customer shows that the bank approved the payment.\n\n### KST-6010 — Duplicate charge detected\n\n**User sees:** nothing; this code appears in the admin console when two charges for the same period are found.\n**Cause:** a retry and a manual payment went through for the same invoice.\n**Support action:** confirm the duplicate in the admin console and request a full refund of the second charge; billing errors are always refunded.\n**Escalate:** to Payments Core if more than three customers are affected on the same day (possible incident).\n"
+    },
+    "errors": "1 validation error for Extraction\ntriples.0.subject\n  Value error, ErrorCode must be a complete KST-0000 identifier. [type=value_error, input_value={'label': 'Payments Core', 'type': 'ErrorCode'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error",
+    "response": {
+      "finish_reason": "stop",
+      "input_tokens": 1265,
+      "model": "gemini-3.5-flash-lite",
+      "output_tokens": 262,
+      "response_id": "jGfwavCyKLPznsEP55-8sAw",
+      "text": "{\n  \"triples\": [\n    {\n      \"condition_quote\": \"if the customer shows that the bank approved the payment\",\n      \"evidence_quote\": \"Escalate: to Payments Core only if the customer shows that the bank approved the payment.\",\n      \"object\": {\n        \"label\": \"Payments Core\",\n        \"type\": \"Team\"\n      },\n      \"relation\": \"ESCALATE_TO\",\n      \"subject\": {\n        \"label\": \"Payments Core\",\n        \"type\": \"ErrorCode\"\n      }\n    },\n    {\n      \"condition_quote\": \"if more than three customers are affected on the same day (possible incident)\",\n      \"evidence_quote\": \"Escalate: to Payments Core if more than three customers are affected on the same day (possible incident).\",\n      \"object\": {\n        \"label\": \"Payments Core\",\n        \"type\": \"Team\"\n      },\n      \"relation\": \"ESCALATE_TO\",\n      \"subject\": {\n        \"label\": \"KST-6010\",\n        \"type\": \"ErrorCode\"\n      }\n    }\n  ],\n  \"aliases\": []\n}"
+    }
+  }
+]

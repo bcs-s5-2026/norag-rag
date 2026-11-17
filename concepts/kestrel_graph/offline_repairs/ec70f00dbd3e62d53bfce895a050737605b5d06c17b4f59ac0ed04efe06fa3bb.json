@@ -1,0 +1,75 @@
+{
+  "attempt_id": "735c5a830ef341d58d13fc05a96e3e4d",
+  "chunk": {
+    "document_id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc",
+    "end": 6560,
+    "id": "40d9cab202952c424bd3bde73e166979a442b84cc5fb928a3b32d0849e7811cc:5760:6560",
+    "line": 100,
+    "name": "support-runbook-errors.md",
+    "start": 5760,
+    "text": "(KST-5xxx)\n\n### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails. A single occurrence is usually a temporary problem with a recipient's mail server.\n**Support action:** check whether the recipient's address is correct and whether the next delivery succeeds. Ask the customer to check that messages from kestrel.example are not blocked by their mail filter.\n**Escalate:** if the error happens on two consecutive deliveries, or for several customers on the same day, escalate to the team that owns postroom, as SEV-2.\n\n### KST-5038 — Embed token expired\n\n**User sees:** an embedded dashboard shows \"This link"
+  },
+  "derivation": {
+    "method": "bounded-heading-context-v1",
+    "original_attempt_id": "735c5a830ef341d58d13fc05a96e3e4d",
+    "original_response_sha256": "4b9cb355aea2c07cebafb04ac9995ee8445e02bcce5b8727882e354b5728d379",
+    "repairs": [
+      {
+        "expanded_quote": "### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails.",
+        "object": {
+          "label": "postroom",
+          "type": "Service"
+        },
+        "original_quote": "This error is raised by postroom, the service that sends all Kestrel e-mails.",
+        "relation": "RAISED_BY",
+        "subject": {
+          "label": "KST-5031",
+          "type": "ErrorCode"
+        },
+        "triple_index": 0
+      }
+    ]
+  },
+  "extracted_at": "2026-11-08T12:14:03.518986+00:00",
+  "extraction": {
+    "aliases": [],
+    "triples": [
+      {
+        "condition_quote": null,
+        "evidence_quote": "### KST-5031 — Scheduled report not delivered\n\n**User sees:** the schedule shows \"Last delivery failed\".\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails.",
+        "object": {
+          "label": "postroom",
+          "type": "Service"
+        },
+        "relation": "RAISED_BY",
+        "subject": {
+          "label": "KST-5031",
+          "type": "ErrorCode"
+        }
+      }
+    ]
+  },
+  "extraction_seconds": 1.3001026670099236,
+  "key": "ec70f00dbd3e62d53bfce895a050737605b5d06c17b4f59ac0ed04efe06fa3bb",
+  "recipe": {
+    "builder_version": "kestrel-graph-builder-v1",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "max_output_tokens": 4096,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_sha256": "228312fd5816593e5ad90181b9399ab15d80b7da5dc6bb866b016857fa62bb93",
+    "prompt_version": "kestrel-grounded-extraction-v1",
+    "provider": "google-gemini-developer-api",
+    "schema_sha256": "14048d44b9f83ae201032bbcbbc70f88f9390f01803fc06338940cb573e69cb7",
+    "schema_version": "kestrel-graph-v1",
+    "temperature": 0
+  },
+  "response": {
+    "finish_reason": "stop",
+    "input_tokens": 1308,
+    "model": "gemini-3.5-flash-lite",
+    "output_tokens": 82,
+    "response_id": "imfwapaHIILMkdUPrOLokAw",
+    "text": "{\"triples\": [{\"subject\": {\"type\": \"ErrorCode\", \"label\": \"KST-5031\"}, \"relation\": \"RAISED_BY\", \"object\": {\"type\": \"Service\", \"label\": \"postroom\"}, \"evidence_quote\": \"### KST-5031 — Scheduled report not delivered\\n\\n**User sees:** the schedule shows \\\"Last delivery failed\\\".\\n**Cause:** the report was generated but the e-mail was not sent. This error is raised by postroom, the service that sends all Kestrel e-mails.\", \"condition_quote\": null}], \"aliases\": []}"
+  },
+  "sha256": "7508c535f3e9b532ed44a64cefdecf8c52a03d0c3cbdec738483b8d22170c2d6"
+}

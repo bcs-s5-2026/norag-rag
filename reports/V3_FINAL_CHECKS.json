@@ -1,0 +1,45 @@
+{
+  "status": "verified",
+  "approved_build_id": "87e963bbdbd3d9f8ee9aa8954d7b6d9dbdd272eacc8e5cd20dc3af4221500ecb",
+  "published_build_id": "529ee6bf820a7554a5d0352d10d92e39d6df992e0ae81f99c9a584c34e797794",
+  "actual_attempts": 43,
+  "remaining_budget": 0,
+  "attempt_statuses": {
+    "valid": 29,
+    "validation_rejected": 10,
+    "provider_failed": 4
+  },
+  "source_scope": [
+    "billing-policy-2025.md",
+    "billing-policy-2026.md",
+    "product-guide.md",
+    "service-catalog.md",
+    "support-runbook-errors.md"
+  ],
+  "entities": 17,
+  "relations": 10,
+  "partial_graph": true,
+  "human_review": {
+    "correct": 10,
+    "unsupported": 0,
+    "wrong": 0
+  },
+  "human_review_original_evidence_preserved": true,
+  "combined_question_bytes_verified": true,
+  "preexisting_hashes_checked": 42,
+  "intentionally_changed_preexisting_files": [
+    "evaluation/v3.py"
+  ],
+  "unchanged_frozen_files": 41,
+  "frontend_hidden_route_unreferenced": true,
+  "configured_secret_scan_files": 124,
+  "configured_secret_matches": 0,
+  "tests": {
+    "passed": 144,
+    "seconds": 11.96
+  },
+  "browser_verification": "unavailable",
+  "evaluation_runs": 9,
+  "evaluation_llm_calls": 0,
+  "commit_push_tag_submission_performed": false
+}
